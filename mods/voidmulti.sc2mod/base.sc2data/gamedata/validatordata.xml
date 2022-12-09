@@ -99,7 +99,7 @@
     </CValidatorPlayerRequirement>
     <CValidatorCombine id="HarvestableResourceandNearbyTownhall">
         <Type value="And"/>
-        <CombineArray value="HarvestableResources"/>
+        <CombineArray value="Minerals"/>
         <CombineArray value="PlayerTownhallwithin10"/>
     </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="LarvaNotConjoined">
@@ -452,6 +452,7 @@
         <CombineArray value="ChannelSnipeBehaviorValidator"/>
         <CombineArray value="ChannelSnipeCasterFilters"/>
         <CombineArray value="ChannelSnipeTargetFilters"/>
+        <CombineArray value="ChannelSnipeRange"/>
     </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="ChannelSnipeRefundValidator">
         <WhichUnit Value="Caster"/>
@@ -507,6 +508,11 @@
         <Compare value="GT"/>
         <Behavior value="TakenDamage"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationCompareRange id="ChannelSnipeRange">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LT"/>
+        <Range value="13.5"/>
+    </CValidatorLocationCompareRange>
     <CValidatorLocationCompareRange id="ChargeDamageDistance">
         <WhichLocation Value="SourceUnit"/>
         <Value Effect="Charge" Value="TargetUnit"/>
@@ -556,6 +562,10 @@
         <Value value="TempestDisruptionSphereAttackMissile"/>
         <Find value="0"/>
     </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveBatteryCooldownBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BatteryAcquireTargetCooldown"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="NotHaveBeamTargetCDBehavior">
         <Behavior value="BeamTargetCD"/>
         <RequireCasterUnit Value="Caster"/>
