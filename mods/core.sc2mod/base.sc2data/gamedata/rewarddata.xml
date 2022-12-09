@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <!-- Dont let the editor change the order of the constants -->
+    <const id="$Decals1" value="ui_wol_achievementdecals_sheet1.dds"/>
+    <const id="$Decals2" value="ui_wol_achievementdecals_sheet2.dds"/>
+    <const id="$Decals3" value="ui_wol_achievementdecals_sheet3.dds"/>
+    <const id="$Decals4" value="ui_wol_achievementdecals_sheet4.dds"/>
+    <const id="$Decals5" value="ui_wol_achievementdecals_sheet5.dds"/>
+    <const id="$Emoticons1" value="ui_wol_achievementemoticons_sheet1.dds"/>
+    <const id="$Emoticons2" value="ui_wol_achievementemoticons_sheet2.dds"/>
+    <const id="$Transparency" value="ui_wol_achievementicons_sheet_transparency.dds"/>
+    <const id="$Portraits1" value="ui_wol_achievementportraits_sheet1.dds"/>
+    <const id="$Portraits2" value="ui_wol_achievementportraits_sheet2.dds"/>
+    <const id="$Portraits3" value="ui_wol_achievementportraits_sheet3.dds"/>
+    <const id="$Portraits4" value="ui_wol_achievementportraits_sheet4.dds"/>
+    <const id="$Portraits5" value="ui_wol_achievementportraits_sheet5.dds"/>
+    <const id="$Portraits6" value="ui_wol_achievementportraits_sheet6.dds"/>
+    <const id="$Portraits7" value="ui_wol_achievementportraits_sheet7.dds"/>
+    <const id="$Portraits8" value="ui_wol_achievementportraits_sheet8.dds"/>
+    <const id="$Portraits9" value="ui_wol_achievementportraits_sheet9.dds"/>
+    <const id="$Portraits10" value="ui_wol_achievementportraits_sheet10.dds"/>
+    <const id="$Portraits11" value="ui_wol_achievementportraits_sheet11.dds"/>
+    <const id="$Portraits12" value="ui_wol_achievementportraits_sheet12.dds"/>
+    <const id="$Portraits13" value="ui_wol_achievementportraits_sheet13.dds"/>
+    <const id="$Portraits14" value="ui_wol_achievementportraits_sheet14.dds"/>
+    <const id="$Portraits15" value="ui_wol_achievementportraits_sheet15.dds"/>
+    <const id="$Portraits16" value="ui_wol_achievementportraits_sheet16.dds"/>
+	<const id="$Portraits17" value="ui_wol_achievementportraits_sheet17.dds"/>
+    <const id="$Achievements1" value="ui_wol_achievementicons_sheet1.dds"/>
+    <const id="$Achievements2" value="ui_wol_achievementicons_sheet2.dds"/>
+    <const id="$Achievements3" value="ui_wol_achievementicons_sheet3.dds"/>
+    <const id="$Achievements4" value="ui_wol_achievementicons_sheet4.dds"/>
+    <const id="$Achievements5" value="ui_wol_achievementicons_sheet5.dds"/>
+    <const id="$Achievements6" value="ui_wol_achievementicons_sheet6.dds"/>
+    <const id="$Achievements7" value="ui_wol_achievementicons_sheet7.dds"/>
+    <const id="$Achievements8" value="ui_wol_achievementicons_sheet8.dds"/>
+    <const id="$Achievements9" value="ui_wol_achievementicons_sheet9.dds"/>
+    <const id="$Achievements10" value="ui_wol_achievementicons_sheet10.dds"/>
+    <const id="$Achievements11" value="ui_wol_achievementicons_sheet11.dds"/>
+    <const id="$Achievements12" value="ui_wol_achievementicons_sheet12.dds"/>
+    <const id="$Achievements13" value="ui_wol_achievementicons_sheet13.dds"/>
+    <const id="$Achievements14" value="ui_wol_achievementicons_sheet14.dds"/>
+    <const id="$Achievements15" value="ui_wol_achievementicons_sheet15.dds"/>
+    <const id="$Achievements16" value="ui_wol_achievementicons_sheet16.dds"/>
+    <const id="$Icons10" value="ui_wol_achievementicons_sheetA.dds"/>
+    <const id="$Icons11" value="ui_wol_achievementicons_sheetB.dds"/>
+    <const id="$Sprays1" value="ui_wol_achievementsprays_sheet1.dds"/>
+    <const id="$Sprays2" value="ui_wol_achievementsprays_sheet2.dds"/>
+    <const id="$Consoles1" value="ui_wol_achievementconsoles_sheet1.dds"/>
+    <const id="$Skins1" value="ui_wol_unitskinicons_sheet1.dds"/>
+    <const id="$Skins2" value="ui_wol_unitskinicons_sheet2.dds"/>
+    <const id="$WarChest1" value="ui_wol_unitskinicons_warchest1.dds"/>
+    <const id="$WarChest2" value="ui_wol_unitskinicons_warchest2.dds"/>
+    <const id="$WarChest3" value="ui_wol_unitskinicons_warchest3.dds"/>
+    <const id="$WarChest4" value="ui_wol_unitskinicons_warchest4.dds"/>
+    <const id="$WarChest5" value="ui_wol_unitskinicons_warchest5.dds"/>
+    <const id="$WarChest6" value="ui_wol_unitskinicons_warchest6.dds"/>
+    <const id="$Banners1" value="ui_wol_achievementbanners_sheet1.dds"/>
+    <const id="$Banners2" value="ui_wol_achievementbanners_sheet2.dds"/>
+    <!-- Dont let the editor change the order of the constants -->
+    <CReward default="1">
+        <Name value="Reward/Name/##id##"/>
+        <Description value="Reward/Description/##id##"/>
+        <DescriptionUnearned value="Reward/DescriptionUnearned/##id##"/>
+    </CReward>
+    <CRewardDecal default="1">
+        <?token id="iconfile" type="CImagePath"?>
+        <Texture value="##id##"/>
+        <IconFile value="##file##"/>
+        <IconCols value="8"/>
+        <IconRows value="8"/>
+        <Spray value="##id##"/>
+    </CRewardDecal>
+    <CRewardIcon default="1">
+        <?token id="iconfile" type="CImagePath"?>
+        <IconFile value="##file##"/>
+        <IconCols value="9"/>
+        <IconRows value="9"/>
+    </CRewardIcon>
+    <CRewardModel default="1">
+        <?token id="iconfile" type="CImagePath"?>
+        <Model value="##id##"/>
+        <!-- Intentionally not set since Battle.net does not expect them. -->
+        <!--<IconFile value="##file##"/>-->
+        <IconCols value="6"/>
+        <IconRows value="6"/>
+    </CRewardModel>
+    <CRewardPortrait default="1">
+        <?token id="iconfile" type="CImagePath"?>
+        <Model value="##id##"/>
+        <IconFile value="##file##"/>
+        <IconCols value="6"/>
+        <IconRows value="6"/>
+        <IgnorePlayerRace value="1"/>
+    </CRewardPortrait>
+    <CRewardEmoticon default="1">
+        <?token id="iconfile" type="CImagePath"?>
+        <IconFile value="##file##"/>
+        <IconCols value="10"/>
+        <IconRows value="10"/>
+    </CRewardEmoticon>
+    <CRewardVoicePack default="1"/>
+    <CRewardPortraitInGame default="1"/>
+    <CRewardSpray default="1">
+        <?token id="iconfile" type="CImagePath"?>
+        <Texture value="##id##"/>
+        <IconFile value="##file##"/>
+        <IconCols value="8"/>
+        <IconRows value="8"/>
+        <IgnorePlayerRace value="1"/>
+        <Spray value="##id##"/>
+    </CRewardSpray>
+    <CRewardRaceBanner default="1">
+        <?token id="iconfile" type="CImagePath"?>
+        <IconFile value="##file##"/>
+        <IconCols value="6"/>
+        <IconRows value="6"/>
+    </CRewardRaceBanner>
+    <CRewardSprayUseDecal default="1"/>
+</Catalog>

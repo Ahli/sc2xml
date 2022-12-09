@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementCountBehavior id="CountBehaviorAHerCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="AHer" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnit_CoopHeroQueuedOrBetterOrRevivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="_CoopHero" State="QueuedOrBetterOrRevivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeWarcraftCommanderCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WarcraftCommander" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="EqSumCountUnit_CoopHeroQueuedOrBetterOrRevivableCountUnitHEROQueuedOrBetterOrRevivable0">
+        <OperandArray index="0" value="SumCountUnit_CoopHeroQueuedOrBetterOrRevivableCountUnitHEROQueuedOrBetterOrRevivable"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementGTE id="GTE1354456570CountBehaviorAHerCompleteOnlyAtUnit3">
+        <OperandArray index="0" value="CountBehaviorAHerCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE2108613712CountBehaviorAHerCompleteOnlyAtUnit7">
+        <OperandArray index="0" value="CountBehaviorAHerCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="7"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE461849425CountBehaviorAHerCompleteOnlyAtUnit5">
+        <OperandArray index="0" value="CountBehaviorAHerCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementGTE>
+    <CRequirementCountUnit id="GoblinBombThrowerCount" parent="War3_UnitCount" x="GoblinBombThrower"/>
+    <CRequirementCountUnit id="GoblinCrusherCount" parent="War3_UnitCount" x="GoblinCrusher"/>
+    <CRequirementCountUnit id="GoblinSwarmerCount" parent="War3_UnitCount" x="GoblinSwarmer"/>
+    <CRequirementCountUnit id="GoblinSapperCount" parent="War3_UnitCount" x="GoblinSapper"/>
+    <CRequirementAnd id="GoblinBombThrower"/>
+    <CRequirementAnd id="GoblinCrusher"/>
+    <CRequirementAnd id="GoblinSwarmer"/>
+    <CRequirementAnd id="GoblinSapper"/>
+    <CRequirementAnd id="InfernalServant"/>
+    <CRequirementCountUnit id="InfernalServantCount" parent="War3_UnitCount" x="InfernalServant">
+        <Count Link="AUin@CreateUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementSum id="SumCountUnit_CoopHeroQueuedOrBetterOrRevivableCountUnitHEROQueuedOrBetterOrRevivable">
+        <OperandArray value="CountUnit_CoopHeroQueuedOrBetterOrRevivable"/>
+        <OperandArray value="CountUnitHEROQueuedOrBetterOrRevivable"/>
+    </CRequirementSum>
+</Catalog>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="DiabolusInfernoInfernoTimedLife" parent="BNin">
+        <Duration value="180"/>
+        <DurationOverride index="0">
+            <Duration value="180"/>
+        </DurationOverride>
+    </CBehaviorBuff>
+    <!--TeleportReveal-->
+    <CBehaviorBuff id="Btrv"/>
+    <CBehaviorAttribute id="GenericSummonedUnitAttribute" parent="War3_Attribute">
+        <InfoIcon value="Assets\Textures\Renee_war3_btnTemp.dds"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.02"/>
+            <DamageDealtScaled index="Melee" value="1"/>
+            <DamageDealtScaled index="Ranged" value="1"/>
+            <LifeArmorBonus value="0.3"/>
+            <VitalMaxArray index="Life" value="25"/>
+            <VitalMaxArray index="Energy" value="15"/>
+            <VitalRegenArray index="Life" value="0.0468"/>
+            <VitalRegenArray index="Energy" value="0.0468"/>
+        </Modification>
+    </CBehaviorAttribute>
+    <CBehaviorAttribute id="GenericSummonedUnitAttributeNoEnergy" parent="War3_Attribute">
+        <InfoIcon value="Assets\Textures\Renee_war3_btnTemp.dds"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.02"/>
+            <DamageDealtScaled index="Melee" value="1"/>
+            <DamageDealtScaled index="Ranged" value="1"/>
+            <LifeArmorBonus value="0.3"/>
+            <VitalMaxArray index="Life" value="25"/>
+            <VitalRegenArray index="Life" value="0.0468"/>
+        </Modification>
+    </CBehaviorAttribute>
+    <CBehaviorBuff id="GoblinWhirlwind">
+        <Duration value="3"/>
+        <PeriodicEffect value="GoblinWhirlwindDPS"/>
+        <Modification>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <!--Unit Is Immunity to Dispel abilities-->
+            <StateFlags index="UnitAttrOnUser1" value="1"/>
+            <StateFlags index="Unstoppable" value="1"/>
+        </Modification>
+        <Period value="1"/>
+        <DisplayDuration index="Self" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GoblinSapperFuseLit">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Creep"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="4"/>
+        <ExpireEffect value="GoblinSapperExplosionSet"/>
+        <Modification>
+            <DeathResponse Chance="1" Effect="GoblinSapperExplosionDropBarrel"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GoblinBombTimedLife">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Creep"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="1"/>
+        <ExpireEffect value="GoblinSapperExplosionSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="War_Shared_ObjectCaptureCountDown" parent="War3_Passive">
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="180"/>
+    </CBehaviorBuff>
+</Catalog>

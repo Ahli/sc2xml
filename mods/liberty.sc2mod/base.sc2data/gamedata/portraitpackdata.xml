@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CPortraitPack id="CarbotPortraitsPack">
+        <ProductId value="22701"/>
+        <PortraitArray value="Portrait_CarbotReaper"/>
+        <PortraitArray value="Portrait_CarbotMarauder"/>
+        <PortraitArray value="Portrait_CarbotGhost"/>
+        <PortraitArray value="Portrait_CarbotInfestor"/>
+        <PortraitArray value="Portrait_CarbotOverlord"/>
+        <PortraitArray value="Portrait_CarbotHydralisk"/>
+        <PortraitArray value="Portrait_CarbotHighTemplar"/>
+        <PortraitArray value="Portrait_CarbotPylon"/>
+        <PortraitArray value="Portrait_CarbotExecutor"/>
+    </CPortraitPack>
+    <CPortraitPack id="2016WCSPortraitsPack">
+        <ProductId value="22637"/>
+        <PortraitArray value="Portrait_2016_World_Championship"/>
+        <PortraitArray value="Portrait_2016_Dark"/>
+        <PortraitArray value="Portrait_2016_Dear"/>
+        <PortraitArray value="Portrait_2016_PtitDrogo"/>
+        <PortraitArray value="Portrait_2016_Elazer"/>
+        <PortraitArray value="Portrait_2016_Neeb"/>
+        <PortraitArray value="Portrait_2016_Nerchio"/>
+        <PortraitArray value="Portrait_2016_Patience"/>
+        <PortraitArray value="Portrait_2016_ShoWTimE"/>
+        <PortraitArray value="Portrait_2016_Snute"/>
+        <PortraitArray value="Portrait_2016_Solar"/>
+        <PortraitArray value="Portrait_2016_Stats"/>
+        <PortraitArray value="Portrait_2016_ByuN"/>
+        <PortraitArray value="Portrait_2016_TRUE"/>
+        <PortraitArray value="Portrait_2016_TY"/>
+        <PortraitArray value="Portrait_2016_viOLet"/>
+        <PortraitArray value="Portrait_2016_Zest"/>
+    </CPortraitPack>
+    <CPortraitPack id="iNcontroLTribute_PortraitPack">
+        <PortraitArray value="Portrait_iNcontroLLegend"/>
+        <PortraitArray value="Portrait_CasterInvitational2018_iNcontroL"/>
+    </CPortraitPack>
+    <CPortraitPack id="TotalBiscuitTribute_PortraitPack">
+        <ProductId value="40190"/>
+        <PortraitArray value="Portrait_TotalBiscuitTribute_Legend"/>
+        <PortraitArray value="Portrait_TotalBiscuitTribute_Axiom"/>
+        <PortraitArray value="Portrait_TotalBiscuitTribute_TopHat"/>
+    </CPortraitPack>
+    <CPortraitPack id="TwitchPrimeAbathur_PortraitPack">
+        <PortraitArray value="Portrait_TwitchPrime2019_Abathur"/>
+        <PortraitArray value="Portrait_TwitchPrime2019_Swann"/>
+        <PortraitArray value="Portrait_TwitchPrime2019_Vorazun"/>
+    </CPortraitPack>
+    <!-- War Chest Season 1 -->
+    <CPortraitPack id="WarChestSeason1_TerranInk">
+        <PortraitArray value="Portrait_WarChest_Portrait02"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason1_TerranColor">
+        <PortraitArray value="Portrait_WarChest_Portrait08"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason1_ZergInk">
+        <PortraitArray value="Portrait_WarChest_Portrait04"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason1_ZergColor">
+        <PortraitArray value="Portrait_WarChest_Portrait10"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason1_ProtossInk">
+        <PortraitArray value="Portrait_WarChest_Portrait00"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason1_ProtossColor">
+        <PortraitArray value="Portrait_WarChest_Portrait06"/>
+    </CPortraitPack>
+    <!-- War Chest Season 2 -->
+    <CPortraitPack id="WarChestSeason2_TerranInk">
+        <PortraitArray value="Portrait_WarChest_Portrait15"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason2_TerranColor">
+        <PortraitArray value="Portrait_WarChest_Portrait14"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason2_ZergInk">
+        <PortraitArray value="Portrait_WarChest_Portrait17"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason2_ZergColor">
+        <PortraitArray value="Portrait_WarChest_Portrait16"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason2_ProtossInk">
+        <PortraitArray value="Portrait_WarChest_Portrait13"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason2_ProtossColor">
+        <PortraitArray value="Portrait_WarChest_Portrait12"/>
+    </CPortraitPack>
+    <!-- War Chest Season 3 -->
+    <CPortraitPack id="WarChestSeason3_TerranInk">
+        <PortraitArray value="Portrait_WarChest_Portrait18"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason3_TerranColor">
+        <PortraitArray value="Portrait_WarChest_Portrait21"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason3_ZergInk">
+        <PortraitArray value="Portrait_WarChest_Portrait19"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason3_ZergColor">
+        <PortraitArray value="Portrait_WarChest_Portrait22"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason3_ProtossInk">
+        <PortraitArray value="Portrait_WarChest_Portrait20"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason3_ProtossColor">
+        <PortraitArray value="Portrait_WarChest_Portrait23"/>
+    </CPortraitPack>
+    <!-- War Chest Season 4 -->
+    <CPortraitPack id="WarChestSeason4_Adjutant">
+        <PortraitArray value="Portrait_WarChest4_Adjutant"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason4_SiegeTank">
+        <PortraitArray value="Portrait_WarChest4_SiegeTank"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason4_Overmind">
+        <PortraitArray value="Portrait_WarChest4_Overmind"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason4_BroodLord">
+        <PortraitArray value="Portrait_WarChest4_BroodLord"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason4_Executor">
+        <PortraitArray value="Portrait_WarChest4_Executor"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason4_Tempest">
+        <PortraitArray value="Portrait_WarChest4_Tempest"/>
+    </CPortraitPack>
+    <!-- War Chest Season 5 -->
+    <CPortraitPack id="WarChestSeason5_ClassicMarine">
+        <PortraitArray value="Portrait_WarChest5_ClassicMarine"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason5_ClassicHydralisk">
+        <PortraitArray value="Portrait_WarChest5_ClassicHydralisk"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason5_ClassicZealot">
+        <PortraitArray value="Portrait_WarChest5_ClassicZealot"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason5_GhostInk">
+        <PortraitArray value="Portrait_WarChest5_GhostInk"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason5_GhostColor">
+        <PortraitArray value="Portrait_WarChest5_GhostColor"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason5_HydraliskInk">
+        <PortraitArray value="Portrait_WarChest5_HydraliskInk"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason5_HydraliskColor">
+        <PortraitArray value="Portrait_WarChest5_HydraliskColor"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason5_AdeptInk">
+        <PortraitArray value="Portrait_WarChest5_AdeptInk"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason5_AdeptColor">
+        <PortraitArray value="Portrait_WarChest5_AdeptColor"/>
+    </CPortraitPack>
+    <!-- War Chest Season 6 -->
+    <CPortraitPack id="WarChestSeason6_ClassicAdjutant">
+        <PortraitArray value="Portrait_WarChest6_ClassicAdjutant"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason6_ClassicOvermind">
+        <PortraitArray value="Portrait_WarChest6_ClassicOvermind"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason6_ClassicAldaris">
+        <PortraitArray value="Portrait_WarChest6_ClassicAldaris"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason6_SilverAdjutant">
+        <PortraitArray value="Portrait_WarChest6_SilverAdjutant"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason6_SilverThor">
+        <PortraitArray value="Portrait_WarChest6_SilverThor"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason6_RCZHiveNode">
+        <PortraitArray value="Portrait_WarChest6_RCZHiveNode"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason6_RCZLurker">
+        <PortraitArray value="Portrait_WarChest6_RCZLurker"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason6_IhanriiExecutor">
+        <PortraitArray value="Portrait_WarChest6_IhanriiExecutor"/>
+    </CPortraitPack>
+    <CPortraitPack id="WarChestSeason6_IhanriiSentry">
+        <PortraitArray value="Portrait_WarChest6_IhanriiSentry"/>
+    </CPortraitPack>
+</Catalog>

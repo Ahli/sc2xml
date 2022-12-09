@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTerrain default="1" id="WarTerrainDefault">
+        <FogEnabled value="1"/>
+        <HeightMapEnabled value="1"/>
+        <RampNoBuild value="0"/>
+        <CreepBaseTexture value="Assets\Textures\blight.dds"/>
+        <CreepBaseSpecularMap value="Assets\Textures\blightspecularmask.dds"/>
+        <CreepHeightMap value="Assets\Textures\blightheight.dds"/>
+        <CreepNoiseMap value="Assets\Textures\white.dds"/>
+        <CreepEdgeNormalMap value="Assets\Textures\BlightEdgeNormal_ex2.dds"/>
+    </CTerrain>
+    <CTerrain id="Felwood" parent="WarTerrainDefault">
+        <EditorCategories value="Climate:Jungle"/>
+        <Lighting value="ZhakulDas"/>
+        <TextureProp value="felwood"/>
+        <Ambience value="Ambience_ZhakulDas"/>
+        <MinimapBackgroundColor value="255,0,0,32"/>
+        <BlendTextures value="Felwood@Dirt"/>
+        <BlendTextures value="Felwood@DirtRough"/>
+        <BlendTextures value="Felwood@Poison"/>
+        <BlendTextures value="Felwood@Rock"/>
+        <BlendTextures value="Felwood@Grass"/>
+        <BlendTextures value="Felwood@Leaves"/>
+        <BlendTextures value="Felwood@Vines"/>
+        <CliffSets value="Felwood@CliffDirt"/>
+        <CliffSets value="Felwood@CliffGrass"/>
+        <FogColor value="255,45,68,86"/>
+        <FogDensity value="0.060000"/>
+        <FogFalloff value="0.200000"/>
+        <FogStartingHeight value="-0.900000"/>
+    </CTerrain>
+    <CTerrain id="Ice" parent="WarTerrainDefault">
+        <EditorCategories value="Climate:Ice"/>
+        <LoadingScreen value="Assets\Textures\war3_loading_screen_northrend.dds"/>
+        <TextureProp value="icecrown"/>
+        <Ambience value="Ambience_IceWorld"/>
+        <ReverbAmbient value="BetaVerb"/>
+        <MinimapBackgroundColor value="255,0,0,32"/>
+        <BlendTextures value="Ice@Dirt"/>
+        <BlendTextures value="Ice@DirtRough"/>
+        <BlendTextures value="Ice@DarkIce"/>
+        <BlendTextures value="Ice@BlackBricks"/>
+        <BlendTextures value="Ice@RuneBricks"/>
+        <BlendTextures value="Ice@TiledBricks"/>
+        <BlendTextures value="Ice@Ice"/>
+        <BlendTextures value="Ice@Snow"/>
+        <CliffSets value="Ice@CliffSnow"/>
+        <CliffSets value="Ice@CliffRuneBricks"/>
+        <FogColor value="255,121,214,244"/>
+        <FogDensity value="0.100000"/>
+        <FogFalloff value="0.200000"/>
+        <FogStartingHeight value="-2.000000"/>
+    </CTerrain>
+    <CTerrain id="LordaeronSummer" parent="WarTerrainDefault">
+        <EditorCategories value="Climate:Wasteland"/>
+        <LoadingScreen value="Assets\Textures\loading-belshir.dds"/>
+        <Ambience value="Ambience_BelShir"/>
+        <ReverbAmbient value="BetaVerb"/>
+        <BlendTextures value="Lords_Dirt"/>
+        <BlendTextures value="Lords_DirtRough"/>
+        <BlendTextures value="Lords_DirtGrass"/>
+        <BlendTextures value="Lords_Rock"/>
+        <BlendTextures value="Lords_Grass"/>
+        <BlendTextures value="Lords_GrassDark"/>
+        <CliffSets value="Lords_Dirt"/>
+        <CliffSets value="Lords_Grass"/>
+        <EnvironmentMap value="Assets\Textures\Reflection_BelShir.dds"/>
+        <FogColor value="255,45,68,100"/>
+        <FogDensity value="0.090000"/>
+        <FogFalloff value="0.320000"/>
+        <FogStartingHeight value="-5.000000"/>
+        <TextureProp value="lordaeronsummer"/>
+    </CTerrain>
+    <CTerrain id="Ashen" parent="WarTerrainDefault">
+        <EditorCategories value="Climate:Jungle"/>
+        <Ambience value="Ambience_Shakuras"/>
+        <MinimapBackgroundColor value="255,0,0,32"/>
+        <BlendTextures value="Ashen@Dirt"/>
+        <BlendTextures value="Ashen@DirtRough"/>
+        <BlendTextures value="Ashen@Rock"/>
+        <BlendTextures value="Ashen@Grass"/>
+        <BlendTextures value="Ashen@DirtGrass"/>
+        <BlendTextures value="Ashen@LumpGrass"/>
+        <BlendTextures value="Ashen@Leaves"/>
+        <BlendTextures value="Ashen@Vines"/>
+        <CliffSets value="Ashen@Cliff0"/>
+        <CliffSets value="Ashen@Cliff1"/>
+        <FogColor value="255,45,68,86"/>
+        <FogDensity value="0.060000"/>
+        <FogFalloff value="0.200000"/>
+        <FogStartingHeight value="-0.900000"/>
+        <TextureProp value="ashenvale"/>
+    </CTerrain>
+    <CTerrain id="Outland" parent="WarTerrainDefault">
+        <EditorCategories value="Climate:Volcanic"/>
+        <LoadingScreen value="Assets\Textures\loading-char.dds"/>
+        <TextureProp value="outland"/>
+        <Ambience value="Ambience_Char"/>
+        <ReverbAmbient value="BetaVerb"/>
+        <BlendTextures value="Outland_Dirt"/>
+        <BlendTextures value="Outland_DirtLight"/>
+        <BlendTextures value="Outland_RoughDirt"/>
+        <BlendTextures value="Outland_DirtCracked"/>
+        <BlendTextures value="Outland_FlatStones"/>
+        <BlendTextures value="Outland_Rock"/>
+        <BlendTextures value="Outland_FlatStonesLight"/>
+        <BlendTextures value="Outland_Abyss"/>
+        <CliffSets value="OutlandCliffs0"/>
+        <CliffSets value="OutlandCliffs1"/>
+        <FogColor value="255,255,54,54"/>
+        <FogDensity value="0.160000"/>
+        <FogFalloff value="0.350000"/>
+        <FogStartingHeight value="-0.900000"/>
+        <CreepEdgeNormalMap value="Assets\Textures\CreepEdgeNormal_ex2.dds"/>
+        <CreepSettingsArray index="Low" CreepOpaqueAlphaThreshold="0.200000" CreepTranslucentMinThreshold="0.000000" CreepTranslucentPassTint="1.100000,1.000000,1.100000"/>
+        <CreepSettingsArray index="Medium">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="High">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="Ultra">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="Extreme">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+    </CTerrain>
+    <CTerrain id="Ruins" parent="WarTerrainDefault">
+        <EditorCategories value="Climate:Jungle"/>
+        <LoadingScreen value="Assets\Textures\loading-haven.dds"/>
+        <Ambience value="Ambience_Haven"/>
+        <ReverbAmbient value="BetaVerb"/>
+        <BlendTextures value="Ruins@Dirt"/>
+        <BlendTextures value="Ruins@DirtRough"/>
+        <BlendTextures value="Ruins@DirtGrass"/>
+        <BlendTextures value="Ruins@SmallBricks"/>
+        <BlendTextures value="Ruins@Sand"/>
+        <BlendTextures value="Ruins@LargeBricks"/>
+        <BlendTextures value="Ruins@RoundTiles"/>
+        <BlendTextures value="Ruins@Grass"/>
+        <CliffSets value="Ruins@CliffDirt"/>
+        <CliffSets value="Ruins@CliffTempleWall"/>
+        <FogColor value="255,43,52,77"/>
+        <FogDensity value="0.050000"/>
+        <FogFalloff value="0.100000"/>
+        <FogStartingHeight value="-2.000000"/>
+        <CreepBaseTexture value="Assets\Textures\Creep_Haven.dds"/>
+        <CreepEdgeNormalMap value="Assets\Textures\CreepEdgeNormal_ex2.dds"/>
+        <CreepNoiseMap value="Assets\Textures\CreepNoise.dds"/>
+        <CreepSettingsArray index="Low" CreepOpaqueAlphaThreshold="0.200000" CreepTranslucentMinThreshold="0.000000" CreepTranslucentPassTint="1.100000,1.000000,1.100000"/>
+        <CreepSettingsArray index="Medium">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="High">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="Ultra">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="Extreme">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <TextureProp value="ruins"/>
+    </CTerrain>
+    <CTerrain id="Barrens" parent="WarTerrainDefault">
+        <EditorCategories value="Climate:Desert"/>
+        <LoadingScreen value="Assets\Textures\loading-marsara.dds"/>
+        <TextureProp value="barrens"/>
+        <Ambience value="Ambience_MarSara"/>
+        <ReverbAmbient value="BetaVerb"/>
+        <BlendTextures value="Barrens@Dirt"/>
+        <BlendTextures value="Barrens@DirtRough"/>
+        <BlendTextures value="Barrens@Pebbles"/>
+        <BlendTextures value="Barrens@DirtGrass"/>
+        <BlendTextures value="Barrens@Desert"/>
+        <BlendTextures value="Barrens@DesertDark"/>
+        <BlendTextures value="Barrens@Rock"/>
+        <BlendTextures value="Barrens@Grass"/>
+        <CliffSets value="Barrens@CliffDesert"/>
+        <CliffSets value="Barrens@CliffGrass"/>
+        <FixedSkyboxModel value="MarSaraSkyBox"/>
+        <FogColor value="255,92,89,78"/>
+        <FogDensity value="0.100000"/>
+        <FogFalloff value="0.250000"/>
+        <FogStartingHeight value="-0.900000"/>
+    </CTerrain>
+    <CTerrain id="North" parent="WarTerrainDefault">
+        <EditorCategories value="Climate:Ice"/>
+        <LoadingScreen value="Assets\Textures\loading-haven.dds"/>
+        <TextureProp value="northrend"/>
+        <Ambience value="Ambience_IceWorld"/>
+        <ReverbAmbient value="BetaVerb"/>
+        <BlendTextures value="North@Dirt"/>
+        <BlendTextures value="North@DirtDark"/>
+        <BlendTextures value="North@Rock"/>
+        <BlendTextures value="North@Grass"/>
+        <BlendTextures value="North@Ice"/>
+        <BlendTextures value="North@Snow"/>
+        <BlendTextures value="North@SnowRock"/>
+        <CliffSets value="North@CliffDirt"/>
+        <CliffSets value="North@CliffSnow"/>
+        <FogColor value="255,43,52,77"/>
+        <FogDensity value="0.050000"/>
+        <FogFalloff value="0.100000"/>
+        <FogStartingHeight value="-2.000000"/>
+        <CreepBaseTexture value="Assets\Textures\Creep_Haven.dds"/>
+        <CreepEdgeNormalMap value="Assets\Textures\CreepEdgeNormal_ex2.dds"/>
+        <CreepNoiseMap value="Assets\Textures\CreepNoise.dds"/>
+        <CreepSettingsArray index="Low" CreepOpaqueAlphaThreshold="0.200000" CreepTranslucentMinThreshold="0.000000" CreepTranslucentPassTint="1.100000,1.000000,1.100000"/>
+        <CreepSettingsArray index="Medium">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="High">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="Ultra">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+        <CreepSettingsArray index="Extreme">
+            <CreepOpaqueAlphaThreshold value="0.200000"/>
+            <CreepTranslucentMinThreshold value="0.000000"/>
+            <CreepTranslucentMaxThreshold value="0.200000"/>
+            <CreepTranslucentPassTint value="1.100000,1.000000,1.100000"/>
+        </CreepSettingsArray>
+    </CTerrain>
+</Catalog>

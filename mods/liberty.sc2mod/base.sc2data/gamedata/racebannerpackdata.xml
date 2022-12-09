@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CRaceBannerPack id="TwitchPrimeAbathur_RaceBannerPack">
+        <RaceBannerArray value="RaceBanner_Zerg_TwitchPrime2019"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="TwitchPrimeSwann_RaceBannerPack">
+        <RaceBannerArray value="RaceBanner_Terran_TwitchPrime2019"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="TwitchPrimeVorazun_RaceBannerPack">
+        <RaceBannerArray value="RaceBanner_Protoss_TwitchPrime2019"/>
+        <RaceBannerArray value="RaceBanner_Random_TwitchPrime2019"/>
+    </CRaceBannerPack>
+    <!-- War Chest 3 -->
+    <CRaceBannerPack id="WarChestSeason3Terran">
+        <RaceBannerArray value="RaceBanner_Terran_WarChest3"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason3Zerg">
+        <RaceBannerArray value="RaceBanner_Zerg_WarChest3"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason3Protoss">
+        <RaceBannerArray value="RaceBanner_Protoss_WarChest3"/>
+    </CRaceBannerPack>
+    <!-- War Chest 4 -->
+    <CRaceBannerPack id="WarChestSeason4Terran">
+        <RaceBannerArray value="RaceBanner_Terran_WarChest4"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason4Zerg">
+        <RaceBannerArray value="RaceBanner_Zerg_WarChest4"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason4Protoss">
+        <RaceBannerArray value="RaceBanner_Protoss_WarChest4"/>
+    </CRaceBannerPack>
+    <!-- War Chest 5 -->
+    <CRaceBannerPack id="WarChestSeason5Free">
+        <RaceBannerArray value="RaceBanner_Terran_WarChest5_Classic"/>
+        <RaceBannerArray value="RaceBanner_Protoss_WarChest5_Classic"/>
+        <RaceBannerArray value="RaceBanner_Zerg_WarChest5_Classic"/>
+        <RaceBannerArray value="RaceBanner_Random_WarChest5_Classic"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason5Terran">
+        <RaceBannerArray value="RaceBanner_Terran_WarChest5_BattlecruiserSilver"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason5Zerg">
+        <RaceBannerArray value="RaceBanner_Zerg_WarChest5_ViperRCZ"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason5Protoss">
+        <RaceBannerArray value="RaceBanner_Protoss_WarChest5_CarrierIhanrii"/>
+    </CRaceBannerPack>
+    <!-- War Chest 6 -->
+    <CRaceBannerPack id="WarChestSeason6Free">
+        <RaceBannerArray value="RaceBanner_Terran_WarChest6_ClassicCommandCenter"/>
+        <RaceBannerArray value="RaceBanner_Protoss_WarChest6_ClassicNexus"/>
+        <RaceBannerArray value="RaceBanner_Zerg_WarChest6_ClassicHydralisks"/>
+        <RaceBannerArray value="RaceBanner_Random_WarChest6_ClassicIceWorld"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason6Terran">
+        <RaceBannerArray value="RaceBanner_Terran_WarChest6_WidowMine"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason6Zerg">
+        <RaceBannerArray value="RaceBanner_Zerg_WarChest6_Leviathan"/>
+    </CRaceBannerPack>
+    <CRaceBannerPack id="WarChestSeason6Protoss">
+        <RaceBannerArray value="RaceBanner_Protoss_WarChest6_VoidRay"/>
+    </CRaceBannerPack>
+</Catalog>

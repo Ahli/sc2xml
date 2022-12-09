@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!-- Base templates -->
+    <CConsoleSkin default="1" id="ConsoleBase">
+        <?token id="race" value="Generic"?>
+        <?token id="assetname" value="Bogus"?>
+        <?token id="preview" value="Bogus"?>
+        <MinimapPanelModel Model="Assets/UI/Console/##race##/##assetname##/##assetname##_00.m3" Position="-1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <InfoPanelModel Model="Assets/UI/Console/##race##/##assetname##/##assetname##_01.m3" Position="0.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <CommandPanelModel Model="Assets/UI/Console/##race##/##assetname##/##assetname##_02.m3" Position="1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <Light value="Console"/>
+        <Description value="ConsoleSkin/Description/##assetname##"/>
+        <ThumbnailImage value="Assets/Textures/SC2_UI_Collection_HUDs_Thumb_##preview##.dds"/>
+        <FeaturedImage value="Assets/Textures/SC2_UI_Collection_HUDs_Large_##preview##.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin default="1" id="ConsoleBase_Default" parent="ConsoleBase">
+        <Default value="1"/>
+        <Name value="ConsoleSkin/Name/Default"/>
+        <ReleaseDate value="7/27/2010"/>
+        <MinimapPanelModel Model="@@UI/ConsoleModelMinimapPanel"/>
+        <InfoPanelModel Model="@@UI/ConsoleModelInfopanel"/>
+        <CommandPanelModel Model="@@UI/ConsoleModelCommandPanel"/>
+    </CConsoleSkin>
+    <!-- Templates for new console skins whose assets ARE standardized -->
+    <CConsoleSkin default="1" id="ConsoleBase_Standard" parent="ConsoleBase">
+        <MinimapPanelModel Model="Assets/UI/Console/##race##/##id##/##id##_00.m3"/>
+        <InfoPanelModel Model="Assets/UI/Console/##race##/##id##/##id##_01.m3"/>
+        <CommandPanelModel Model="Assets/UI/Console/##race##/##id##/##id##_02.m3"/>
+        <Description value="ConsoleSkin/Description/##id##"/>
+        <ThumbnailImage value="Assets/Textures/SC2_UI_Collection_HUDs_Thumb_##id##.dds"/>
+        <FeaturedImage value="Assets/Textures/SC2_UI_Collection_HUDs_Large_##id##.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin default="1" id="ConsoleBase_Reward" parent="ConsoleBase_Standard">
+        <RequiredReward value="##id##"/>
+    </CConsoleSkin>
+    <CConsoleSkin default="1" id="ConsoleBase_Reward_2D" parent="ConsoleBase_Reward">
+        <MinimapPanelModel Model="Assets/UI/Console/Generic/ConsoleGeneric_Invisible/ConsoleGeneric_Invisible_00.m3"/>
+        <InfoPanelModel Model="Assets/UI/Console/Generic/ConsoleGeneric_Invisible/ConsoleGeneric_Invisible_01.m3"/>
+        <CommandPanelModel Model="Assets/UI/Console/Generic/ConsoleGeneric_Invisible/ConsoleGeneric_Invisible_02.m3"/>
+    </CConsoleSkin>
+    <!-- Default consoles -->
+    <CConsoleSkin id="Dflt" parent="ConsoleBase_Default"/>
+    <CConsoleSkin id="ConsoleProtoss_Default" parent="ConsoleBase_Default" assetname="ProtossDefault" preview="ConsoleSkinProtossDefault">
+        <RequiredReward value="ConsoleSkinProtossDefault"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Default" parent="ConsoleBase_Default" assetname="TerranDefault" preview="ConsoleSkinTerranDefault">
+        <RequiredReward value="ConsoleSkinTerranDefault"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Default" parent="ConsoleBase_Default" assetname="ZergDefault" preview="ConsoleSkinZergDefault">
+        <RequiredReward value="ConsoleSkinZergDefault"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Dehaka" parent="ConsoleBase" assetname="Dehaka_ConsoleZerg" preview="Dehaka_ConsoleZerg" race="Zerg">
+        <Name value="ConsoleSkin/Name/Dehaka_ConsoleZerg"/>
+        <ReleaseDate value="12/5/2017"/>
+        <RequiredReward value="ConsoleSkinZergDehaka"/>
+        <SkinId value="Primal"/>
+        <ProductId value="38198"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Abathur" parent="ConsoleBase" assetname="Abathur_ConsoleZerg" race="Zerg">
+        <ReleaseDate value="2/19/2019"/>
+        <RequiredReward value="ConsoleZerg_Abathur"/>
+        <SkinId value="Evolved"/>
+        <FeaturedImage value="Assets/Textures/sc2_ui_collection_huds_large_consolezerg_abathur.dds"/>
+        <ThumbnailImage value="Assets/Textures/sc2_ui_collection_huds_thumb_consolezerg_abathur.dds"/>
+        <ProductId value="48750"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Fenix" parent="ConsoleBase" assetname="ConsoleProtoss_Purifier" preview="Fenix_ConsoleProtoss" race="Protoss">
+        <Name value="ConsoleSkin/Name/Fenix_ConsoleProtoss"/>
+        <Description value="ConsoleSkin/Description/Fenix_ConsoleProtoss"/>
+        <ReleaseDate value="12/5/2017"/>
+        <RequiredReward value="ConsoleSkinProtossFenix"/>
+        <SkinId value="Purifier"/>
+        <ProductId value="38199"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Swann" parent="ConsoleBase" assetname="ConsoleTerran_Construction" race="Terran">
+        <Description value="ConsoleSkin/Description/ConsoleTerran_Swann"/>
+        <RequiredReward value="ConsoleTerran_Swann"/>
+        <ReleaseDate value="4/9/2019"/>
+        <Light value="ConsoleTerran_Construction"/>
+        <SkinId value="Machined"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consoleterran_machined.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consoleterran_machined.dds"/>
+        <ProductId value="48751"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Zagara" parent="ConsoleBase" assetname="Zagara_ConsoleZerg" race="Zerg">
+        <ReleaseDate value="1/1/2020"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Horner" parent="ConsoleBase" assetname="ConsoleTerran_Junker" preview="ConsoleTerran_Junker" race="Terran">
+        <Name value="ConsoleSkin/Name/ConsoleTerran_Junker"/>
+        <ReleaseDate value="12/5/2017"/>
+        <RequiredReward value="ConsoleSkinTerranHorner"/>
+        <SkinId value="MirasMarauders"/>
+        <ProductId value="38214"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Nova" parent="ConsoleBase_Standard" race="Terran">
+        <ReleaseDate value="1/1/2020"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Classic" parent="ConsoleBase_Reward" race="Protoss">
+        <ReleaseDate value="2/20/2018"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Classic" parent="ConsoleBase_Reward" race="Terran">
+        <ReleaseDate value="2/20/2018"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Classic" parent="ConsoleBase_Reward" race="Zerg">
+        <ReleaseDate value="2/20/2018"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_XelNaga" parent="ConsoleBase" assetname="ConsoleGeneric_Classic" preview="ConsoleGeneric_Classic">
+        <ReleaseDate value="2/20/2018"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Classic"/>
+        <RequiredReward value="ConsoleProtoss_XelNaga"/>
+        <SkinId value="Galactic"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_XelNaga" parent="ConsoleBase" assetname="ConsoleGeneric_Classic" preview="ConsoleGeneric_Classic">
+        <ReleaseDate value="2/20/2018"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Classic"/>
+        <RequiredReward value="ConsoleTerran_XelNaga"/>
+        <SkinId value="Galactic"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_XelNaga" parent="ConsoleBase" assetname="ConsoleGeneric_Classic" preview="ConsoleGeneric_Classic">
+        <ReleaseDate value="2/20/2018"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Classic"/>
+        <RequiredReward value="ConsoleZerg_XelNaga"/>
+        <SkinId value="Galactic"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Forged" parent="ConsoleBase_Reward_2D" race="Protoss">
+        <ReleaseDate value="12/20/2018"/>
+        <SkinId value="Forged"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_forged.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_forged.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_forged.dds"/>
+        <ProductId value="47030"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_CovertOps" parent="ConsoleBase_Reward" race="Terran">
+        <ReleaseDate value="12/20/2018"/>
+        <SkinId value="SpecialForces"/>
+        <MinimapPanelModel Model="Assets/UI/Console/Terran/ConsoleTerran_Nova/ConsoleTerran_Nova_00.m3"/>
+        <InfoPanelModel Model="Assets/UI/Console/Terran/ConsoleTerran_Nova/ConsoleTerran_Nova_01.m3"/>
+        <CommandPanelModel Model="Assets/UI/Console/Terran/ConsoleTerran_Nova/ConsoleTerran_Nova_02.m3"/>
+        <ProductId value="47032"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Mecha" parent="ConsoleBase_Reward_2D" race="Zerg">
+        <ReleaseDate value="12/20/2018"/>
+        <SkinId value="Simulant"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_simulant.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_simulant.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_simulant.dds"/>
+        <ProductId value="47031"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Nerazim" parent="ConsoleBase_Reward_2D" race="Protoss">
+        <ReleaseDate value="5/20/2019"/>
+        <SkinId value="Nerazim"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_nerazim.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_nerazim.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_nerazim.dds"/>
+        <ProductId value="48752"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_ArcadePurple" parent="ConsoleBase_Reward_2D" race="Terran">
+        <ReleaseDate value="5/21/2019"/>
+        <SkinId value="ArcadeCabinetPurple"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_ArcadePurple"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_ArcadePurple"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_arcadecabinetpurple.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_arcadecabinetpurple.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_arcadecabinetpurple.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_arcadecabinetpurple.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_arcadecabinetpurple.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_ArcadePurple" parent="ConsoleBase_Reward_2D" race="Zerg">
+        <ReleaseDate value="5/21/2019"/>
+        <SkinId value="ArcadeCabinetPurple"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_ArcadePurple"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_ArcadePurple"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_arcadecabinetpurple.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_arcadecabinetpurple.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_arcadecabinetpurple.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_arcadecabinetpurple.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_arcadecabinetpurple.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_ArcadePurple" parent="ConsoleBase_Reward_2D" race="Protoss">
+        <ReleaseDate value="5/21/2019"/>
+        <SkinId value="ArcadeCabinetPurple"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_ArcadePurple"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_ArcadePurple"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_arcadecabinetpurple.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_arcadecabinetpurple.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_arcadecabinetpurple.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_arcadecabinetpurple.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_arcadecabinetpurple.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Imperial" parent="ConsoleBase_Reward_2D" race="Terran">
+        <ReleaseDate value="5/20/2019"/>
+        <SkinId value="Imperial"/>
+        <!-- <RequiredReward value="ConsoleProtoss_Nerazim"/> -->
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_imperial.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_imperial.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_imperial.dds"/>
+        <!-- <ProductId value="48752"/> -->
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Alliance" parent="ConsoleBase_Reward_2D" race="Terran">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Alliance"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Alliance"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Alliance"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_alliance.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_alliance.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_alliance.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_alliance.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_alliance.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Alliance" parent="ConsoleBase_Reward_2D" race="Zerg">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Alliance"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Alliance"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Alliance"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_alliance.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_alliance.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_alliance.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_alliance.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_alliance.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Alliance" parent="ConsoleBase_Reward_2D" race="Protoss">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Alliance"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Alliance"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Alliance"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_alliance.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_alliance.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_alliance.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_alliance.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_alliance.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Horde" parent="ConsoleBase_Reward_2D" race="Terran">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Horde"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Horde"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Horde"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_horde.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_horde.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_horde.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_horde.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_horde.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Horde" parent="ConsoleBase_Reward_2D" race="Zerg">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Horde"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Horde"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Horde"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_horde.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_horde.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_horde.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_horde.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_horde.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Horde" parent="ConsoleBase_Reward_2D" race="Protoss">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Horde"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Horde"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Horde"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_horde.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_horde.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_horde.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_horde.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_horde.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Sentinels" parent="ConsoleBase_Reward_2D" race="Terran">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Sentinels"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Sentinels"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Sentinels"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_sentinels.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_sentinels.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_sentinels.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_sentinels.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_sentinels.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Sentinels" parent="ConsoleBase_Reward_2D" race="Zerg">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Sentinels"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Sentinels"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Sentinels"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_sentinels.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_sentinels.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_sentinels.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_sentinels.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_sentinels.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Sentinels" parent="ConsoleBase_Reward_2D" race="Protoss">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Sentinels"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Sentinels"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Sentinels"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_sentinels.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_sentinels.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_sentinels.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_sentinels.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_sentinels.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Scourge" parent="ConsoleBase_Reward_2D" race="Terran">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Scourge"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Scourge"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Scourge"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_scourge.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_scourge.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_scourge.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_scourge.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_scourge.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_Scourge" parent="ConsoleBase_Reward_2D" race="Zerg">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Scourge"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Scourge"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Scourge"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_scourge.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_scourge.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_scourge.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_scourge.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_scourge.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Scourge" parent="ConsoleBase_Reward_2D" race="Protoss">
+        <ReleaseDate value="10/22/2019"/>
+        <SkinId value="Scourge"/>
+        <Name value="ConsoleSkin/Name/ConsoleGeneric_Scourge"/>
+        <Description value="ConsoleSkin/Description/ConsoleGeneric_Scourge"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_scourge.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_scourge.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_scourge.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolegeneric_scourge.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolegeneric_scourge.dds"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Silver" parent="ConsoleBase_Reward_2D" race="Terran">
+        <ReleaseDate value="6/4/2020"/>
+        <SkinId value="Tyrador"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_tyrador.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_tyrador.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_tyrador.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consoleterran_tyrador.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consoleterran_tyrador.dds"/>
+        <ProductId value="73804"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleZerg_RCZ" parent="ConsoleBase_Reward_2D" race="Zerg">
+        <ReleaseDate value="6/4/2020"/>
+        <SkinId value="Cerberus"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_cerberus.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_cerberus.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_cerberus.dds"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consolezerg_cerberus.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consolezerg_cerberus.dds"/>
+        <ProductId value="73805"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleProtoss_Ihanrii" parent="ConsoleBase_Reward_2D" race="Protoss">
+        <ReleaseDate value="6/4/2020"/>
+        <SkinId value="Ihanrii"/>
+        <CommandPanelImage value="Assets/Textures/ui_console_panel_command_ihanrii.dds"/>
+        <InfoPanelImage value="Assets/Textures/ui_console_panel_unitinfo_ihanrii.dds"/>
+        <MinimapPanelImage value="Assets/Textures/ui_console_panel_minimap_ihanrii.dds"/>
+        <ProductId value="73821"/>
+    </CConsoleSkin>
+</Catalog>

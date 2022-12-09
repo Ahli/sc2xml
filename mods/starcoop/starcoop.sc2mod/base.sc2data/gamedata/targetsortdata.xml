@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTargetSortBehaviorCount id="LowestAscendantStacks">
+        <WhichUnit Value="Target"/>
+        <Behavior value="AscendantSacrificeSelfBuff"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortBehaviorCount id="CommanderPrestigeAlarakMechLowestStacks">
+        <WhichUnit Value="Target"/>
+        <Behavior value="CommanderPrestigeAlarakMechBuff"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortBehaviorCount id="CarryMineralFieldMinerals">
+        <Behavior value="CarryMineralFieldMinerals"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortBehaviorCount id="CarryHighYieldMineralFieldMinerals">
+        <Behavior value="CarryHighYieldMineralFieldMinerals"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortBehaviorCount id="CarryHarvestableVespeneGeyserGasZerg">
+        <Behavior value="CarryHarvestableVespeneGeyserGasZerg"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortBehaviorCount id="CommanderPrestigeZeratulTornadoes">
+        <Behavior value="CommanderPrestigeZeratulTornadoesDoT"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortBehaviorCount id="StrongestSurviveLeechPoriority">
+        <WhichUnit Value="Target"/>
+        <Behavior value="StrongestSurviveLeechPriority"/>
+        <Descending value="1"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortBehaviorCount id="TSCommanderPrestigeKerriganAbilitiesStun">
+        <WhichUnit Value="Target"/>
+        <Behavior value="CommanderPrestigeKerriganAbilitiesStun"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortInterruptible id="TSInterruptibleFirst">
+        <WhichUnit Value="Target"/>
+        <Descending value="1"/>
+        <Value value="1"/>
+    </CTargetSortInterruptible>
+    <CTargetSortBehaviorCount id="TSCODXelNagaConstructMissiles">
+        <WhichUnit Value="Target"/>
+        <Behavior value="CODXelNagaConstructMissilesTargeted"/>
+    </CTargetSortBehaviorCount>
+    <CTargetSortValidator id="TSNotDeathFleet">
+        <Descending value="1"/>
+        <Validator value="IsDeathFleet"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="TSNotDestructible">
+        <Validator value="NotDestructible"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="TSNotHeroicOrMapBoss">
+        <Validator value="NotMapBossOrHeroic"/>
+    </CTargetSortValidator>
+    <CTargetSortField id="TSSupply">
+        <Field value="Food"/>
+        <Value value="0"/>
+        <Descending value="1"/>
+    </CTargetSortField>
+    <CTargetSortValidator id="TSUnitsAndAttackingStructures">
+        <Validator value="UnitOrAttackingStructure"/>
+    </CTargetSortValidator>
+    <CTargetSortField id="HighestUnitLevel">
+        <Descending value="1"/>
+        <Field value="Level"/>
+        <Value value="0"/>
+    </CTargetSortField>
+</Catalog>

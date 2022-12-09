@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CDecalPack id="CarbotDecalsPack">
+        <ProductId value="22702"/>
+        <DecalArray value="Decal_CarbotInfestor_Terran"/>
+        <DecalArray value="Decal_CarbotInfestor_Zerg"/>
+        <DecalArray value="Decal_CarbotInfestor_Protoss"/>
+        <DecalArray value="Decal_CarbotPylon_Terran"/>
+        <DecalArray value="Decal_CarbotPylon_Zerg"/>
+        <DecalArray value="Decal_CarbotPylon_Protoss"/>
+        <DecalArray value="Decal_CarbotMarine_Terran"/>
+        <DecalArray value="Decal_CarbotMarine_Zerg"/>
+        <DecalArray value="Decal_CarbotMarine_Protoss"/>
+    </CDecalPack>
+    <CDecalPack id="TotalBiscuitTribute_DecalPack">
+        <ProductId value="40190"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_BoxingTrunks_Terran"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_BoxingTrunks_Zerg"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_BoxingTrunks_Protoss"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_Axiom_Terran"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_Axiom_Zerg"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_Axiom_Protoss"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_TopHat_Terran"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_TopHat_Zerg"/>
+        <DecalArray value="Decal_TotalBiscuitTribute_TopHat_Protoss"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason1_Terran">
+        <DecalArray value="Decal_WarChestSeason1_Terran"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason1_Zerg">
+        <DecalArray value="Decal_WarChestSeason1_Zerg"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason1_Protoss">
+        <DecalArray value="Decal_WarChestSeason1_Protoss"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason4_Terran">
+        <DecalArray value="Decal_Terran_0084_01"/>
+        <DecalArray value="Decal_Zerg_0084_01"/>
+        <DecalArray value="Decal_Protoss_0084_01"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason4_Zerg">
+        <DecalArray value="Decal_Terran_0082_01"/>
+        <DecalArray value="Decal_Zerg_0082_01"/>
+        <DecalArray value="Decal_Protoss_0082_01"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason4_Protoss">
+        <DecalArray value="Decal_Terran_0083_01"/>
+        <DecalArray value="Decal_Zerg_0083_01"/>
+        <DecalArray value="Decal_Protoss_0083_01"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason5_Terran">
+        <DecalArray value="Decal_Terran_0085_01"/>
+        <DecalArray value="Decal_Zerg_0085_01"/>
+        <DecalArray value="Decal_Protoss_0085_01"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason5_Zerg">
+        <DecalArray value="Decal_Terran_0088_01"/>
+        <DecalArray value="Decal_Zerg_0088_01"/>
+        <DecalArray value="Decal_Protoss_0088_01"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason5_Protoss">
+        <DecalArray value="Decal_Terran_0086_01"/>
+        <DecalArray value="Decal_Zerg_0086_01"/>
+        <DecalArray value="Decal_Protoss_0086_01"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason5_Free">
+        <DecalArray value="Decal_Terran_0087_01"/>
+        <DecalArray value="Decal_Zerg_0087_01"/>
+        <DecalArray value="Decal_Protoss_0087_01"/>
+    </CDecalPack>
+    <CDecalPack id="WarChestSeason6_Free">
+        <DecalArray value="Decal_Terran_0090_01"/>
+        <DecalArray value="Decal_Zerg_0090_01"/>
+        <DecalArray value="Decal_Protoss_0090_01"/>
+    </CDecalPack>
+</Catalog>

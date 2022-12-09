@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CArtifact default="1">
+        <Name value="Artifact/Name/##id##"/>
+        <InfoText value="Artifact/Info/##id##"/>
+        <Model value="Artifact##id##"/>
+        <TileCutsceneFile value="Cutscenes\FrameArtifact_##id##.StormCutscene"/>
+        <PreviewCutsceneFile value="Cutscenes\StoreArtifact_##id##.StormCutscene"/>
+        <HeroSelectCutsceneFile value="Cutscenes\HeroSelectArtifact_##id##.StormCutscene"/>
+        <AdditionalSearchText value="Artifact/AdditionalSearchText/##id##"/>
+        <Talent value="Artifact##id##"/>
+        <HyperlinkId value="##id##"/>
+        <ApplyTo index="Self" value="1"/>
+    </CArtifact>
+</Catalog>

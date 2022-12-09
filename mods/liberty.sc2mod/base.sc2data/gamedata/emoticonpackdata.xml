@@ -1,0 +1,1491 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEmoticonPack id="Default">
+        <Default value="1"/>
+        <ReleaseDate value="7/27/2010"/>
+        <EmoticonArray value="happy"/>
+        <EmoticonArray value="sad"/>
+        <EmoticonArray value="angry"/>
+        <EmoticonArray value="surprised"/>
+        <EmoticonArray value="cool"/>
+        <EmoticonArray value="inlove"/>
+        <EmoticonArray value="speechless"/>
+        <EmoticonArray value="rofl"/>
+        <EmoticonArray value="silly"/>
+        <EmoticonArray value="zipped"/>
+        <EmoticonArray value="scared"/>
+        <EmoticonArray value="sleepy"/>
+        <EmoticonArray value="thinking"/>
+        <EmoticonArray value="kiss"/>
+        <EmoticonArray value="nerd"/>
+        <EmoticonArray value="party"/>
+        <EmoticonArray value="devil"/>
+        <EmoticonArray value="infested"/>
+        <EmoticonArray value="gg"/>
+        <EmoticonArray value="glhf"/>
+        <EmoticonArray value="flex"/>
+        <EmoticonArray value="thumbsup"/>
+        <EmoticonArray value="thumbsdown"/>
+        <EmoticonArray value="toast"/>
+        <EmoticonArray value="minerals"/>
+        <EmoticonArray value="gminerals"/>
+        <EmoticonArray value="gas"/>
+        <EmoticonArray value="mochi"/>
+        <EmoticonArray value="poo"/>
+        <EmoticonArray value="rainbow"/>
+        <EmoticonArray value="hearts"/>
+        <EmoticonArray value="cake"/>
+        <EmoticonArray value="sc2"/>
+        <EmoticonArray value="random"/>
+        <EmoticonArray value="terran"/>
+        <EmoticonArray value="zerg"/>
+        <EmoticonArray value="protoss"/>
+        <EmoticonArray value="mustache"/>
+        <EmoticonArray value="business"/>
+        <EmoticonArray value="purplerain"/>
+        <EmoticonArray value="pizza"/>
+        <EmoticonArray value="salty"/>
+        <EmoticonArray value="stim"/>
+        <EmoticonArray value="swarmqueen"/>
+        <EmoticonArray value="coffeetime"/>
+        <EmoticonArray value="cutealarak"/>
+        <EmoticonArray value="goldtrophy"/>
+        <EmoticonArray value="kitty"/>
+        <EmoticonArray value="tuna"/>
+        <EmoticonArray value="arya"/>
+        <EmoticonArray value="ahoot"/>
+        <EmoticonArray value="jtrain"/>
+        <EmoticonArray value="jthursday"/>
+        <EmoticonArray value="myheart"/>
+        <EmoticonArray value="uhaveapackage"/>
+        <EmoticonArray value="gameheart"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WingsOfLiberty">
+        <ReleaseDate value="7/27/2010"/>
+        <Image Index="1"/>
+        <RequiredCampaign Campaign="WingsOfLiberty"/>
+        <EmoticonArray value="scv"/>
+        <EmoticonArray value="depot"/>
+        <EmoticonArray value="bunker"/>
+        <EmoticonArray value="theart"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="HeartOfTheSwarm">
+        <ReleaseDate value="3/12/2013"/>
+        <Image Index="2"/>
+        <RequiredCampaign Campaign="HeartOfTheSwarm"/>
+        <EmoticonArray value="drone"/>
+        <EmoticonArray value="overlord"/>
+        <EmoticonArray value="baneling"/>
+        <EmoticonArray value="zheart"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="LegacyOfTheVoid">
+        <ReleaseDate value="11/10/2015"/>
+        <Image Index="3"/>
+        <RequiredCampaign Campaign="LegacyOfTheVoid"/>
+        <EmoticonArray value="probe"/>
+        <EmoticonArray value="pylon"/>
+        <EmoticonArray value="cannon"/>
+        <EmoticonArray value="pheart"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderAbathur">
+        <ReleaseDate value="6/1/2016"/>
+        <Image Index="5"/>
+        <RequiredRewardArray value="CommanderAbathur"/>
+        <RequiredRewardArray value="Emoticon_Symbiote"/>
+        <RequiredRewardArray value="Emoticon_Locust"/>
+        <RequiredCommander value="Abathur"/>
+        <EmoticonArray value="symbiote"/>
+        <EmoticonArray value="locust"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="NovaDLC1">
+        <ReleaseDate value="3/30/2016"/>
+        <Image Index="4"/>
+        <RequiredCampaign Campaign="NovaDLC1"/>
+        <EmoticonArray value="snipe"/>
+        <EmoticonArray value="nuke"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderAlarak">
+        <ReleaseDate value="9/13/2016"/>
+        <Image Index="6"/>
+        <RequiredRewardArray value="CommanderAlarak"/>
+        <RequiredRewardArray value="Emoticon_Taldarim"/>
+        <RequiredRewardArray value="Emoticon_RedPsiBlade"/>
+        <RequiredRewardArray value="Emoticon_NyonTaldarim"/>
+        <RequiredCommander value="Alarak"/>
+        <EmoticonArray value="taldarim"/>
+        <EmoticonArray value="redpsi"/>
+        <EmoticonArray value="nyontal"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderNova">
+        <ReleaseDate value="10/17/2016"/>
+        <Image Index="7"/>
+        <RequiredRewardArray value="CommanderNova"/>
+        <RequiredRewardArray value="Emoticon_Cloak"/>
+        <RequiredRewardArray value="Emoticon_Ghost"/>
+        <RequiredCommander value="Nova"/>
+        <EmoticonArray value="cloak"/>
+        <EmoticonArray value="ghost"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CarbotProtoss">
+        <ReleaseDate value="11/22/2016"/>
+        <Image Index="8"/>
+        <ProductId value="22642"/>
+        <RequiredRewardArray value="Emoticon_CarbotCannon"/>
+        <RequiredRewardArray value="Emoticon_CarbotExecutor"/>
+        <RequiredRewardArray value="Emoticon_CarbotHighTemplar"/>
+        <RequiredRewardArray value="Emoticon_CarbotOracleGG"/>
+        <RequiredRewardArray value="Emoticon_CarbotProbeCheese"/>
+        <RequiredRewardArray value="Emoticon_CarbotProbeGift"/>
+        <RequiredRewardArray value="Emoticon_CarbotPylonCool"/>
+        <RequiredRewardArray value="Emoticon_CarbotSentryLoLKR"/>
+        <RequiredRewardArray value="Emoticon_CarbotSentryLoL"/>
+        <RequiredRewardArray value="Emoticon_CarbotSurrender"/>
+        <RequiredRewardArray value="Emoticon_CarbotZealotRage"/>
+        <EmoticonArray value="carbotcannon"/>
+        <EmoticonArray value="carbotexecutor"/>
+        <EmoticonArray value="carbothightemplar"/>
+        <EmoticonArray value="carbotoraclegg"/>
+        <EmoticonArray value="carbotprobecheese"/>
+        <EmoticonArray value="carbotprobegift"/>
+        <EmoticonArray value="carbotpyloncool"/>
+        <EmoticonArray value="carbotsentrylolkr"/>
+        <EmoticonArray value="carbotsentrylol"/>
+        <EmoticonArray value="carbotsurrender"/>
+        <EmoticonArray value="carbotzealotrage"/>
+        <ParentBundle value="CarbotCompleteBundle"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CarbotTerran">
+        <ReleaseDate value="11/22/2016"/>
+        <Image Index="9"/>
+        <ProductId value="22641"/>
+        <RequiredRewardArray value="Emoticon_CarbotStarShock"/>
+        <RequiredRewardArray value="Emoticon_CarbotStarHappy"/>
+        <RequiredRewardArray value="Emoticon_CarbotSCVGift"/>
+        <RequiredRewardArray value="Emoticon_CarbotReaperBomber"/>
+        <RequiredRewardArray value="Emoticon_CarbotRaynor"/>
+        <RequiredRewardArray value="Emoticon_CarbotMULE"/>
+        <RequiredRewardArray value="Emoticon_CarbotMarine"/>
+        <RequiredRewardArray value="Emoticon_CarbotMarineCptSalute"/>
+        <RequiredRewardArray value="Emoticon_CarbotAdjutant"/>
+        <RequiredRewardArray value="Emoticon_CarbotWidowMineGG"/>
+        <EmoticonArray value="carbotstarshock"/>
+        <EmoticonArray value="carbotstarhappy"/>
+        <EmoticonArray value="carbotscvgift"/>
+        <EmoticonArray value="carbotreaperbomber"/>
+        <EmoticonArray value="carbotraynor"/>
+        <EmoticonArray value="carbotmule"/>
+        <EmoticonArray value="carbotmarine"/>
+        <EmoticonArray value="carbotmarinecptsalute"/>
+        <EmoticonArray value="carbotadjutant"/>
+        <EmoticonArray value="carbotwidowminegg"/>
+        <ParentBundle value="CarbotCompleteBundle"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CarbotZerg">
+        <ReleaseDate value="11/22/2016"/>
+        <Image Index="10"/>
+        <ProductId value="22643"/>
+        <RequiredRewardArray value="Emoticon_CarbotZergling"/>
+        <RequiredRewardArray value="Emoticon_CarbotOverseer"/>
+        <RequiredRewardArray value="Emoticon_CarbotOverlordUnimpressed"/>
+        <RequiredRewardArray value="Emoticon_CarbotMutalisk"/>
+        <RequiredRewardArray value="Emoticon_CarbotLarva"/>
+        <RequiredRewardArray value="Emoticon_CarbotInfestedTerranLaugh"/>
+        <RequiredRewardArray value="Emoticon_CarbotHydralisk"/>
+        <RequiredRewardArray value="Emoticon_CarbotDroneGift"/>
+        <RequiredRewardArray value="Emoticon_CarbotDerpfestor"/>
+        <RequiredRewardArray value="Emoticon_CarbotZerglingSleep"/>
+        <EmoticonArray value="carbotzergling"/>
+        <EmoticonArray value="carbotoverseer"/>
+        <EmoticonArray value="carbotoverlordunimpressed"/>
+        <EmoticonArray value="carbotmutalisk"/>
+        <EmoticonArray value="carbotlarva"/>
+        <EmoticonArray value="carbotinfestedterranlaugh"/>
+        <EmoticonArray value="carbothydralisk"/>
+        <EmoticonArray value="carbotdronegift"/>
+        <EmoticonArray value="carbotderpfestor"/>
+        <EmoticonArray value="carbotzerglingsleep"/>
+        <ParentBundle value="CarbotCompleteBundle"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderStukov">
+        <ReleaseDate value="12/17/2016"/>
+        <Image Index="11"/>
+        <RequiredRewardArray value="CommanderStukov"/>
+        <RequiredRewardArray value="Emoticon_Stukov"/>
+        <RequiredRewardArray value="Emoticon_InfestedAdjutant"/>
+        <RequiredCommander value="Stukov"/>
+        <EmoticonArray value="stukov"/>
+        <EmoticonArray value="infestedadjutant"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderFenix">
+        <ReleaseDate value="12/17/2016"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="CommanderFenix"/>
+        <RequiredRewardArray value="Emoticon_Purifier"/>
+        <RequiredRewardArray value="Emoticon_Fenix"/>
+        <RequiredCommander value="Fenix"/>
+        <EmoticonArray value="purifier"/>
+        <EmoticonArray value="fenix"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="Twitch20thAnniversary">
+        <Name value="Emoticon/Description/twitch"/>
+        <ShortName value="Emoticon/Description/twitch"/>
+        <ReleaseDate value="3/6/2018"/>
+        <Image Index="19"/>
+        <RequiredRewardArray value="Emoticon_Twitch"/>
+        <EmoticonArray value="twitch"/>
+    </CEmoticonPack>
+    <!-- Total Biscuit Tribute -->
+    <CEmoticonPack id="TotalBiscuitTribute_EmoticonPack">
+        <ReleaseDate value="7/5/2018"/>
+        <Image Index="21"/>
+        <ProductId value="40190"/>
+        <RequiredRewardArray value="Emoticon_LUL"/>
+        <RequiredRewardArray value="Emoticon_Axiom"/>
+        <RequiredRewardArray value="Emoticon_TopHat"/>
+        <EmoticonArray value="lul"/>
+        <EmoticonArray value="axiom"/>
+        <EmoticonArray value="tophat"/>
+        <ParentBundle value="TotalBiscuitTributeBundle"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <!-- War Chest Season 1 -->
+    <CEmoticonPack id="WarChestTerran_FeelsGoodMarine">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_FeelsGoodMarine"/>
+        <EmoticonArray value="feelsgood"/>
+        <ParentBundle value="WarChestSeason1TerranTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_FistBump">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_FistBump"/>
+        <EmoticonArray value="fistbump"/>
+        <ParentBundle value="WarChestSeason1TerranTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Turtle">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_TerranTurtle"/>
+        <EmoticonArray value="terranturtle"/>
+        <ParentBundle value="WarChestSeason1TerranTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Baited">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Baited"/>
+        <EmoticonArray value="baited"/>
+        <ParentBundle value="WarChestSeason1TerranTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Applause">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Applause"/>
+        <EmoticonArray value="applause"/>
+        <ParentBundle value="WarChestSeason1TerranTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_WTF">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_WTF"/>
+        <EmoticonArray value="wtf"/>
+        <ParentBundle value="WarChestSeason1TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_QQ">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_QQ"/>
+        <EmoticonArray value="qq"/>
+        <ParentBundle value="WarChestSeason1TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Peace">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Peace"/>
+        <EmoticonArray value="peace"/>
+        <ParentBundle value="WarChestSeason1TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_RestInPieces">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_RestInPieces"/>
+        <EmoticonArray value="rip"/>
+        <ParentBundle value="WarChestSeason1ZergTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_StinkyTofu">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_StinkyTofu"/>
+        <EmoticonArray value="stinkytofu"/>
+        <ParentBundle value="WarChestSeason1ZergTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Kappa">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Kappa"/>
+        <EmoticonArray value="keppa"/>
+        <ParentBundle value="WarChestSeason1ZergTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_TeaTime">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_TeaTime"/>
+        <EmoticonArray value="teatime"/>
+        <ParentBundle value="WarChestSeason1ZergTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_FingersCrossed">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_FingersCrossed"/>
+        <EmoticonArray value="fingerscrossed"/>
+        <ParentBundle value="WarChestSeason1ZergTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Gift">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Gift"/>
+        <EmoticonArray value="gift"/>
+        <ParentBundle value="WarChestSeason1ProtossTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Cheese">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Cheese"/>
+        <EmoticonArray value="cheese"/>
+        <ParentBundle value="WarChestSeason1ProtossTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Survivor">
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Survivor"/>
+        <EmoticonArray value="survivor"/>
+        <ParentBundle value="WarChestSeason1ProtossTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran">
+        <ShortName value="EmoticonPack/ShortName/WarChestTerran"/>
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="13"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait02"/>
+        <EmoticonArray value="feelsgood"/>
+        <EmoticonArray value="fistbump"/>
+        <EmoticonArray value="terranturtle"/>
+        <EmoticonArray value="baited"/>
+        <EmoticonArray value="applause"/>
+        <EmoticonArray value="wtf"/>
+        <EmoticonArray value="qq"/>
+        <EmoticonArray value="peace"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg">
+        <ShortName value="EmoticonPack/ShortName/WarChestZerg"/>
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="14"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait04"/>
+        <EmoticonArray value="rip"/>
+        <EmoticonArray value="stinkytofu"/>
+        <EmoticonArray value="keppa"/>
+        <EmoticonArray value="teatime"/>
+        <EmoticonArray value="fingerscrossed"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss">
+        <ShortName value="EmoticonPack/ShortName/WarChestProtoss"/>
+        <ReleaseDate value="7/20/2017"/>
+        <Image Index="15"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait00"/>
+        <EmoticonArray value="gift"/>
+        <EmoticonArray value="cheese"/>
+        <EmoticonArray value="survivor"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <!-- War Chest Season 2 -->
+    <CEmoticonPack id="WarChestTerran_Lying">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Lying"/>
+        <EmoticonArray value="lying"/>
+        <ParentBundle value="WarChestSeason2TerranTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Sick">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Sick"/>
+        <EmoticonArray value="sick"/>
+        <ParentBundle value="WarChestSeason2TerranTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Explode">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Explode"/>
+        <EmoticonArray value="explode"/>
+        <ParentBundle value="WarChestSeason2TerranTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Joker">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Joker"/>
+        <EmoticonArray value="joker"/>
+        <ParentBundle value="WarChestSeason2TerranTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Mule">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Mule"/>
+        <EmoticonArray value="mule"/>
+        <ParentBundle value="WarChestSeason2TerranTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_RaynorSkull">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_RaynorSkull"/>
+        <EmoticonArray value="skull"/>
+        <ParentBundle value="WarChestSeason2TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Hardcore">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Hardcore"/>
+        <EmoticonArray value="hard"/>
+        <ParentBundle value="WarChestSeason2TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Cowboy">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Cowboy"/>
+        <EmoticonArray value="cowboy"/>
+        <ParentBundle value="WarChestSeason2TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Salute">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Salute"/>
+        <EmoticonArray value="salute"/>
+        <ParentBundle value="WarChestSeason2ZergTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Drool">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Drool"/>
+        <EmoticonArray value="drool"/>
+        <ParentBundle value="WarChestSeason2ZergTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Scream">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Scream"/>
+        <EmoticonArray value="scream"/>
+        <ParentBundle value="WarChestSeason2ZergTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Creep">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Creep"/>
+        <EmoticonArray value="creep"/>
+        <ParentBundle value="WarChestSeason2ZergTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Rush">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Rush"/>
+        <EmoticonArray value="rush"/>
+        <ParentBundle value="WarChestSeason2ZergTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_HearNoEvil">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_HearNoEvil"/>
+        <EmoticonArray value="nohear"/>
+        <ParentBundle value="WarChestSeason2ProtossTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_SpeakNoEvil">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_SpeakNoEvil"/>
+        <EmoticonArray value="nospeak"/>
+        <ParentBundle value="WarChestSeason2ProtossTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_SeeNoEvil">
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_SeeNoEvil"/>
+        <EmoticonArray value="nosee"/>
+        <ParentBundle value="WarChestSeason2ProtossTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest2Terran">
+        <ShortName value="EmoticonPack/ShortName/WarChest2Terran"/>
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="13"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait15"/>
+        <EmoticonArray value="lying"/>
+        <EmoticonArray value="sick"/>
+        <EmoticonArray value="explode"/>
+        <EmoticonArray value="joker"/>
+        <EmoticonArray value="mule"/>
+        <EmoticonArray value="skull"/>
+        <EmoticonArray value="hard"/>
+        <EmoticonArray value="cowboy"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest2Zerg">
+        <ShortName value="EmoticonPack/ShortName/WarChest2Zerg"/>
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="14"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait17"/>
+        <EmoticonArray value="salute"/>
+        <EmoticonArray value="drool"/>
+        <EmoticonArray value="scream"/>
+        <EmoticonArray value="creep"/>
+        <EmoticonArray value="rush"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest2Protoss">
+        <ShortName value="EmoticonPack/ShortName/WarChest2Protoss"/>
+        <ReleaseDate value="12/5/2017"/>
+        <Image Index="15"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait13"/>
+        <EmoticonArray value="nohear"/>
+        <EmoticonArray value="nospeak"/>
+        <EmoticonArray value="nosee"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <!-- War Chest Season 3 -->
+    <CEmoticonPack id="WarChestTerran_Medivac">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Medivac"/>
+        <EmoticonArray value="medivac"/>
+        <ParentBundle value="WarChestSeason3TerranTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Dead">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Dead"/>
+        <EmoticonArray value="dead"/>
+        <ParentBundle value="WarChestSeason3TerranTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_CantLook">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_CantLook"/>
+        <EmoticonArray value="cantlook"/>
+        <ParentBundle value="WarChestSeason3TerranTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_PointRight">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_PointRight"/>
+        <EmoticonArray value="pointright"/>
+        <ParentBundle value="WarChestSeason3TerranTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_PointLeft">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_PointLeft"/>
+        <EmoticonArray value="pointleft"/>
+        <ParentBundle value="WarChestSeason3TerranTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Skeleton">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Skeleton"/>
+        <EmoticonArray value="skeleton"/>
+        <ParentBundle value="WarChestSeason3TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Cheeseburger">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Cheeseburger"/>
+        <EmoticonArray value="cheeseburger"/>
+        <ParentBundle value="WarChestSeason3TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Potato">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Potato"/>
+        <EmoticonArray value="potato"/>
+        <ParentBundle value="WarChestSeason3TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Dropperlord">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Dropperlord"/>
+        <EmoticonArray value="dropperlord"/>
+        <ParentBundle value="WarChestSeason3ZergTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Pineapple">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Pineapple"/>
+        <EmoticonArray value="pineapple"/>
+        <ParentBundle value="WarChestSeason3ZergTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_BWEgg">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_BWEgg"/>
+        <EmoticonArray value="bwegg"/>
+        <ParentBundle value="WarChestSeason3ZergTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_BWHydralisk">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_BWHydralisk"/>
+        <EmoticonArray value="bwhydralisk"/>
+        <ParentBundle value="WarChestSeason3ZergTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_BWMutalisk">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_BWMutalisk"/>
+        <EmoticonArray value="bwmutalisk"/>
+        <ParentBundle value="WarChestSeason3ZergTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_WarpPrism">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_WarpPrism"/>
+        <EmoticonArray value="warpprism"/>
+        <ParentBundle value="WarChestSeason3ProtossTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_WarpIn">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_WarpIn"/>
+        <EmoticonArray value="warpin"/>
+        <ParentBundle value="WarChestSeason3ProtossTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_DoubleProxy">
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_DoubleProxy"/>
+        <EmoticonArray value="doubleproxy"/>
+        <ParentBundle value="WarChestSeason3ProtossTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest3Terran">
+        <ShortName value="EmoticonPack/ShortName/WarChest3Terran"/>
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="13"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait18"/>
+        <EmoticonArray value="medivac"/>
+        <EmoticonArray value="dead"/>
+        <EmoticonArray value="cantlook"/>
+        <EmoticonArray value="pointright"/>
+        <EmoticonArray value="pointleft"/>
+        <EmoticonArray value="skeleton"/>
+        <EmoticonArray value="cheeseburger"/>
+        <EmoticonArray value="potato"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest3Zerg">
+        <ShortName value="EmoticonPack/ShortName/WarChest3Zerg"/>
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="14"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait19"/>
+        <EmoticonArray value="dropperlord"/>
+        <EmoticonArray value="pineapple"/>
+        <EmoticonArray value="bwegg"/>
+        <EmoticonArray value="bwhydralisk"/>
+        <EmoticonArray value="bwmutalisk"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest3Protoss">
+        <ShortName value="EmoticonPack/ShortName/WarChest3Protoss"/>
+        <ReleaseDate value="8/9/2018"/>
+        <Image Index="15"/>
+        <RequiredRewardArray value="Portrait_WarChest_Portrait20"/>
+        <EmoticonArray value="warpprism"/>
+        <EmoticonArray value="warpin"/>
+        <EmoticonArray value="doubleproxy"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <!-- War Chest Season 4 -->
+    <CEmoticonPack id="WarChestTerran_CanisterRifle">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_CanisterRifle"/>
+        <EmoticonArray value="canisterrifle"/>
+        <ParentBundle value="WarChestSeason4TerranTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Koi">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Koi"/>
+        <EmoticonArray value="koi"/>
+        <ParentBundle value="WarChestSeason4TerranTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Junkbot">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Junkbot"/>
+        <EmoticonArray value="junkbot"/>
+        <ParentBundle value="WarChestSeason4TerranTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Sombrero">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Sombrero"/>
+        <EmoticonArray value="sombrero"/>
+        <ParentBundle value="WarChestSeason4TerranTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_GLHFTerran">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_GoodLuckTerran"/>
+        <EmoticonArray value="glterran"/>
+        <EmoticonArray value="hfterran"/>
+        <ParentBundle value="WarChestSeason4TerranTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Simulant">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Simulant"/>
+        <EmoticonArray value="simulant"/>
+        <ParentBundle value="WarChestSeason4ZergTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Shark">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Shark"/>
+        <EmoticonArray value="shark"/>
+        <ParentBundle value="WarChestSeason4ZergTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Scantipede">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Scantipede"/>
+        <EmoticonArray value="scantipede"/>
+        <ParentBundle value="WarChestSeason4ZergTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Stovepipe">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Stovepipe"/>
+        <EmoticonArray value="stovepipe"/>
+        <ParentBundle value="WarChestSeason4ZergTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_GLHFZerg">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_GoodLuckZerg"/>
+        <EmoticonArray value="glzerg"/>
+        <EmoticonArray value="hfzerg"/>
+        <ParentBundle value="WarChestSeason4ZergTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_GoldenAge">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_GoldenAge"/>
+        <EmoticonArray value="goldenage"/>
+        <ParentBundle value="WarChestSeason4ProtossTier4Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Tancho">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Tancho"/>
+        <EmoticonArray value="tancho"/>
+        <ParentBundle value="WarChestSeason4ProtossTier5Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Urubu">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Urubu"/>
+        <EmoticonArray value="urubu"/>
+        <ParentBundle value="WarChestSeason4ProtossTier9Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Bowler">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Bowler"/>
+        <EmoticonArray value="bowler"/>
+        <ParentBundle value="WarChestSeason4ProtossTier10Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_GLHFProtoss">
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_GoodLuckProtoss"/>
+        <EmoticonArray value="glprotoss"/>
+        <EmoticonArray value="hfprotoss"/>
+        <ParentBundle value="WarChestSeason4ProtossTier15Bundle"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest4Terran">
+        <ShortName value="EmoticonPack/ShortName/WarChest4Terran"/>
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="13"/>
+        <RequiredRewardArray value="Portrait_WarChest4_Adjutant"/>
+        <EmoticonArray value="canisterrifle"/>
+        <EmoticonArray value="koi"/>
+        <EmoticonArray value="junkbot"/>
+        <EmoticonArray value="sombrero"/>
+        <EmoticonArray value="glterran"/>
+        <EmoticonArray value="hfterran"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest4Zerg">
+        <ShortName value="EmoticonPack/ShortName/WarChest4Zerg"/>
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="14"/>
+        <RequiredRewardArray value="Portrait_WarChest4_Overmind"/>
+        <EmoticonArray value="simulant"/>
+        <EmoticonArray value="shark"/>
+        <EmoticonArray value="scantipede"/>
+        <EmoticonArray value="stovepipe"/>
+        <EmoticonArray value="glzerg"/>
+        <EmoticonArray value="hfzerg"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest4Protoss">
+        <ShortName value="EmoticonPack/ShortName/WarChest4Protoss"/>
+        <ReleaseDate value="12/20/2018"/>
+        <Image Index="15"/>
+        <RequiredRewardArray value="Portrait_WarChest4_Executor"/>
+        <EmoticonArray value="goldenage"/>
+        <EmoticonArray value="tancho"/>
+        <EmoticonArray value="urubu"/>
+        <EmoticonArray value="bowler"/>
+        <EmoticonArray value="glprotoss"/>
+        <EmoticonArray value="hfprotoss"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <!-- War Chest Season 5 -->
+    <CEmoticonPack id="WarChestTerran_BrownCat">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_BrownCat"/>
+        <EmoticonArray value="browncat"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Thumbtack">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Thumbtack"/>
+        <EmoticonArray value="thumbtack"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Drill">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Drill"/>
+        <EmoticonArray value="drill"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_ShieldSword">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Shield"/>
+        <EmoticonArray value="shield"/>
+        <EmoticonArray value="sword"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_PickaxeShovelSaw">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Pickaxe"/>
+        <EmoticonArray value="pickaxe"/>
+        <EmoticonArray value="shovel"/>
+        <EmoticonArray value="saw"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_CheeseMouse">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_CheeseMouse"/>
+        <EmoticonArray value="cheesemouse"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Hammer">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Hammer"/>
+        <EmoticonArray value="hammer"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Wrench">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Wrench"/>
+        <EmoticonArray value="wrench"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_PliersVice">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Pliers"/>
+        <EmoticonArray value="pliers"/>
+        <EmoticonArray value="vice"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_CookieRat">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_CookieRat"/>
+        <EmoticonArray value="cookierat"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Screwdriver">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Screwdriver"/>
+        <EmoticonArray value="screwdriver"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Crowbar">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Crowbar"/>
+        <EmoticonArray value="crowbar"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestFree_ClassicTerranNPC">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_ClassicTerran"/>
+        <EmoticonArray value="classicterran"/>
+        <EmoticonArray value="npc"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestFree_ClassicZergSlapRoof">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_ClassicZerg"/>
+        <EmoticonArray value="classiczerg"/>
+        <EmoticonArray value="slaproof"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestFree_ClassicProtossWhatsThis">
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_ClassicProtoss"/>
+        <EmoticonArray value="classicprotoss"/>
+        <EmoticonArray value="whatsthis"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest5Terran">
+        <ShortName value="EmoticonPack/ShortName/WarChest5Terran"/>
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="13"/>
+        <RequiredRewardArray value="Portrait_WarChest5_GhostInk"/>
+        <EmoticonArray value="browncat"/>
+        <EmoticonArray value="thumbtack"/>
+        <EmoticonArray value="drill"/>
+        <EmoticonArray value="shield"/>
+        <EmoticonArray value="sword"/>
+        <EmoticonArray value="pickaxe"/>
+        <EmoticonArray value="saw"/>
+        <EmoticonArray value="shovel"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest5Zerg">
+        <ShortName value="EmoticonPack/ShortName/WarChest5Zerg"/>
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="14"/>
+        <RequiredRewardArray value="Portrait_WarChest5_HydraliskInk"/>
+        <EmoticonArray value="cheesemouse"/>
+        <EmoticonArray value="hammer"/>
+        <EmoticonArray value="wrench"/>
+        <EmoticonArray value="pliers"/>
+        <EmoticonArray value="vice"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest5Protoss">
+        <ShortName value="EmoticonPack/ShortName/WarChest5Protoss"/>
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="15"/>
+        <RequiredRewardArray value="Portrait_WarChest5_AdeptInk"/>
+        <EmoticonArray value="cookierat"/>
+        <EmoticonArray value="screwdriver"/>
+        <EmoticonArray value="crowbar"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest5Free">
+        <ShortName value="EmoticonPack/ShortName/WarChest5Free"/>
+        <ReleaseDate value="8/15/2019"/>
+        <Image Index="27"/>
+        <EmoticonArray value="classicterran"/>
+        <EmoticonArray value="npc"/>
+        <EmoticonArray value="classiczerg"/>
+        <EmoticonArray value="slaproof"/>
+        <EmoticonArray value="classicprotoss"/>
+        <EmoticonArray value="whatsthis"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <!-- War Chest Season 6 -->
+    <CEmoticonPack id="WarChestTerran_Broccoli">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Broccoli"/>
+        <EmoticonArray value="broccoli"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Apple">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Apple"/>
+        <EmoticonArray value="apple"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Toasted">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Toasted"/>
+        <EmoticonArray value="toasted"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_Steak">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Steak"/>
+        <EmoticonArray value="steak"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestTerran_CherriesGarlic">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Cherries"/>
+        <EmoticonArray value="cherries"/>
+        <EmoticonArray value="garlic"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Carrot">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Carrot"/>
+        <EmoticonArray value="carrot"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Strawberry">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Strawberry"/>
+        <EmoticonArray value="strawberry"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Croissant">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Croissant"/>
+        <EmoticonArray value="croissant"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_Lobster">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Lobster"/>
+        <EmoticonArray value="lobster"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestZerg_LemonPepper">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Lemon"/>
+        <EmoticonArray value="lemon"/>
+        <EmoticonArray value="pepper"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Onion">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Onion"/>
+        <EmoticonArray value="onion"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Banana">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Banana"/>
+        <EmoticonArray value="banana"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Muffin">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Muffin"/>
+        <EmoticonArray value="muffin"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_Shrimp">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Shrimp"/>
+        <EmoticonArray value="shrimp"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestProtoss_GrapesMushroom">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Grapes"/>
+        <EmoticonArray value="grapes"/>
+        <EmoticonArray value="mushroom"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestFree_PieCookie">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Pie"/>
+        <EmoticonArray value="pie"/>
+        <EmoticonArray value="cookie"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestFree_CoffeeJuiceBox">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Coffee"/>
+        <EmoticonArray value="coffee"/>
+        <EmoticonArray value="juicebox"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChestFree_DonutPancakes">
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="12"/>
+        <RequiredRewardArray value="Emoticon_Donut"/>
+        <EmoticonArray value="donut"/>
+        <EmoticonArray value="pancakes"/>
+        <Description value="EmoticonPack/Description/Generic"/>
+        <Hidden value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest6Terran">
+        <ShortName value="EmoticonPack/ShortName/WarChest6Terran"/>
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="13"/>
+        <RequiredRewardArray value="Portrait_WarChest6_SilverAdjutant"/>
+        <EmoticonArray value="broccoli"/>
+        <EmoticonArray value="apple"/>
+        <EmoticonArray value="toasted"/>
+        <EmoticonArray value="steak"/>
+        <EmoticonArray value="cherries"/>
+        <EmoticonArray value="garlic"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest6Zerg">
+        <ShortName value="EmoticonPack/ShortName/WarChest6Zerg"/>
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="14"/>
+        <RequiredRewardArray value="Portrait_WarChest6_RCZHiveNode"/>
+        <EmoticonArray value="carrot"/>
+        <EmoticonArray value="strawberry"/>
+        <EmoticonArray value="croissant"/>
+        <EmoticonArray value="lobster"/>
+        <EmoticonArray value="lemon"/>
+        <EmoticonArray value="pepper"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest6Protoss">
+        <ShortName value="EmoticonPack/ShortName/WarChest6Protoss"/>
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="15"/>
+        <RequiredRewardArray value="Portrait_WarChest6_IhanriiExecutor"/>
+        <EmoticonArray value="onion"/>
+        <EmoticonArray value="banana"/>
+        <EmoticonArray value="muffin"/>
+        <EmoticonArray value="shrimp"/>
+        <EmoticonArray value="grapes"/>
+        <EmoticonArray value="mushroom"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="WarChest6Free">
+        <ShortName value="EmoticonPack/ShortName/WarChest6Free"/>
+        <ReleaseDate value="6/4/2020"/>
+        <Image Index="27"/>
+        <EmoticonArray value="pie"/>
+        <EmoticonArray value="cookie"/>
+        <EmoticonArray value="coffee"/>
+        <EmoticonArray value="juicebox"/>
+        <EmoticonArray value="donut"/>
+        <EmoticonArray value="pancakes"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+	<!-- END WAR CHEST -->
+    <CEmoticonPack id="PrestigePack">
+        <ReleaseDate value="8/28/2017"/>
+        <Image Index="16"/>
+        <RequiredRewardArray value="Emoticon_Prestige91"/>
+        <EmoticonArray value="prestige91"/>
+        <EmoticonArray value="prestige100"/>
+        <EmoticonArray value="prestige200"/>
+        <EmoticonArray value="prestige300"/>
+        <EmoticonArray value="prestige400"/>
+        <EmoticonArray value="prestige500"/>
+        <EmoticonArray value="prestige600"/>
+        <EmoticonArray value="prestige700"/>
+        <EmoticonArray value="prestige800"/>
+        <EmoticonArray value="prestige900"/>
+        <EmoticonArray value="prestige1000"/>
+        <EmoticonArray value="shake"/>
+        <EmoticonArray value="handok"/>
+        <EmoticonArray value="pray"/>
+        <EmoticonArray value="rocks"/>
+        <EmoticonArray value="exhaust"/>
+        <EmoticonArray value="cutemissile"/>
+        <EmoticonArray value="viper"/>
+        <EmoticonArray value="vipertongue"/>
+        <EmoticonArray value="voidray"/>
+        <EmoticonArray value="bluelaser"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderDehaka">
+        <ReleaseDate value="8/28/2017"/>
+        <Image Index="17"/>
+        <RequiredRewardArray value="CommanderDehaka"/>
+        <RequiredRewardArray value="Emoticon_Dehaka"/>
+        <RequiredRewardArray value="Emoticon_DehakaClaw"/>
+        <RequiredCommander value="Dehaka"/>
+        <EmoticonArray value="dehaka"/>
+        <EmoticonArray value="dehakaclaw"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderHorner">
+        <ReleaseDate value="11/13/2017"/>
+        <Image Index="18"/>
+        <RequiredRewardArray value="CommanderHorner"/>
+        <RequiredRewardArray value="Emoticon_Smooch"/>
+        <RequiredRewardArray value="Emoticon_BrokenHeart"/>
+        <RequiredCommander value="Horner"/>
+        <EmoticonArray value="smooch"/>
+        <EmoticonArray value="brokenheart"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="NationWars">
+        <ReleaseDate value="3/27/2018"/>
+        <Image Index="20"/>
+        <RequiredRewardArray value="Emoticon_NationWarsAce"/>
+        <RequiredRewardArray value="Emoticon_NationWarsAllKill"/>
+        <RequiredRewardArray value="Emoticon_NationWarsEZPZ"/>
+        <RequiredRewardArray value="Emoticon_NationWarsWallez"/>
+        <EmoticonArray value="nwace"/>
+        <EmoticonArray value="nwallkill"/>
+        <EmoticonArray value="nwezpz"/>
+        <EmoticonArray value="nwwallez"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderTychus">
+        <ReleaseDate value="9/4/2018"/>
+        <Image Index="22"/>
+        <RequiredRewardArray value="CommanderTychus"/>
+        <RequiredRewardArray value="Emoticon_Reaper"/>
+        <RequiredRewardArray value="Emoticon_Tychus"/>
+        <RequiredCommander value="Tychus"/>
+        <EmoticonArray value="reaper"/>
+        <EmoticonArray value="tychus"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="BlizzCon2018_TwitchDrop">
+        <ReleaseDate value="10/16/2018"/>
+        <Image Index="23"/>
+        <RequiredRewardArray value="Emoticon_BongoProbe"/>
+        <RequiredRewardArray value="Emoticon_Mic"/>
+        <RequiredRewardArray value="Emoticon_SeeThis"/>
+        <RequiredRewardArray value="Emoticon_RainbowBarf"/>
+        <EmoticonArray value="bongo"/>
+        <EmoticonArray value="mic"/>
+        <EmoticonArray value="seethis"/>
+        <EmoticonArray value="rainbarf"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderZeratul">
+        <ReleaseDate value="11/4/2018"/>
+        <Image Index="24"/>
+        <RequiredRewardArray value="CommanderZeratul"/>
+        <RequiredRewardArray value="Emoticon_Zeratul"/>
+        <RequiredRewardArray value="Emoticon_Artifact"/>
+        <RequiredCommander value="Zeratul"/>
+        <EmoticonArray value="zeratul"/>
+        <EmoticonArray value="artifact"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="TwitchPrime2019">
+        <ReleaseDate value="4/9/2019"/>
+        <Image Index="25"/>
+        <RequiredRewardArray value="Emoticon_BabyRage"/>
+        <EmoticonArray value="babyrage"/>
+        <EmoticonArray value="bleedpurple"/>
+        <EmoticonArray value="cmonbruh"/>
+        <EmoticonArray value="coolcat"/>
+        <EmoticonArray value="failfish"/>
+        <EmoticonArray value="heyguys"/>
+        <EmoticonArray value="kappa"/>
+        <EmoticonArray value="kappaross"/>
+        <EmoticonArray value="ohmydog"/>
+        <EmoticonArray value="residentsleeper"/>
+        <EmoticonArray value="stinkycheese"/>
+        <EmoticonArray value="theilluminati"/>
+        <EmoticonArray value="thething"/>
+        <EmoticonArray value="unity"/>
+        <EmoticonArray value="wutface"/>
+        <HideAchievement value="1"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderStetmann">
+        <ReleaseDate value="5/21/2019"/>
+        <Image Index="26"/>
+        <RequiredRewardArray value="CommanderStetmann"/>
+        <RequiredRewardArray value="Emoticon_CheeseHand"/>
+        <RequiredRewardArray value="Emoticon_GoodGary"/>
+        <RequiredRewardArray value="Emoticon_BadGary"/>
+        <RequiredCommander value="Stetmann"/>
+        <EmoticonArray value="cheesehand"/>
+        <EmoticonArray value="goodgary"/>
+        <EmoticonArray value="badgary"/>
+    </CEmoticonPack>
+    <CEmoticonPack id="CommanderMengsk">
+        <ReleaseDate value="11/26/2019"/>
+        <Image Index="28"/>
+        <RequiredRewardArray value="CommanderMengsk"/>
+        <RequiredRewardArray value="Emoticon_Contaminated"/>
+        <RequiredRewardArray value="Emoticon_Royal"/>
+        <RequiredCommander value="Mengsk"/>
+        <EmoticonArray value="contaminated"/>
+        <EmoticonArray value="royal"/>
+    </CEmoticonPack>
+</Catalog>

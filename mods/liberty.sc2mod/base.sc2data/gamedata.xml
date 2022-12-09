@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Includes>
+    <Catalog path="GameData/CollectionSkin.xml"/>
+    <Catalog path="GameData/SC2Events.xml"/>
+    <Catalog path="GameData/WarChestSeason5.xml"/>
+    <Catalog path="GameData/WarChestSeason6.xml"/>
+</Includes>
