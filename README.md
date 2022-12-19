@@ -1,5 +1,5 @@
 # sc2xml
-This is a dumb of the StarCraft II game data which is all written in XML. With multiple dumbs, we can see changes between patches, e.g. via pull requests.
+This is a dump of the StarCraft II game data which is all written in XML. With multiple data dumps, we can see changes between patches, e.g. via pull requests.
 
 ## Exporting game's xml data:
 
