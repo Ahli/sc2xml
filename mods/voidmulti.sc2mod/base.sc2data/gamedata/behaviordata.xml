@@ -9,8 +9,14 @@
     <CBehaviorBuff id="AdeptPhaseShift">
         <Modification MoveSpeedBonus="0"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="AdeptPhaseShiftCaster">
+        <Modification>
+            <StateFlags index="SuppressPassenger" value="0"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="AdeptPhaseShiftTimer">
         <RemoveValidatorArray value="CasterIsNotRecallingNexus"/>
+        <RemoveValidatorArray value="CasterIsNotHidden"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BatteryEnergy">
         <InfoFlags index="Hidden" value="1"/>
@@ -18,10 +24,13 @@
         <Duration value="0.01"/>
         <ExpireEffect value="BatteryAddEnergy"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BroodlingFate">
+        <Duration value="5"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DarkTemplarBlinkAttackDelay">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
-        <Duration value="1.05"/>
+        <Duration value="1"/>
         <Modification>
             <StateFlags index="SuppressAttack" value="1"/>
             <AbilCategoriesEnable index="Passive" value="1"/>
@@ -33,7 +42,16 @@
         <Start value="Footprint4x4CreepSourceGrown"/>
         <Birth value="CreepGrowthMediumNydusCreepSourceStart"/>
         <Grown value="Footprint4x4CreepSourceGrown"/>
+        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorCreepSource>
+    <CBehaviorBuff id="OracleStasisTrapTarget">
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="0"/>
+            <ModifyFlags index="SuppressMoving" value="0"/>
+            <ModifyFlags index="SuppressTurning" value="0"/>
+            <AbilClassDisableArray index="CAbilBuild" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="QueenMustBeOnCreep">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
@@ -189,9 +207,9 @@
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
         <RemoveValidatorArray value="NotOracleStasisTrapped"/>
         <Duration value="30"/>
-        <Modification ShieldArmorBonus="3">
+        <Modification ShieldArmorBonus="2">
             <ModifyFlags index="HideChangeUI" value="1"/>
-            <LifeArmorBonus value="3"/>
+            <LifeArmorBonus value="2"/>
         </Modification>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
@@ -201,8 +219,8 @@
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
         <RemoveValidatorArray value="NotOracleStasisTrapped"/>
         <Duration value="30"/>
-        <Modification ShieldArmorBonus="-3">
-            <LifeArmorBonus value="-3"/>
+        <Modification ShieldArmorBonus="-2">
+            <LifeArmorBonus value="-2"/>
         </Modification>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
@@ -214,6 +232,9 @@
         <Capacity value="2250"/>
         <Contents value="2250"/>
     </CBehaviorResource>
+    <CBehaviorBuff id="SensorTowerRadar">
+        <Modification Radar="27"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="TemporalField">
         <Modification AttackSpeedMultiplier="0.5"/>
     </CBehaviorBuff>
@@ -539,7 +560,7 @@
         <Period value="0.63"/>
     </CBehaviorCreepSource>
     <CBehaviorCreepSource id="makeCreep8x6">
-        <Period value="0.42"/>
+        <Period value="0.35"/>
     </CBehaviorCreepSource>
     <CBehaviorBuff id="BarrierDamageResponse">
         <InfoFlags index="Hidden" value="1"/>
@@ -676,13 +697,16 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Duration value="15"/>
+        <Duration value="11"/>
         <ExpireEffect value="ImmortalBarrierCDFix"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="EnableAttack" value="1"/>
             <ModifyFlags index="EnableMove" value="1"/>
             <StateFlags index="SuppressAttack" value="1"/>
             <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressCombat" value="1"/>
+            <AbilClassEnableArray index="CAbilStop" value="1"/>
             <BehaviorLinkDisableArray value="ImmortalBarrierSupressed"/>
         </Modification>
         <DisplayDuration index="Self" value="1"/>
@@ -710,6 +734,9 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.2"/>
         <AINotifyEffect value="SeekerMissileDamage"/>
+        <DamageResponse>
+            <ModifyAmount value="2"/>
+        </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorBuff id="RavenShredderMissileArmorReduction">
         <Alignment value="Negative"/>
@@ -725,7 +752,7 @@
             <Kind index="Spell" value="0"/>
             <Kind index="Splash" value="0"/>
             <Kind index="NoProc" value="0"/>
-            <ModifyAmount value="3"/>
+            <ModifyAmount value="2"/>
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
@@ -863,6 +890,14 @@
             <WeaponArray Link="MothershipCoreWeapon"/>
             <WeaponArray Link="MothershipCoreWeapon" Turret="Nexus"/>
         </Modification-->
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BatteryAcquireTargetCooldown">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="65535"/>
+        <MaxStackCountPerCaster value="1"/>
+        <TimeScaleSource Value="Caster"/>
+        <Duration value="0.063"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BatteryOvercharge">
         <Alignment value="Positive"/>

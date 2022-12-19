@@ -352,6 +352,34 @@
             <Payload value="Repair_Bot_Beam_01"/>
         </Events>
     </CModel>
+    <CModel id="Observer">
+        <Radius value="0.438000"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+        <SelectionRadius value="0.515000"/>
+        <ShadowRadius value="0.515000"/>
+    </CModel>
+    <CModel id="ObserverPlacement">
+        <Radius value="0.438000"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+        <SelectionRadius value="0.515000"/>
+        <ShadowRadius value="0.515000"/>
+    </CModel>
+    <CModel id="PurificationNova">
+        <Radius value="2.291700"/>
+        <RadiusLoose value="2.291700"/>
+        <ScaleMax value="0.640000,0.640000,0.640000"/>
+        <ScaleMin value="0.640000,0.640000,0.640000"/>
+    </CModel>
+    <CModel id="PurificationNovaRangeIndicator">
+        <Radius value="2.291700"/>
+        <RadiusLoose value="2.291700"/>
+        <!--ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"\-->
+        <ScaleMax value="0.687500,0.687500,0.687500"/>
+        <ScaleMin value="0.687500,0.687500,0.687500"/>
+    </CModel>
     <CModel id="ShieldBatteryRechargeEx5@Beam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\ProtossShield_Battery_Beam\ProtossShield_Battery_Beam.m3"/>
         <EditorCategories value="Race:Protoss"/>
@@ -851,6 +879,10 @@
     </CModel>
     <CModel id="TemporalFieldImpactModel">
         <Model value="Assets\Effects\Protoss\TimeWarpImpact_Red\TimeWarpImpact_Red.m3"/>
+    </CModel>
+    <CModel id="Ultralisk">
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModel>
     <CModel id="UrsadakMale" parent="Unit">
         <Model value="Assets\Units\Critters\UrsadakMale\UrsadakMale.m3"/>

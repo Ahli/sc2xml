@@ -24,6 +24,10 @@
         <ExpireDelay value="0.0625"/>
         <FinalEffect value="IssueOrderMorphtoWarpGate"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="BacklashRockets">
+        <PeriodicPeriodArray index="0" value="0"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
     <CEffectModifyUnit id="BatteryAddEnergy">
         <ValidatorArray value="NexusBatteryOvercharge8RangePlacementVisual"/>
         <EditorCategories value=""/>
@@ -194,6 +198,9 @@
         <InitialEffect value="SentryWeaponPeriodicSet"/>
         <PeriodicPeriodArray index="0" value="0.0625"/>
     </CEffectCreatePersistent>
+    <CEffectEnumArea id="EMPSearch">
+        <AreaArray index="0" Radius="1.75"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="HyperjumpInitialCP">
         <ValidatorArray value="CasterNotFungalGrowthed"/>
         <ValidatorArray value="CasterIsNotYoinked"/>
@@ -292,6 +299,9 @@
     <CEffectDestroyPersistent id="PhaseDestroyGravitonBeamPersistant">
         <Radius value="0"/>
     </CEffectDestroyPersistent>
+    <CEffectEnumArea id="PurificationNovaTargettedSearch">
+        <AreaArray index="0" Radius="1.35"/>
+    </CEffectEnumArea>
     <CEffectSet id="RavenScramblerDummy">
         <EditorCategories value="Race:Terran"/>
     </CEffectSet>
@@ -542,6 +552,9 @@
     <CEffectCreateUnit id="ReaperKD8Knockback">
         <ValidatorArray value="IsNotRecallingNexus"/>
     </CEffectCreateUnit>
+    <CEffectCreateHealer id="ShieldBatteryRechargeChanneledOvercharged">
+        <RechargeVitalRate value="54"/>
+    </CEffectCreateHealer>
     <CEffectCreateHealer id="ShieldBatteryRechargeEx5">
         <ValidatorArray value="noMarkers"/>
         <ValidatorArray value="NotVortexd"/>
@@ -556,6 +569,7 @@
         </DrainVitalCostFactor>
         <RechargeVital value="Shields"/>
         <RechargeVitalRate value="36"/>
+        <InitialEffect value="BatteryCooldownAB"/>
     </CEffectCreateHealer>
     <CEffectDamage id="ShieldBatteryRechargeEx5@DamageDummy">
         <EditorCategories value="Race:Protoss"/>
@@ -709,8 +723,6 @@
         <AttributeBonus index="Light" value="0"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="LurkerMP">
-        <Flags index="Channeled" value="0"/>
-        <Flags index="EffectFailure" value="0"/>
         <PeriodicPeriodArray value="0.125"/>
         <PeriodicPeriodArray value="0.125"/>
         <PeriodicPeriodArray value="0.125"/>
@@ -724,6 +736,7 @@
         <PeriodicOffsetArray value="0,-11,0"/>
         <PeriodicOffsetArray value="0,-12,0"/>
         <PeriodicEffectArray index="0" value="LurkerMPCU"/>
+        <PeriodicValidator value=""/>
     </CEffectCreatePersistent>
     <CEffectDamage id="LurkerMPDamage">
         <Kind value="Ranged"/>
@@ -731,7 +744,7 @@
     </CEffectDamage>
     <CEffectEnumArea id="LurkerMPSearch">
         <AreaArray index="0" Radius="0.5"/>
-        <ValidatorArray value="WeaponInRange"/>
+        <ValidatorArray index="0" value="WeaponInRange"/>
     </CEffectEnumArea>
     <CEffectCreateHealer id="MedivacHeal">
         <ValidatorArray index="7" value=""/>
@@ -1826,7 +1839,7 @@
     </CEffectModifyUnit>
     <CEffectModifyUnit id="ImmortalBarrierCDFix">
         <ValidatorArray value="BarrierOnCooldown"/>
-        <Cost Behavior="ImmortalBarrierSupressed" CooldownOperation="Add" CooldownTimeUse="8"/>
+        <Cost Behavior="ImmortalBarrierSupressed" CooldownOperation="Add" CooldownTimeUse="11"/>
     </CEffectModifyUnit>
     <CEffectApplyBehavior id="NexusShieldRechargeOnPylonAB">
         <ValidatorArray index="0" value="IsPylon"/>
@@ -1933,8 +1946,7 @@
         <ValidatorArray value="SourceNotHidden"/>
         <ValidatorArray value="NotInterceptor"/>
     </CEffectSet>
-    <CEffectCreateHealer id="ShieldBatteryRechargeChanneledOvercharged">
-        <!--ValidatorArray value="noMarkers"/>
+    <!--ValidatorArray value="noMarkers"/>
         <ValidatorArray value="ShieldsNotFull"/>
         <ValidatorArray value="NotWarpingIn"/>
         <ValidatorArray value="HiddenCompareAB"/>
@@ -1942,16 +1954,6 @@
         <ValidatorArray value="NotVortexd"/>
         <ValidatorArray value="SourceNotHidden"/>
         <ValidatorArray value="NotInterceptor"/-->
-        <ValidatorArray value="CasterHasBatteryOverchargeBehavior"/>
-        <ValidatorArray value="NotHidden"/>
-        <ValidatorArray value="NotVortexd"/>
-        <EditorCategories value="Race:Terran"/>
-        <PeriodicValidator value="ShieldsNotFull"/>
-        <DrainVital value="Energy"/>
-        <RechargeVital value="Shields"/>
-        <RechargeVitalRate value="72"/>
-        <PeriodicEffect value="ShieldBatteryRechargeChanneledRevealSearch"/>
-    </CEffectCreateHealer>
     <CEffectCreateHealer id="ShieldBatteryRechargeChanneled">
         <!--ValidatorArray value="noMarkers"/>
         <ValidatorArray value="ShieldsNotFull"/>
@@ -2157,6 +2159,13 @@
         <Amount value="5"/>
         <Kind value="Ranged"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="BatteryCooldownAB">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="BatteryAcquireTargetCooldown"/>
+        <Flags index="UseDuration" value="1"/>
+        <Duration value="0.063"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="BattlecrusierDisableWeaponsAB">
         <EditorCategories value="Race:Protoss"/>
         <WhichUnit Value="Caster"/>

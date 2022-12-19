@@ -86,6 +86,9 @@
     </CAbilArmMagazine>
     <CAbilEffectTarget id="BuildAutoTurret">
         <Range index="0" value="2"/>
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilBuild id="BuildNydusCanal">
         <InfoArray index="Build1">
@@ -119,6 +122,11 @@
         <CmdButtonArray index="Execute">
             <Flags index="ShowInGlossary" value="0"/>
         </CmdButtonArray>
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+        </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="BurrowHydraliskDown">
         <Flags index="IgnoreFood" value="1"/>
@@ -133,7 +141,7 @@
                 <DurationArray index="Duration" value="0.5"/>
             </SectionArray>
             <SectionArray index="Stats">
-                <DurationArray index="Duration" value="0.2221"/>
+                <DurationArray index="Duration" value="0"/>
             </SectionArray>
         </InfoArray>
         <Flags index="IgnoreFood" value="1"/>
@@ -169,11 +177,20 @@
         <CmdButtonArray index="Execute">
             <Flags index="ShowInGlossary" value="0"/>
         </CmdButtonArray>
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowLurkerMPDown">
+        <InfoArray index="0" RandomDelayMax="0.125"/>
     </CAbilMorph>
     <CAbilMorph id="BurrowLurkerMPUp">
         <CmdButtonArray index="Execute">
             <Flags index="ShowInGlossary" value="0"/>
         </CmdButtonArray>
+        <InfoArray index="0" RandomDelayMax="0"/>
     </CAbilMorph>
     <CAbilMorph id="BurrowQueenDown">
         <Flags index="IgnoreFood" value="1"/>
@@ -188,6 +205,11 @@
         <CmdButtonArray index="Execute">
             <Flags index="ShowInGlossary" value="0"/>
         </CmdButtonArray>
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+        </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="BurrowRavagerDown">
         <Flags index="IgnoreFood" value="1"/>
@@ -202,6 +224,11 @@
         <CmdButtonArray index="Execute">
             <Flags index="ShowInGlossary" value="0"/>
         </CmdButtonArray>
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+        </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="BurrowRoachDown">
         <Flags index="IgnoreFood" value="1"/>
@@ -216,6 +243,11 @@
         <CmdButtonArray index="Execute">
             <Flags index="ShowInGlossary" value="0"/>
         </CmdButtonArray>
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+        </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="BurrowUltraliskDown">
         <Flags index="IgnoreFood" value="1"/>
@@ -236,19 +268,19 @@
         <Flags index="IgnoreUnitCost" value="1"/>
     </CAbilMorph>
     <CAbilMorph id="BurrowZerglingUp">
+        <CmdButtonArray index="Execute">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
         <InfoArray index="0" RandomDelayMax="0.1125">
             <SectionArray index="Abils">
-                <DurationArray index="Delay" value="0.5625"/>
+                <DurationArray index="Delay" value="0"/>
             </SectionArray>
             <SectionArray index="Actor">
                 <DurationArray index="Duration" value="0.5"/>
             </SectionArray>
         </InfoArray>
-        <Flags index="IgnoreFood" value="1"/>
-        <Flags index="IgnoreUnitCost" value="1"/>
-        <CmdButtonArray index="Execute">
-            <Flags index="ShowInGlossary" value="0"/>
-        </CmdButtonArray>
     </CAbilMorph>
     <CAbilEffectTarget id="CalldownMULE">
         <Effect index="0" value="OrbitalCommandCreateMuleSwitch"/>
@@ -257,6 +289,13 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
     </CAbilEffectTarget>
+    <CAbilBuild id="CreepTumorBuild">
+        <InfoArray index="Build1">
+            <Cooldown TimeStart="18" TimeUse="18"/>
+        </InfoArray>
+        <!--EffectArray index="Finish" value="CreepTumorLaunchMissile"/>
+        <EffectArray index="Cancel" value="CreepTumorLaunchMissile"/-->
+    </CAbilBuild>
     <CAbilResearch id="CyberneticsCoreResearch">
         <InfoArray index="Research1" Time="180"/>
         <InfoArray index="Research2" Time="215"/>
@@ -307,6 +346,7 @@
     </CAbilResearch>
     <CAbilTrain id="FactoryTrain">
         <InfoArray index="Train25" Time="30"/>
+        <Range value="3"/>
     </CAbilTrain>
     <CAbilEffectTarget id="Feedback">
         <Range index="0" value="10"/>
@@ -340,15 +380,15 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilResearch id="ForgeResearch">
-        <InfoArray index="Research1" Time="180"/>
-        <InfoArray index="Research2" Time="215"/>
-        <InfoArray index="Research3" Time="250"/>
-        <InfoArray index="Research4" Time="180"/>
-        <InfoArray index="Research5" Time="215"/>
-        <InfoArray index="Research6" Time="250"/>
-        <InfoArray index="Research7" Time="180"/>
-        <InfoArray index="Research8" Time="215"/>
-        <InfoArray index="Research9" Time="250"/>
+        <InfoArray index="Research1" Time="170"/>
+        <InfoArray index="Research2" Time="200"/>
+        <InfoArray index="Research3" Time="230"/>
+        <InfoArray index="Research4" Time="170"/>
+        <InfoArray index="Research5" Time="200"/>
+        <InfoArray index="Research6" Time="230"/>
+        <InfoArray index="Research7" Time="170"/>
+        <InfoArray index="Research8" Time="200"/>
+        <InfoArray index="Research9" Time="230"/>
     </CAbilResearch>
     <CAbilEffectTarget id="FungalGrowth">
         <CmdButtonArray index="Execute">
@@ -369,6 +409,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilTrain id="GatewayTrain">
+        <InfoArray index="Train6" Time="32"/>
         <InfoArray index="Train7" Time="42"/>
     </CAbilTrain>
     <CAbilResearch id="GhostAcademyResearch">
@@ -557,8 +598,33 @@
         <Arc value="0"/>
         <Range index="0" value="5"/>
     </CAbilEffectTarget>
+    <CAbilMorph id="LiberatorMorphtoAA">
+        <InfoArray index="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="LiberatorMorphtoAG">
+        <InfoArray index="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
     <CAbilEffectTarget id="LockOn">
         <Effect index="0" value="LockOnInitialSetNew"/>
+        <AutoCastValidatorArray value="CasterIsNotHidden"/>
+        <AutoCastValidatorArray value="NotLarvaEgg"/>
     </CAbilEffectTarget>
     <!--CAbilEffectTarget id="LockOn">
         <Flags index="AutoCast" value="0"/>
@@ -606,6 +672,8 @@
     </CAbilMorph>
     <CAbilMorph id="MorphToLurker">
         <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray index="0" RandomDelayMax="0"/>
     </CAbilMorph>
     <CAbilMorph id="MorphToOverseer">
         <Flags index="IgnoreFacing" value="1"/>
@@ -613,6 +681,19 @@
     </CAbilMorph>
     <CAbilMorph id="MorphToRavager">
         <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray index="0" RandomDelayMax="0"/>
+        <InfoArray index="1">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="17"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="17"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="17"/>
+            </SectionArray>
+        </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="MorphToSwarmHostBurrowedMP">
         <AbilSetId value="BrwD"/>
@@ -629,6 +710,52 @@
         <CmdButtonArray index="Execute">
             <Flags index="ShowInGlossary" value="0"/>
         </CmdButtonArray>
+        <InfoArray index="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0"/>
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToBaneling">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Baneling" Requirements="HaveBanelingNest"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="Rally" value="1"/>
+        <Flags index="RallyReset" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray Unit="BanelingCocoon"/>
+        <InfoArray Score="1" Unit="Baneling">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="20"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="20"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="20"/>
+                <EffectArray index="Finish" value="PostMorphHeal"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="MorphComplete_Zerg"/>
     </CAbilMorph>
     <CAbilEffectTarget id="MothershipCoreMassRecall">
         <Cost index="0">
@@ -756,6 +883,7 @@
         <AutoCastRange value="6"/>
         <AutoCastValidatorArray value="Casterhas10EnergyorCasterisBatteryOvercharged"/>
         <AutoCastValidatorArray value="UnitOrAttackingStructure"/>
+        <AutoCastValidatorArray value="NotHaveBatteryCooldownBehavior"/>
         <UseMarkerArray index="Approach" value="0"/>
         <UseMarkerArray index="Prep" value="0"/>
         <CancelableArray index="Channel" value="1"/>
@@ -785,6 +913,7 @@
         <Effect index="0" value="LocustMPCreateSet"/>
         <Flags index="BestUnit" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
         <Cost>
             <Cooldown TimeUse="60"/>
         </Cost>
@@ -823,9 +952,9 @@
             <Resource index="Minerals" value="100"/>
             <Resource index="Vespene" value="100"/>
         </InfoArray>
-        <InfoArray index="Research10" Time="170" Upgrade="BansheeSpeed">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+        <InfoArray index="Research10" Time="140" Upgrade="BansheeSpeed">
+            <Resource index="Minerals" value="125"/>
+            <Resource index="Vespene" value="125"/>
             <Button DefaultButtonFace="BansheeSpeed" Requirements="LearnBansheeSpeed">
                 <Flags index="ShowInGlossary" value="1"/>
             </Button>
@@ -874,6 +1003,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilTrain id="StarportTrain">
+        <InfoArray index="Train3" Time="42"/>
         <InfoArray index="Train7">
             <Button State="Available"/>
         </InfoArray>
@@ -912,9 +1042,12 @@
         </InfoArray>
     </CAbilMorph>
     <CAbilEffectTarget id="TimeWarp"/>
+    <CAbilTrain id="TrainQueen">
+        <InfoArray index="Train1" Effect=""/>
+    </CAbilTrain>
     <CAbilEffectTarget id="Transfusion">
         <Effect index="0" value="TransfusionImpactSet"/>
-        <CmdButtonArray index="Execute" Requirements="QueenOnCreep"/>
+        <CmdButtonArray index="Execute" Requirements="OnCreep"/>
     </CAbilEffectTarget>
     <CAbilResearch id="TwilightCouncilResearch">
         <InfoArray index="Research1">
@@ -998,6 +1131,10 @@
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ParasiticBomb"/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="VoidSwarmHostSpawnLocust">
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+    </CAbilEffectTarget>
     <CAbilWarpTrain id="WarpGateTrain">
         <InfoArray index="Train1" Time="16"/>
         <InfoArray index="Train2" Time="16"/>
@@ -1020,6 +1157,7 @@
     </CAbilEffectInstant>
     <CAbilEffectTarget id="WidowMineAttack">
         <PrepEffect value="WidowMineTargetingBeamDummy"/>
+        <AutoCastValidatorArray value="NotLarvaEgg"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="LocustMPFlyingSwoopAttack">
         <Alignment value="Negative"/>
@@ -1095,9 +1233,11 @@
         <TargetFilters value="Biological,Visible;Self,Player,Ally,Structure,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="10"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ChannelSnipe"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
         <RangeSlop value="20"/>
         <UninterruptibleArray index="Cast" value="1"/>
         <UninterruptibleArray index="Channel" value="1"/>
+        <CancelableArray index="Channel" value="1"/>
     </CAbilEffectTarget>
     <CAbilMorph id="PurifyMorphPylon">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
@@ -1162,6 +1302,29 @@
             </Button>
         </InfoArray>
     </CAbilResearch>
+    <CAbilMorph id="WidowMineBurrow">
+        <InfoArray index="0" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="3.125"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.6806"/>
+            </SectionArray>
+            <!--SectionArray index="Mover">
+                <DurationArray index="Duration" value="3"/>
+            </SectionArray-->
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="3.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="WidowMineUnburrow">
+        <InfoArray index="0" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
     <CAbilEffectTarget id="Yamato">
         <Flags index="AbortOnAllianceChange" value="0"/>
         <Flags index="IgnoreOrderPlayerIdInStageValidate" value="1"/>
@@ -1175,6 +1338,9 @@
             <Cooldown TimeUse="100"/>
         </InterruptCost>
         <CancelEffect index="Prep" value="BattlecruiserYamatoCD"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Yoink">
+        <CastOutroTime value="1"/>
     </CAbilEffectTarget>
     <CAbilBuild id="ZergBuild">
         <InfoArray index="Build12" Unit="LurkerDenMP" Time="80">
@@ -1525,5 +1691,6 @@
     </CAbilResearch>
     <CAbilMove id="move">
         <AbilSetId value="Move"/>
+        <FollowAcquireRange value="2"/>
     </CAbilMove>
 </Catalog>

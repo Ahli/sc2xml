@@ -46,7 +46,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-hyperflightrotors.dds"/>
         <Alert value="ResearchComplete"/>
         <Race value="Terr"/>
-        <ScoreAmount value="200"/>
+        <ScoreAmount value="250"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Reference="Unit,Banshee,Speed" Value="1"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
@@ -548,11 +548,9 @@
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
         <!--EffectArray Reference="Effect,CycloneAirWeaponDamage,Amount" Value="6"/-->
-        <EffectArray Reference="Effect,CycloneAirWeaponDamage,AttributeBonus[Armored]" Value="20"/>
+        <EffectArray Reference="Effect,CycloneAirWeaponDamage,Amount" Value="10"/>
         <!--EffectArray Reference="Effect,CycloneWeaponDamage,Amount" Value="5"/-->
-        <EffectArray Reference="Effect,CycloneWeaponDamage,AttributeBonus[Armored]" Value="20"/>
-        <EffectArray Operation="Set" Reference="Button,LockOn,AlertTooltip" Value="Button/Tooltip/LockOnUpgraded"/>
-        <EffectArray Operation="Set" Reference="Button,LockOn,Tooltip" Value="Button/Tooltip/LockOnUpgraded"/>
+        <EffectArray Reference="Effect,CycloneWeaponDamage,Amount" Value="10"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <AffectedUnitArray value="Cyclone"/>
     </CUpgrade>
@@ -692,7 +690,7 @@
         <Race value="Zerg"/>
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
-        <EffectArray Operation="Set" Reference="Unit,Hydralisk,Speed" Value="2.812500"/>
+        <EffectArray Reference="Unit,Hydralisk,Speed" Value="0.750000"/>
         <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
         <AffectedUnitArray value="Hydralisk"/>
         <AffectedUnitArray value="HydraliskBurrowed"/>
