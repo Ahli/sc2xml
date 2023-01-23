@@ -5,6 +5,9 @@
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
     </CUpgrade>
+    <CUpgrade id="BansheeCloak">
+        <ScoreAmount value="200"/>
+    </CUpgrade>
     <CUpgrade id="TempestGroundAttackUpgrade">
         <Icon value="Assets\Textures\btn-ability-protoss-disruptionblast.dds"/>
         <ScoreAmount value="300"/>
@@ -46,7 +49,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-hyperflightrotors.dds"/>
         <Alert value="ResearchComplete"/>
         <Race value="Terr"/>
-        <ScoreAmount value="200"/>
+        <ScoreAmount value="250"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Reference="Unit,Banshee,Speed" Value="1"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
@@ -85,6 +88,7 @@
     <CUpgrade id="DrillClaws">
         <EffectArray index="0" Value="1.500000"/>
         <EffectArray index="1" Value="1.500000"/>
+        <ScoreAmount value="150"/>
         <!--EffectArray Operation="Set" Reference="Behavior,WidowMineBurrowedCloakingBehavior,Modification.StateFlags[SuppressCloak]" Value="0"/-->
     </CUpgrade>
     <CUpgrade id="SecretedCoating">
@@ -105,7 +109,7 @@
         <AffectedUnitArray value="NydusCanal"/>
     </CUpgrade>
     <CUpgrade id="ObserverGraviticBooster">
-        <EffectArray index="0" Value="0.937500"/>
+        <EffectArray index="0" Value="1.007800"/>
     </CUpgrade>
     <CUpgrade id="PhoenixRangeUpgrade"/>
     <CUpgrade id="ProtossAirArmorsLevel1">
@@ -136,6 +140,8 @@
         <EffectArray index="0" Value="2"/>
         <EffectArray index="1" Value="2"/>
         <EffectArray Reference="Weapon,ThermalLances,MinScanRange" Value="2"/>
+        <EffectArray Reference="Validator,ColossusAttackDamageMaxRange,Range" Value="2"/>
+        <ScoreAmount value="300"/>
     </CUpgrade>
     <CUpgrade id="GhostMoebiusReactor">
         <EffectArray Reference="Unit,GhostAlternate,EnergyStart" Value="25"/>
@@ -220,6 +226,7 @@
     <CUpgrade id="HighCapacityBarrels">
         <EffectArray Reference="Effect,HellionTankDamage,AttributeBonus[Light]" Value="12"/>
         <AffectedUnitArray value="HellionTank"/>
+        <ScoreAmount value="200"/>
     </CUpgrade>
     <CUpgrade id="LurkerRange">
         <Flags index="TechTreeCheat" value="1"/>
@@ -235,11 +242,14 @@
         <AffectedUnitArray value="LurkerMPBurrowed"/>
     </CUpgrade>
     <CUpgrade id="TerranBuildingArmor">
-        <AffectedUnitArray value="BypassArmorDrone"/>
+        <AffectedUnitArray index="29" value="PointDefenseDrone"/>
+        <AffectedUnitArray index="30" value="BypassArmorDrone"/>
         <AffectedUnitArray value="RavenRepairDrone"/>
         <AffectedUnitArray value="RefineryRich"/>
-        <EffectArray Reference="Unit,BypassArmorDrone,LifeArmorLevel" Value="2"/>
-        <EffectArray Reference="Unit,BypassArmorDrone,LifeArmor" Value="2"/>
+        <EffectArray index="58" Reference="Unit,PointDefenseDrone,LifeArmorLevel" Value="2"/>
+        <EffectArray index="59" Reference="Unit,PointDefenseDrone,LifeArmor"/>
+        <EffectArray index="60" Reference="Unit,BypassArmorDrone,LifeArmorLevel"/>
+        <EffectArray index="61" Reference="Unit,BypassArmorDrone,LifeArmor"/>
         <EffectArray Reference="Unit,RavenRepairDrone,LifeArmorLevel" Value="2"/>
         <EffectArray Reference="Unit,RavenRepairDrone,LifeArmor" Value="2"/>
         <EffectArray Reference="Abil,BunkerTransport,MaxCargoCount" Value="2"/>
@@ -506,6 +516,9 @@
         <EffectArray index="0" Value="1.4062"/>
         <EffectArray index="1" Value="0.000000"/>
         <EffectArray Reference="Unit,RoachBurrowed,Acceleration" Value="1000.000000"/>
+        <EffectArray Operation="Set" Reference="Unit,RoachBurrowed,Collide[Land1]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,RoachBurrowed,Collide[Land7]" Value="1"/>
+        <ScoreAmount value="200"/>
     </CUpgrade>
     <CUpgrade id="hydraliskspeed">
         <EffectArray Operation="Set" Reference="Unit,Hydralisk,Speed" Value="2.812500"/>
@@ -551,8 +564,6 @@
         <EffectArray Reference="Effect,CycloneAirWeaponDamage,AttributeBonus[Armored]" Value="20"/>
         <!--EffectArray Reference="Effect,CycloneWeaponDamage,Amount" Value="5"/-->
         <EffectArray Reference="Effect,CycloneWeaponDamage,AttributeBonus[Armored]" Value="20"/>
-        <EffectArray Operation="Set" Reference="Button,LockOn,AlertTooltip" Value="Button/Tooltip/LockOnUpgraded"/>
-        <EffectArray Operation="Set" Reference="Button,LockOn,Tooltip" Value="Button/Tooltip/LockOnUpgraded"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <AffectedUnitArray value="Cyclone"/>
     </CUpgrade>
@@ -692,7 +703,8 @@
         <Race value="Zerg"/>
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
-        <EffectArray Operation="Set" Reference="Unit,Hydralisk,Speed" Value="2.812500"/>
+        <EffectArray Reference="Unit,Hydralisk,Speed" Value="0.700000"/>
+        <EffectArray Operation="Set" Reference="Unit,Hydralisk,SpeedMultiplierCreep" Value="1.2391"/>
         <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
         <AffectedUnitArray value="Hydralisk"/>
         <AffectedUnitArray value="HydraliskBurrowed"/>
@@ -742,7 +754,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-transformationservos.dds"/>
         <Alert value="ResearchComplete"/>
         <Race value="Terr"/>
-        <ScoreAmount value="300"/>
+        <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <EffectArray Operation="Subtract" Reference="Abil,AssaultMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.010000"/>

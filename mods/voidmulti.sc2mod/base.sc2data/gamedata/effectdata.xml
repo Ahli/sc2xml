@@ -24,6 +24,10 @@
         <ExpireDelay value="0.0625"/>
         <FinalEffect value="IssueOrderMorphtoWarpGate"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="BacklashRockets">
+        <PeriodicPeriodArray index="0" value="0"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
     <CEffectModifyUnit id="BatteryAddEnergy">
         <ValidatorArray value="NexusBatteryOvercharge8RangePlacementVisual"/>
         <EditorCategories value=""/>
@@ -144,6 +148,12 @@
     <CEffectCreatePersistent id="BlindingCloudCP">
         <PeriodCount value="15"/>
     </CEffectCreatePersistent>
+    <CEffectSet id="BroodlingEscortLaunch">
+        <EffectArray index="3" value="BroodlingTimedLifeBroodLord"/>
+    </CEffectSet>
+    <CEffectSet id="BroodlingEscortLaunchB">
+        <EffectArray index="2" value="BroodlingTimedLifeBroodLord"/>
+    </CEffectSet>
     <CEffectSet id="CCCreateSet">
         <EffectArray value="SprayTerranInitialUpgrade"/>
     </CEffectSet>
@@ -159,6 +169,30 @@
         <Abil value="MULEGather"/>
         <Target Effect="OrbitalCommandCreateMuleSearchTownHall" Value="TargetUnit"/>
     </CEffectIssueOrder>
+    <CEffectEnumArea id="CollapsibleRockTowerRubbleDamageSearch">
+        <SearchFilters value="-;Self,Air,Destructible,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CollapsibleRockTowerRubbleDamageSearchRampLeft">
+        <SearchFilters value="-;Self,Air,Destructible,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CollapsibleRockTowerRubbleDamageSearchRampLeftGreen">
+        <SearchFilters value="-;Self,Air,Destructible,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CollapsibleRockTowerRubbleDamageSearchRampRight">
+        <SearchFilters value="-;Self,Air,Destructible,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CollapsibleRockTowerRubbleDamageSearchRampRightGreen">
+        <SearchFilters value="-;Self,Air,Destructible,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CollapsibleTerranTowerRubbleDamageSearch">
+        <SearchFilters value="-;Self,Air,Destructible,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CollapsibleTerranTowerRubbleDamageSearchRampLeft">
+        <SearchFilters value="-;Self,Air,Destructible,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CollapsibleTerranTowerRubbleDamageSearchRampRight">
+        <SearchFilters value="-;Self,Air,Destructible,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
     <CEffectEnumArea id="CommandCenterKnockbackSE">
         <EditorCategories value=""/>
         <SearchFilters value="Ground;Self,Neutral,Structure,Missile,Dead,Hidden"/>
@@ -194,6 +228,9 @@
         <InitialEffect value="SentryWeaponPeriodicSet"/>
         <PeriodicPeriodArray index="0" value="0.0625"/>
     </CEffectCreatePersistent>
+    <CEffectEnumArea id="EMPSearch">
+        <AreaArray index="0" Radius="1.75"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="HyperjumpInitialCP">
         <ValidatorArray value="CasterNotFungalGrowthed"/>
         <ValidatorArray value="CasterIsNotYoinked"/>
@@ -281,6 +318,10 @@
         <CaseDefault value="CalldownMULECreateUnit"/>
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSwitch>
+    <CEffectDamage id="P38ScytheGuassPistol">
+        <ValidatorArray value="MultipleHitGroundOnlyAttackTargetFilter"/>
+        <ValidatorArray value="ReaperAttackDamageMaxRange"/>
+    </CEffectDamage>
     <CEffectEnumArea id="ParasiticBombSecondarySearchEffect">
         <AreaArray index="0" Effect="ParasiticBombSecondaryAB"/>
     </CEffectEnumArea>
@@ -292,6 +333,13 @@
     <CEffectDestroyPersistent id="PhaseDestroyGravitonBeamPersistant">
         <Radius value="0"/>
     </CEffectDestroyPersistent>
+    <CEffectDamage id="PsiBlades">
+        <ValidatorArray index="0" value="MultipleHitGroundOnlyAttackTargetFilter"/>
+        <ValidatorArray value="ZealotAttackDamageMaxRange"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="PurificationNovaTargettedSearch">
+        <AreaArray index="0" Radius="1.375"/>
+    </CEffectEnumArea>
     <CEffectSet id="RavenScramblerDummy">
         <EditorCategories value="Race:Terran"/>
     </CEffectSet>
@@ -546,7 +594,7 @@
         <ValidatorArray value="noMarkers"/>
         <ValidatorArray value="NotVortexd"/>
         <ValidatorArray value="NotHiddenSelf"/>
-        <ValidatorArray value="NotHidden"/>
+        <ValidatorArray value="ShieldBatteryRechargeTargetFilter"/>
         <ValidatorArray value="NotInterceptor"/>
         <EditorCategories value="Race:Protoss"/>
         <PeriodicEffect value="ShieldBatteryRechargeEx5@RevealSearch"/>
@@ -556,6 +604,7 @@
         </DrainVitalCostFactor>
         <RechargeVital value="Shields"/>
         <RechargeVitalRate value="36"/>
+        <InitialEffect value="BatteryCooldownAB"/>
     </CEffectCreateHealer>
     <CEffectDamage id="ShieldBatteryRechargeEx5@DamageDummy">
         <EditorCategories value="Race:Protoss"/>
@@ -566,6 +615,10 @@
         <AreaArray Radius="10" Effect="ShieldBatteryRechargeEx5@DamageDummy"/>
         <MaxCount value="1"/>
     </CEffectEnumArea>
+    <CEffectDamage id="Talons">
+        <ValidatorArray value="MultipleHitGroundOnlyAttackTargetFilter"/>
+        <ValidatorArray value="QueenTalonsAGAttackDamageMaxRange"/>
+    </CEffectDamage>
     <CEffectDamage id="TempestDamageGround">
         <Amount value="40"/>
     </CEffectDamage>
@@ -728,13 +781,15 @@
     <CEffectDamage id="LurkerMPDamage">
         <Kind value="Ranged"/>
         <AttributeBonus index="Armored" value="10"/>
+        <ValidatorArray value="NotHidden"/>
     </CEffectDamage>
     <CEffectEnumArea id="LurkerMPSearch">
         <AreaArray index="0" Radius="0.5"/>
-        <ValidatorArray value="WeaponInRange"/>
+        <ValidatorArray index="0" value="WeaponInRange"/>
     </CEffectEnumArea>
     <CEffectCreateHealer id="MedivacHeal">
         <ValidatorArray index="7" value=""/>
+        <ValidatorArray index="9" value="MedivacHealTargetFilter"/>
         <ValidatorArray value="NotDisintegrating"/>
     </CEffectCreateHealer>
     <CEffectApplyBehavior id="MothershipCoreApplyPurifyAB">
@@ -782,6 +837,9 @@
     </CEffectDamage>
     <CEffectDamage id="TempestDamage">
         <AttributeBonus index="Massive" value="22"/>
+    </CEffectDamage>
+    <CEffectDamage id="ThorsHammerDamage">
+        <ValidatorArray value="MultipleHitGroundOnlyAttackTargetFilter"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="TransfusionAB">
         <EditorCategories value="Race:Zerg"/>
@@ -850,10 +908,17 @@
     <CEffectDamage id="ThermalLancesFriendlyDamage">
         <Amount value="10"/>
         <AttributeBonus index="Light" value="5"/>
+        <ValidatorArray index="0" value="MultipleHitAlliedOnlyGroundOnlyAttackTargetFilter"/>
+        <ValidatorArray index="1" value="noMarkers"/>
+        <ValidatorArray index="2" value="ColossusAttackDamageMaxRange"/>
+        <ValidatorArray index="3" removed="1"/>
     </CEffectDamage>
     <CEffectDamage id="ThermalLancesMU">
         <Amount value="10"/>
         <AttributeBonus index="Light" value="5"/>
+        <ValidatorArray index="0" value="MultipleHitGroundOnlyAttackTargetFilter"/>
+        <ValidatorArray index="1" value="noMarkers"/>
+        <ValidatorArray index="2" value="ColossusAttackDamageMaxRange"/>
     </CEffectDamage>
     <CEffectDamage id="ThermalLancesMUAir">
         <Amount value="12"/>
@@ -1826,7 +1891,7 @@
     </CEffectModifyUnit>
     <CEffectModifyUnit id="ImmortalBarrierCDFix">
         <ValidatorArray value="BarrierOnCooldown"/>
-        <Cost Behavior="ImmortalBarrierSupressed" CooldownOperation="Add" CooldownTimeUse="8"/>
+        <Cost Behavior="ImmortalBarrierSupressed" CooldownOperation="Add" CooldownTimeUse="15"/>
     </CEffectModifyUnit>
     <CEffectApplyBehavior id="NexusShieldRechargeOnPylonAB">
         <ValidatorArray index="0" value="IsPylon"/>
@@ -2084,6 +2149,7 @@
         <EditorCategories value="Race:Protoss"/>
         <EffectArray value="NexusMassRecallTeleport"/>
         <EffectArray value="NexusMassRecallPostBehavior"/>
+        <EffectArray value="NexusMassRecallSetPrevent2ndRecall"/>
     </CEffectSet>
     <CEffectApplyBehavior id="NexusMassRecallPostBehavior">
         <EditorCategories value="Race:Protoss"/>
@@ -2114,6 +2180,7 @@
         <EditorCategories value="Race:Protoss"/>
         <EffectArray value="MothershipStrategicRecallTeleport"/>
         <EffectArray value="NexusMassRecallPostBehavior"/>
+        <EffectArray value="MothershipStrategicRecallSetPrevent2ndRecall"/>
     </CEffectSet>
     <CEffectTeleport id="MothershipStrategicRecallTeleport">
         <EditorCategories value="Race:Protoss"/>
@@ -2162,4 +2229,31 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="BattlecruiserDisableWeapons"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="BroodlingTimedLifeBroodLord">
+        <EditorCategories value="Race:Zerg"/>
+        <Behavior value="BroodlingFate"/>
+        <Flags index="UseDuration" value="1"/>
+        <Duration value="5"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="MothershipBeamDamage">
+        <ValidatorArray index="1" value="MultipleHitAttackTargetFilter"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="BatteryCooldownAB">
+        <WhichUnit Value="Source"/>
+        <Behavior value="BatteryAcquireTargetCooldown"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="NexusMassRecallSetPrevent2ndRecall">
+        <ValidatorArray index="0" value="NexusRecallSucceeded"/>
+        <EditorCategories value=""/>
+        <BehaviorLink value="MothershipStrategicWarpOut"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
+    <CEffectRemoveBehavior id="MothershipStrategicRecallSetPrevent2ndRecall">
+        <ValidatorArray index="0" value="MothershipRecallSucceeded"/>
+        <EditorCategories value=""/>
+        <BehaviorLink value="NexusMassRecallWarpOut"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="PowerUserWarpablelevel2lost"/>
+    <CEffectSet id="PowerUserWarpablelevel2gained"/>
 </Catalog>

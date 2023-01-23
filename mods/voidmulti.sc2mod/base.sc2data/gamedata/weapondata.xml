@@ -99,11 +99,17 @@
         <Effect value="DisruptionBeam"/>
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="FusionCutter">
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="GuassRifle">
         <MinScanRange value="5.5"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="HydraliskMelee">
-        <Period value="0.75"/>
+        <Period value="0.825"/>
+        <DamagePoint value="0.14"/>
+        <Backswing value="0.5607"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="InfernalFlameThrower">
         <MinScanRange value="5.5"/>
@@ -115,10 +121,16 @@
     <CWeaponLegacy id="JavelinMissileLaunchers">
         <MinScanRange value="10.5"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="KaiserBlades">
+        <RangeSlop value="1.25"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="LanceMissileLaunchers">
         <Period value="1.28"/>
         <Range value="11"/>
         <!--Effect value="LanceMissileLaunchersLaunchMissile"/-->
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LanzerTorpedoes">
+        <DamagePoint value="0.05"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="LiberatorAGWeapon">
         <Range value="10"/>
@@ -141,6 +153,8 @@
     <CWeaponLegacy id="NeedleSpines">
         <Period value="0.825"/>
         <MinScanRange value="5.5"/>
+        <DamagePoint value="0.14"/>
+        <Backswing value="0.5607"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Oracle">
         <Options index="Hidden" value="1"/>
@@ -176,6 +190,10 @@
     <CWeaponLegacy id="ParasiteSpore">
         <DamagePoint value="0.0625"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="ParticleBeam">
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ParticleDisruptors">
         <MinScanRange value="6.5"/>
         <Period value="1.87"/>
@@ -191,6 +209,10 @@
     <CWeaponLegacy id="RavagerWeapon">
         <Period value="1.6"/>
         <MinScanRange value="6.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Spines">
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Talons">
         <MinScanRange value="5.5"/>

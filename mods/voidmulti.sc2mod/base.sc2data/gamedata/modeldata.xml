@@ -352,6 +352,10 @@
             <Payload value="Repair_Bot_Beam_01"/>
         </Events>
     </CModel>
+    <CModel id="PurificationNovaImpact">
+        <ScaleMax value="0.916700,0.916700,0.916700"/>
+        <ScaleMin value="0.916700,0.916700,0.916700"/>
+    </CModel>
     <CModel id="ShieldBatteryRechargeEx5@Beam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\ProtossShield_Battery_Beam\ProtossShield_Battery_Beam.m3"/>
         <EditorCategories value="Race:Protoss"/>
@@ -851,6 +855,11 @@
     </CModel>
     <CModel id="TemporalFieldImpactModel">
         <Model value="Assets\Effects\Protoss\TimeWarpImpact_Red\TimeWarpImpact_Red.m3"/>
+    </CModel>
+    <CModel id="Thor_Silver">
+        <RequiredAnimsEx FilePath="Assets\Units\Terran\ThorCE_SwarmAnims\ThorCE_SwarmAnims.m3a">
+            <Flags index="Override" value="1"/>
+        </RequiredAnimsEx>
     </CModel>
     <CModel id="UrsadakMale" parent="Unit">
         <Model value="Assets\Units\Critters\UrsadakMale\UrsadakMale.m3"/>

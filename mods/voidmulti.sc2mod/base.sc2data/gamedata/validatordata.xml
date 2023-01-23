@@ -99,7 +99,7 @@
     </CValidatorPlayerRequirement>
     <CValidatorCombine id="HarvestableResourceandNearbyTownhall">
         <Type value="And"/>
-        <CombineArray value="HarvestableResources"/>
+        <CombineArray value="Minerals"/>
         <CombineArray value="PlayerTownhallwithin10"/>
     </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="LarvaNotConjoined">
@@ -452,6 +452,7 @@
         <CombineArray value="ChannelSnipeBehaviorValidator"/>
         <CombineArray value="ChannelSnipeCasterFilters"/>
         <CombineArray value="ChannelSnipeTargetFilters"/>
+        <CombineArray value="ChannelSnipeRange"/>
     </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="ChannelSnipeRefundValidator">
         <WhichUnit Value="Caster"/>
@@ -802,4 +803,61 @@
     <CValidatorUnitFilters id="NotHeroic">
         <Filters value="-;Heroic"/>
     </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="MedivacHealTargetFilter">
+        <Filters value="Biological,Visible;Enemy,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="MultipleHitAttackTargetFilter">
+        <Filters value="-;Stasis,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveBatteryCooldownBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BatteryAcquireTargetCooldown"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationCompareRange id="ChannelSnipeRange">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="14"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorLocationCompareRange id="NexusRecallSucceeded">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="GT"/>
+        <Value Effect="NexusMassRecallSet" Value="TargetPoint"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorLocationCompareRange id="MothershipRecallSucceeded">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="GT"/>
+        <Value Effect="MothershipStrategicRecallSet" Value="TargetPoint"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitFilters id="ShieldBatteryRechargeTargetFilter">
+        <Filters value="Visible;Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="MultipleHitGroundOnlyAttackTargetFilter">
+        <Filters value="Ground;Stasis,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="MultipleHitAlliedOnlyGroundOnlyAttackTargetFilter" parent="MultipleHitGroundOnlyAttackTargetFilter">
+        <Filters value="Ground;Player,Neutral,Enemy,Stasis,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareAttackPriority id="ThreatensCyclone" parent="ThreatensUnit" unitLink="Baneling">
+        <AttackerAlternateType value="Cyclone"/>
+    </CValidatorUnitCompareAttackPriority>
+    <CValidatorLocationCompareRange id="ZealotAttackDamageMaxRange">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="2.1"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorLocationCompareRange id="QueenTalonsAGAttackDamageMaxRange">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="5"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorLocationCompareRange id="ReaperAttackDamageMaxRange">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="7"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorLocationCompareRange id="ColossusAttackDamageMaxRange">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="9"/>
+    </CValidatorLocationCompareRange>
 </Catalog>

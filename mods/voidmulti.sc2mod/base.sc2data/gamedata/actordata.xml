@@ -13,6 +13,9 @@
     <CActorAction id="AdeptAttack">
         <ImpactModel value="AdeptAttackImpactModel"/>
     </CActorAction>
+    <CActorRange id="SensorTowerRadar">
+        <Range value="27.000000"/>
+    </CActorRange>
     <CActorAction id="TempestAttackGround">
         <ImpactModel value="TempestAttackGroundImpact"/>
         <!--ImpactModel value="TempestGroundAttackImpactModel"/-->
@@ -37,6 +40,7 @@
         <On Terms="Effect.HyperjumpTeleport" Send="CombatRevealClearTimers"/>
         <Remove Terms="Abil.attack.ReadyStop" Target="_BattlecruiserTurretATS" Send="LookAtDisengage"/>
         <Remove Terms="Abil.attack.ReadyStop" Target="_BattlecruiserTurretATA" Send="LookAtDisengage"/>
+        <TerrainSquibs index="0" RangeDown="5.150000"/>
     </CActorUnit>
     <CActorModel id="ShieldBatteryRechargeEx5@ImpactActor">
         <Flags index="SuppressCreationErrors" value="1"/>
@@ -48,6 +52,7 @@
         <On Terms="SupporterDestruction" Send="AnimBracketStop BSD"/>
         <HostForProps Subject="ShieldBatteryRechargeEx5@Beam" Scope="Caster" Actor="Find"/>
         <ModelFlags index="AllowHitTest" value="0"/>
+        <FogVisibility value="Hidden"/>
     </CActorModel>
     <CActorList id="NexusShieldBatteryRangeIndicatorHelperList">
         <On Terms="ActorCreation" Send="ExternalFinderAdd"/>
@@ -177,6 +182,9 @@
         <On Terms="ActorCreation; ValidateUnit TempestGroundAttackUpgraded" Send="ModelSwap TempestWeaponGroundUpgraded"/>
         <On Terms="ActorCreation; ValidateCreationEffect TempestGroundAttackUpgraded" Send="SetTintColor {255,128,0 5.000000}"/>
     </CActorMissile>
+    <CActorSplat id="UltraliskBurrowedSplat">
+        <Scale value="0.770000"/>
+    </CActorSplat>
     <CActorAction id="ZealotSunderingImpactAttackImpactEffect" parent="GenericAttack" effectAttack="ChargingDamage">
         <ImpactMap index="None" Model="PurificationNovaImpact" Sound="" ModelReaction=""/>
         <ImpactMap index="Shield" Sound="" ModelReaction=""/>
@@ -756,6 +764,7 @@
         <On Terms="Behavior.MothershipOffensiveMode.On" Send="SetTintColor {0,0,255 2.000000} 1.000000"/>
         <On Terms="Behavior.MothershipOffensiveMode.On" Send="ClearTintColor 1.000000"/>
         <On Terms="Abil.NexusMassRecall.SourceCastStart" Send="$Spell"/>
+        <TerrainSquibs index="0" RangeDown="5.750000"/>
     </CActorUnit>
     <CActorUnit id="MothershipCore">
         <On Terms="Behavior.MothershipCoreOffensiveMode.On" Send="SetTintColor {0,255,255 2.000000} 1.000000"/>
@@ -840,6 +849,10 @@
         <On Terms="Upgrade.AnabolicSynthesis.Remove; !ValidateUnit IsUltraliskBurrowed" Target="UltraliskAnabolicSynthesisUpgrade" Send="Destroy"/>
         <On Terms="AbilMorph.BurrowUltraliskUp.Finish; ValidatePlayer HasAnabolicSynthesisUpgrade" Send="Create UltraliskAnabolicSynthesisUpgrade"/>
         <On Terms="AbilMorph.BurrowUltraliskDown.Start" Target="UltraliskAnabolicSynthesisUpgrade" Send="Destroy"/>
+        <DeathActorModelLow value="UnitDeathModel"/>
+        <BarOffset value="16"/>
+        <BarWidth value="130"/>
+        <Scale value="0.875000"/>
     </CActorUnit>
     <CActorModel id="UltraliskAnabolicSynthesisUpgrade" parent="ModelAnimationStyleContinuous">
         <Inherits index="BaseModelScale" value="1"/>
@@ -980,6 +993,7 @@
         <On Terms="Signal.*.SiegeTankLoadTransit" Send="RefSetFromMsg ::actor.SiegeTankSieged ::Sender"/>
         <On Terms="AbilTransport.MedivacTransport.PassengerKilled; AbilTransport SiegeTankSieged" Target="::actor.SiegeTankSieged" Send="Signal Dead"/>
         <On Terms="UnitDeath" Target="::actor.SiegeTankSieged" Send="Signal Dead"/>
+        <TerrainSquibs index="0" RangeDown="5.100000"/>
     </CActorUnit>
     <CActorSound id="ActorSound_Banshee_MovementBoost">
         <Sound value="Banshee_MovementBoost"/>
@@ -1253,6 +1267,8 @@
         <DeathCustoms ModelLink="ZerglingUpgradeXPRDeathAcid" Name="Variation16"/>
         <DeathCustoms ModelLink="ZerglingUpgradeXPRDeathFire" Name="Variation17"/>
         <DeathCustoms ModelLink="ZerglingUpgradeXPRDeathEviscerate" Name="Variation18"/-->
+        <On index="71" Terms="AbilMorph.*.Finish; MorphTo Zergling; MorphFrom BanelingCocoon; !AbilKey BurrowUp"/>
+        <On index="72" Terms="AbilMorph.*.Finish; MorphFrom Zergling; MorphTo BanelingCocoon; !AbilKey BurrowDown"/>
     </CActorUnit>
     <CActorModel id="ZerglingDeathRagdoll">
         <!--On Terms="ActorCreation; PlayerHasReward ZerglingSkin" Send="ModelSwap ZerglingXPRDeathRagdoll"/>
@@ -1483,6 +1499,8 @@
         <On Terms="AbilMorph.*.Start; MorphFrom ObserverSiegeMode; MorphTo Observer" Send="AnimBracketStop Work"/>
         <On Terms="UnitDetectedByViewer.*.On" Target="_UndetectedMuteSound" Send="SoundSetMuted"/>
         <On Terms="UnitDetectedByViewer.*.Off" Target="_UndetectedMuteSound" Send="SoundSetMuted 1"/>
+        <BarWidth value="46"/>
+        <Scale value="1.100000"/>
     </CActorUnit>
     <CActorModel id="ObserverObservationMode" parent="ModelAnimationStyleContinuous">
         <On Terms="ActorCreation" Send="Create Observer_SiegeMode_Loop_AS"/>
@@ -1837,7 +1855,7 @@
     </CActorSound>
     <CActorSimple id="RavenShredderMissileImpactArmorReductionTint">
         <On Terms="Behavior.RavenShredderMissileArmorReductionUISubtruct.On" Send="Create"/>
-        <On Terms="Behavior.RavenShredderMissileArmorReductionUISubtruct.On" Target="_Unit" Send="SetTintColor {255,100,0 2.000000} 0.100000 OneShot SeekerTargetArmor"/>
+        <On Terms="Behavior.RavenShredderMissileArmorReductionUISubtruct.On" Target="_Unit" Send="SetTintColor {255,153,85 2.000000} 0.100000 OneShot SeekerTargetArmor"/>
         <On Terms="Behavior.RavenShredderMissileArmorReductionUISubtruct.Off" Target="_Unit" Send="ClearTintColor 0.100000 SeekerTargetArmor"/>
         <On Terms="Behavior.RavenShredderMissileArmorReductionUISubtruct.Off" Send="Destroy"/>
     </CActorSimple>
@@ -2389,4 +2407,107 @@
         <On Terms="Behavior.BatteryOvercharge.Off" Send="ClearScale 0.000000 OverchargeScale"/>
         <ModelFlags index="AutomateGlobalLoops" value="1"/>
     </CActorBeamSimple>
+    <CActorUnit id="Hydralisk">
+        <On index="65" Send="AnimBracketStart AttackSuperior Attack,Superior {} {} 0 1.245509 AsTimeScale"/>
+        <On index="66" Send="AnimBracketStart AttackInferior Attack,Inferior {} {} 0 1.245509 AsTimeScale"/>
+        <On index="67" Send="AnimPlay AttackCover Attack,Cover 0 -1.000000 -1.000000 1.500000 AsTimeScale"/>
+        <On index="68" Send="AnimBracketStart Attack Attack {} {} 0 1.245509 AsTimeScale"/>
+        <On index="73" Send="TimerSet 0.267000 MeleeAttackLaunch"/>
+        <On index="74" Send="TimerSet 0.066700 MeleeAttackLaunch"/>
+    </CActorUnit>
+    <CActorAction id="MutaliskAttackSegment2">
+        <LaunchAssets Sound=""/>
+    </CActorAction>
+    <CActorAction id="MutaliskAttackSegment3">
+        <LaunchAssets Sound=""/>
+    </CActorAction>
+    <CActorModel id="PurificationNova">
+        <Scale value="0.916700"/>
+    </CActorModel>
+    <CActorModel id="PurificationNovaRangeIndicator">
+        <Scale value="0.916700"/>
+    </CActorModel>
+    <CActorUnit id="Ravager">
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="AnimClear Spell"/>
+    </CActorUnit>
+    <CActorRange id="ShieldBatteryRange">
+        <On index="1" Terms="Abil.ShieldBatteryRechargeEx5.TargetOn"/>
+        <On index="2" Terms="Abil.ShieldBatteryRechargeEx5.TargetOff"/>
+        <On index="3" Terms="Abil.ShieldBatteryRechargeEx5.ButtonHoverOn"/>
+        <On index="4" Terms="Abil.ShieldBatteryRechargeEx5.ButtonHoverOff"/>
+        <Abil Link="ShieldBatteryRechargeEx5"/>
+    </CActorRange>
+    <CActorUnit id="Barracks">
+        <TerrainSquibs index="0" RangeDown="5.800000"/>
+    </CActorUnit>
+    <CActorUnit id="CommandCenter">
+        <TerrainSquibs index="0" RangeDown="6.250000"/>
+    </CActorUnit>
+    <CActorUnit id="Factory">
+        <TerrainSquibs index="0" RangeDown="6.200000"/>
+    </CActorUnit>
+    <CActorUnit id="Liberator">
+        <Macros value="TerrainSquibAnimations"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="4.950000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
+        </TerrainSquibs>
+    </CActorUnit>
+    <CActorUnit id="LiberatorAG">
+        <Macros value="TerrainSquibAnimations"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="4.950000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
+        </TerrainSquibs>
+    </CActorUnit>
+    <CActorUnit id="LiberatorAGMorphModel">
+        <Macros value="TerrainSquibAnimations"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="4.950000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
+        </TerrainSquibs>
+    </CActorUnit>
+    <CActorUnit id="LiberatorMorphModel">
+        <Macros value="TerrainSquibAnimations"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="4.950000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
+        </TerrainSquibs>
+    </CActorUnit>
+    <CActorUnit id="OrbitalCommand">
+        <TerrainSquibs index="0" RangeDown="6.750000"/>
+    </CActorUnit>
+    <CActorUnit id="Starport">
+        <TerrainSquibs index="0" RangeDown="6.250000"/>
+    </CActorUnit>
+    <CActorUnit id="VikingFighter">
+        <TerrainSquibs index="0" RangeDown="5.050000"/>
+    </CActorUnit>
+    <CActorAction id="KD8ChargeAction">
+        <LaunchAttachQuery Methods="AMFilterWeaponRight"/>
+    </CActorAction>
+    <CActorModel id="ProtossFastWarpinMarker">
+        <On Terms="Effect.PowerUserWarpablelevel2lost.Start" Send="Destroy"/>
+    </CActorModel>
+    <CActorProgress id="ProtossWarpIn">
+        <On Terms="Effect.PowerUserWarpablelevel2gained.Start" Target="_Unit" Send="AnimSetTimeScale Birth 1.000000"/>
+        <On Terms="Effect.PowerUserWarpablelevel2lost.Start" Target="_Unit" Send="AnimSetTimeScale Birth 0.312500"/>
+        <On Terms="Effect.PowerUserWarpablelevel2gained.Start" Send="Create ProtossFastWarpinMarker"/>
+    </CActorProgress>
 </Catalog>
