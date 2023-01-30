@@ -1606,10 +1606,6 @@
             </Button>
         </InfoArray>
     </CAbilResearch>
-    <CAbilMove id="move">
-        <AbilSetId value="Move"/>
-        <FollowAcquireRange value="2"/>
-    </CAbilMove>
     <CAbilMorph id="MorphToBaneling">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Baneling" Requirements="HaveBanelingNest"/>
@@ -1670,4 +1666,5 @@
     <CAbilEffectTarget id="Yoink">
         <CastOutroTime value="0.8"/>
     </CAbilEffectTarget>
+    <CAbilMove id="move"/>
 </Catalog>

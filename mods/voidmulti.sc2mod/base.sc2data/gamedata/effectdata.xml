@@ -320,7 +320,7 @@
     </CEffectSwitch>
     <CEffectDamage id="P38ScytheGuassPistol">
         <ValidatorArray value="MultipleHitGroundOnlyAttackTargetFilter"/>
-        <ValidatorArray value="ReaperAttackDamageMaxRange"/>
+        <ValidatorArray value="ReaperAttackDamageMaxRangeCombine"/>
     </CEffectDamage>
     <CEffectEnumArea id="ParasiticBombSecondarySearchEffect">
         <AreaArray index="0" Effect="ParasiticBombSecondaryAB"/>
@@ -908,7 +908,7 @@
     <CEffectDamage id="ThermalLancesFriendlyDamage">
         <Amount value="10"/>
         <AttributeBonus index="Light" value="5"/>
-        <ValidatorArray index="0" value="MultipleHitAlliedOnlyGroundOnlyAttackTargetFilter"/>
+        <ValidatorArray index="0" value="MultipleHitSelfAlliedOnlyGroundOnlyAttackTargetFilter"/>
         <ValidatorArray index="1" value="noMarkers"/>
         <ValidatorArray index="2" value="ColossusAttackDamageMaxRange"/>
         <ValidatorArray index="3" removed="1"/>

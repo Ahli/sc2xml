@@ -560,10 +560,8 @@
         <Race value="Terr"/>
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
-        <!--EffectArray Reference="Effect,CycloneAirWeaponDamage,Amount" Value="6"/-->
-        <EffectArray Reference="Effect,CycloneAirWeaponDamage,AttributeBonus[Armored]" Value="20"/>
-        <!--EffectArray Reference="Effect,CycloneWeaponDamage,Amount" Value="5"/-->
-        <EffectArray Reference="Effect,CycloneWeaponDamage,AttributeBonus[Armored]" Value="20"/>
+        <EffectArray Reference="Effect,CycloneAirWeaponDamage,Amount" Value="10"/>
+        <EffectArray Reference="Effect,CycloneWeaponDamage,Amount" Value="10"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <AffectedUnitArray value="Cyclone"/>
     </CUpgrade>

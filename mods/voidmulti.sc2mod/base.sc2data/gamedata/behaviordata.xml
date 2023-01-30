@@ -692,6 +692,7 @@
             <StateFlags index="SuppressCombat" value="1"/>
             <AbilClassEnableArray index="CAbilStop" value="1"/>
             <BehaviorLinkDisableArray value="ImmortalBarrierSupressed"/>
+            <WeaponDisableArray value="InterceptorLaunch"/>
         </Modification>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>

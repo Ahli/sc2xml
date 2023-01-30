@@ -859,10 +859,10 @@
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
         <SubgroupPriority value="30"/>
+        <Sight value="12"/>
         <CardLayouts index="0">
             <LayoutButtons index="10" removed="1"/>
         </CardLayouts>
-        <AttackTargetPriority value="12"/>
     </CUnit>
     <CUnit id="LocustMPFlying">
         <FlagArray index="UseLineOfSight" value="1"/>
