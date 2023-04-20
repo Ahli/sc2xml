@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="RavenScramblerMissileABcarrier">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="RavenScramblerMissileCarrier"/>
+    </CEffectApplyBehavior>
+    <CEffectSwitch id="RavenScramblerMissileABswitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="IsCarrier" Effect="RavenScramblerMissileABcarrier"/>
+        <CaseDefault value="RavenScramblerMissileAB"/>
+    </CEffectSwitch>
     <CBehaviorBuff id="AddonIsWorking">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
@@ -701,6 +710,11 @@
         <RemoveValidatorArray value="NotOracleStasisTrapped"/>
         <DisableValidatorArray value="TargetNotTacticalJumping"/>
         <BuffFlags index="UpdateDurationWhileDisabled" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenScramblerMissileCarrier" parent="RavenScramblerMissile">
+        <Modification>
+            <ModifyFlags index="EnableAttack" value="0"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="RavenRepairDroneTimedLife" parent="TimedLife">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>

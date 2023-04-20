@@ -137,10 +137,6 @@
         <EffectArray index="1" Value="10.000000"/>
     </CUpgrade>
     <CUpgrade id="ExtendedThermalLance">
-        <EffectArray index="0" Value="2"/>
-        <EffectArray index="1" Value="2"/>
-        <EffectArray Reference="Weapon,ThermalLances,MinScanRange" Value="2"/>
-        <EffectArray Reference="Validator,ColossusAttackDamageMaxRange,Range" Value="2"/>
         <ScoreAmount value="300"/>
     </CUpgrade>
     <CUpgrade id="GhostMoebiusReactor">

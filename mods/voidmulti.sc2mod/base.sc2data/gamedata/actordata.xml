@@ -1652,13 +1652,15 @@
         <IconArcLength value="3.250000"/>
     </CActorRange>
     <CActorSound id="RavenScramblerMissileImpactSound" parent="SoundOneShot">
-        <On Terms="Effect.RavenScramblerMissileAB.Start; At Target" Send="Create"/>
+        <On Terms="Effect.RavenScramblerMissileABswitch.Start; At Target" Send="Create"/>
         <Host Subject="_Selectable"/>
         <Sound value="SkyTank_BarrageMissile_Impact"/>
     </CActorSound>
     <CActorModel id="RavenScramblerMissileBehavior" parent="ModelAnimationStyleContinuous">
         <On Terms="Behavior.RavenScramblerMissile.On" Send="Create"/>
         <On Terms="Behavior.RavenScramblerMissile.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.RavenScramblerMissileCarrier.On" Send="Create"/>
+        <On Terms="Behavior.RavenScramblerMissileCarrier.Off" Send="AnimBracketStop BSD"/>
         <On Terms="ActorCreation; ValidateUnit IsColossus" Send="SetScale 1.000000,1.000000,1.500000"/>
         <On Terms="ActorCreation; ValidateUnit IsCarrier" Send="SetScale 0.750000"/>
         <On Terms="ActorCreation; ValidateUnit IsTempest" Send="SetScale 0.850000"/>
@@ -1683,7 +1685,7 @@
     </CActorAction>
     <CActorModel id="RavenScramblerMissileImpact" parent="GenericAttackImpactModel">
         <HostSiteOps Ops="SOpAttachCenter SOpForwardLaunchGuide SOp2DRotation" HoldRotation="1"/>
-        <On Terms="Effect.RavenScramblerMissileAB.Start; At Target" Send="Create"/>
+        <On Terms="Effect.RavenScramblerMissileABswitch.Start; At Target" Send="Create"/>
         <!--On Terms="ActorCreation" Send="SetScale 2.500000"/-->
         <Model value="RavenScramblerMissileImpact"/>
         <AutoScaleFactor value="1.000000"/>
@@ -1692,6 +1694,8 @@
     <CActorSound id="RavenScramblerMissileLoopSound" parent="SoundContinuous">
         <On Terms="Behavior.RavenScramblerMissile.On" Send="Create"/>
         <On Terms="Behavior.RavenScramblerMissile.Off" Send="Destroy"/>
+        <On Terms="Behavior.RavenScramblerMissileCarrier.On" Send="Create"/>
+        <On Terms="Behavior.RavenScramblerMissileCarrier.Off" Send="Destroy"/>
         <Sound value="Raven_ScramblerMissileLoop"/>
     </CActorSound>
     <CActorUnit id="RavenRepairDrone" parent="GenericUnitStandard" unitName="RavenRepairDrone">
