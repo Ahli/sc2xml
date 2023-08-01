@@ -112,9 +112,11 @@
     </CButton>
     <CButton id="SwarmHostBurrowDown">
         <HotkeySet value="BurrowUnburrowModes"/>
+        <HotkeyAlias value="BurrowDown"/>
     </CButton>
     <CButton id="SwarmHostBurrowUp">
         <HotkeySet value="BurrowUnburrowModes"/>
+        <HotkeyAlias value="BurrowUp"/>
     </CButton>
     <CButton id="TempestDisruptionBlast">
         <Icon value="Assets\Textures\btn-ability-protoss-disruptionblast.dds"/>

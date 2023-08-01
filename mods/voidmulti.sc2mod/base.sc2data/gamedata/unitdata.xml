@@ -81,9 +81,11 @@
         <GlossaryStrongArray index="0" value="SiegeTank"/>
         <GlossaryStrongArray index="1" value="Ravager"/>
         <GlossaryStrongArray index="2" value="Adept"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="BarracksFlying">
         <SubgroupPriority value="4"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="BarracksReactor">
         <Collide index="Locust" value="1"/>
@@ -120,6 +122,7 @@
         <EquipmentArray Effect="ATSLaserBatteryU" Icon="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds" Weapon="ATSLaserBattery"/>
         <EquipmentArray Effect="ATALaserBatteryU" Icon="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds" Weapon="ATALaserBattery"/>
         <GlossaryStrongArray index="0" value="Liberator"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="BroodLord">
         <SubgroupPriority value="78"/>
@@ -128,9 +131,11 @@
         <GlossaryStrongArray index="2" value="HighTemplar"/>
         <GlossaryWeakArray index="2" value="Tempest"/>
         <Speed value="1.6015"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="BroodLordCocoon">
         <FlagArray index="ArmySelect" value="1"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Broodling">
         <Collide index="Locust" value="1"/>
@@ -153,6 +158,7 @@
         </CardLayouts>
         <ScoreMake value="540"/>
         <ScoreKill value="540"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Changeling">
         <Collide index="Locust" value="1"/>
@@ -181,9 +187,11 @@
     <CUnit id="CollapsiblePurifierTowerDebris">
         <MinimapRadius value="2.5"/>
         <Collide index="Locust" value="1"/>
+        <FlagArray index="Destructible" value="0"/>
     </CUnit>
     <CUnit id="CollapsiblePurifierTowerDiagonal">
         <MinimapRadius value="2.5"/>
+        <FlagArray index="Destructible" value="0"/>
     </CUnit>
     <CUnit id="CollapsiblePurifierTowerPushUnit">
         <Collide index="Locust" value="1"/>
@@ -210,6 +218,7 @@
     <CUnit id="Colossus">
         <SubgroupPriority value="48"/>
         <GlossaryWeakArray index="2" value="Tempest"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="CommandCenter">
         <Food value="15"/>
@@ -221,6 +230,7 @@
     <CUnit id="CommandCenterFlying">
         <Food value="15"/>
         <SubgroupPriority value="5"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Corruptor">
         <AbilArray index="0" Link="CausticSpray"/>
@@ -233,12 +243,14 @@
         <GlossaryStrongArray index="1" value="BroodLord"/>
         <GlossaryStrongArray index="2" value="Tempest"/>
         <GlossaryWeakArray index="0" value="Thor"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="CreepTumor">
         <CardLayouts index="0" removed="1"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Armored" value="0"/>
         <Sight value="10"/>
+        <FlagArray index="NoScore" value="1"/>
     </CUnit>
     <CUnit id="CreepTumorBurrowed">
         <CardLayouts index="0">
@@ -248,12 +260,14 @@
         <Attributes index="Light" value="1"/>
         <Attributes index="Armored" value="0"/>
         <Sight value="10"/>
+        <FlagArray index="NoScore" value="1"/>
     </CUnit>
     <CUnit id="CreepTumorQueen">
         <Attributes index="Light" value="1"/>
         <Attributes index="Armored" value="0"/>
         <Sight value="10"/>
         <CardLayouts index="0" removed="1"/>
+        <FlagArray index="NoScore" value="1"/>
     </CUnit>
     <CUnit id="DarkShrine">
         <Collide index="Locust" value="1"/>
@@ -266,6 +280,7 @@
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="ResearchDarkTemplarBlink" Type="AbilCmd" AbilCmd="DarkShrineResearch,Research1" Row="0" Column="0"/>
         </CardLayouts>
+        <KillDisplay value="Default"/>
     </CUnit>
     <CUnit id="DarkTemplar">
         <Collide index="Locust" value="1"/>
@@ -410,6 +425,7 @@
     </CUnit>
     <CUnit id="KD8Charge">
         <FlagArray index="Invulnerable" value="1"/>
+        <LeaderAlias value=""/>
     </CUnit>
     <CUnit id="Liberator">
         <SubgroupPriority value="72"/>
@@ -422,6 +438,7 @@
         <GlossaryStrongArray index="1" value="Ultralisk"/>
         <GlossaryWeakArray index="2" value="Tempest"/>
         <CostResource index="Vespene" value="125"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="LiberatorAG">
         <SubgroupPriority value="72"/>
@@ -432,6 +449,7 @@
         <ScoreMake value="275"/>
         <ScoreKill value="275"/>
         <CostResource index="Vespene" value="125"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Drone">
         <AbilArray Link="SprayZerg"/>
@@ -631,6 +649,8 @@
         <CardLayouts index="0">
             <LayoutButtons index="8" removed="1"/>
         </CardLayouts>
+        <KillDisplay value="Default"/>
+        <RankDisplay value="Default"/>
     </CUnit>
     <CUnit id="Hydralisk">
         <AbilArray Link="MorphToLurker"/>
@@ -853,6 +873,7 @@
         <ScoreMake value="15"/>
         <ScoreKill value="15"/>
         <AttackTargetPriority value="19"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Lair">
         <Food value="6"/>
@@ -872,6 +893,7 @@
         <LifeStart value="50"/>
         <LifeMax value="50"/>
         <SubgroupPriority value="56"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="LurkerDenMP">
         <Collide index="Locust" value="1"/>
@@ -905,6 +927,7 @@
         <CardLayouts index="0">
             <LayoutButtons index="6" Column="3"/>
         </CardLayouts>
+        <EquipmentArray index="0" Weapon="Spinesdisabled"/>
     </CUnit>
     <CUnit id="LurkerMPBurrowed">
         <SubgroupPriority value="90"/>
@@ -940,6 +963,7 @@
         <GlossaryWeakArray value="MissileTurret"/>
         <GlossaryWeakArray value="SporeCrawler"/>
         <GlossaryWeakArray value="PhotonCannon"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="MissileTurret">
         <Collide index="Locust" value="1"/>
@@ -956,6 +980,7 @@
         </CardLayouts>
         <GlossaryWeakArray index="2" value="Tempest"/>
         <Attributes index="Heroic" value="1"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="MothershipCore">
         <SubgroupPriority value="90"/>
@@ -968,6 +993,7 @@
         <GlossaryStrongArray index="1" value="Drone"/>
         <GlossaryStrongArray index="2" value="Probe"/>
         <GlossaryWeakArray index="1" value="Viper"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Nexus">
         <Collide index="Locust" value="1"/>
@@ -975,7 +1001,6 @@
         <SubgroupPriority value="28"/>
         <Food value="15"/>
         <BehaviorArray Link="FastEnablerPowerSourceNexus"/>
-        <KillDisplay value="Never"/>
         <AbilArray index="1" Link="ChronoBoostEnergyCost"/>
         <AbilArray index="7" Link="NexusTrainMothership"/>
         <AbilArray index="8" Link="NexusMassRecall"/>
@@ -1028,6 +1053,7 @@
         <GlossaryStrongArray index="1" value="LurkerMP"/>
         <FlagArray index="UseLineOfSight" value="1"/>
         <Speed value="2.0156"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="ObserverSiegeMode" parent="Observer">
         <Speed value="0"/>
@@ -1049,7 +1075,7 @@
         <SubgroupPriority value="84"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
-        <WeaponArray Link="OracleDisplayDummy"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="OracleStasisTrap">
         <BehaviorArray Link="StasisWardTimedLife"/>
@@ -1060,6 +1086,7 @@
         <GlossaryWeakArray value="Overseer"/>
         <GlossaryWeakArray value="Observer"/>
         <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
         <AttackTargetPriority value="20"/>
     </CUnit>
     <CUnit id="OrbitalCommand">
@@ -1072,6 +1099,7 @@
     <CUnit id="OrbitalCommandFlying">
         <Food value="15"/>
         <SubgroupPriority value="6"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Overlord">
         <SubgroupPriority value="72"/>
@@ -1085,9 +1113,11 @@
         <GlossaryWeakArray value="MissileTurret"/>
         <GlossaryWeakArray value="SporeCrawler"/>
         <GlossaryWeakArray value="PhotonCannon"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="OverlordCocoon">
         <FlagArray index="ArmySelect" value="1"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Overseer">
         <SubgroupPriority value="74"/>
@@ -1100,6 +1130,7 @@
         </CardLayouts>
         <GlossaryStrongArray index="1" value="LurkerMP"/>
         <FlagArray index="UseLineOfSight" value="1"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="OverseerSiegeMode" parent="Overseer">
         <Name value="Unit/Name/OverseerSiegeMode"/>
@@ -1131,6 +1162,7 @@
     <CUnit id="Phoenix">
         <SubgroupPriority value="81"/>
         <GlossaryStrongArray index="2" value="Oracle"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="PhotonCannon">
         <Collide index="Locust" value="1"/>
@@ -1179,7 +1211,6 @@
         <CardLayouts index="0">
             <LayoutButtons Face="ImprovedEnergy" Type="Passive" Requirements="NearWarpgateorNexus" Row="2" Column="0"/>
         </CardLayouts>
-        <KillDisplay value="Always"/>
     </CUnit>
     <CUnit id="PylonOvercharged" parent="Pylon">
         <AttackTargetPriority value="20"/>
@@ -1419,7 +1450,6 @@
         <AbilArray index="1" Link="ShieldBatteryRechargeEx5"/>
         <AbilArray index="2" removed="1"/>
         <CardLayouts index="0">
-            <LayoutButtons index="0" Face="Cancel" AbilCmd="BuildInProgress,Cancel" Column="4"/>
             <LayoutButtons index="1" removed="1"/>
             <LayoutButtons index="2" removed="1"/>
         </CardLayouts>
@@ -1580,6 +1610,7 @@
         <Acceleration value="1.5"/>
         <ScoreMake value="425"/>
         <ScoreKill value="425"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Stargate">
         <TechTreeProducedUnitArray index="1" value="Oracle"/>
@@ -1738,6 +1769,9 @@
         <GlossaryStrongArray index="0" value="VikingFighter"/>
         <GlossaryStrongArray index="2" value="Phoenix"/>
         <Collide index="Locust" value="1"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" removed="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="TwilightCouncil">
         <Collide index="Locust" value="1"/>
@@ -1840,6 +1874,7 @@
         <GlossaryWeakArray index="1" value="Hydralisk"/>
         <LifeStart value="135"/>
         <LifeMax value="135"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="Viper">
         <AbilArray Link="ParasiticBomb"/>
@@ -1856,6 +1891,7 @@
         <GlossaryWeakArray index="1" value="Corruptor"/>
         <GlossaryWeakArray index="2" value="HighTemplar"/>
         <FlagArray index="UseLineOfSight" value="1"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="VoidRay">
         <SubgroupPriority value="78"/>
@@ -1868,6 +1904,7 @@
         <GlossaryWeakArray index="0" value="Marine"/>
         <GlossaryWeakArray index="1" value="Hydralisk"/>
         <EquipmentArray Weapon="VoidRaySwarmDisplayDummy"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="WarpGate">
         <SubgroupPriority value="30"/>
@@ -1885,6 +1922,7 @@
         <CostResource index="Minerals" value="250"/>
         <ScoreMake value="250"/>
         <ScoreKill value="250"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="WarpPrismPhasing">
         <SubgroupPriority value="69"/>
@@ -1896,6 +1934,7 @@
         <LifeMax value="80"/>
         <CostResource index="Minerals" value="250"/>
         <ScoreKill value="250"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="WidowMine">
         <Collide index="Locust" value="1"/>
@@ -2176,9 +2215,12 @@
     </CUnit>
     <CUnit id="BraxisAlphaDestructible1x1">
         <FlagArray index="Destructible" value="0"/>
+        <LifeArmorName value="Unit/LifeArmorName/HardenedMaterial"/>
     </CUnit>
     <CUnit id="BraxisAlphaDestructible2x2">
+        <FlagArray index="Untooltipable" value="0"/>
         <FlagArray index="Destructible" value="0"/>
+        <LifeArmorName value="Unit/LifeArmorName/HardenedMaterial"/>
     </CUnit>
     <CUnit id="CollapsibleRockTower">
         <FlagArray index="Destructible" value="0"/>
@@ -2224,15 +2266,19 @@
     </CUnit>
     <CUnit id="DestructibleCityDebris2x4Horizontal">
         <FlagArray index="Destructible" value="0"/>
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
     </CUnit>
     <CUnit id="DestructibleCityDebris2x4Vertical">
         <FlagArray index="Destructible" value="0"/>
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
     </CUnit>
     <CUnit id="DestructibleCityDebris2x6Horizontal">
         <FlagArray index="Destructible" value="0"/>
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
     </CUnit>
     <CUnit id="DestructibleCityDebris2x6Vertical">
         <FlagArray index="Destructible" value="0"/>
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
     </CUnit>
     <CUnit id="DestructibleCityDebris4x4">
         <FlagArray index="Destructible" value="0"/>
@@ -2322,6 +2368,7 @@
     </CUnit>
     <CUnit id="DestructibleRock6x6Weak">
         <FlagArray index="Destructible" value="0"/>
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
     </CUnit>
     <CUnit id="DestructibleRockEx12x4Horizontal">
         <FlagArray index="Destructible" value="0"/>
@@ -2477,8 +2524,8 @@
             <LayoutButtons index="10" Face="AutoTurret" AbilCmd="BuildAutoTurret,Execute" Column="0"/>
         </CardLayouts>
         <Speed value="2.9492"/>
-        <AbilArray index="2" Link="RavenShredderMissile"/>
-        <AbilArray index="3" Link="RavenScramblerMissile"/>
+        <AbilArray index="2" Link="RavenScramblerMissile"/>
+        <AbilArray index="3" Link="RavenShredderMissile"/>
         <AbilArray index="4" Link="BuildAutoTurret"/>
         <GlossaryWeakArray index="0" value="VikingFighter"/>
         <GlossaryWeakArray index="1" value="Mutalisk"/>
@@ -2489,6 +2536,7 @@
         <RepairTime value="48"/>
         <ScoreMake value="250"/>
         <ScoreKill value="250"/>
+        <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="RavenScramblerMissile" parent="MISSILE_INVULNERABLE">
         <Race value="Terr"/>
@@ -2578,5 +2626,51 @@
         <FlagArray index="Unstoppable" value="1"/>
         <FlagArray index="PlayerRevivable" value="0"/>
         <BehaviorArray Link="DelayedRemove"/>
+    </CUnit>
+    <CUnit id="FactoryFlying">
+        <VisionHeight value="15"/>
+    </CUnit>
+    <CUnit id="OverlordTransport">
+        <VisionHeight value="15"/>
+    </CUnit>
+    <CUnit id="StarportFlying">
+        <VisionHeight value="15"/>
+    </CUnit>
+    <CUnit id="TransportOverlordCocoon">
+        <VisionHeight value="15"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerDebrisRampLeftGreen">
+        <FlagArray index="Destructible" value="0"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerDebrisRampRightGreen">
+        <FlagArray index="Destructible" value="0"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerRampLeftGreen">
+        <FlagArray index="Destructible" value="0"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerRampRightGreen">
+        <FlagArray index="Destructible" value="0"/>
+    </CUnit>
+    <CUnit id="DestructibleExpeditionGate6x6">
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
+        <FlagArray index="Destructible" value="0"/>
+    </CUnit>
+    <CUnit id="DestructibleGarage">
+        <FlagArray index="Destructible" value="0"/>
+    </CUnit>
+    <CUnit id="DestructibleGarageLarge">
+        <FlagArray index="Destructible" value="0"/>
+    </CUnit>
+    <CUnit id="DestructibleZergInfestation3x3">
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
+        <FlagArray index="Destructible" value="0"/>
+    </CUnit>
+    <CUnit id="Ice2x2NonConjoined">
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
+        <LifeArmorName value="Unit/LifeArmorName/HardenedMaterial"/>
+    </CUnit>
+    <CUnit id="Rocks2x2NonConjoined">
+        <Description value="Button/Tooltip/BraxisAlphaDestructible2x2"/>
+        <LifeArmorName value="Unit/LifeArmorName/HardenedMaterial"/>
     </CUnit>
 </Catalog>
