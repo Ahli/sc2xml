@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUnit id="DOMHealthDispenser">
+        <Footprint value=""/>
+        <DeadFootprint value=""/>
+        <PlacementFootprint value=""/>
+    </CUnit>
+    <CUnit id="HealerBot">
+        <Footprint value=""/>
+        <DeadFootprint value=""/>
+        <PlacementFootprint value=""/>
+    </CUnit>
+    <CUnit id="HealthDispenser">
+        <Footprint value=""/>
+        <DeadFootprint value=""/>
+        <PlacementFootprint value=""/>
+    </CUnit>
+    <CUnit id="MoebiusLabDoorsThinRight">
+        <FlagArray index="Turnable" value="1"/>
+        <Footprint value=""/>
+        <Collide index="Ground" value="0"/>
+        <Collide index="Small" value="0"/>
+    </CUnit>
+    <CUnit id="MoebiusLabDoorsThinRightLowered">
+        <FlagArray index="Turnable" value="1"/>
+        <Footprint value=""/>
+        <Collide index="Ground" value="0"/>
+        <Collide index="Small" value="0"/>
+    </CUnit>
+    <CUnit id="MoebiusLabDoorsWideLeftLowered">
+        <FlagArray index="Turnable" value="1"/>
+        <Footprint value=""/>
+        <Collide index="Ground" value="0"/>
+        <Collide index="Small" value="0"/>
+    </CUnit>
+    <CUnit id="NovaHero">
+        <Response value="AcquireNoFlee"/>
+    </CUnit>
+    <CUnit id="ReptileCrate">
+        <Fidget TurnAngle="0"/>
+    </CUnit>
+</Catalog>
