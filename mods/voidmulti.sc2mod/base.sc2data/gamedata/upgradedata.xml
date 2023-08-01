@@ -138,6 +138,9 @@
     </CUpgrade>
     <CUpgrade id="ExtendedThermalLance">
         <ScoreAmount value="300"/>
+        <EffectArray index="0" Value="2"/>
+        <EffectArray index="1" Value="2"/>
+        <EffectArray Reference="Weapon,ThermalLances,MinScanRange" Value="2"/>
     </CUpgrade>
     <CUpgrade id="GhostMoebiusReactor">
         <EffectArray Reference="Unit,GhostAlternate,EnergyStart" Value="25"/>
@@ -864,5 +867,20 @@
         <EffectArray Reference="Abil,CarrierHangar,Leash" Value="2"/>
         <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
         <AffectedUnitArray value="Carrier"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel1">
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount" Value="5"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount" Value="2"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,AttributeBonus[Light]" Value="2"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel2">
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount" Value="5"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount" Value="2"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,AttributeBonus[Light]" Value="2"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel3">
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount" Value="5"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount" Value="2"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,AttributeBonus[Light]" Value="2"/>
     </CUpgrade>
 </Catalog>

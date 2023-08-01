@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CEffectApplyBehavior id="RavenScramblerMissileABcarrier">
-        <EditorCategories value="Race:Terran"/>
-        <Behavior value="RavenScramblerMissileCarrier"/>
-    </CEffectApplyBehavior>
-    <CEffectSwitch id="RavenScramblerMissileABswitch">
-        <EditorCategories value="Race:Terran"/>
-        <CaseArray Validator="IsCarrier" Effect="RavenScramblerMissileABcarrier"/>
-        <CaseDefault value="RavenScramblerMissileAB"/>
-    </CEffectSwitch>
     <CBehaviorBuff id="AddonIsWorking">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
@@ -97,6 +88,8 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.25"/>
         <PeriodicEffect value="CommandCenterKnockbackSE"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="0.5"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="HyperjumpTeleportOut">
         <Modification>
@@ -236,6 +229,8 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.25"/>
         <PeriodicEffect value="TerranStructuresKnockbackSE"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="0.5"/>
     </CBehaviorBuff>
     <CBehaviorPowerSource id="FastEnablerPowerSourceNexus">
         <PowerLink value="FastEnablerPowerSource"/>
@@ -715,6 +710,7 @@
         <Modification>
             <ModifyFlags index="EnableAttack" value="0"/>
         </Modification>
+        <ExpireEffect value=""/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RavenRepairDroneTimedLife" parent="TimedLife">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>

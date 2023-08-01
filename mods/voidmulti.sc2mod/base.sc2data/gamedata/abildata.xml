@@ -349,7 +349,9 @@
         <InfoArray index="Research6" Time="140" Upgrade="TempestGroundAttackUpgrade">
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
-            <Button DefaultButtonFace="TempestResearchGroundAttackUpgrade" Requirements="LearnTempestGroundAttackUpgrade"/>
+            <Button DefaultButtonFace="TempestResearchGroundAttackUpgrade" Requirements="LearnTempestGroundAttackUpgrade">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
         </InfoArray>
     </CAbilResearch>
     <CAbilResearch id="ForgeResearch">
@@ -884,6 +886,7 @@
                 <DurationArray index="Delay" value="4"/>
             </SectionArray>
         </InfoArray>
+        <ProgressButton value="SporeCrawlerRoot"/>
     </CAbilMorphPlacement>
     <CAbilTrain id="StargateTrain">
         <InfoArray index="Train3" Time="90"/>
@@ -1029,7 +1032,9 @@
         <InfoArray index="Research1" Time="60" Upgrade="AnabolicSynthesis">
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
-            <Button DefaultButtonFace="EvolveAnabolicSynthesis2" Requirements="LearnAnabolicSynthesis"/>
+            <Button DefaultButtonFace="EvolveAnabolicSynthesis2" Requirements="LearnAnabolicSynthesis">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
         </InfoArray>
     </CAbilResearch>
     <CAbilMorph id="Unsiege">
@@ -1666,5 +1671,17 @@
     <CAbilEffectTarget id="Yoink">
         <CastOutroTime value="0.8"/>
     </CAbilEffectTarget>
-    <CAbilMove id="move"/>
+    <CAbilMove id="move">
+        <AbilSetId value="Move"/>
+    </CAbilMove>
+    <CAbilEffectTarget id="MULERepair">
+        <TargetFilters index="0" value="Mechanical,Visible;Self,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Hallucination"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Repair">
+        <TargetFilters index="0" value="Mechanical,Visible;Self,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Hallucination"/>
+    </CAbilEffectTarget>
+    <CAbilMorphPlacement id="SpineCrawlerRoot">
+        <ProgressButton value="SpineCrawlerRoot"/>
+    </CAbilMorphPlacement>
 </Catalog>
