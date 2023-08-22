@@ -138,6 +138,9 @@
     </CUpgrade>
     <CUpgrade id="ExtendedThermalLance">
         <ScoreAmount value="300"/>
+        <EffectArray index="0" Value="2"/>
+        <EffectArray index="1" Value="2"/>
+        <EffectArray Reference="Weapon,ThermalLances,MinScanRange" Value="2"/>
     </CUpgrade>
     <CUpgrade id="GhostMoebiusReactor">
         <EffectArray Reference="Unit,GhostAlternate,EnergyStart" Value="25"/>
@@ -402,6 +405,8 @@
         <EffectArray Operation="Set" Reference="Weapon,InfestedGuassRifle,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
         <EffectArray Reference="Weapon,InfestedAcidSpines,Level" Value="1"/>
         <EffectArray Operation="Set" Reference="Weapon,InfestedAcidSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
+        <EffectArray Reference="Weapon,Spinesdisabled,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,Spinesdisabled,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
     </CUpgrade>
     <CUpgrade id="ZergMissileWeaponsLevel2">
         <AffectedUnitArray value="LurkerMP"/>
@@ -418,6 +423,8 @@
         <EffectArray Operation="Set" Reference="Weapon,InfestedGuassRifle,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
         <EffectArray Reference="Weapon,InfestedAcidSpines,Level" Value="1"/>
         <EffectArray Operation="Set" Reference="Weapon,InfestedAcidSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
+        <EffectArray Reference="Weapon,Spinesdisabled,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,Spinesdisabled,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
     </CUpgrade>
     <CUpgrade id="ZergMissileWeaponsLevel3">
         <AffectedUnitArray value="LurkerMP"/>
@@ -434,6 +441,8 @@
         <EffectArray Operation="Set" Reference="Weapon,InfestedGuassRifle,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
         <EffectArray Reference="Weapon,InfestedAcidSpines,Level" Value="1"/>
         <EffectArray Operation="Set" Reference="Weapon,InfestedAcidSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
+        <EffectArray Reference="Weapon,Spinesdisabled,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,Spinesdisabled,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
     </CUpgrade>
     <CUpgrade id="ProtossGroundWeaponsLevel1">
         <EffectArray index="5" Value="1"/>
@@ -864,5 +873,20 @@
         <EffectArray Reference="Abil,CarrierHangar,Leash" Value="2"/>
         <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
         <AffectedUnitArray value="Carrier"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel1">
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount" Value="5"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount" Value="2"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,AttributeBonus[Light]" Value="2"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel2">
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount" Value="5"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount" Value="2"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,AttributeBonus[Light]" Value="2"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel3">
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount" Value="5"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount" Value="2"/>
+        <EffectArray Reference="Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,AttributeBonus[Light]" Value="2"/>
     </CUpgrade>
 </Catalog>

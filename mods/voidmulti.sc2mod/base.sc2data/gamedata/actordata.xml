@@ -160,7 +160,7 @@
     </CActorSound>
     <CActorAction id="ShieldBatteryRechargeEx5@Action" parent="GenericAttackBase">
         <On Terms="Effect.ShieldBatteryRechargeEx5.Start; At Caster" Send="Create"/>
-        <On Terms="Effect.ShieldBatteryRechargeEx5.Stop" Send="Destroy"/>
+        <On Terms="Effect.ShieldBatteryRechargeEx5.Stop; FromEffectTreeDescendant" Send="Destroy"/>
         <LaunchAssets Sound="ShieldBattery_RechargeStart"/>
         <Beam value="ShieldBatteryRechargeEx5@Beam"/>
         <BeamScope value="Caster"/>
@@ -311,9 +311,6 @@
     <CActorMissile id="PhoenixAirAttackMissile">
         <On Terms="ActorCreation; ValidateUnit PhoenixRangeUpgraded" Send="ModelSwap IonCannonsWeapon_Upgrade"/>
     </CActorMissile>
-    <CActorModel id="ProtossBuildingBirthSmall">
-        <On Terms="UnitConstruction.ShieldBattery.Start" Send="Create"/>
-    </CActorModel>
     <CActorSound id="Purifier_WarpPad_Halo_Loop">
         <Layers Sound="Purifier_WarpPad_Halo_Active"/>
     </CActorSound>
@@ -446,6 +443,7 @@
     </CActorUnit>
     <CActorUnit id="CollapsiblePurifierTowerDiagonal">
         <MinimapIcon value="Assets\Textures\ui_minimap_icon_destructibletower.dds"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
     </CActorUnit>
     <CActorUnit id="CollapsiblePurifierTowerPushUnit">
         <MinimapIcon value="Assets\Textures\ui_minimap_icon_destructibledebris.dds"/>
@@ -454,21 +452,25 @@
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStart" Target="CollapsibleRockTowerTarget" Send="SetVisibility 1"/>
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStop" Target="CollapsibleRockTowerTarget" Send="SetVisibility"/>
         <Macros value="CollapsibleRockTowerPartnerNearbySearch"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
     </CActorUnit>
     <CActorUnit id="CollapsibleRockTowerDiagonal">
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStart" Target="CollapsibleRockTowerTargetDiagonal" Send="SetVisibility 1"/>
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStop" Target="CollapsibleRockTowerTargetDiagonal" Send="SetVisibility"/>
         <Macros value="CollapsibleRockTowerPartnerNearbySearch"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
     </CActorUnit>
     <CActorUnit id="CollapsibleRockTowerRampRight">
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStart" Target="CollapsibleRockTowerTargetDiagonal" Send="SetVisibility 1"/>
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStop" Target="CollapsibleRockTowerTargetDiagonal" Send="SetVisibility"/>
         <Macros value="CollapsibleRockTowerPartnerNearbySearch"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
     </CActorUnit>
     <CActorUnit id="CollapsibleRockTowerRampLeft">
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStart" Target="CollapsibleRockTowerTargetDiagonal" Send="SetVisibility 1"/>
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStop" Target="CollapsibleRockTowerTargetDiagonal" Send="SetVisibility"/>
         <Macros value="CollapsibleRockTowerPartnerNearbySearch"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
     </CActorUnit>
     <CActorUnit id="CollapsibleTerranTowerRampLeft">
         <On Terms="Signal.*.ConjoinedCollapsibleNearbyStart" Target="CollapsibleTerranTowerTargetDiagonal" Send="SetVisibility 1"/>
@@ -1119,6 +1121,7 @@
         <On Terms="Abil.ChannelSnipe.SourceChannelStop" Send="AnimClear SpellB"/>
         <On Terms="Effect.ChannelSnipeDamage.Start; At Caster" Send="AnimPlay SpellC Spell,C"/>
         <On Terms="Effect.ChannelSnipeInitialSet.Start; At Caster" Send="Create ChannelSnipeTrackingBeam"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
     </CActorUnit>
     <CActorUnit id="BypassArmorDrone" parent="GenericUnitBase" unitName="BypassArmorDrone">
         <DeathArray index="Normal" ModelLink="PointDefenseDroneDeath" SoundLink="Raven_TargetingDroneExplode"/>
@@ -1671,7 +1674,7 @@
         <Inherits index="Visibility" value="1"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
-    <CActorAction id="RavenScramblerMissileLaunch" parent="GenericAttackBase" effectImpact="RavenScramblerMissileAB" effectLaunch="RavenScramblerMissileLM">
+    <CActorAction id="RavenScramblerMissileLaunch" parent="GenericAttackBase" effectImpact="RavenScramblerMissileABswitch" effectLaunch="RavenScramblerMissileLM">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA2"/>
         <LaunchAssets Sound="Raven_ScramblerMissileLaunch"/>
         <Missile value="RavenScramblerMissileProjectile"/>
@@ -2400,9 +2403,9 @@
     <CActorBeamSimple id="ShieldBatteryRechargeEx5@Beam" parent="BeamSimpleAnimationStyleContinuous">
         <Supporter Subject="::Creator"/>
         <On Terms="SupporterDestruction" Send="AnimBracketStop BSD"/>
-        <On Terms="AnimBracketState.*.BeforeOpening" Send="Create ShieldBatteryRechargeEx5@SoundStart"/>
-        <On Terms="AnimBracketState.*.BeforeClosing" Send="Create ShieldBatteryRechargeEx5@SoundEnd"/>
-        <On Terms="AnimBracketState.*.AfterOpening" Send="Create ShieldBatteryRechargeEx5@SoundLoop"/>
+        <On Terms="AnimBracketState.*.BeforeOpening; AnimName BSD" Send="Create ShieldBatteryRechargeEx5@SoundStart"/>
+        <On Terms="AnimBracketState.*.BeforeClosing; AnimName BSD" Send="Create ShieldBatteryRechargeEx5@SoundEnd"/>
+        <On Terms="AnimBracketState.*.AfterOpening; AnimName BSD" Send="Create ShieldBatteryRechargeEx5@SoundLoop"/>
         <On Terms="ActorCreation; ValidateUnit CasterHasBatteryOverchargeBehavior" Send="SetTintColor 0,255,108 0.000000 OneShot Overcharge"/>
         <On Terms="Behavior.BatteryOvercharge.On" Send="SetTintColor 0,255,108 0.000000 OneShot Overcharge"/>
         <On Terms="Behavior.BatteryOvercharge.Off" Send="ClearTintColor 0.000000 Overcharge"/>
@@ -2443,12 +2446,15 @@
     </CActorRange>
     <CActorUnit id="Barracks">
         <TerrainSquibs index="0" RangeDown="5.800000"/>
+        <PlaceholderActorModel value="PlaceholderModelStaticPosition"/>
     </CActorUnit>
     <CActorUnit id="CommandCenter">
         <TerrainSquibs index="0" RangeDown="6.250000"/>
+        <PlaceholderActorModel value="PlaceholderModelStaticPosition"/>
     </CActorUnit>
     <CActorUnit id="Factory">
         <TerrainSquibs index="0" RangeDown="6.200000"/>
+        <PlaceholderActorModel value="PlaceholderModelStaticPosition"/>
     </CActorUnit>
     <CActorUnit id="Liberator">
         <Macros value="TerrainSquibAnimations"/>
@@ -2482,6 +2488,7 @@
             <AttachQuery Methods="AMFilterCenter"/>
             <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
         </TerrainSquibs>
+        <ModelFlags index="OutlineEmitter" value="1"/>
     </CActorUnit>
     <CActorUnit id="LiberatorMorphModel">
         <Macros value="TerrainSquibAnimations"/>
@@ -2493,12 +2500,23 @@
             <AttachQuery Methods="AMFilterCenter"/>
             <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
         </TerrainSquibs>
+        <ModelFlags index="OutlineEmitter" value="1"/>
     </CActorUnit>
+    <CActorModel id="PlaceholderModelStaticPosition" parent="PlacementModel">
+        <HostSiteOps Ops="SOpShadowAsyncPrecise" HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
+    <CActorModel id="PlacementModelOrbitalCommand" parent="PlacementModel">
+        <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimGroupApply B {} {} Instant"/>
+        <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimSetPausedAll"/>
+    </CActorModel>
     <CActorUnit id="OrbitalCommand">
         <TerrainSquibs index="0" RangeDown="6.750000"/>
+        <PlaceholderActorModel value="PlaceholderModelOrbitalCommand"/>
+        <PlacementActorModel value="PlacementModelOrbitalCommand"/>
     </CActorUnit>
     <CActorUnit id="Starport">
         <TerrainSquibs index="0" RangeDown="6.250000"/>
+        <PlaceholderActorModel value="PlaceholderModelStaticPosition"/>
     </CActorUnit>
     <CActorUnit id="VikingFighter">
         <TerrainSquibs index="0" RangeDown="5.050000"/>
@@ -2514,4 +2532,108 @@
         <On Terms="Effect.PowerUserWarpablelevel2lost.Start" Target="_Unit" Send="AnimSetTimeScale Birth 0.312500"/>
         <On Terms="Effect.PowerUserWarpablelevel2gained.Start" Send="Create ProtossFastWarpinMarker"/>
     </CActorProgress>
+    <CActorSimple id="CombatVisibilityClearer">
+        <On Terms="Effect.Blink.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.DarkTemplarBlink.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.NexusMassRecallTeleport.Start; At Target" Send="Create"/>
+        <On Terms="Effect.MothershipStrategicRecallTeleport.Start; At Target" Send="Create"/>
+    </CActorSimple>
+    <CActorUnit id="Baneling">
+        <On index="84" Terms="WeaponStart.VolatileBurstBuilding.AttackStart" Send="StatusSet DeathSuicide 1"/>
+        <On Terms="UnitDeathCustomize; IsStatus DeathSuicide 0" Send="Create BanelingDeathNormalSound"/>
+    </CActorUnit>
+    <CActorUnit id="SporeCrawler">
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Unburrow"/>
+    </CActorUnit>
+    <CActorUnit id="SpineCrawler">
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Unburrow"/>
+    </CActorUnit>
+    <CActorSiteOpLocalOffset id="SOpHigher_ShieldBatteryBirthSelectionCircleFixNoSkin">
+        <LocalOffset value="0.000000,0.000000,0.003000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="SOpHigher_ShieldBatteryBirthSelectionCircleFixReforgedSkin">
+        <LocalOffset value="0.000000,0.000000,0.005000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="SOpHigher_ShieldBatteryBirthSelectionCircleFixIhanriiSkin">
+        <LocalOffset value="0.000000,0.000000,0.004000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorUnit id="ShieldBattery">
+        <On Terms="ActorCreation; ModelName ShieldBatteryBirth" Send="HostSiteOpsAdd ::Host SOpHigher_ShieldBatteryBirthSelectionCircleFixNoSkin"/>
+        <On Terms="ActorCreation; ModelName ShieldBattery" Send="HostSiteOpsAdd ::Host SOpHigher_ShieldBatteryBirthSelectionCircleFixNoSkin"/>
+        <On Terms="ActorCreation; ModelName ShieldBattery_Forged_WarpIn" Send="HostSiteOpsAdd ::Host SOpHigher_ShieldBatteryBirthSelectionCircleFixReforgedSkin"/>
+        <On Terms="ActorCreation; ModelName ShieldBattery_Forged" Send="HostSiteOpsAdd ::Host SOpHigher_ShieldBatteryBirthSelectionCircleFixReforgedSkin"/>
+        <On Terms="ActorCreation; ModelName ShieldBattery_Ihanrii_WarpIn" Send="HostSiteOpsAdd ::Host SOpHigher_ShieldBatteryBirthSelectionCircleFixIhanriiSkin"/>
+        <On Terms="ActorCreation; ModelName ShieldBattery_Ihanrii" Send="HostSiteOpsAdd ::Host SOpHigher_ShieldBatteryBirthSelectionCircleFixIhanriiSkin"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+    </CActorUnit>
+    <CActorAction id="ColossusAttackShieldHitter">
+        <On Terms="Effect.ThermalLancesFriendlyDamage.Start" Send="Create"/>
+        <On Terms="Effect.ThermalLancesFriendlyDamage.Start" Send="ActionDamage"/>
+        <On Terms="Effect.ThermalLancesFriendlyDamage.Stop" Send="ActionDamagePhysics"/>
+        <On Terms="Effect.ThermalLancesFriendlyDamage.Stop" Send="Destroy"/>
+    </CActorAction>
+    <CActorUnit id="Pylon">
+        <On Terms="ActorCreation" Target="GroundShadow" Send="SetOpacity"/>
+        <On Terms="UnitBirth.Pylon" Target="GroundShadow" Send="SetOpacity 1.000000 0.250000"/>
+    </CActorUnit>
+    <CActorUnit id="Stargate">
+        <On Terms="ActorCreation" Target="GroundShadow" Send="SetOpacity"/>
+        <On Terms="UnitBirth.Stargate" Target="GroundShadow" Send="SetOpacity 1.000000 0.250000"/>
+    </CActorUnit>
+    <CActorRange id="PulsarBeamRange">
+        <On Terms="Abil.OracleWeapon.ButtonHoverOn" Send="Create"/>
+        <On Terms="Abil.OracleWeapon.ButtonHoverOff" Send="Destroy"/>
+        <Abil Link=""/>
+        <Weapon value="Oracle"/>
+        <IconArcLength value="2.250000"/>
+    </CActorRange>
+    <CActorSound id="GenericAttackLaunchSoundFallbackSite" parent="GenericAttackLaunchSound">
+        <HostSiteOps Ops="SOpBasicCreatorStationary"/>
+    </CActorSound>
+    <CActorAction id="SpineCrawlerAttack">
+        <LaunchSound value="GenericAttackLaunchSoundFallbackSite"/>
+    </CActorAction>
+    <CActorUnit id="WolfStatue">
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+    </CActorUnit>
+    <CActorUnit id="XelNagaHealingShrine">
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+    </CActorUnit>
+    <CActorUnit id="DestructibleGarage">
+        <HighlightTooltip value="Unit/Name/UnbuildableRocksDestructibleHighlightTooltip"/>
+        <MinimapIcon value="Assets\Textures\ui_minimap_icon_destructibledebris.dds"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+    </CActorUnit>
+    <CActorUnit id="DestructibleGarageLarge">
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <HighlightTooltip value="Unit/Name/UnbuildableRocksDestructibleHighlightTooltip"/>
+        <MinimapIcon value="Assets\Textures\ui_minimap_icon_destructibledebris.dds"/>
+    </CActorUnit>
+    <CActorUnit id="Ice2x2NonConjoined">
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+    </CActorUnit>
+    <CActorUnit id="GlobeStatue">
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+    </CActorUnit>
+    <CActorUnit id="DestructibleBullhornLights">
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+    </CActorUnit>
+    <CActorUnit id="CollapsibleRockTowerRampLeftGreen">
+        <ModelFlags index="OutlineOccluder" value="1"/>
+    </CActorUnit>
+    <CActorUnit id="CollapsibleRockTowerRampRightGreen">
+        <ModelFlags index="OutlineOccluder" value="1"/>
+    </CActorUnit>
+    <CActorUnit id="BraxisAlphaDestructible2x2">
+        <HighlightTooltip value="Actor/HighlightTooltip/Rocks2x2NonConjoined"/>
+        <MinimapIcon value="Assets\Textures\ui_minimap_icon_destructibledebris.dds"/>
+    </CActorUnit>
+    <CActorAction id="BanelingAttackDirect" parent="GenericAttack" effectAttack="VolatileBurstFriendlyUnitDamage">
+        <On Terms="Effect.VolatileBurstDirectFallbackEnemyNeutralUnit.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.VolatileBurstDirectFallbackEnemyNeutralUnit.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.VolatileBurstDirectFallbackEnemyNeutralBuilding.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.VolatileBurstDirectFallbackEnemyNeutralBuilding.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.VolatileBurstFriendlyBuildingDamage.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.VolatileBurstFriendlyBuildingDamage.Start; At Caster" Send="Create"/>
+    </CActorAction>
 </Catalog>
