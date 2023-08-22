@@ -1,0 +1,127 @@
+//GENERATED CODE====================================================================================
+//  
+//  Copyright Blizzard Entertainment 2003+
+//  
+//  Behavior.galaxy generated from Behavior.xml using GalaxyHeader.xtc
+//  
+//  !!! WARNING !!! This is generated code. Changes made here will be overwritten.
+//  
+//GENERATED CODE====================================================================================
+
+//  EClassIdCBehavior
+const int c_classIdCBehavior = 0;
+const int c_classIdCBehaviorAttackModifier = 1;
+const int c_classIdCBehaviorAttribute = 2;
+const int c_classIdCBehaviorUnitTracker = 3;
+const int c_classIdCBehaviorBuff = 4;
+const int c_classIdCBehaviorClickResponse = 5;
+const int c_classIdCBehaviorConjoined = 6;
+const int c_classIdCBehaviorCreepSource = 7;
+const int c_classIdCBehaviorJump = 8;
+const int c_classIdCBehaviorPowerSource = 9;
+const int c_classIdCBehaviorPowerUser = 10;
+const int c_classIdCBehaviorResource = 11;
+const int c_classIdCBehaviorReveal = 12;
+const int c_classIdCBehaviorSpawn = 13;
+const int c_classIdCBehaviorVeterancy = 14;
+const int c_classIdCBehaviorWander = 15;
+const string c_classIdCBehaviorName = "CBehavior";
+const string c_classIdCBehaviorAttackModifierName = "CBehaviorAttackModifier";
+const string c_classIdCBehaviorAttributeName = "CBehaviorAttribute";
+const string c_classIdCBehaviorUnitTrackerName = "CBehaviorUnitTracker";
+const string c_classIdCBehaviorBuffName = "CBehaviorBuff";
+const string c_classIdCBehaviorClickResponseName = "CBehaviorClickResponse";
+const string c_classIdCBehaviorConjoinedName = "CBehaviorConjoined";
+const string c_classIdCBehaviorCreepSourceName = "CBehaviorCreepSource";
+const string c_classIdCBehaviorJumpName = "CBehaviorJump";
+const string c_classIdCBehaviorPowerSourceName = "CBehaviorPowerSource";
+const string c_classIdCBehaviorPowerUserName = "CBehaviorPowerUser";
+const string c_classIdCBehaviorResourceName = "CBehaviorResource";
+const string c_classIdCBehaviorRevealName = "CBehaviorReveal";
+const string c_classIdCBehaviorSpawnName = "CBehaviorSpawn";
+const string c_classIdCBehaviorVeterancyName = "CBehaviorVeterancy";
+const string c_classIdCBehaviorWanderName = "CBehaviorWander";
+
+//  EBehaviorCategory
+const int c_behaviorCategoryPermanent = 0;
+const int c_behaviorCategoryRestorable = 1;
+const int c_behaviorCategoryTemporary = 2;
+const int c_behaviorCategoryCloak = 3;
+const int c_behaviorCategoryInvulnerable = 4;
+const int c_behaviorCategorySlow = 5;
+const int c_behaviorCategoryFast = 6;
+const int c_behaviorCategoryStun = 7;
+const int c_behaviorCategoryReveal = 8;
+const int c_behaviorCategoryMagic = 9;
+const int c_behaviorCategoryPhysical = 10;
+const int c_behaviorCategoryAura = 11;
+const int c_behaviorCategoryPassive = 12;
+const int c_behaviorCategoryPassiveMagic = 13;
+const int c_behaviorCategoryTeleportRemove = 14;
+const int c_behaviorCategoryCanSteal = 15;
+const int c_behaviorCategoryTimedLife = 16;
+const int c_behaviorCategoryUser1 = 17;
+const int c_behaviorCategoryUser2 = 18;
+const int c_behaviorCategoryUser3 = 19;
+const int c_behaviorCategoryUser4 = 20;
+const int c_behaviorCategoryUser5 = 21;
+const int c_behaviorCategoryUser6 = 22;
+const int c_behaviorCategoryUser7 = 23;
+const int c_behaviorCategoryUser8 = 24;
+const int c_behaviorCategoryUser9 = 25;
+const int c_behaviorCategoryUser10 = 26;
+const int c_behaviorCategoryUser11 = 27;
+const int c_behaviorCategoryUser12 = 28;
+const int c_behaviorCategoryUser13 = 29;
+const int c_behaviorCategoryUser14 = 30;
+const int c_behaviorCategoryUser15 = 31;
+const string c_behaviorCategoryPermanentName = "Permanent";
+const string c_behaviorCategoryRestorableName = "Restorable";
+const string c_behaviorCategoryTemporaryName = "Temporary";
+const string c_behaviorCategoryCloakName = "Cloak";
+const string c_behaviorCategoryInvulnerableName = "Invulnerable";
+const string c_behaviorCategorySlowName = "Slow";
+const string c_behaviorCategoryFastName = "Fast";
+const string c_behaviorCategoryStunName = "Stun";
+const string c_behaviorCategoryRevealName = "Reveal";
+const string c_behaviorCategoryMagicName = "Magic";
+const string c_behaviorCategoryPhysicalName = "Physical";
+const string c_behaviorCategoryAuraName = "Aura";
+const string c_behaviorCategoryPassiveName = "Passive";
+const string c_behaviorCategoryPassiveMagicName = "PassiveMagic";
+const string c_behaviorCategoryTeleportRemoveName = "TeleportRemove";
+const string c_behaviorCategoryCanStealName = "CanSteal";
+const string c_behaviorCategoryTimedLifeName = "TimedLife";
+const string c_behaviorCategoryUser1Name = "User1";
+const string c_behaviorCategoryUser2Name = "User2";
+const string c_behaviorCategoryUser3Name = "User3";
+const string c_behaviorCategoryUser4Name = "User4";
+const string c_behaviorCategoryUser5Name = "User5";
+const string c_behaviorCategoryUser6Name = "User6";
+const string c_behaviorCategoryUser7Name = "User7";
+const string c_behaviorCategoryUser8Name = "User8";
+const string c_behaviorCategoryUser9Name = "User9";
+const string c_behaviorCategoryUser10Name = "User10";
+const string c_behaviorCategoryUser11Name = "User11";
+const string c_behaviorCategoryUser12Name = "User12";
+const string c_behaviorCategoryUser13Name = "User13";
+const string c_behaviorCategoryUser14Name = "User14";
+const string c_behaviorCategoryUser15Name = "User15";
+
+//  EAttackModifierStage
+const int c_attackModifierStageInit = 0;
+const int c_attackModifierStageIdle = 1;
+const int c_attackModifierStageWaiting = 2;
+const int c_attackModifierStageApplied = 3;
+const int c_attackModifierStageFired = 4;
+const string c_attackModifierStageInitName = "Init";
+const string c_attackModifierStageIdleName = "Idle";
+const string c_attackModifierStageWaitingName = "Waiting";
+const string c_attackModifierStageAppliedName = "Applied";
+const string c_attackModifierStageFiredName = "Fired";
+
+//  EDamageLocation
+const int c_damageLocationAttacker = 0;
+const int c_damageLocationDefender = 1;
+const string c_damageLocationAttackerName = "Attacker";
+const string c_damageLocationDefenderName = "Defender";
