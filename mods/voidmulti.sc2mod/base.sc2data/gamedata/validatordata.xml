@@ -883,4 +883,21 @@
         <Range value="2"/>
         <Value Effect="ThermalLances" Value="TargetPoint"/>
     </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareBehaviorCount id="CasterIsNeuralParasited">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="NeuralParasite"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationCompareCliffLevel id="CliffLevelNotEqual">
+        <WhichLocation Value="TargetUnit"/>
+        <OtherLocation Value="OriginUnit"/>
+        <Compare value="NE"/>
+    </CValidatorLocationCompareCliffLevel>
+    <CValidatorUnitFilters id="VolatileBurstFallbackEnemyNeutralUnit">
+        <Filters value="Ground;Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="VolatileBurstFallbackEnemyNeutralBuilding">
+        <Filters value="Ground,Structure;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
 </Catalog>

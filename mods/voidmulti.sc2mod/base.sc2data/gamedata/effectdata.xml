@@ -196,7 +196,7 @@
     <CEffectEnumArea id="CommandCenterKnockbackSE">
         <EditorCategories value=""/>
         <SearchFilters value="Ground;Self,Neutral,Structure,Missile,Dead,Hidden"/>
-        <AreaArray Radius="2" Effect="TerranBuildingKnockBack2Set"/>
+        <AreaArray Radius="1.9" Effect="TerranBuildingKnockBack2Set"/>
     </CEffectEnumArea>
     <CEffectLaunchMissile id="CycloneWeaponLaunchMissileLeft">
         <ValidatorArray index="0" value="CycloneWeaponLaunchMissileLeftTargetFilters"/>
@@ -454,6 +454,7 @@
         <PeriodicEffectArray index="0" value="OracleWeaponPeriodicSet"/>
         <InitialEffect value="OracleWeaponPeriodicSet"/>
         <PeriodicPeriodArray index="0" value="0.0625"/>
+        <PeriodicValidator value="OracleHasEnergyAndNotDead"/>
         <!--ValidatorArray value="PulsarCasterMinEnergy"/-->
     </CEffectCreatePersistent>
     <CEffectSet id="OracleWeaponPeriodicSet">
@@ -633,7 +634,7 @@
     <CEffectEnumArea id="TerranStructuresKnockbackSE">
         <EditorCategories value=""/>
         <SearchFilters value="Ground;Self,Neutral,Structure,Missile,Dead,Hidden"/>
-        <AreaArray Radius="1" Effect="TerranBuildingKnockBack2Set"/>
+        <AreaArray Radius="0.9" Effect="TerranBuildingKnockBack2Set"/>
     </CEffectEnumArea>
     <CEffectDamage id="CrucioShockCannonBlast">
         <AttributeBonus index="Armored" value="30"/>
@@ -1177,6 +1178,7 @@
         <Amount value="170"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
+        <Flags index="Notification" value="1"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="ChannelSnipeCombat">
         <EditorCategories value="Race:Terran"/>
@@ -1687,14 +1689,23 @@
         <RevealRadius value="5.5"/>
         <RevealFlags index="Unfog" value="1"/>
     </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="RavenScramblerMissileABcarrier">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="RavenScramblerMissileCarrier"/>
+    </CEffectApplyBehavior>
     <CEffectLaunchMissile id="RavenScramblerMissileLM">
         <EditorCategories value="Race:Terran"/>
         <!--ImpactEffect value="BattlecruiserTargetTriggerHyperJumpCD"/-->
         <AmmoUnit value="RavenScramblerMissile"/>
         <ValidatorArray index="0" value="IsMechanicalOrIsPsionic"/>
         <ValidatorArray value="TargetNotTacticalJumping"/>
-        <FinishEffect value="RavenScramblerMissileAB"/>
+        <FinishEffect value="RavenScramblerMissileABswitch"/>
     </CEffectLaunchMissile>
+    <CEffectSwitch id="RavenScramblerMissileABswitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="IsCarrier" Effect="RavenScramblerMissileABcarrier"/>
+        <CaseDefault value="RavenScramblerMissileAB"/>
+    </CEffectSwitch>
     <CEffectApplyBehavior id="RavenScramblerMissileAB">
         <EditorCategories value="Race:Terran"/>
         <Behavior value="RavenScramblerMissile"/>
@@ -2256,4 +2267,47 @@
     </CEffectRemoveBehavior>
     <CEffectSet id="PowerUserWarpablelevel2lost"/>
     <CEffectSet id="PowerUserWarpablelevel2gained"/>
+    <CEffectSet id="AdeptPhaseShiftSpawnSet">
+        <EffectArray value="AdeptPhaseShiftNeuraledShadeCP"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="AdeptPhaseShiftNeuraledShadeCP">
+        <ValidatorArray value="CasterIsNeuralParasited"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <FinalEffect value="AdeptPhaseShiftCancelAB"/>
+        <PeriodicValidator value="CasterIsNeuralParasited"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="BanelingVolatileBurstDirectFallbackSet">
+        <ValidatorArray value="CliffLevelNotEqual"/>
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="VolatileBurstDirectFallbackEnemyNeutralBuilding"/>
+        <EffectArray value="VolatileBurstDirectFallbackEnemyNeutralUnit"/>
+        <EffectArray value="VolatileBurstDirectFallbackFriendlyBuilding"/>
+        <EffectArray value="VolatileBurstDirectFallbackFriendlyUnit"/>
+    </CEffectSet>
+    <CEffectSet id="VolatileBurst">
+        <EffectArray index="4" value="BanelingVolatileBurstDirectFallbackSet"/>
+        <EffectArray value="Suicide"/>
+    </CEffectSet>
+    <CEffectDamage id="VolatileBurstDirectFallbackEnemyNeutralBuilding" parent="VolatileBurstU2">
+        <AreaArray index="0" removed="1"/>
+        <ExcludeArray index="0" removed="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+        <SearchFlags index="SameCliff" value="0"/>
+        <Name value="Effect/Name/VolatileBurstDirectFallbackEnemyNeutralBuilding"/>
+        <ValidatorArray value="VolatileBurstFallbackEnemyNeutralBuilding"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <SearchFilters value="-;-"/>
+    </CEffectDamage>
+    <CEffectDamage id="VolatileBurstDirectFallbackEnemyNeutralUnit" parent="VolatileBurstU">
+        <AreaArray index="0" removed="1"/>
+        <ExcludeArray index="0" removed="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+        <SearchFlags index="SameCliff" value="0"/>
+        <Name value="Effect/Name/VolatileBurstDirectFallbackEnemyNeutralUnit"/>
+        <ValidatorArray value="VolatileBurstFallbackEnemyNeutralUnit"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <SearchFilters value="-;-"/>
+    </CEffectDamage>
 </Catalog>
