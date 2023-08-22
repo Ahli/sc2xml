@@ -405,6 +405,8 @@
         <EffectArray Operation="Set" Reference="Weapon,InfestedGuassRifle,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
         <EffectArray Reference="Weapon,InfestedAcidSpines,Level" Value="1"/>
         <EffectArray Operation="Set" Reference="Weapon,InfestedAcidSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
+        <EffectArray Reference="Weapon,Spinesdisabled,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,Spinesdisabled,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
     </CUpgrade>
     <CUpgrade id="ZergMissileWeaponsLevel2">
         <AffectedUnitArray value="LurkerMP"/>
@@ -421,6 +423,8 @@
         <EffectArray Operation="Set" Reference="Weapon,InfestedGuassRifle,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
         <EffectArray Reference="Weapon,InfestedAcidSpines,Level" Value="1"/>
         <EffectArray Operation="Set" Reference="Weapon,InfestedAcidSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
+        <EffectArray Reference="Weapon,Spinesdisabled,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,Spinesdisabled,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
     </CUpgrade>
     <CUpgrade id="ZergMissileWeaponsLevel3">
         <AffectedUnitArray value="LurkerMP"/>
@@ -437,6 +441,8 @@
         <EffectArray Operation="Set" Reference="Weapon,InfestedGuassRifle,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
         <EffectArray Reference="Weapon,InfestedAcidSpines,Level" Value="1"/>
         <EffectArray Operation="Set" Reference="Weapon,InfestedAcidSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
+        <EffectArray Reference="Weapon,Spinesdisabled,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,Spinesdisabled,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
     </CUpgrade>
     <CUpgrade id="ProtossGroundWeaponsLevel1">
         <EffectArray index="5" Value="1"/>

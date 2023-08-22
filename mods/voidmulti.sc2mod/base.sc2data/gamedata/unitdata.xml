@@ -1448,10 +1448,9 @@
     </CUnit>
     <CUnit id="ShieldBattery">
         <AbilArray index="1" Link="ShieldBatteryRechargeEx5"/>
-        <AbilArray index="2" removed="1"/>
         <CardLayouts index="0">
-            <LayoutButtons index="1" removed="1"/>
-            <LayoutButtons index="2" removed="1"/>
+            <LayoutButtons index="1" Face="Stop" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons index="2" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
         <EnergyStart value="50"/>
         <BehaviorArray Link="BatteryEnergy"/>
