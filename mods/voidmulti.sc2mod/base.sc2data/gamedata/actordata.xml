@@ -2504,6 +2504,8 @@
     </CActorUnit>
     <CActorModel id="PlaceholderModelStaticPosition" parent="PlacementModel">
         <HostSiteOps Ops="SOpShadowAsyncPrecise" HoldPosition="1" HoldRotation="1"/>
+        <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimGroupApply B {} {} Instant"/>
+        <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimSetPausedAll"/>
     </CActorModel>
     <CActorModel id="PlacementModelOrbitalCommand" parent="PlacementModel">
         <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimGroupApply B {} {} Instant"/>

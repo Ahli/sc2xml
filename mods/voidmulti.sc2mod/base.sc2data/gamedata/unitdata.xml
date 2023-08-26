@@ -1449,8 +1449,12 @@
     <CUnit id="ShieldBattery">
         <AbilArray index="1" Link="ShieldBatteryRechargeEx5"/>
         <CardLayouts index="0">
-            <LayoutButtons index="1" Face="Stop" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons index="2" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons index="0" Face="Stop" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons index="1" Face="CancelBuilding"/>
+            <LayoutButtons index="2" Face="ShieldBatteryRecharge" AbilCmd="ShieldBatteryRechargeEx5,Execute" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
         <EnergyStart value="50"/>
         <BehaviorArray Link="BatteryEnergy"/>
