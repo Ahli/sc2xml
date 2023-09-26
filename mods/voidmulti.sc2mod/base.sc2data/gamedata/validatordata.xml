@@ -695,8 +695,9 @@
         <Behavior value="RavenScramblerMissile"/>
     </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareCooldown id="BarrierOnCooldown">
-        <CooldownLink value="Abil/ImmortalOverload"/>
-        <Ability value="ImmortalOverload"/>
+        <CooldownLink value="Behavior/BarrierDamageResponse"/>
+        <Location value="Behavior"/>
+        <Behavior value="BarrierDamageResponse"/>
         <Compare value="GT"/>
     </CValidatorUnitCompareCooldown>
     <CValidatorUnitFilters id="InfestorEnsnareReheightSourceLaunchMissileCasterNotDead">
@@ -900,4 +901,15 @@
     <CValidatorUnitFilters id="VolatileBurstFallbackEnemyNeutralBuilding">
         <Filters value="Ground,Structure;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CValidatorUnitFilters>
+    <CValidatorCombine id="BarrierNoGravitonBeamOrBarrierOnCooldown">
+        <CombineArray value="NotGravitonBeamd"/>
+        <CombineArray value="BarrierOnCooldown"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="LockOnCasterNearTargetUpgraded">
+        <Range value="9"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveCycloneLockOnCooldownBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="CycloneLockOnCooldown"/>
+    </CValidatorUnitCompareBehaviorCount>
 </Catalog>

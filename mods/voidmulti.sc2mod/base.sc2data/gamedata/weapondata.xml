@@ -268,14 +268,11 @@
         <AllowedMovement value="Moving"/>
         <TeleportResetRange value="0"/>
     </CWeaponLegacy>
-    <!--CWeaponLegacy id="TyphoonMissilePod">
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    <CWeaponLegacy id="TyphoonMissilePod">
         <MinScanRange value="6.5"/>
         <Range value="6"/>
-        <Period value="0.14"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy-->
+        <Period value="0.6738"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="HighTemplarWeapon">
         <Name value="Weapon/Name/PsiBlast"/>
         <EditorCategories value="Race:Protoss"/>
@@ -356,5 +353,12 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="Spinesdisabled" parent="LurkerMP">
         <Options index="Disabled" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CycloneLockOnDummy">
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NeedleClaws">
+        <Period value="0.8"/>
     </CWeaponLegacy>
 </Catalog>

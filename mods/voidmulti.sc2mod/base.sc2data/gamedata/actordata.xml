@@ -181,6 +181,7 @@
     <CActorMissile id="TempestAttackGroundMissile">
         <On Terms="ActorCreation; ValidateUnit TempestGroundAttackUpgraded" Send="ModelSwap TempestWeaponGroundUpgraded"/>
         <On Terms="ActorCreation; ValidateCreationEffect TempestGroundAttackUpgraded" Send="SetTintColor {255,128,0 5.000000}"/>
+        <Scale value="0.900000"/>
     </CActorMissile>
     <CActorSplat id="UltraliskBurrowedSplat">
         <Scale value="0.770000"/>
@@ -570,13 +571,13 @@
         <On Terms="Upgrade.CycloneRapidFireLaunchers.Add" Send="Create CycloneUpgradeBeamLeft"/>
         <On Terms="Upgrade.CycloneRapidFireLaunchers.Add" Send="Create CycloneUpgradeBeamRight"/>
         <On Terms="Upgrade.CycloneRapidFireLaunchers.Remove" Target="CycloneUpgradeBeamLeft" Send="Destroy"/>
-        <On Terms="Upgrade.CycloneRapidFireLaunchers.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/-->
+        <On Terms="Upgrade.CycloneRapidFireLaunchers.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/>
         <On Terms="ActorCreation; ValidatePlayer HaveCycloneLockOnDamageUpgrade" Send="Create CycloneUpgradeBeamLeft"/>
         <On Terms="ActorCreation; ValidatePlayer HaveCycloneLockOnDamageUpgrade" Send="Create CycloneUpgradeBeamRight"/>
         <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Add" Send="Create CycloneUpgradeBeamLeft"/>
         <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Add" Send="Create CycloneUpgradeBeamRight"/>
         <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Remove" Target="CycloneUpgradeBeamLeft" Send="Destroy"/>
-        <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/>
+        <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/-->
     </CActorUnit>
     <!--CActorMissile id="CycloneMissile">
         <On Terms="ActorCreation" Send="SetTintColor 255,202,202"/>
@@ -613,6 +614,10 @@
     </CActorRange>
     <CActorUnit id="Immortal">
         <On Terms="UnitMovementUpdate.*.Walk" Send="AnimBracketStop Attack"/>
+        <On index="73" Terms="Behavior.TakenDamage.Enable"/>
+        <On index="74" Terms="Behavior.TakenDamage.Enable"/>
+        <On index="75" Terms="Behavior.TakenDamage.Off"/>
+        <On index="76" Terms="Behavior.TakenDamage.Off"/>
     </CActorUnit>
     <CActorUnit id="Infestor">
         <On Terms="ActorCreation" Send="ModelAnimateInvisible 1"/>
@@ -766,6 +771,13 @@
         <On Terms="Behavior.MothershipOffensiveMode.On" Send="SetTintColor {0,0,255 2.000000} 1.000000"/>
         <On Terms="Behavior.MothershipOffensiveMode.On" Send="ClearTintColor 1.000000"/>
         <On Terms="Abil.NexusMassRecall.SourceCastStart" Send="$Spell"/>
+        <On index="68" Send="SetScale 0.900000 0.400000"/>
+        <On index="73" Send="SetScale 0.900000 0.500000"/>
+        <On index="83" Send="SetScale 0.900000 0.500000"/>
+        <Scale value="0.900000"/>
+        <BarOffset value="160"/>
+        <BarWidth value="194"/>
+        <NameOffset value="117"/>
         <TerrainSquibs index="0" RangeDown="5.750000"/>
     </CActorUnit>
     <CActorUnit id="MothershipCore">
@@ -1019,6 +1031,7 @@
         <On Terms="AnimBracketState.*.AfterClosing; !AnimBracketExitReason ModelSwap; AnimName BSD" Send="Destroy"/>
         <HostSiteOps Ops="SOpShadow"/>
         <Macros value="GlobalLoopMacro"/>
+        <Scale value="0.937500"/>
     </CActorModel>
     <CActorModel id="TemporalFieldAfterBubbleModel">
         <On Terms="Effect.TemporalFieldAfterBubbleCreatePersistent.Start" Send="Create"/>
@@ -1029,6 +1042,7 @@
         <On Terms="AnimBracketState.*.AfterClosing; !AnimBracketExitReason ModelSwap; AnimName BSD" Send="Destroy"/>
         <HostSiteOps Ops="SOpShadow"/>
         <Macros value="GlobalLoopMacro"/>
+        <Scale value="0.937500"/>
     </CActorModel>
     <CActorSound id="TemporalFieldBubbleEnd" parent="SoundOneShot">
         <On Terms="Effect.TemporalFieldGrowingBubbleCreatePersistent.Stop" Send="Create"/>
@@ -1210,6 +1224,9 @@
         <On Terms="Behavior.PurificationNovaTargettedCaster.Off" Send="AnimBracketStop Purification"/>
         <!--On Terms="Behavior.DisruptorAnimationController.Create" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
         <On Terms="Behavior.DisruptorAnimationController.Destroy" Send="AnimBracketStop Cover"/-->
+        <Scale value="0.912500"/>
+        <BarOffset value="83"/>
+        <BarWidth value="60"/>
     </CActorUnit>
     <CActorModel id="ChannelSnipeLaunchSquib" parent="ModelAnimationStyleOneShot">
         <Flags index="SuppressCreationErrors" value="1"/>
@@ -2504,10 +2521,12 @@
     </CActorUnit>
     <CActorModel id="PlaceholderModelStaticPosition" parent="PlacementModel">
         <HostSiteOps Ops="SOpShadowAsyncPrecise" HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
+    <CActorModel id="PlacementModelOrbitalCommand" parent="PlacementModel">
         <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimGroupApply B {} {} Instant"/>
         <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimSetPausedAll"/>
     </CActorModel>
-    <CActorModel id="PlacementModelOrbitalCommand" parent="PlacementModel">
+    <CActorModel id="PlaceholderModelOrbitalCommand" parent="PlaceholderModelStaticPosition">
         <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimGroupApply B {} {} Instant"/>
         <On Terms="ActorCreation; ModelIsLowQuality" Send="AnimSetPausedAll"/>
     </CActorModel>
@@ -2638,4 +2657,33 @@
         <On Terms="Effect.VolatileBurstFriendlyBuildingDamage.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On Terms="Effect.VolatileBurstFriendlyBuildingDamage.Start; At Caster" Send="Create"/>
     </CActorAction>
+    <CActorRange id="CycloneLockOnTrackingRange">
+        <Range value="9.000000"/>
+    </CActorRange>
+    <CActorSound id="Mothership_CloakFieldOff">
+        <On index="1" Terms="Behavior.CloakField.Off"/>
+    </CActorSound>
+    <CActorSound id="Mothership_CloakFieldOn">
+        <On index="1" Terms="Behavior.CloakField.On"/>
+    </CActorSound>
+    <CActorModel id="MothershipCloakingField" parent="ModelAnimationStyleContinuous">
+        <On Terms="Behavior.CloakField.On" Send="Create"/>
+        <On Terms="Behavior.CloakField.Off" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="CloakingField"/>
+        <Scale value="3.164100"/>
+    </CActorModel>
+    <CActorUnit id="Tempest">
+        <Scale value="0.900000"/>
+        <BarOffset value="86"/>
+        <BarWidth value="140"/>
+        <NameOffset value="99"/>
+    </CActorUnit>
+    <CActorMissile id="TempestAttackMissile">
+        <Scale value="0.900000"/>
+    </CActorMissile>
+    <CActorUnit id="ThornLizard">
+        <DeathArray index="Normal" ModelLink="ThornLizardDeath"/>
+    </CActorUnit>
 </Catalog>
