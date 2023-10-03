@@ -9,3 +9,4 @@ I wrote my own tool for this which facilitates [Zezula's CascLib](https://github
 - run it with the following parameters:
     CascExtractor.exe ["Path\to\the\CASC storage"] ["*mask.txt"] ["Path\to\the\output Directory"]
     example: `CascExtractor.exe "D:\Games\StarCraft II\SC2Data" "*.xml" "D:\exportedXml"`
+    example: `CascExtractor.exe "D:\Games\StarCraft II\SC2Data" "*.galaxy" "D:\exportedXml"`
