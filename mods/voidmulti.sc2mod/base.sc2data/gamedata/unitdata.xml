@@ -130,7 +130,7 @@
         <GlossaryStrongArray index="1" value="Ultralisk"/>
         <GlossaryStrongArray index="2" value="HighTemplar"/>
         <GlossaryWeakArray index="2" value="Tempest"/>
-        <Speed value="1.6015"/>
+        <Speed value="1.875"/>
         <VisionHeight value="15"/>
     </CUnit>
     <CUnit id="BroodLordCocoon">
@@ -140,6 +140,9 @@
     <CUnit id="Broodling">
         <Collide index="Locust" value="1"/>
         <SubgroupPriority value="62"/>
+        <LifeStart value="20"/>
+        <LifeMax value="20"/>
+        <Speed value="2.9531"/>
     </CUnit>
     <CUnit id="Bunker">
         <Collide index="Locust" value="1"/>
@@ -297,13 +300,14 @@
         <SubgroupPriority value="72"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
-        <Food value="-3"/>
+        <Food value="-4"/>
         <CostResource index="Vespene" value="150"/>
         <ScoreMake value="300"/>
         <ScoreKill value="300"/>
         <GlossaryStrongArray index="2" value="Stalker"/>
         <GlossaryWeakArray index="2" value="Tempest"/>
-        <MinimapRadius value="0.5"/>
+        <MinimapRadius value="0.625"/>
+        <Radius value="0.625"/>
     </CUnit>
     <CUnit id="DisruptorPhased">
         <ShieldsStart value="100"/>
@@ -547,7 +551,7 @@
         <CardLayouts index="0">
             <LayoutButtons index="4" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="" Row="1" Column="3"/>
             <LayoutButtons index="5" Face="ResearchBallisticRange" Type="AbilCmd" AbilCmd="FusionCoreResearch,Research2" Row="0" Column="2"/>
-            <LayoutButtons Face="ResearchRapidReignitionSystem" Type="AbilCmd" AbilCmd="FusionCoreResearch,Research3" Row="0" Column="1"/>
+            <LayoutButtons Face="ResearchMedivacEnergyUpgrade" Type="AbilCmd" AbilCmd="FusionCoreResearch,Research4" Row="0" Column="1"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="Ghost">
@@ -725,6 +729,7 @@
         <TacticalAIThink value="AIThinkImmortal"/>
         <GlossaryStrongArray index="0" value="Cyclone"/>
         <BehaviorArray index="0" Link="BarrierDamageResponse"/>
+        <BehaviorArray Link="ImmortalOverload"/>
         <CardLayouts index="0">
             <LayoutButtons index="5" Face="ImmortalOverload" AbilCmd="ImmortalOverload,Execute" Behavior="BarrierDamageResponse"/>
         </CardLayouts>
@@ -782,6 +787,7 @@
         <AbilArray Link="AmorphousArmorcloud"/>
         <GlossaryStrongArray index="2" value="VoidRay"/>
         <Radius value="0.625"/>
+        <EnergyStart value="75"/>
     </CUnit>
     <CUnit id="CorrosiveParasiteWeapon" parent="MISSILE">
         <Race value="Zerg"/>
@@ -823,6 +829,7 @@
         <Radius value="0.625"/>
         <SubgroupAlias value="Infestor"/>
         <SelectAlias value="Infestor"/>
+        <EnergyStart value="75"/>
     </CUnit>
     <CUnit id="InfestorTerran">
         <Collide index="Locust" value="1"/>
@@ -958,12 +965,13 @@
     <CUnit id="Medivac">
         <SubgroupPriority value="60"/>
         <CardLayouts index="0">
-            <LayoutButtons Face="RapidReignitionSystem" Type="Passive" Requirements="HaveMedivacSpeedBoostUpgrade" Row="1" Column="0"/>
+            <LayoutButtons Face="CaduceusReactor" Type="Passive" Requirements="HaveMedivacEnergyUpgrade" Row="1" Column="0"/>
         </CardLayouts>
         <GlossaryWeakArray value="MissileTurret"/>
         <GlossaryWeakArray value="SporeCrawler"/>
         <GlossaryWeakArray value="PhotonCannon"/>
         <VisionHeight value="15"/>
+        <MinimapRadius value="1"/>
     </CUnit>
     <CUnit id="MissileTurret">
         <Collide index="Locust" value="1"/>
@@ -973,14 +981,31 @@
     </CUnit>
     <CUnit id="Mothership">
         <SubgroupPriority value="96"/>
-        <Speed value="1.875"/>
+        <Speed value="2.0156"/>
         <AbilArray index="4" Link="MassRecall"/>
+        <AbilArray Link="MothershipCloak"/>
         <CardLayouts index="0">
+            <LayoutButtons index="5" Type="AbilCmd" AbilCmd="MothershipCloak,Execute"/>
             <LayoutButtons index="6" Face="MassRecall" AbilCmd="MassRecall,Execute"/>
         </CardLayouts>
         <GlossaryWeakArray index="2" value="Tempest"/>
         <Attributes index="Heroic" value="1"/>
         <VisionHeight value="15"/>
+        <LateralAcceleration value="2.0625"/>
+        <LifeStart value="250"/>
+        <LifeMax value="250"/>
+        <ShieldsStart value="250"/>
+        <ShieldsMax value="250"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="300"/>
+        <BehaviorArray index="0" removed="1"/>
+        <Radius value="1.25"/>
+        <SeparationRadius value="1.25"/>
+        <ScoreMake value="600"/>
+        <ScoreKill value="600"/>
+        <Food value="-6"/>
+        <EnergyStart value="0"/>
+        <EnergyMax value="0"/>
     </CUnit>
     <CUnit id="MothershipCore">
         <SubgroupPriority value="90"/>
@@ -1088,6 +1113,7 @@
         <FlagArray index="UseLineOfSight" value="1"/>
         <FlagArray index="NoScore" value="1"/>
         <AttackTargetPriority value="20"/>
+        <Sight value="7"/>
     </CUnit>
     <CUnit id="OrbitalCommand">
         <Food value="15"/>
@@ -1114,6 +1140,7 @@
         <GlossaryWeakArray value="SporeCrawler"/>
         <GlossaryWeakArray value="PhotonCannon"/>
         <VisionHeight value="15"/>
+        <Deceleration value="1.625"/>
     </CUnit>
     <CUnit id="OverlordCocoon">
         <FlagArray index="ArmySelect" value="1"/>
@@ -1610,10 +1637,13 @@
         <Food value="-5"/>
         <ShieldsStart value="100"/>
         <ShieldsMax value="100"/>
-        <Acceleration value="1.5"/>
+        <Acceleration value="3"/>
         <ScoreMake value="425"/>
         <ScoreKill value="425"/>
         <VisionHeight value="15"/>
+        <Radius value="1.125"/>
+        <SeparationRadius value="1.125"/>
+        <MinimapRadius value="1.125"/>
     </CUnit>
     <CUnit id="Stargate">
         <TechTreeProducedUnitArray index="1" value="Oracle"/>
@@ -1644,7 +1674,7 @@
         <CardLayouts index="0">
             <LayoutButtons index="2" Face="ResearchBansheeCloak" AbilCmd="StarportTechLabResearch,Research1"/>
             <LayoutButtons index="3" Face="BansheeSpeed" AbilCmd="StarportTechLabResearch,Research10" Column="1"/>
-            <LayoutButtons index="4" removed="1"/>
+            <LayoutButtons index="4" Face="ResearchRavenInterferenceMatrix" Type="AbilCmd" AbilCmd="StarportTechLabResearch,Research18" Row="0" Column="2"/>
             <LayoutButtons index="5" removed="1"/>
             <LayoutButtons index="6" removed="1"/>
             <LayoutButtons index="7" removed="1"/>
@@ -1702,9 +1732,10 @@
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
         <SubgroupPriority value="12"/>
-        <!--CardLayouts index="0">
-            <LayoutButtons Face="EvolveAmorphousArmorcloud" Type="AbilCmd" AbilCmd="InfestationPitResearch,Research6" Row="0" Column="2"/>
-        </CardLayouts-->
+        <CardLayouts index="0">
+            <LayoutButtons index="2" Face="ResearchNeuralParasite" AbilCmd="InfestationPitResearch,Research4"/>
+            <LayoutButtons index="3" removed="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="FactoryTechLab">
         <CardLayouts index="0">
@@ -1712,7 +1743,7 @@
             <LayoutButtons index="2" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons index="3" Face="ResearchDrillClaws" AbilCmd="FactoryTechLabResearch,Research5"/>
             <LayoutButtons index="4" Face="ResearchSmartServos" AbilCmd="FactoryTechLabResearch,Research7" Row="0" Column="3"/>
-            <LayoutButtons Face="CycloneResearchLockOnDamageUpgrade" Type="AbilCmd" AbilCmd="FactoryTechLabResearch,Research10" Row="0" Column="1"/>
+            <LayoutButtons Face="CycloneResearchHurricaneThrusters" Type="AbilCmd" AbilCmd="FactoryTechLabResearch,Research11" Row="0" Column="1"/>
         </CardLayouts>
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
@@ -1750,20 +1781,24 @@
     <CUnit id="Cyclone">
         <SubgroupPriority value="71"/>
         <CardLayouts index="0">
-            <LayoutButtons index="7" Face="CycloneLockOnDamageUpgrade" Requirements="HaveCycloneLockOnDamageUpgrade" Row="1" Column="0"/>
+            <LayoutButtons index="7" Face="HurricaneThrusters" Requirements="HaveCycloneSpeedUpgrade" Row="1" Column="0"/>
         </CardLayouts>
-        <LifeStart value="120"/>
-        <LifeMax value="120"/>
-        <Speed value="3.375"/>
+        <LifeStart value="110"/>
+        <LifeMax value="110"/>
+        <Speed value="2.8125"/>
         <Description value="Button/Tooltip/BuildCyclone"/>
-        <CostResource index="Vespene" value="100"/>
-        <ScoreMake value="250"/>
-        <ScoreKill value="250"/>
+        <CostResource index="Minerals" value="125"/>
+        <CostResource index="Vespene" value="50"/>
+        <ScoreMake value="175"/>
+        <ScoreKill value="175"/>
         <GlossaryStrongArray index="0" value="Marauder"/>
         <GlossaryStrongArray index="1" value="Roach"/>
         <GlossaryStrongArray index="2" value="Adept"/>
         <GlossaryWeakArray index="0" value="SiegeTank"/>
         <GlossaryWeakArray index="2" value="Immortal"/>
+        <Food value="-2"/>
+        <LifeArmor value="0"/>
+        <AIKiteRange value="8"/>
     </CUnit>
     <CUnit id="ThorAP">
         <WeaponArray index="0" Link="LanceMissileLaunchers"/>
@@ -1822,6 +1857,9 @@
         <Radius value="0.875"/>
         <InnerRadius value="0.6875"/>
         <MinimapRadius value="0.875"/>
+        <CostResource index="Minerals" value="275"/>
+        <ScoreMake value="475"/>
+        <ScoreKill value="475"/>
     </CUnit>
     <CUnit id="UltraliskBurrowed">
         <SubgroupPriority value="88"/>
@@ -1855,6 +1893,8 @@
         <Radius value="0.875"/>
         <InnerRadius value="0.6875"/>
         <MinimapRadius value="0.875"/>
+        <CostResource index="Minerals" value="275"/>
+        <ScoreKill value="475"/>
     </CUnit>
     <CUnit id="UltraliskCavern">
         <Collide index="Locust" value="1"/>
@@ -1926,6 +1966,7 @@
         <ScoreMake value="250"/>
         <ScoreKill value="250"/>
         <VisionHeight value="15"/>
+        <MinimapRadius value="1"/>
     </CUnit>
     <CUnit id="WarpPrismPhasing">
         <SubgroupPriority value="69"/>
@@ -1938,6 +1979,7 @@
         <CostResource index="Minerals" value="250"/>
         <ScoreKill value="250"/>
         <VisionHeight value="15"/>
+        <MinimapRadius value="1"/>
     </CUnit>
     <CUnit id="WidowMine">
         <Collide index="Locust" value="1"/>
@@ -2522,8 +2564,8 @@
             <LayoutButtons index="4" Face="Attack" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons index="5" Face="AcquireMove" AbilCmd="move,AcquireMove"/>
             <LayoutButtons index="6" Face="Detector" Type="Passive" AbilCmd="" Row="2" Column="3"/>
-            <LayoutButtons index="8" Face="RavenShredderMissile" Type="AbilCmd" AbilCmd="RavenShredderMissile,Execute" Row="2" Column="2"/>
-            <LayoutButtons index="9" Face="RavenScramblerMissile" AbilCmd="RavenScramblerMissile,Execute"/>
+            <LayoutButtons index="8" Face="RavenShredderMissile" Type="AbilCmd" AbilCmd="RavenShredderMissile,Execute" Row="2" Column="1"/>
+            <LayoutButtons index="9" Face="RavenScramblerMissile" AbilCmd="RavenScramblerMissile,Execute" Column="2"/>
             <LayoutButtons index="10" Face="AutoTurret" AbilCmd="BuildAutoTurret,Execute" Column="0"/>
         </CardLayouts>
         <Speed value="2.9492"/>
@@ -2635,6 +2677,8 @@
     </CUnit>
     <CUnit id="OverlordTransport">
         <VisionHeight value="15"/>
+        <Speed value="0.7851"/>
+        <Deceleration value="1.625"/>
     </CUnit>
     <CUnit id="StarportFlying">
         <VisionHeight value="15"/>

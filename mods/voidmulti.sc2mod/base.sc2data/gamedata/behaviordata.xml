@@ -82,6 +82,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="CloakField">
         <DisableValidatorArray value="NotHaveScramblerMissileBehavior"/>
+        <InfoFlags index="Hidden" value="0"/>
+        <Period value="0.0625"/>
+        <Tooltip value="Behavior/Tooltip/CloakField2"/>
+        <Duration value="28"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CommandCenterKnockbackBehavior">
         <InfoFlags index="Hidden" value="1"/>
@@ -222,7 +226,7 @@
         <Contents value="2250"/>
     </CBehaviorResource>
     <CBehaviorBuff id="TemporalField">
-        <Modification AttackSpeedMultiplier="0.5"/>
+        <Modification MoveSpeedMultiplier="0.6" AttackSpeedMultiplier="0.6"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TerranStructuresKnockbackBehavior">
         <InfoFlags index="Hidden" value="1"/>
@@ -251,8 +255,11 @@
         <DepletionThreshold value="903"/>
     </CBehaviorResource>
     <CBehaviorBuff id="ImmortalOverload">
-        <DamageResponse ModifyLimit="100"/>
-        <RemoveValidatorArray value="NotHaveScramblerMissileBehavior"/>
+        <Duration value="0"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="NotHaveScramblerMissileBehavior"/>
+        <DisableValidatorArray value="BarrierNoGravitonBeamOrBarrierOnCooldown"/>
+        <DamageResponse ModifyLimit="100" Exhausted="ImmortalBarrierRemoveactiveDuration"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="InfestedTerranTimedLife">
         <DisplayDuration index="Neutral" value="1"/>
@@ -543,6 +550,7 @@
     </CBehaviorBuff>
     <CBehaviorCreepSource id="makeCreep2x2Overlord">
         <Period value="0.63"/>
+        <Delay value="1.5"/>
     </CBehaviorCreepSource>
     <CBehaviorCreepSource id="makeCreep4x4">
         <Period value="0.63"/>
@@ -554,7 +562,8 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <DisableValidatorArray value="NotGravitonBeamd"/>
-        <DamageResponse Handled="ImmortalOverloadAB">
+        <DisableValidatorArray value="NotHaveScramblerMissileBehavior"/>
+        <DamageResponse Handled="ImmortalBarrierAfterfirstdamageeffect">
             <Chance value="1"/>
             <Cost>
                 <Cooldown TimeUse="45"/>
@@ -566,17 +575,25 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="ImmortalBarrierSupressed">
         <Cost>
-            <Cooldown TimeStart="45"/>
+            <Cooldown TimeStart="0"/>
         </Cost>
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-invulnerabilityshield.dds"/>
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <Duration value="45"/>
+        <ExpireEffect value="ImmortalBarrierAddBarrier"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TakenDamage">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
-        <Duration value="0.0625"/>
-        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="3"/>
+        <Name value="Behavior/Name/ImmortalOverload"/>
+        <DisplayDuration index="Self" value="1"/>
+        <ExpireEffect value="ImmortalBarrierRemoveBarrier"/>
+        <Tooltip value="Behavior/Tooltip/ImmortalOverload"/>
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="0"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-invulnerabilityshield.dds"/>
+        <RemoveValidatorArray value="NotHaveScramblerMissileBehavior"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="QueenSpawnLarvaHiddenStack">
         <Alignment value="Positive"/>
@@ -686,7 +703,6 @@
         <InfoIcon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="15"/>
-        <ExpireEffect value="ImmortalBarrierCDFix"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
             <ModifyFlags index="EnableAttack" value="1"/>
@@ -695,7 +711,6 @@
             <StateFlags index="SuppressCloak" value="1"/>
             <StateFlags index="SuppressCombat" value="1"/>
             <AbilClassEnableArray index="CAbilStop" value="1"/>
-            <BehaviorLinkDisableArray value="ImmortalBarrierSupressed"/>
             <WeaponDisableArray value="InterceptorLaunch"/>
         </Modification>
         <DisplayDuration index="Self" value="1"/>
@@ -710,7 +725,6 @@
         <Modification>
             <ModifyFlags index="EnableAttack" value="0"/>
         </Modification>
-        <ExpireEffect value=""/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RavenRepairDroneTimedLife" parent="TimedLife">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -967,7 +981,6 @@
         <RemoveValidatorArray value="LockOnTargetNotDeadNew"/>
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <Modification WeaponRange="2" WeaponScanBonus="1.5"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="AdeptPhaseShiftCaster">
         <Modification>
@@ -986,5 +999,13 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SensorTowerRadar">
         <Modification Radar="27"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CycloneLockOnCooldown">
+        <InfoFlags index="Hidden" value="1"/>
+        <TimeScaleSource Value="Caster"/>
+        <Duration value="0.64"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CloakFieldEffect">
+        <Duration value="0.125"/>
     </CBehaviorBuff>
 </Catalog>
