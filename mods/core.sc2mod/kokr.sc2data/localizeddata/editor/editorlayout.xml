@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<EditorLayout>
+
+<!-- Battle.net Publish dialog -->
+<window label="PublishDialog">
+    <control label="ConfigNameText">
+        <size>180,16</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="ConfigRevisionLabel">
+        <size>30,0</size>
+    </control>
+</window>
+
+<!-- Sound dialog -->
+<window label="SoundDialog">
+    <control label="SyncPointsLabel">
+        <pos>325,26</pos>
+        <size>70,16</size>
+    </control>
+    
+    <control label="LoopCountLabel">
+        <pos>2,61</pos>
+        <size>90,16</size>
+    </control>
+    
+    <control label="LoopCountEdit">
+        <pos>120,57</pos>
+        <size>60,21</size>
+    </control>
+    
+    <control label="LoopTimeLabel">
+        <pos>2,84</pos>
+        <size>90,16</size>
+    </control>
+    
+    <control label="LoopTimeRange">
+        <pos>95,80</pos>
+        <size>2,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="LoopTimeDefault">
+        <pos>370,82</pos>
+        <size>16,16</size>
+    </control>
+    
+    <control label="SpeakerLabel">
+        <pos>2,199</pos>
+        <size>110,16</size>
+    </control>
+    
+    <control label="SpeakerEdit">
+        <pos>115,195</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="SubtitleLabel">
+        <pos>2,222</pos>
+        <size>110,16</size>
+    </control>
+    
+    <control label="SubtitleEdit">
+        <pos>115,218</pos>
+        <size>0,32</size>
+        <autoResizeX/>
+        <autoResizeY/>
+    </control>
+</window>
+
+<window label="StandardSettings">
+    <control label="RangeControl">
+        <value label="LabelYOffset">4</value>
+        <value label="LabelHeight">16</value>
+        <value label="LabelWidth">40</value>
+        <value label="EditWidth">90</value>
+        <value label="EditGap">8</value>
+    </control>
+    
+    <!-- File controls -->
+    <control label="FileControl">
+        <Windows><value label="TextButtonGap">4</value></Windows>
+        <MacOSX> <value label="TextButtonGap">5</value></MacOSX>
+        <value label="TextHeight">16</value>
+        <Windows><value label="BrowseWidth">70</value></Windows>
+        <MacOSX> <value label="BrowseWidth">77</value></MacOSX> 
+        <value label="BrowseWidthSmall">20</value>
+        <value label="SmallWidthThresh">100</value>
+    </control>
+</window>
+
+<window label="NewDocumentDialog">
+    <control label="MapInitTextureLabel">
+        <size>80,16</size>
+    </control>
+    <control label="MapInitTextureText">
+        <pos>85,75</pos>
+    </control>
+    <control label="ResetButton">
+        <size>150,20</size>
+        <pos>5,25</pos>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="OpenDocumentPaneLocalFiles">
+    <control label="DirectoryLabel">
+        <pos>2,3</pos>
+        <size>55,16</size>
+    </control>
+    <control label="Directory">
+        <pos>60,0</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    <control label="TypeLabel">
+        <pos>2,27</pos>
+        <size>55,16</size>
+    </control>
+    <control label="TypeMenu">
+        <pos>60,23</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    <control label="RadioButtonTree">
+        <pos>35,20</pos>
+        <size>60,16</size>
+        <posReverseY/>
+    </control>
+    <control label="RadioButtonList">
+        <pos>100,20</pos>
+        <size>50,16</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="OpenDocumentPaneBattleNet">
+    <control label="TypeLabel">
+        <pos>2,27</pos>
+        <size>55,16</size>
+    </control>
+    
+    <control label="TypeMenu">
+        <pos>60,23</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="SourceLabel">
+        <pos>2,50</pos>
+        <size>30,16</size>
+    </control>
+    
+    <control label="SourceMenu">
+        <pos>35,46</pos>
+        <size>150,21</size>
+    </control>
+    
+    <control label="SourceEdit">
+        <pos>187,46</pos>
+        <size>34,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="GoButton">
+        <pos>32,46</pos>
+        <size>32,21</size>
+        <posReverseX/>
+    </control>
+    
+</window>
+
+<window label="FindDialog">
+    <size>700,400</size>
+    <minsize>700,350</minsize>
+    <control label="SwapCheck">
+        <pos>150,2</pos>
+        <posReverseX/>
+    </control>
+</window>
+
+<window label="PrefsDialog">
+    <control label="ResetButton">
+        <size>140,20</size>
+        <pos>5,70</pos>
+        <posReverseY/>
+    </control>
+    <control label="ImportButton">
+        <size>80,20</size>
+        <pos>150,70</pos>
+        <posReverseY/>
+    </control>
+    <control label="ExportButton">
+        <size>80,20</size>
+        <pos>235,70</pos>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="ConfigControlsDialog">
+    <control label="ResetButton">
+        <size>210,20</size>
+        <pos>5,25</pos>
+        <posReverseY/>
+    </control>
+    <control label="ImportButton">
+        <size>80,20</size>
+        <pos>220,25</pos>
+        <posReverseY/>
+    </control>
+    <control label="ExportButton">
+        <size>80,20</size>
+        <pos>305,25</pos>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="CreateDoodadDialog">
+    <control label="EditorModelCheck">
+        <pos>4,220</pos>
+        <size>130,16</size>
+    </control>
+    <control label="EditorModelMenu">
+        <pos>134,218</pos>
+        <size>120,20</size>
+    </control>
+    <control label="ResetToDefaultBtn">
+        <pos>4,26</pos>
+        <size>120,20</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="PropertiesDialog">
+    <control label="PointPathingLabel">
+        <pos>0,6</pos>
+        <size>120,16</size>
+    </control>
+    
+    <control label="ModelArea">
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    <control label="ModelLabel">
+        <pos>0,3</pos>
+        <size>70,16</size>
+    </control>
+    <control label="ModelLink">
+        <pos>72,0</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    <!-- Anim Props Area -->
+    <control label="AnimPropsArea">
+        <size>0,184</size>
+        <autoResizeX/>
+    </control>
+    <control label="AnimPropsLabel">
+        <pos>0,4</pos>
+        <size>70,16</size>
+    </control>
+    <control label="AnimPropsMenus">
+        <pos>72,0</pos>
+        <size>0,182</size>
+        <autoResizeX/>
+    </control>
+
+    <!-- Color Area -->
+    <control label="ColorButton">
+        <pos>120,0</pos>
+        <size>42,21</size>
+    </control>
+
+    <control label="CameraDepthOfFieldGetButton">
+        <pos>122,41</pos>
+        <size>120,21</size>
+        <posReverseY/>
+        <text>EDSTR_PROPSDIALOG_CAMERA_DEPTHREGION_GET</text>
+    </control>
+    <control label="CameraDepthOfFieldSetButton">
+        <pos>245,41</pos>
+        <size>110,21</size>
+        <posReverseY/>
+        <text>EDSTR_PROPSDIALOG_CAMERA_DEPTHREGION_SET</text>
+    </control>
+
+    <control label="ColorHDRLabel">
+        <pos>170,3</pos>
+        <size>75,21</size>
+        <text>EDSTR_PROPSDIALOG_COLOR_HDR</text>
+    </control>
+
+    <control label="ColorHDR">
+        <pos>245,0</pos>
+        <size>60,21</size>
+    </control>
+
+</window>
+
+<window label="ObjectPropertiesDialog">
+    <control label="FieldRadioCopy">
+        <pos>80,39</pos>
+        <size>120,16</size>
+    </control>
+</window>
+
+<!-- Object Field Detail Areas -->
+<window label="ObjectFieldDetail">
+    <!-- Throw Band -->
+    <control label="FieldDetailThrowBandPosMinLabel">
+        <pos>5,10</pos>
+        <size>40,16</size>
+    </control>
+
+    <control label="FieldDetailThrowBandPosMaxLabel">
+        <pos>5,47</pos>
+        <size>40,16</size>
+    </control>
+
+    <control label="FieldDetailThrowBandNegMinLabel">
+        <pos>175,10</pos>
+        <size>50,16</size>
+    </control>
+
+    <control label="FieldDetailThrowBandNegMaxLabel">
+        <pos>175,47</pos>
+        <size>50,16</size>
+    </control>
+
+    <control label="FieldDetailThrowBandPosMin">
+        <pos>49,38</pos>
+        <size>105,32</size>
+    </control>
+
+    <control label="FieldDetailThrowBandPosMax">
+        <pos>49,1</pos>
+        <size>105,32</size>
+    </control>
+
+    <control label="FieldDetailThrowBandNegMin">
+        <pos>219,1</pos>
+        <size>105,32</size>
+    </control>
+
+    <control label="FieldDetailThrowBandNegMax">
+        <pos>219,38</pos>
+        <size>105,32</size>
+    </control>
+    
+    <!-- Yaw/Pitch/Roll -->
+    <control label="FieldDetailYawLabel">
+        <pos>2,5</pos>
+        <size>70,25</size>
+    </control>
+    
+    <control label="FieldDetailYaw">
+        <pos>72,1</pos>
+        <size>80,25</size>
+    </control>
+
+    <control label="FieldDetailPitchLabel">
+        <pos>2,30</pos>
+        <size>70,25</size>
+    </control>
+
+    <control label="FieldDetailPitch">
+        <pos>72,26</pos>
+        <size>80,25</size>
+    </control>
+
+    <control label="FieldDetailRollLabel">
+        <pos>2,56</pos>
+        <size>70,25</size>
+    </control>
+
+    <control label="FieldDetailRoll">
+        <pos>72,52</pos>
+        <size>80,25</size>
+    </control>
+
+    <control label="FieldDetailTextKeyLabel">
+        <pos>1,4</pos>
+        <size>55,21</size>
+    </control>
+
+    <control label="FieldDetailTextKey">
+        <pos>60,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="FieldDetailTextSingleKeyLabel">
+        <pos>1,4</pos>
+        <size>55,21</size>
+    </control>
+    
+    <control label="FieldDetailTextSingleKey">
+        <pos>60,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="FieldDetailRangeSlider">
+        <pos>290,0</pos>
+        <size>200,23</size>
+    </control>
+    
+    <control label="FieldDetailSoundPitchLabel">
+        <pos>2,196</pos>
+        <size>95,16</size>
+    </control>
+    
+    <control label="FieldDetailSoundPitchArea">
+        <pos>100,192</pos>
+        <size>2,21</size>
+    </control>
+    
+    <control label="FieldDetailSoundVolumeLabel">
+        <pos>2,218</pos>
+        <size>95,16</size>
+    </control>
+    
+    <control label="FieldDetailSoundVolumeArea">
+        <pos>100,214</pos>
+        <size>2,21</size>
+    </control>
+    
+    <!-- Actor Key -->
+    <control label="FieldDetailActorKeyTypeLabel">
+        <pos>2,2</pos>
+        <size>30,16</size>
+    </control>
+
+    <control label="FieldDetailActorKeyActorButton">
+        <pos>40,2</pos>
+        <size>60,16</size>
+    </control>
+
+    <control label="FieldDetailActorKeyAliasButton">
+        <pos>105,2</pos>
+        <size>50,16</size>
+    </control>
+
+    <control label="FieldDetailActorKeySystemButton">
+        <pos>160,2</pos>
+        <size>60,16</size>
+    </control>
+
+    <control label="FieldDetailActorKeyReferenceButton">
+        <pos>225,2</pos>
+        <size>50,16</size>
+    </control>
+
+    <control label="FieldDetailActorKeyCustomButton">
+        <pos>280,2</pos>
+        <size>80,16</size>
+    </control>
+</window>
+
+<window label="CameraWindow">
+  <control label="CameraResetButton">
+        <pos>2,24</pos>
+        <size>120,22</size>
+        <posReverseY/>
+    </control>
+  <control label="CameraGetGameButton">
+        <pos>126,24</pos>
+        <size>120,22</size>
+        <posReverseY/>
+    </control>
+  <control label="CameraSetGameButton">
+        <pos>250,24</pos>
+        <size>120,22</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="AviRecorderWindow">
+    <control label="RecorderFramerateLabel">
+        <pos>181,46</pos>
+        <size>80,16</size>
+    </control>
+</window>
+
+<window label="TextKeyEdit">
+    <control label="EditButton">
+        <pos>0,18</pos>
+        <size>60,19</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ShowStyle">
+        <pos>65,18</pos>
+        <posReverseY/>
+    </control>
+    
+    <control label="ShowRawText">
+        <pos>195,18</pos>
+        <posReverseY/>
+    </control>
+    </window>
+
+<window label="PlayerPanePlacementPreset">
+    <control label="ButtonNew">
+        <pos>0,21</pos>
+        <size>100,21</size>
+        <posReverseY/>
+    </control>
+    <control label="ButtonEdit">
+        <pos>105,21</pos>
+        <size>60,21</size>
+        <posReverseY/>
+    </control>
+    <control label="ButtonDelete">
+        <pos>170,21</pos>
+        <size>60,21</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="TriggerElementSelection">
+    <Windows>
+        <control label="SearchLabel">
+            <pos>2,4</pos>
+            <size>40,16</size>
+        </control>
+        
+        <control label="SearchEdit">
+            <pos>45,0</pos>
+            <size>0,21</size>
+            <autoResizeX/>
+        </control>
+    </Windows>
+</window>
+
+<window label="TriggerElementView">
+    <control label="GrammarTextStyleCheckbox">
+        <pos>130,19</pos>
+        <posReverseX/>
+        <posReverseY/>
+    </control>
+    
+    <control label="IdentifierLabel">
+        <pos>2,2</pos>
+        <size>110,16</size>
+    </control>
+    <control label="IdentifierUseNameCheck">
+        <pos>110,1</pos>
+    </control>
+
+    <control label="FunctionDefEventLabel">
+        <size>150,14</size>
+    </control>
+
+</window>
+
+<window label="TriggerTypeControls">
+    <control label="TypeLabel">
+        <pos>2,4</pos>
+        <size>85,16</size>
+        <text>EDSTR_TRIGGER_TYPE_BASICTYPE</text>
+    </control>
+    <control label="TypeMenu">
+        <pos>90,0</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    <control label="ElementLabel">
+        <pos>2,27</pos>
+        <size>85,16</size>
+    </control>
+    <control label="ElementMenu">
+        <pos>90,23</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+</window>
+
+<!-- Game Attributes - General -->
+<window label="GameAttributesPaneGeneral">
+    <control label="TypeRadioPlayer">
+        <pos>135,1</pos>
+        <size>160,21</size>
+    </control>
+</window>
+
+<!-- Object Editor Module -->
+<window label="ObjectEditorModule">
+    <control label="TypeLabel">
+        <pos>2,6</pos>
+        <size>70,16</size>
+    </control>
+
+    <control label="TypeMenu">
+        <pos>75,2</pos>
+        <size>140,21</size>
+    </control>
+
+    <control label="TypeDescription">
+        <pos>215,5</pos>
+        <size>32,16</size>
+    </control>
+</window>
+
+<!-- Object Palette dialog -->
+<window label="ObjectPaletteDialog">
+    <control label="ViewButtonsRadio">
+        <pos>40,16</pos>
+        <size>60,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ViewTreeRadio">
+        <pos>100,16</pos>
+        <size>65,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ViewListRadio">
+        <pos>170,16</pos>
+        <size>60,16</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<!-- Object Palette (Trigger Parameters - Game Link) -->
+<window label="ObjectPaletteTriggerGameLink">
+    <control label="ViewButtonsRadio">
+        <pos>40,16</pos>
+        <size>60,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ViewTreeRadio">
+        <pos>100,16</pos>
+        <size>65,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ViewListRadio">
+        <pos>170,16</pos>
+        <size>60,16</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<!-- Object Palette (Water) -->
+<window label="ObjectPaletteWater">
+    <control label="ViewLabel">
+        <pos>2,15</pos>
+        <size>40,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ViewButtonsRadio">
+        <pos>42,16</pos>
+        <size>60,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ViewTreeRadio">
+        <pos>102,16</pos>
+        <size>65,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ViewListRadio">
+        <pos>170,16</pos>
+        <size>45,16</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<!-- Text Editor Module -->
+<window label="TextEditorModule">
+    <control label="FontSizeLabel">
+        <pos>115,4</pos>
+    </control>
+</window>
+
+<!-- Object Palette (Tech Tree Requirement) -->
+<window label="ObjectPaletteRequirement">
+    <control label="ViewTreeRadio">
+        <pos>102,16</pos>
+        <size>55,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ViewListRadio">
+        <pos>165,16</pos>
+        <size>45,16</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="ConversationFacialAnimDisplay">
+    <control label="InsertButton">
+        <pos>0,41</pos>
+        <size>120,21</size>
+    </control>
+    
+    <control label="InsertMenu">
+        <pos>124,41</pos>
+        <size>90,21</size>
+    </control>
+    
+    <control label="InsertBlendLabel">
+        <pos>218,45</pos>
+        <size>50,16</size>
+    </control>
+    
+    <control label="InsertBlendEdit">
+        <pos>271,41</pos>
+        <size>50,21</size>
+    </control>
+</window>
+
+<!-- Conversation properties -->
+<window label="ConversationProperties">
+    <control label="PropLabel">
+        <pos>2,5</pos>
+        <size>160,16</size>
+    </control>
+
+    <control label="PropText">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropTextLarge">
+        <pos>165,1</pos>
+        <size>0,118</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropComment">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropFacialAnim">
+        <pos>165,1</pos>
+        <size>0,66</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropChoiceSelection">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="PropMaxChoices">
+        <pos>165,1</pos>
+        <size>45,21</size>
+    </control>
+    
+    <control label="PropLineSelection">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="PropMaxLines">
+        <pos>165,1</pos>
+        <size>45,21</size>
+    </control>
+    
+    <control label="PropReqPrev">
+        <pos>165,4</pos>
+    </control>
+  
+    <control label="PropPermanent">
+        <pos>165,4</pos>
+    </control>
+    
+    <control label="PropSound">
+        <pos>165,1</pos>
+        <size>0,165</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropSoundStatus">
+        <pos>165,1</pos>
+        <size>0,80</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropNoWait">
+        <pos>165,4</pos>
+    </control>
+    
+    <control label="PropOverlapPrevious">
+        <pos>165,1</pos>
+        <size>60,21</size>
+    </control>
+    
+    <control label="PropAnim">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropObject">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="PropCustomSpeaker">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropVariation">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+     <control label="PropLookAtType">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="PropLookAtAttach">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="PropWaitDuration">
+        <pos>165,1</pos>
+        <size>60,21</size>
+    </control>
+    
+    <control label="PropLocation">
+        <pos>165,1</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropStateOp">
+        <pos>165,3</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="PropStateOpLabel">
+        <pos>0,2</pos>
+        <size>75,18</size>
+    </control>
+
+    <control label="PropStateOpAddButton">
+        <pos>75,0</pos>
+        <size>60,18</size>
+    </control>
+</window>
+
+<!-- File Preview -->
+<window label="FilePreviewControls">
+    <control label="FilePreviewModelViewButton">
+        <pos>0,21</pos>
+        <size>170,21</size>
+        <autoCenterX/>
+        <posReverseY/>
+    </control>
+</window>
+
+<window label="ConversationStateDialog">
+    <control label="ImagePathLabel">
+        <pos>2,4</pos>
+        <size>108,16</size>
+    </control>
+    
+    <control label="ImagePathControl">
+        <pos>110,0</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="ImageEdgeLabel">
+        <pos>2,27</pos>
+        <size>108,16</size>
+    </control>
+    
+    <control label="ImageEdgeMenu">
+        <pos>110,23</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="ImageAttachLabel">
+        <pos>2,50</pos>
+        <size>108,16</size>
+    </control>
+    
+    <control label="ImageAttachMenu">
+        <pos>110,46</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="MoviePathLabel">
+        <pos>2,73</pos>
+        <size>108,16</size>
+    </control>
+    
+    <control label="MoviePathControl">
+        <pos>110,69</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+</window>
+
+<!-- Import files dialog -->
+<window label="ImportFilesDialog">
+    <control label="ImportPathLabel">
+        <pos>2,4</pos>
+        <size>80,16</size>
+    </control>
+    
+    <control label="ImportPathEdit">
+        <pos>85,0</pos>
+        <size>2,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="DirectoryLabel">
+        <pos>2,27</pos>
+        <size>80,16</size>
+    </control>
+    
+    <control label="DirectoryControl">
+        <pos>85,23</pos>
+        <size>0,21</size>
+        <autoResizeX/>
+    </control>
+</window>
+</EditorLayout>

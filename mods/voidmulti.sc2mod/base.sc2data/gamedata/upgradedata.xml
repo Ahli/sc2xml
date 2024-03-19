@@ -13,6 +13,7 @@
         <ScoreAmount value="300"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Reference="Effect,TempestDamageGround,AttributeBonus[Structure]" Value="40"/>
+        <EffectArray Reference="Effect,TempestDamage,AttributeBonus[Structure]" Value="40"/>
         <AffectedUnitArray value="Tempest"/>
     </CUpgrade>
     <CUpgrade id="AmplifiedShielding">
@@ -150,8 +151,8 @@
     </CUpgrade>
     <CUpgrade id="LiberatorAGRangeUpgrade">
         <Icon value="Assets\Textures\btn-upgrade-terran-advanceballistics.dds"/>
-        <EffectArray Reference="Abil,LiberatorAGTarget,Range[0]" Value="3"/>
-        <EffectArray Reference="Weapon,LiberatorAGWeapon,Range" Value="3"/>
+        <EffectArray Reference="Abil,LiberatorAGTarget,Range[0]" Value="2"/>
+        <EffectArray Reference="Weapon,LiberatorAGWeapon,Range" Value="2"/>
         <!--EffectArray Reference="Unit,LiberatorAG,Sight" Value="4"/-->
         <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
         <AffectedUnitArray value="Liberator"/>
@@ -300,9 +301,9 @@
         <EffectArray index="22" Value="1"/>
         <EffectArray index="34" Reference="Weapon,LanceMissileLaunchers,Level" Value="1"/>
         <EffectArray index="35" Reference="Effect,LanceMissileLaunchersDamage,Amount" Value="3"/>
-        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="1"/>
+        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="2"/>
         <EffectArray index="37" Operation="Set" Reference="Weapon,LanceMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
-        <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="1"/>
+        <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="2"/>
         <EffectArray index="39" Operation="Set" Reference="Weapon,TyphoonMissilePod,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
         <EffectArray index="40" Operation="Add" Reference="Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]" Value="1"/>
     </CUpgrade>
@@ -315,9 +316,9 @@
         <EffectArray index="22" Value="1"/>
         <EffectArray index="34" Reference="Weapon,LanceMissileLaunchers,Level" Value="1"/>
         <EffectArray index="35" Reference="Effect,LanceMissileLaunchersDamage,Amount" Value="3"/>
-        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="1"/>
+        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="2"/>
         <EffectArray index="37" Operation="Set" Reference="Weapon,LanceMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
-        <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="1"/>
+        <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="2"/>
         <EffectArray index="39" Operation="Set" Reference="Weapon,TyphoonMissilePod,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
         <EffectArray index="40" Operation="Add" Reference="Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]" Value="1"/>
     </CUpgrade>
@@ -330,9 +331,9 @@
         <EffectArray index="22" Value="1"/>
         <EffectArray index="34" Reference="Weapon,LanceMissileLaunchers,Level" Value="1"/>
         <EffectArray index="35" Reference="Effect,LanceMissileLaunchersDamage,Amount" Value="3"/>
-        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="1"/>
+        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="2"/>
         <EffectArray index="37" Operation="Set" Reference="Weapon,LanceMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
-        <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="1"/>
+        <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="2"/>
         <EffectArray index="39" Operation="Set" Reference="Weapon,TyphoonMissilePod,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
         <EffectArray index="40" Operation="Add" Reference="Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]" Value="1"/>
     </CUpgrade>
@@ -555,7 +556,7 @@
         <EffectArray Reference="Weapon,NeedleSpines,MinScanRange" Value="1"/>
     </CUpgrade>
     <CUpgrade id="overlordspeed">
-        <EffectArray Operation="Set" Reference="Unit,OverlordTransport,Speed" Value="2.019500"/>
+        <EffectArray Operation="Set" Reference="Unit,OverlordTransport,Speed" Value="2.144500"/>
         <AffectedUnitArray value="OverlordTransport"/>
         <AffectedUnitArray value="OverseerSiegeMode"/>
     </CUpgrade>
@@ -704,6 +705,7 @@
         <EffectArray Reference="Unit,GhostNova,LifeArmor" Value="1"/>
         <EffectArray Operation="Set" Reference="Actor,GhostAlternate,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
         <EffectArray Operation="Set" Reference="Actor,GhostNova,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <ScoreAmount value="300"/>
     </CUpgrade>
     <CUpgrade id="TerranInfantryArmorsLevel3">
         <AffectedUnitArray value="GhostAlternate"/>
@@ -714,6 +716,7 @@
         <EffectArray Reference="Unit,GhostNova,LifeArmor" Value="1"/>
         <EffectArray Operation="Set" Reference="Actor,GhostAlternate,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
         <EffectArray Operation="Set" Reference="Actor,GhostNova,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <ScoreAmount value="400"/>
     </CUpgrade>
     <CUpgrade id="DarkTemplarBlinkUpgrade">
         <Icon value="Assets\Textures\btn-ability-protoss-stealth-blink.dds"/>
@@ -950,5 +953,11 @@
     </CUpgrade>
     <CUpgrade id="MedivacCaduceusReactor">
         <EffectArray index="0" Operation="Multiply" Reference="Unit,Medivac,EnergyRegenRate" Value="2.000000"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryWeaponsLevel2">
+        <ScoreAmount value="300"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryWeaponsLevel3">
+        <ScoreAmount value="400"/>
     </CUpgrade>
 </Catalog>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<EditorLayout>
+<!-- Standard settings, generic to all windows -->
+<window label="StandardSettings">
+    <!-- File controls -->
+    <control label="FileControl">
+        <Windows><value label="TextButtonGap">4</value></Windows>
+        <MacOSX> <value label="TextButtonGap">5</value></MacOSX>
+        <value label="TextHeight">16</value>
+        <Windows><value label="BrowseWidth">80</value></Windows>
+        <MacOSX> <value label="BrowseWidth">87</value></MacOSX> 
+        <value label="BrowseWidthSmall">20</value>
+        <value label="SmallWidthThresh">100</value>
+    </control>
+    
+    <!-- Chooser controls -->
+    <control label="ChooserControl">
+        <Windows><value label="ChooseWidth">80</value></Windows>
+        <MacOSX> <value label="ChooseWidth">87</value></MacOSX> 
+        <value label="ChooseWidthSmall">20</value>
+    </control>
+</window>
+
+<!-- Welcome dialog -->
+<window label="WelcomeDialog">
+    <control label="CopyrightText">
+        <pos>2,22</pos>
+        <size>350,18</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<!-- Difficulty values -->
+<window label="DifficultyValues">
+    <value label="RowHeight">23</value>
+    
+    <control label="UseForAllCheck">
+        <pos>152,4</pos>
+        <text>EDSTR_DIFFVALUES_USEFORALL</text>
+    </control>
+    
+    <control label="Edit">
+        <pos>85,1</pos>
+        <size>60,21</size>
+    </control>
+</window>
+
+<!-- Map Properties Dialog -->
+<window label="MapPropsDialog">
+    <size>500,500</size>
+    <minsize>460,500</minsize>
+</window>
+
+<!-- Trigger Element View controls (within Trigger Editor) -->
+<window label="TriggerElementView">
+    <control label="ParamDefMinEdit">
+        <pos>135,223</pos>
+        <size>80,21</size>
+    </control>
+    
+    <control label="ParamDefMaxEdit">
+        <pos>135,246</pos>
+        <size>80,21</size>
+    </control>
+</window>
+
+<!-- Trigger Type controls -->
+<window label="TriggerTypeControls">
+    <control label="ArraySizeLabel">
+        <pos>70,90</pos>
+        <size>45,16</size>
+    </control>
+</window>
+
+<!-- Configure Controls Dialog -->
+<window label="ConfigControlsDialog">
+    <control label="ControlModLabel">
+        <pos>5,41</pos>
+        <size>70,16</size>
+    </control>
+    
+    <control label="ControlModCtrl">
+        <pos>75,40</pos>
+    </control>
+    
+    <control label="ControlModShift">
+        <pos>75,60</pos>
+    </control>
+    
+    <control label="ControlModAlt">
+        <pos>75,80</pos>
+    </control>
+</window>
+
+<!-- General Object Properties Dialog -->
+<window label="PropertiesDialog">
+    <!-- Difficulty Area -->
+    <control label="DifficultyRebuildMenu">
+        <pos>140,18</pos>
+        <size>180,21</size>
+    </control>
+
+    <!-- Camera Area -->
+    <control label="CameraValueLabel">
+        <pos>2,11</pos>
+        <size>260,16</size>
+    </control>
+    
+    <control label="CameraValueAngle">
+        <pos>262,1</pos>
+        <size>106,32</size>
+    </control>
+    
+    <control label="CameraValueEdit">
+        <pos>262,7</pos>
+        <size>70,21</size>
+    </control>
+    
+    <control label="CameraDepthOfFieldLabel">
+        <pos>2,37</pos>
+        <size>120,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="CameraDepthOfFieldGetButton">
+        <pos>122,41</pos>
+        <size>110,21</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="CameraDepthOfFieldSetButton">
+        <pos>235,41</pos>
+        <size>110,21</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="CameraPreviewCheck">
+        <pos>0,16</pos>
+        <posReverseY/>
+    </control>
+</window>
+
+<!-- Lighting Window -->
+<window label="LightingWindow">
+    <control label="DataSourceLabel">
+        <pos>2,4</pos>
+        <size>85,16</size>
+    </control>
+    
+    <control label="DataSourcePopup">
+        <pos>90,2</pos>
+        <size>0,16</size>
+        <autoResizeX/>
+    </control>
+</window>
+
+<!-- Dependencies dialog -->
+<window label="DependenciesDialog">
+    <size>650,300</size>
+    <minsize>650,200</minsize>
+</window>
+
+<!-- Find Dialog -->
+<window label="FindDialog">
+    <control label="ObjectLocationAll">
+        <pos>4,108</pos>
+        <size>120,16</size>
+    </control>
+
+    <control label="ObjectLocationSelected">
+        <pos>124,108</pos>
+        <size>120,16</size>
+    </control>
+    
+    <!-- Placed Objects Pane -->
+    <control label="PlacedObjectAnyRadio">
+        <pos>65,24</pos>
+        <size>70,16</size>
+    </control>
+    
+    <control label="PlacedObjectSpecificRadio">
+        <pos>135,24</pos>
+        <size>75,16</size>
+    </control>
+</window>
+
+<!-- Open Document - Local Files -->
+<window label="OpenDocumentPaneLocalFiles">
+    <control label="ViewLabel">
+        <pos>2,19</pos>
+        <size>40,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="RadioButtonTree">
+        <pos>45,20</pos>
+        <size>80,16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="RadioButtonList">
+        <pos>115,20</pos>
+        <size>50,16</size>
+        <posReverseY/>
+    </control>
+</window>
+
+<!-- Object Palette (within Find dialog) -->
+<window label="ObjectPaletteFindDialog">
+    <control label="SelectionText">
+        <pos>210,2</pos>
+        <size>0,16</size>
+        <autoResizeX/>
+    </control>
+</window>
+
+<!-- Object Field Detail Areas -->
+<window label="ObjectFieldDetail">
+    <!-- Tech Tree Requirements -->
+    <control label="FieldDetailRequirementViewTree">
+        <pos>4,4</pos>
+        <size>70,20</size>
+    </control>
+
+    <control label="FieldDetailRequirementViewExpression">
+        <pos>70,4</pos>
+        <size>70,20</size>
+    </control>
+
+    <!-- Throw Band -->
+    <control label="FieldDetailThrowBandPosMinLabel">
+        <pos>5,10</pos>
+        <size>40,16</size>
+    </control>
+
+    <control label="FieldDetailThrowBandPosMaxLabel">
+        <pos>5,47</pos>
+        <size>40,16</size>
+    </control>
+
+    <control label="FieldDetailThrowBandNegMinLabel">
+        <pos>165,10</pos>
+        <size>40,16</size>
+    </control>
+
+    <control label="FieldDetailThrowBandNegMaxLabel">
+        <pos>165,47</pos>
+        <size>40,16</size>
+    </control>
+
+    <control label="FieldDetailThrowBandPosMin">
+        <pos>49,38</pos>
+        <size>105,32</size>
+    </control>
+
+    <control label="FieldDetailThrowBandPosMax">
+        <pos>49,1</pos>
+        <size>105,32</size>
+    </control>
+
+    <control label="FieldDetailThrowBandNegMin">
+        <pos>204,1</pos>
+        <size>105,32</size>
+    </control>
+
+    <control label="FieldDetailThrowBandNegMax">
+        <pos>204,38</pos>
+        <size>105,32</size>
+    </control>
+</window>
+
+<!-- Battle.net Publish dialog -->
+<window label="PublishDialog">
+    <control label="ConfigNameText">
+        <size>230,16</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="ConfigAuthorText">
+        <size>230,16</size>
+        <autoResizeX/>
+    </control>
+</window>
+
+<!-- Text Key Edit controls -->
+<window label="TextKeyEdit">
+    <control label="EditButton">
+        <pos>0,18</pos>
+        <size>70, 16</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="ShowStyle">
+        <pos>76,18</pos>
+        <posReverseY/>
+    </control>
+    
+    <control label="ShowPreview">
+        <pos>204,18</pos>
+        <posReverseY/>
+    </control>
+</window>
+
+<!-- Game Text Controls -->
+<window label="GameTextControls">
+    <control label="ColorStart">
+        <size>35,0</size>
+    </control>
+    
+    <control label="ColorGrad">
+        <size>98,21</size>
+    </control>
+    
+    <control label="ColorGradApply">
+        <size>98,21</size>
+    </control>
+    
+    <control label="InsertButton">
+        <pos>0,69</pos>
+        <size>100,21</size>
+    </control>
+    
+    <control label="InsertMenu">
+        <pos>102,69</pos>
+        <size>100,21</size>
+    </control>
+    
+    <control label="InsertFile">
+        <pos>204,69</pos>
+        <size>2,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="InsertInfoUnitMenu">
+        <pos>204,69</pos>
+        <size>104,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="InsertInfoTypeButton">
+        <pos>102,69</pos>
+        <size>100,21</size>
+        <posReverseX/>
+    </control>
+
+    <control label="InsertDataValue">
+        <pos>204,72</pos>
+        <size>246,16</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="InsertDataFieldButton">
+        <pos>244,69</pos>
+        <size>110,21</size>
+        <posReverseX/>
+    </control>
+
+    <control label="InsertDataFormulaButton">
+        <pos>132,69</pos>
+        <size>130,21</size>
+        <posReverseX/>
+    </control>
+    
+    <control label="InsertKeysMenu">
+        <pos>204,69</pos>
+        <size>186,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="InsertKeysCountCheck">
+        <pos>176,72</pos>
+        <size>174,21</size>
+        <posReverseX/>
+    </control>
+
+    <control label="InsertKeysCountEdit">
+        <pos>54,69</pos>
+        <size>52,21</size>
+        <posReverseX/>
+    </control>
+</window>
+
+<!-- Tip dialog -->
+<window label="TipDialog">
+    <size>400,200</size>
+    <minsize>350,100</minsize>
+    <centerInParent/>
+    <padding/>
+    <text>EDSTR_TIP_TITLE</text>
+    <acceptButton/>
+    
+    <control label="PreviousButton">
+        <pos>5,55</pos>
+        <size>130,21</size>
+        <posReverseY/>
+    </control>
+    
+    <control label="NextButton">
+        <pos>135,55</pos>
+        <size>130,21</size>
+        <posReverseX/>
+        <posReverseY/>
+    </control>
+</window>
+
+<!-- Trigger element selection controls -->
+<window label="TriggerElementSelection">
+    <Windows>
+        <control label="SearchLabel">
+            <pos>2,4</pos>
+            <size>50,16</size>
+        </control>
+        
+        <control label="SearchEdit">
+            <pos>55,0</pos>
+            <size>0,21</size>
+            <autoResizeX/>
+        </control>
+    </Windows>
+    <MacOSX>
+        <control label="SearchLabel">
+            <pos>2,3</pos>
+            <size>50,16</size>
+        </control>
+        
+        <control label="SearchEdit">
+            <pos>56,0</pos>
+            <size>0,19</size>
+            <autoResizeX/>
+        </control>
+    </MacOSX>
+</window>
+</EditorLayout>

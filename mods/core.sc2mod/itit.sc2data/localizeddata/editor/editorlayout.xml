@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<EditorLayout>
+
+<!-- Battle.net Publish dialog -->
+<window label="PublishDialog">
+    <control label="ConfigNameText">
+        <size>190,16</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="ConfigRevisionLabel">
+        <size>10,0</size>
+    </control>
+</window>
+
+<!-- Find Dialog -->
+<window label="FindDialog">
+    <control label="PlacedObjectAnyRadio">
+        <pos>45,24</pos>
+        <size>70,16</size>
+        <text>EDSTR_FIND_OBJECT_ANY</text>
+    </control>
+    
+    <control label="PlacedObjectSpecificRadio">
+        <pos>125,24</pos>
+        <size>65,16</size>
+        <text>EDSTR_FIND_OBJECT_SPECIFIC</text>
+    </control>
+    
+    <control label="ReplaceCheck">
+        <pos>75,2</pos>
+        <posReverseX/>
+        <text>EDSTR_FIND_REPLACE</text>
+    </control>
+    
+    <control label="SwapCheck">
+        <pos>180,2</pos>
+        <posReverseX/>
+        <text>EDSTR_FIND_SWAP</text>
+    </control>
+    
+    <control label="ObjectTypeEntries">
+        <pos>4,64</pos>
+        <size>70,16</size>
+        <text>EDSTR_FIND_OBJECTTYPE_ENTRIES</text>
+    </control>
+
+    <control label="ObjectTypeFields">
+        <pos>74,64</pos>
+        <size>60,16</size>
+        <text>EDSTR_FIND_OBJECTTYPE_FIELDS</text>
+    </control>
+
+    <control label="ObjectTypeBoth">
+        <pos>134,64</pos>
+        <size>60,16</size>
+        <text>EDSTR_FIND_OBJECTTYPE_BOTH</text>
+    </control>
+    
+    <control label="ObjectLocationAll">
+        <pos>4,108</pos>
+        <size>95,16</size>
+        <text>EDSTR_FIND_OBJECTLOCATION_ALL</text>
+    </control>
+
+    <control label="ObjectLocationSelected">
+        <pos>99,108</pos>
+        <size>120,16</size>
+        <text>EDSTR_FIND_OBJECTLOCATION_SELECTED</text>
+    </control>
+</window>
+
+<!-- Configure Controls Dialog -->
+<window label="ConfigControlsDialog">
+    <control label="ConflictCountLabel">
+        <pos>145,1</pos>
+        <size>50,14</size>
+        <posReverseX/>
+        <text>EDSTR_CONFIGCTRL_CONFLICTCOUNT</text>
+    </control>
+    
+    <control label="ConflictCountText">
+        <pos>95,0</pos>
+        <size>57,16</size>
+        <posReverseX/>
+    </control>
+</window>
+
+<!-- Object Field Detail Areas -->
+<window label="ObjectFieldDetail">
+    <control label="FieldDetailLinkMenu">
+        <pos>0,1</pos>
+        <size>58,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="FieldDetailLinkViewButton">
+        <pos>55,1</pos>
+        <size>55,21</size>
+        <posReverseX/>
+        <text>EDSTR_OBJECTEDITOR_LINKVIEW</text>
+        <tooltip>EDSTR_OBJECTEDITOR_LINKVIEW_TIP</tooltip>
+    </control>
+</window>
+
+<!-- Text Key Edit controls -->
+<window label="TextKeyEdit">
+    <control label="EditButton">
+        <pos>0,18</pos>
+        <size>50, 16</size>
+        <posReverseY/>
+        <text>EDSTR_TEXTKEYEDIT_EDITBUTTON</text>
+        <tooltip>EDSTR_TEXTKEYEDIT_EDITBUTTON_TIP</tooltip>
+    </control>
+    
+    <control label="ShowStyle">
+        <pos>56,18</pos>
+        <posReverseY/>
+        <text>EDSTR_TEXTKEYEDIT_SHOWSTYLE</text>
+    </control>
+    
+    <control label="ShowRawText">
+        <pos>184,18</pos>
+        <posReverseY/>
+        <text>EDSTR_TEXTKEYEDIT_SHOWRAWTEXT</text>
+        <tooltip>EDSTR_TEXTKEYEDIT_SHOWRAWTEXT_TIP</tooltip>
+    </control>
+</window>
+
+<!-- Object Palette (within Find dialog) -->
+<window label="ObjectPaletteFindDialog">
+    <control label="SelectionLabel">
+        <pos>0,3</pos>
+        <size>45,16</size>
+    </control>
+    
+    <control label="SelectionText">
+        <pos>190,2</pos>
+        <size>0,16</size>
+        <autoResizeX/>
+    </control>
+</window>
+
+<!-- Game Text Controls -->
+<window label="GameTextControls">
+    <control label="ColorStart">
+        <size>25,0</size>
+    </control>
+    
+    <control label="ColorGrad">
+        <size>102,21</size>
+    </control>
+    
+    <control label="ColorGradApply">
+        <size>102,21</size>
+    </control>
+    
+    <control label="InsertMenu">
+        <pos>82,69</pos>
+        <size>170,21</size>
+    </control>
+    
+    <control label="InsertFile">
+        <pos>254,69</pos>
+        <size>2,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="InsertInfoUnitMenu">
+        <pos>254,69</pos>
+        <size>94,21</size>
+        <autoResizeX/>
+    </control>
+    
+    <!-- InsertData - Regular buttons -->
+    <control label="InsertDataValue">
+        <pos>254,72</pos>
+        <size>216,16</size>
+        <autoResizeX/>
+    </control>
+    
+    <control label="InsertDataFieldButton">
+        <pos>214,69</pos>
+        <size>110,21</size>
+        <posReverseX/>
+    </control>
+
+    <control label="InsertDataFormulaButton">
+        <pos>102,69</pos>
+        <size>100,21</size>
+        <posReverseX/>
+    </control>
+    
+    <control label="InsertKeysMenu">
+        <pos>254,69</pos>
+        <size>186,21</size>
+        <autoResizeX/>
+    </control>
+
+    <control label="InsertKeysCountCheck">
+        <pos>176,72</pos>
+        <size>144,21</size>
+        <posReverseX/>
+    </control>
+</window>
+
+<!-- Text Editor Module -->
+<window label="TextEditorModule">
+    <control label="SourceLabel">
+        <pos>239,6</pos>
+    </control>
+
+    <control label="FontSizeLabel">
+        <Windows><pos>159,4</pos></Windows>
+        <MacOSX><pos>159,4</pos></MacOSX>
+        <minsize>55,16</minsize>
+        <text>EDSTR_TEXTEDITOR_FONTSIZE</text>
+        <posReverseX/>
+        <autoSizeText/>
+    </control>
+</window>
+</EditorLayout>
