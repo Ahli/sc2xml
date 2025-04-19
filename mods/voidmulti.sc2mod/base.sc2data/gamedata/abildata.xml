@@ -356,9 +356,6 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilTrain id="FactoryTrain">
-        <InfoArray index="Train8">
-            <Button Requirements=""/>
-        </InfoArray>
         <InfoArray index="Train25" Time="30"/>
         <Range value="3"/>
     </CAbilTrain>
@@ -436,6 +433,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilTrain id="GatewayTrain">
+        <InfoArray index="Train2" Time="38"/>
         <InfoArray index="Train6" Time="32"/>
         <InfoArray index="Train7" Time="42"/>
     </CAbilTrain>
@@ -541,12 +539,10 @@
                 <Flags index="ShowInGlossary" value="1"/>
             </Button>
         </InfoArray>
-        <InfoArray index="Research3" Time="0" Upgrade="">
-            <Resource index="Minerals" value="0"/>
-            <Resource index="Vespene" value="0"/>
-            <Button DefaultButtonFace="" State="Available" Requirements="">
-                <Flags index="ShowInGlossary" value="0"/>
-            </Button>
+        <InfoArray index="Research3" Time="90" Upgrade="Frenzy">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchFrenzy" Requirements="LearnEvolveFrenzy"/>
         </InfoArray>
         <InfoArray index="Research4" Time="0" Upgrade="">
             <Resource index="Minerals" value="0"/>
@@ -561,6 +557,15 @@
             </Button>
         </InfoArray>
     </CAbilResearch>
+    <CAbilEffectInstant id="HydraliskFrenzy">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="HydraliskFrenzyApplyBehavior"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="14"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements="UseFrenzy"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="Hyperjump">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
@@ -648,27 +653,13 @@
     </CAbilMorph>
     <CAbilEffectTarget id="LockOn">
         <Effect index="0" value="LockOnInitialSetNew"/>
-        <Cost index="0">
-            <Cooldown TimeUse="4"/>
-        </Cost>
-        <AutoCastValidatorArray index="1" value="IsNotInterceptor"/>
-        <AutoCastValidatorArray index="2" value="TargetNotChangeling"/>
-        <AutoCastValidatorArray index="3" value="IsNotNeuralParasited"/>
-        <AutoCastValidatorArray index="4" value="TargetNotChangeling"/>
-        <AutoCastValidatorArray index="5" value="IsDefensiveStructure"/>
-        <AutoCastValidatorArray index="6" value="IsNotBroodlingFate"/>
-        <AutoCastValidatorArray index="7" value="NotLarva"/>
-        <AutoCastValidatorArray index="8" value="CasterIsNotHidden"/>
-        <AutoCastValidatorArray index="9" value="NotLarvaEgg"/>
-        <AutoCastValidatorArray index="10" removed="1"/>
+        <AutoCastValidatorArray value="CasterIsNotHidden"/>
+        <AutoCastValidatorArray value="NotLarvaEgg"/>
         <TargetSorts>
             <SortArray value="TSThreatensCyclone"/>
             <SortArray value="AirTarget"/>
-            <SortArray value="TSDistance"/>
         </TargetSorts>
-        <Range index="0" value="6"/>
-        <AutoCastRange value="6.5"/>
-	<FollowRange value="6"/>
+        <AutoCastRange value="7.5"/>
     </CAbilEffectTarget>
     <!--CAbilEffectTarget id="LockOn">
         <Flags index="AutoCast" value="0"/>
@@ -703,7 +694,6 @@
     </CAbilEffectTarget>
     <CAbilTransport id="MedivacTransport">
         <!--UnloadCargoEffect value="MedivacUnloadCargoSetEffect"/-->
-        <UnloadCargoEffect value="SiegeTankUnloadDelayAB"/>
         <UnloadCargoEffect value="PurificationNovaTargettedCasterRB"/>
         <TargetFilters value="Visible;Self,Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden"/>
     </CAbilTransport>
@@ -916,12 +906,10 @@
         <DefaultError value="RequiresHealTarget"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ShieldBatteryRecharge">
             <Flags index="UseDefaultButton" value="1"/>
-            <Flags index="CreateDefaultButton" value="0"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Stop">
             <Flags index="ToSelection" value="1"/>
             <Flags index="UseDefaultButton" value="1"/>
-            <Flags index="CreateDefaultButton" value="0"/>
         </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilMorph id="SiegeMode">
@@ -1764,6 +1752,7 @@
     </CAbilMorph>
     <CAbilEffectTarget id="Yoink">
         <CastOutroTime value="0.8"/>
+        <TargetFilters index="0" value="-;Self,Neutral,Structure,Heroic,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
     <CAbilMove id="move">
         <AbilSetId value="Move"/>
@@ -1835,4 +1824,79 @@
             <Resource index="Vespene" value="200"/>
         </InfoArray>
     </CAbilResearch>
+    <CAbilEffectTarget id="EnergyRecharge">
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Charge Link="Abil/BatteryOvercharge"/>
+            <Cooldown Location="Player" TimeUse="84"/>
+        </Cost>
+        <TargetFilters value="CanHaveEnergy;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <UninterruptibleArray index="Approach" value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="EnergyRecharge"/>
+        <Effect index="0" value="EnergyRechargePersistent"/>
+    </CAbilEffectTarget>
+    <CAbilMorphPlacement id="CommandCenterLand">
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="CommandStructureAutoRally"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilEffectInstant id="SalvageEffect" parent="Refund">
+        <Name value="Abil/Name/SalvageEffect"/>
+        <Effect index="0" value="SalvageCombatAB"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="CancelResetAutoCast" value="0"/>
+        <Flags index="RangeUseCasterRadius" value="0"/>
+        <Flags index="ReApproachable" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Flags index="UpdateChargesOnLevelChange" value="0"/>
+        <Cost/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="SalvageSensorTowerRefund" parent="Refund">
+        <Name value="Abil/Name/SalvageSensorTowerRefund"/>
+        <Cost>
+            <Resource index="Minerals" value="-75"/>
+            <Resource index="Vespene" value="-37"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilBuild id="TerranBuild">
+        <FidgetDelayMin value="6.5"/>
+        <FidgetDelayMax value="8.5"/>
+    </CAbilBuild>
+    <CAbilEffectTarget id="WorkerStopIdleAbilityVespene">
+        <Effect index="0" value="WorkerChannelStopIdle"/>
+        <PreEffectBehavior Behavior="WorkerVespeneWalking" Count="1"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="DeferCooldown" value="1"/>
+        <TargetFilters value="Visible,UnderConstruction;Self,Ally,Neutral,Enemy,Dead,Hidden"/>
+        <Range value="0.3"/>
+        <RangeSlop value="0.05"/>
+        <AutoCastFilters value="HarvestableResource,Visible,UnderConstruction;Ally,Neutral,Enemy"/>
+        <UninterruptibleArray index="Wait" value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Gather">
+            <Flags index="HidePath" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilHarvest id="DroneHarvest">
+        <CancelableArray index="ApproachResource" value="1"/>
+        <CancelableArray index="WaitAtResource" value="1"/>
+    </CAbilHarvest>
+    <CAbilHarvest id="ProbeHarvest">
+        <CancelableArray index="ApproachResource" value="1"/>
+        <CancelableArray index="WaitAtResource" value="1"/>
+    </CAbilHarvest>
+    <CAbilHarvest id="SCVHarvest">
+        <CancelableArray index="ApproachResource" value="1"/>
+        <CancelableArray index="WaitAtResource" value="1"/>
+    </CAbilHarvest>
 </Catalog>

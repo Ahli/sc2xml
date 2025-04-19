@@ -14,7 +14,7 @@
         <ImpactModel value="AdeptAttackImpactModel"/>
     </CActorAction>
     <CActorRange id="SensorTowerRadar">
-        <Range value="27.000000"/>
+        <Range value="22.000000"/>
     </CActorRange>
     <CActorAction id="TempestAttackGround">
         <ImpactModel value="TempestAttackGroundImpact"/>
@@ -26,7 +26,8 @@
         <On Terms="ActorCreation; ValidateUnit IsStructureTarget; ValidateCreationEffect TempestGroundAttackUpgraded" Send="SetTintColor {255,128,0 5.000000}"/>
     </CActorModel>
     <CActorAction id="TempestAttack">
-        <ImpactModel value="TempestAttackGroundImpact"/> <!--Allows for the impact model to change colour-->
+        <ImpactModel value="TempestAttackGroundImpact"/>
+        <!--Allows for the impact model to change colour-->
     </CActorAction>
     <CActorMissile id="AdeptAttackMissile">
         <On Terms="ActorCreation; ValidateUnit AdeptGlaivesUpgraded" Send="ModelSwap Adept_Missile_Upgrade"/>
@@ -49,7 +50,6 @@
     <CActorModel id="ShieldBatteryRechargeEx5@ImpactActor">
         <Flags index="SuppressCreationErrors" value="1"/>
         <Inherits index="TintColor" value="1"/>
-        <Inherits index="Visibility" value="0"/>
         <Supporter Subject="::Creator"/>
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
         <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
@@ -83,7 +83,7 @@
         <On Terms="SelectionLocalUpdate.Nexus.Stop" Send="Destroy"/>
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="1.750000"/>
-        <Range value="9.800000"/>
+        <Range value="11.800000"/>
     </CActorRange>
     <!--                                                                                         -->
     <!-- Nexus ................................................................................. -->
@@ -189,7 +189,7 @@
         <Scale value="0.900000"/>
     </CActorMissile>
     <CActorSplat id="UltraliskBurrowedSplat">
-        <Scale value="0.770000"/>
+        <Scale value="0.880000"/>
     </CActorSplat>
     <CActorAction id="ZealotSunderingImpactAttackImpactEffect" parent="GenericAttack" effectAttack="ChargingDamage">
         <ImpactMap index="None" Model="PurificationNovaImpact" Sound="" ModelReaction=""/>
@@ -441,10 +441,10 @@
         <On Terms="ActorCreation" Send="AnimPlay Main Stand PlayForever"/>
         <On Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Destroy"/>
         <On Terms="ActorCreation; ValidateUnitType IsInfestor" Send="SetScale 1.250000"/>
-        <Inherits index="CloakEffect" value="0"/>
-        <Inherits index="Visibility" value="0"/>
         <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="CloakEffect" value="0"/>
         <Inherits index="Scale" value="0"/>
+        <Inherits index="Visibility" value="0"/>
     </CActorModel>
     <CActorUnit id="Adept">
         <!-- AdeptCE -->
@@ -585,13 +585,13 @@
         <On Terms="Upgrade.CycloneRapidFireLaunchers.Add" Send="Create CycloneUpgradeBeamLeft"/>
         <On Terms="Upgrade.CycloneRapidFireLaunchers.Add" Send="Create CycloneUpgradeBeamRight"/>
         <On Terms="Upgrade.CycloneRapidFireLaunchers.Remove" Target="CycloneUpgradeBeamLeft" Send="Destroy"/>
-        <On Terms="Upgrade.CycloneRapidFireLaunchers.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/>
+        <On Terms="Upgrade.CycloneRapidFireLaunchers.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/-->
         <On Terms="ActorCreation; ValidatePlayer HaveCycloneLockOnDamageUpgrade" Send="Create CycloneUpgradeBeamLeft"/>
         <On Terms="ActorCreation; ValidatePlayer HaveCycloneLockOnDamageUpgrade" Send="Create CycloneUpgradeBeamRight"/>
         <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Add" Send="Create CycloneUpgradeBeamLeft"/>
         <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Add" Send="Create CycloneUpgradeBeamRight"/>
         <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Remove" Target="CycloneUpgradeBeamLeft" Send="Destroy"/>
-        <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/-->
+        <On Terms="Upgrade.CycloneLockOnDamageUpgrade.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/>
     </CActorUnit>
     <!--CActorMissile id="CycloneMissile">
         <On Terms="ActorCreation" Send="SetTintColor 255,202,202"/>
@@ -627,11 +627,11 @@
         <Remove index="5" removed="1"/>
     </CActorRange>
     <CActorUnit id="Immortal">
-        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimBracketStop Attack"/>
         <On index="73" Terms="Behavior.TakenDamage.Enable"/>
         <On index="74" Terms="Behavior.TakenDamage.Enable"/>
         <On index="75" Terms="Behavior.TakenDamage.Off"/>
         <On index="76" Terms="Behavior.TakenDamage.Off"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimBracketStop Attack"/>
     </CActorUnit>
     <CActorUnit id="Infestor">
         <On Terms="ActorCreation" Send="ModelAnimateInvisible 1"/>
@@ -782,16 +782,12 @@
         <On Terms="Effect.PunisherGrenadesLMRight.Start; At Caster; ValidateEffect PunisherGrenadesResearched" Send="Create"/>
     </CActorAction>
     <CActorUnit id="Mothership">
-        <On Terms="Behavior.MothershipOffensiveMode.On" Send="SetTintColor {0,0,255 2.000000} 1.000000"/>
-        <On Terms="Behavior.MothershipOffensiveMode.On" Send="ClearTintColor 1.000000"/>
-        <On Terms="Abil.NexusMassRecall.SourceCastStart" Send="$Spell"/>
         <On index="68" Send="SetScale 0.900000 0.400000"/>
         <On index="73" Send="SetScale 0.900000 0.500000"/>
         <On index="83" Send="SetScale 0.900000 0.500000"/>
-        <Scale value="0.900000"/>
-        <BarOffset value="160"/>
-        <BarWidth value="194"/>
-        <NameOffset value="117"/>
+        <On Terms="Behavior.MothershipOffensiveMode.On" Send="SetTintColor {0,0,255 2.000000} 1.000000"/>
+        <On Terms="Behavior.MothershipOffensiveMode.On" Send="ClearTintColor 1.000000"/>
+        <On Terms="Abil.NexusMassRecall.SourceCastStart" Send="$Spell"/>
         <TerrainSquibs index="0" RangeDown="5.750000"/>
     </CActorUnit>
     <CActorUnit id="MothershipCore">
@@ -853,6 +849,7 @@
         <!--On Terms="ActorCreation; PlayerHasReward ThorCE" Send="StatusSet CE 1"/-->
         <!--On Terms="StatusSet.*.CE; IsStatus CE 1" Send="ModelSwap ThorCE"/>
         <On Terms="UnitDeathCustomize; IsStatus CE 1" Send="DeathCustomize Variation0"/-->
+        <On Terms="WeaponStart.JavelinMissileLaunchers.AttackStart" Send="AnimPlay LaunchExplosive Spell,D,00 NonLooping 0.500000 -1.000000 1.000000"/>
     </CActorUnit>
     <!--CActorAction id="ThorAAAttackLance" parent="GenericAttack" effectImpact="LanceMissileLaunchersDamage" effectLaunch="LanceMissileLaunchersLaunchMissile">-->
     <!--        <LaunchAttachQuery Methods="AMFilterWeaponSetA2 AMPatternThorAALance"/>-->
@@ -880,9 +877,6 @@
         <On Terms="AbilMorph.BurrowUltraliskUp.Finish; ValidatePlayer HasAnabolicSynthesisUpgrade" Send="Create UltraliskAnabolicSynthesisUpgrade"/>
         <On Terms="AbilMorph.BurrowUltraliskDown.Start" Target="UltraliskAnabolicSynthesisUpgrade" Send="Destroy"/>
         <DeathActorModelLow value="UnitDeathModel"/>
-        <BarOffset value="16"/>
-        <BarWidth value="130"/>
-        <Scale value="0.875000"/>
     </CActorUnit>
     <CActorModel id="UltraliskAnabolicSynthesisUpgrade" parent="ModelAnimationStyleContinuous">
         <Inherits index="BaseModelScale" value="1"/>
@@ -1082,16 +1076,15 @@
         <Sound value="Mothership_TimeWarpLaunch3"/>
     </CActorSound>
     <CActorBeamSimple id="WidowMineTargetingBeam" parent="BeamSimpleAnimationStyleContinuous">
-        <On Terms="Effect.WidowMineTargetingBeamDummy.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.WidowMineTargetTintApplyBehavior.Start; At Caster" Send="Create"/>
         <On Terms="Abil.WidowMineAttack.SourcePrepStop" Send="Destroy"/>
-        <On index="3" Terms="Effect.WidowMineTargetTintApplyBehavior.Start; At Caster"/>
         <On Terms="ActorCreation" Send="SetTintColorBlendPair 255,255,255 {221,0,0 1.500000} 1.350000"/>
         <On Terms="ActorCreation" Send="SetScale 2.000000 3.000000"/>
         <HostLaunch Subject="_Selectable" Scope="Caster"/>
         <HostLaunchSiteOps Ops="SOpAttachOrigin"/>
         <HostImpact Subject="_Selectable" Scope="Target"/>
         <HostImpactSiteOps Ops="SOpAttachCenter"/>
-        <Scale value="0.4"/>
+        <Scale value="0.400000"/>
     </CActorBeamSimple>
     <!-- Hellbat upgraded flame effects -->
     <CActorModel id="HellionTankAttackLaunch">
@@ -1234,6 +1227,8 @@
         <On Terms="Effect.LiberatorTargetMorphPersistent.Stop" Send="Destroy"/>
         <On Terms="ActorCreation" Send="Create LiberatorAGSearchRange"/>
         <On Terms="ActorDestruction" Target="LiberatorAGSearchRange" Send="Destroy"/>
+        <On Terms="ActorCreation; ValidateCreationEffect LiberatorAGRangeUpgraded" Send="SetScale 1.300000"/>
+        <On Terms="ActorCreation; ValidateCreationEffect HaveSmartServos" Send="AnimSetTimeScale Birth 1.361702"/>
         <Model value="LiberatorRangeIndicatorDummy"/>
     </CActorModel>
     <CActorUnit id="Disruptor">
@@ -1351,6 +1346,7 @@
     </CActorUnit>
     <CActorUnit id="ChangelingZealot">
         <On Terms="ActorCreation; IsStatus HasZealotReward 1" Send="ModelSwap ZealotXPR"/>
+        <WalkAnimMoveSpeed value="2.9765"/>
     </CActorUnit>
     <CActorUnit id="ChangelingMarineShield">
         <On Terms="ActorCreation; IsStatus HasMarineReward 1" Send="ModelSwap MarineXPR"/>
@@ -2458,6 +2454,7 @@
         <On index="68" Send="AnimBracketStart Attack Attack {} {} 0 1.245509 AsTimeScale"/>
         <On index="73" Send="TimerSet 0.267000 MeleeAttackLaunch"/>
         <On index="74" Send="TimerSet 0.066700 MeleeAttackLaunch"/>
+        <WalkAnimMoveSpeed value="2.6484"/>
     </CActorUnit>
     <CActorAction id="MutaliskAttackSegment2">
         <LaunchAssets Sound=""/>
@@ -2465,12 +2462,6 @@
     <CActorAction id="MutaliskAttackSegment3">
         <LaunchAssets Sound=""/>
     </CActorAction>
-    <CActorModel id="PurificationNova">
-        <Scale value="0.916700"/>
-    </CActorModel>
-    <CActorModel id="PurificationNovaRangeIndicator">
-        <Scale value="0.916700"/>
-    </CActorModel>
     <CActorUnit id="Ravager">
         <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="AnimClear Spell"/>
     </CActorUnit>
@@ -2674,9 +2665,6 @@
         <On Terms="Effect.VolatileBurstFriendlyBuildingDamage.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On Terms="Effect.VolatileBurstFriendlyBuildingDamage.Start; At Caster" Send="Create"/>
     </CActorAction>
-    <CActorRange id="CycloneLockOnTrackingRange">
-        <Range value="9.000000"/>
-    </CActorRange>
     <CActorSound id="Mothership_CloakFieldOff">
         <On index="1" Terms="Behavior.CloakField.Off"/>
     </CActorSound>
@@ -2689,7 +2677,7 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
         <Model value="CloakingField"/>
-        <Scale value="3.164100"/>
+        <Scale value="3.515667"/>
     </CActorModel>
     <CActorUnit id="Tempest">
         <Scale value="0.900000"/>
@@ -2699,8 +2687,8 @@
     </CActorUnit>
     <CActorMissile id="TempestAttackMissile">
         <Scale value="0.900000"/>
-        <On index="4" Terms="ActorCreation" Send="SetTintColor 219,151,255 0.000000 OneShot {} 100.000000"/>
-        <On index="5" Terms="ActorCreation; ValidateUnit TempestGroundAttackUpgraded; ValidateCreationEffect IsStructureTarget" Send="ModelSwap TempestWeaponGroundUpgraded"/>
+        <On Terms="ActorCreation" Send="SetTintColor 219,151,255 0.000000 OneShot {} 100.000000"/>
+        <On Terms="ActorCreation; ValidateUnit TempestGroundAttackUpgraded; ValidateCreationEffect IsStructureTarget" Send="ModelSwap TempestWeaponGroundUpgraded"/>
         <On Terms="ActorCreation; ValidateUnit TempestGroundAttackUpgraded; ValidateCreationEffect IsStructureTarget" Send="SetTintColor {255,128,0 5.000000}"/>
     </CActorMissile>
     <CActorUnit id="ThornLizard">
@@ -2742,5 +2730,56 @@
     </CActorUnit>
     <CActorUnit id="KD8Charge">
         <On Terms="ActorCreation" Send="AnimSetTimeScaleGlobal 3.000000"/>
+    </CActorUnit>
+    <CActorSound id="EnergyRechargeImpactSound" parent="SoundOneShot">
+        <On Terms="Effect.EnergyRecharge.Start; At Target" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <Sound value="Nexus_EnergyRechargeImpact"/>
+    </CActorSound>
+    <CActorModel id="EnergyRechargeLaunch" parent="ModelAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Abil.EnergyRecharge.SourceCastStart" Send="Create"/>
+        <Model value="TimeWarpLaunch"/>
+    </CActorModel>
+    <CActorSound id="EnergyRechargeLaunchSound" parent="SoundOneShot">
+        <On Terms="Abil.EnergyRecharge.SourceApproachStart" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <Sound value="Obelisk_TimeWarpLaunch"/>
+    </CActorSound>
+    <CActorModel id="HydraliskFrenzyBirthModel" parent="ModelAnimationStyleOneShot">
+        <On Terms="Behavior.HydraliskFrenzy.On" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <AutoScaleFactor value="0.750000"/>
+    </CActorModel>
+    <CActorModel id="HydraliskFrenzyModel" parent="ModelAddition">
+        <Inherits index="TintColor" value="0"/>
+        <On Terms="Behavior.HydraliskFrenzy.On" Send="Create"/>
+        <On Terms="Behavior.HydraliskFrenzy.Off" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpAttachWeapon"/>
+        <AutoScaleFactor value="0.500000"/>
+    </CActorModel>
+    <CActorModel id="NexusEnergyRechargeImpact" parent="ModelAnimationStyleOneShot">
+        <Terms value="Cap 1"/>
+        <On Terms="Effect.EnergyRecharge.Start; At Target" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="RestoreShieldsImpactModel"/>
+        <AutoScaleFactor value="0.700000"/>
+    </CActorModel>
+    <CActorModel id="ScannerSweepModel">
+        <Inherits index="TeamColor" value="1"/>
+    </CActorModel>
+    <CActorRange id="ScannerSweepVisual">
+        <Inherits index="TeamColor" value="1"/>
+        <Icon value="Assets\Textures\radaricon1.dds"/>
+    </CActorRange>
+    <CActorSound id="Spell_Frenzy_Launch" parent="SoundOneShot">
+        <On Terms="Behavior.HydraliskFrenzy.On" Send="Create"/>
+    </CActorSound>
+    <CActorUnit id="Corruptor">
+        <On Terms="Effect.CausticSprayBasePersistent.Start" Send="AnimBracketStart Spell Spell Spell Stand ContentForceLooping 0.500000 AsTimeScale"/>
+        <On Terms="Effect.CausticSprayBasePersistent.Stop" Send="AnimBracketStop Spell"/>
     </CActorUnit>
 </Catalog>

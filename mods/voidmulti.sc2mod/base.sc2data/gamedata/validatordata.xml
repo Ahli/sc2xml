@@ -45,7 +45,7 @@
         <AreaArray>
             <Compare value="GE"/>
             <Count value="1"/>
-            <Radius value="10"/>
+            <Radius value="12"/>
             <Validator value="NexusBatteryOverchargeisNexus"/>
         </AreaArray>
         <Compare value="GE"/>
@@ -61,7 +61,7 @@
         <AreaArray>
             <Compare value="GE"/>
             <Count value="1"/>
-            <Radius value="10"/>
+            <Radius value="12"/>
             <Validator value="NexusBatteryOverchargeisNexus"/>
         </AreaArray>
         <Compare value="GE"/>
@@ -906,9 +906,6 @@
         <CombineArray value="NotGravitonBeamd"/>
         <CombineArray value="BarrierOnCooldown"/>
     </CValidatorCombine>
-    <CValidatorLocationCompareRange id="LockOnCasterNearTargetUpgraded">
-        <Range value="9"/>
-    </CValidatorLocationCompareRange>
     <CValidatorUnitCompareBehaviorCount id="NotHaveCycloneLockOnCooldownBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="CycloneLockOnCooldown"/>
@@ -937,4 +934,60 @@
         <AbilLink value="WidowMineAttack"/>
         <Target Value="TargetUnit"/>
     </CValidatorUnitOrderQueue>
+    <CValidatorCombine id="CasterIsAliveandBurrowedLurker">
+        <CombineArray value="CasterIsLurkerBurrowed"/>
+        <CombineArray value="CasterIsAlive"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="CasterIsLurkerBurrowed">
+        <WhichUnit Value="Caster"/>
+        <Value value="LurkerMPBurrowed"/>
+    </CValidatorUnitType>
+    <CValidatorUnitOrderQueue id="WorkerConstructingThisRefinery">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="TerranBuild"/>
+        <AbilCmdIndex value="3"/>
+        <Target Value="CasterUnit"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorLocationCompareRange id="WorkerWithinRangeOfRefinery">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="0.3"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorCombine id="WorkerCasterGatheringThisCombine">
+        <CombineArray value="WorkerGatheringThis"/>
+        <CombineArray value="WorkerConstructingThisRefinery"/>
+    </CValidatorCombine>
+    <CValidatorUnitOrderQueue id="WorkerGatheringThis">
+        <WhichUnit Value="Target"/>
+        <AbilClass value="CAbilHarvest"/>
+        <Target Value="CasterUnit"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="WorkerNoIdleChannelOrder">
+        <ResultNoUnit value="NotWhileOccupied"/>
+        <AbilLink value="WorkerStopIdleAbilityVespene"/>
+        <Find value="0"/>
+        <Target Value="TargetUnit"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitFilters id="CasterUnderConstruction">
+        <WhichUnit Value="Caster"/>
+        <Filters value="UnderConstruction;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="IsUnderConstruction">
+        <Filters value="UnderConstruction;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorLocationCompareRange id="MothershipRangeCheck">
+        <Range value="10"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareBehaviorCount id="TargetFirePriority">
+        <Compare value="GT"/>
+        <Behavior value="TargetFire"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="FriendlyTargetExcludeSelf">
+        <Filters value="-;Enemy"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitType id="CasterIsNotHatchery">
+        <WhichUnit Value="Caster"/>
+        <Value value="Hatchery"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
 </Catalog>

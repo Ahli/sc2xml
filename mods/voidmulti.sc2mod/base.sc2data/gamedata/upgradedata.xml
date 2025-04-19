@@ -43,8 +43,8 @@
         <AffectedUnitArray value="Adept"/>
     </CUpgrade>
     <CUpgrade id="AnabolicSynthesis">
-        <EffectArray index="0" Operation="Subtract" Reference="Unit,Ultralisk,SpeedMultiplierCreep" Value="0.2165"/>
-        <EffectArray Reference="Unit,Ultralisk,Speed" Value="0.589800"/>
+        <EffectArray index="0" Operation="Subtract" Reference="Unit,Ultralisk,SpeedMultiplierCreep" Value="0.1625"/>
+        <EffectArray Reference="Unit,Ultralisk,Speed" Value="0.421871"/>
     </CUpgrade>
     <CUpgrade id="BansheeSpeed">
         <Icon value="Assets\Textures\btn-upgrade-terran-hyperflightrotors.dds"/>
@@ -86,10 +86,10 @@
     <CUpgrade id="DrillClaws">
         <EffectArray index="0" Value="1.500000"/>
         <EffectArray index="1" Value="1.500000"/>
-        <ScoreAmount value="150"/>
         <!--EffectArray Operation="Set" Reference="Behavior,WidowMineBurrowedCloakingBehavior,Modification.StateFlags[SuppressCloak]" Value="0"/-->
         <EffectArray Operation="Subtract" Reference="Abil,WidowMineUnburrow,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.500000"/>
         <EffectArray Operation="Subtract" Reference="Abil,WidowMineUnburrow,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.500000"/>
+        <ScoreAmount value="150"/>
     </CUpgrade>
     <CUpgrade id="SecretedCoating">
         <Flags index="TechTreeCheat" value="1"/>
@@ -187,6 +187,8 @@
         <EffectArray Reference="Unit,ShieldBattery,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmorLevel" Value="1"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/-->
     </CUpgrade>
     <CUpgrade id="ProtossShieldsLevel2">
@@ -199,6 +201,8 @@
         <EffectArray Reference="Unit,ShieldBattery,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmorLevel" Value="1"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/-->
         <ScoreAmount value="400"/>
     </CUpgrade>
@@ -212,6 +216,8 @@
         <EffectArray Reference="Unit,ShieldBattery,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmorLevel" Value="1"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/-->
         <ScoreAmount value="500"/>
     </CUpgrade>
@@ -735,7 +741,7 @@
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Reference="Unit,Hydralisk,Speed" Value="0.700000"/>
-        <EffectArray Operation="Set" Reference="Unit,Hydralisk,SpeedMultiplierCreep" Value="1.2391"/>
+        <EffectArray Operation="Set" Reference="Unit,Hydralisk,SpeedMultiplierCreep" Value="1.17"/>
         <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
         <AffectedUnitArray value="Hydralisk"/>
         <AffectedUnitArray value="HydraliskBurrowed"/>
@@ -959,5 +965,14 @@
     </CUpgrade>
     <CUpgrade id="TerranInfantryWeaponsLevel3">
         <ScoreAmount value="400"/>
+    </CUpgrade>
+    <CUpgrade id="Frenzy">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-frenzy.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Zerg"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Hydralisk"/>
     </CUpgrade>
 </Catalog>

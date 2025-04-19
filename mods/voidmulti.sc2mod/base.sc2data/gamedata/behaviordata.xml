@@ -14,6 +14,20 @@
         <RemoveValidatorArray value="CasterIsNotHidden"/>
         <RemoveValidatorArray value="CasterIsNotMothershipMassRecalling"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="AmorphousArmorcloudSpell">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="0.625"/>
+        <DamageResponse ModifyFraction="0.5">
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="BatteryEnergy">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -177,7 +191,7 @@
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
-        <Duration value="0.625"/>
+        <Duration value="5"/>
         <DamageResponse ModifyFraction="0.5">
             <Kind index="Spell" value="0"/>
             <ValidatorArray value="TargetIsNotGround"/>
@@ -261,7 +275,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <DisableValidatorArray value="NotHaveScramblerMissileBehavior"/>
         <DisableValidatorArray value="BarrierNoGravitonBeamOrBarrierOnCooldown"/>
-        <DamageResponse ModifyLimit="100" Exhausted="ImmortalBarrierRemoveactiveDuration"/>
+        <DamageResponse Exhausted="ImmortalBarrierRemoveactiveDuration" ModifyLimit="100"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="InfestedTerranTimedLife">
         <DisplayDuration index="Neutral" value="1"/>
@@ -576,9 +590,6 @@
         </Cost>
     </CBehaviorBuff>
     <CBehaviorBuff id="ImmortalBarrierSupressed">
-        <Cost>
-            <Cooldown TimeStart="0"/>
-        </Cost>
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-invulnerabilityshield.dds"/>
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
@@ -593,7 +604,6 @@
         <ExpireEffect value="ImmortalBarrierRemoveBarrier"/>
         <Tooltip value="Behavior/Tooltip/ImmortalOverload"/>
         <Alignment value="Positive"/>
-        <InfoFlags index="Hidden" value="0"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-invulnerabilityshield.dds"/>
         <RemoveValidatorArray value="NotHaveScramblerMissileBehavior"/>
     </CBehaviorBuff>
@@ -983,6 +993,7 @@
         <RemoveValidatorArray value="LockOnTargetNotDeadNew"/>
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
+        <Modification WeaponRange="2" WeaponScanBonus="1.5"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="AdeptPhaseShiftCaster">
         <Modification>
@@ -1000,7 +1011,7 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SensorTowerRadar">
-        <Modification Radar="27"/>
+        <Modification Radar="22"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CycloneLockOnCooldown">
         <InfoFlags index="Hidden" value="1"/>
@@ -1008,7 +1019,7 @@
         <Duration value="0.812"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CloakFieldEffect">
-        <Duration value="0.125"/>
+        <Duration value="0.1838"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ScramblerMarker">
         <InfoFlags index="Hidden" value="1"/>
@@ -1052,5 +1063,85 @@
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
         <Modification Detect="3.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlindingCloud">
+        <Modification WeaponRange="0" RangedWeaponRange="-20"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HydraliskFrenzy">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-frenzy.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification MoveSpeedMultiplier="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SalvageShared">
+        <DamageResponse Handled="SalvageCombatRB">
+            <ExcludeEffectArray value="BurndownDamage"/>
+            <Chance value="1"/>
+            <Cost>
+                <Charge Link="Behavior/SalvageCombat"/>
+                <Cooldown Link="Behavior/SalvageCombat"/>
+            </Cost>
+        </DamageResponse>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupplyDrop">
+        <Modification>
+            <VitalMaxArray index="Life" value="100"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupplyDropEnRoute">
+        <ExpireEffect value="SupplyDropSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TargetFire">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="2"/>
+        <Duration value="5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGas">
+        <BehaviorCategories index="User6" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGasProtoss">
+        <BehaviorCategories index="User6" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGasZerg">
+        <BehaviorCategories index="User6" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGas">
+        <BehaviorCategories index="User6" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGasProtoss">
+        <BehaviorCategories index="User6" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGasZerg">
+        <BehaviorCategories index="User6" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WorkerPeriodicRefineryCheck">
+        <RemoveValidatorArray value="CasterUnderConstruction"/>
+        <Period value="0.25"/>
+        <PeriodicEffect value="WorkerVespeneProximitySearch"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WorkerVespeneWalking">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="Channeling" value="1"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <InitialEffect value="WorkerVespeneWalkRemoveBehaviorTimed"/>
+        <Modification DecelerationMultiplier="0.4">
+            <StateFlags index="SuppressCollision" value="1"/>
+        </Modification>
+        <MaxStackCount value="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WorkerVespeneWalkingPreCast">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="SuppressCollision" value="1"/>
+        </Modification>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="2"/>
     </CBehaviorBuff>
 </Catalog>

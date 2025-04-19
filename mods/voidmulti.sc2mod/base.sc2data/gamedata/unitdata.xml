@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUnit default="1" id="MineralFieldDefault">
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+    </CUnit>
+    <CUnit default="1" id="RichMineralFieldDefault">
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+    </CUnit>
     <CUnit id="Adept">
         <SubgroupPriority value="57"/>
         <GlossaryStrongArray index="0" value="Marine"/>
@@ -42,12 +50,14 @@
         <LifeMax value="300"/>
         <ShieldsStart value="300"/>
         <ShieldsMax value="300"/>
+        <BehaviorArray Link="WorkerPeriodicRefineryCheck"/>
     </CUnit>
     <CUnit id="AssimilatorRich">
         <LifeStart value="300"/>
         <LifeMax value="300"/>
         <ShieldsStart value="300"/>
         <ShieldsMax value="300"/>
+        <BehaviorArray Link="WorkerPeriodicRefineryCheck"/>
     </CUnit>
     <CUnit id="AutoTurret">
         <Collide index="Locust" value="1"/>
@@ -150,6 +160,16 @@
         <SubgroupPriority value="12"/>
         <GlossaryWeakArray index="0" value="SiegeTank"/>
         <GlossaryWeakArray index="2" value="Immortal"/>
+        <AbilArray index="2" Link="SalvageEffect"/>
+        <AbilArray index="3" Link="Rally"/>
+        <AbilArray index="4" Link="StimpackRedirect"/>
+        <AbilArray index="5" Link="StimpackMarauderRedirect"/>
+        <AbilArray index="6" Link="StopRedirect"/>
+        <AbilArray index="7" Link="AttackRedirect"/>
+        <AbilArray index="8" removed="1"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="7" AbilCmd="SalvageEffect,Execute"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Carrier">
         <SubgroupPriority value="51"/>
@@ -222,6 +242,10 @@
         <SubgroupPriority value="48"/>
         <GlossaryWeakArray index="2" value="Tempest"/>
         <VisionHeight value="15"/>
+        <LifeStart value="250"/>
+        <LifeMax value="250"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
     </CUnit>
     <CUnit id="CommandCenter">
         <Food value="15"/>
@@ -300,7 +324,6 @@
         <SubgroupPriority value="72"/>
         <Attributes index="Light" value="0"/>
         <Attributes index="Armored" value="1"/>
-        <Food value="-4"/>
         <CostResource index="Vespene" value="150"/>
         <ScoreMake value="300"/>
         <ScoreKill value="300"/>
@@ -356,6 +379,7 @@
     </CUnit>
     <CUnit id="ExtractorRich">
         <ScoreKill value="75"/>
+        <BehaviorArray Link="WorkerPeriodicRefineryCheck"/>
     </CUnit>
     <CUnit id="Gateway">
         <Collide index="Locust" value="1"/>
@@ -457,6 +481,7 @@
     </CUnit>
     <CUnit id="Drone">
         <AbilArray Link="SprayZerg"/>
+        <AbilArray Link="WorkerStopIdleAbilityVespene"/>
         <CardLayouts index="0">
             <LayoutButtons index="6" AbilCmd="255,255"/>
             <LayoutButtons index="7" AbilCmd="255,255"/>
@@ -524,6 +549,7 @@
     <CUnit id="Extractor">
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
+        <BehaviorArray Link="WorkerPeriodicRefineryCheck"/>
     </CUnit>
     <CUnit id="FactoryReactor">
         <Collide index="Locust" value="1"/>
@@ -574,6 +600,7 @@
         <EnergyStart value="75"/>
         <GlossaryWeakArray index="0" value="Thor"/>
         <GlossaryWeakArray index="1" value="Roach"/>
+        <Food value="-3"/>
     </CUnit>
     <CUnit id="GhostAlternate" parent="Ghost">
         <EffectArray index="Create" value="MorphToGhostNova"/>
@@ -620,6 +647,9 @@
             <LayoutButtons index="10" removed="1"/>
         </CardLayouts>
         <Sight value="12"/>
+        <CostResource index="Minerals" value="325"/>
+        <ScoreMake value="275"/>
+        <ScoreKill value="325"/>
     </CUnit>
     <CUnit id="Hellion">
         <Collide index="Locust" value="1"/>
@@ -628,6 +658,10 @@
         <GlossaryStrongArray index="1" value="Zergling"/>
         <GlossaryStrongArray value="Probe"/>
         <GlossaryWeakArray index="0" value="Cyclone"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="ResearchHighCapacityBarrels" Type="Passive" Requirements="HaveInfernalPreigniter" Row="1" Column="0"/>
+            <LayoutButtons Face="ResearchSmartServos" Type="Passive" Requirements="HaveSmartServos" Row="2" Column="2"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="HellionTank">
         <Collide index="Locust" value="1"/>
@@ -638,6 +672,10 @@
         <GlossaryWeakArray index="0" value="Marauder"/>
         <GlossaryWeakArray index="1" value="Baneling"/>
         <GlossaryWeakArray index="2" value="Stalker"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="ResearchHighCapacityBarrels" Type="Passive" Requirements="HaveInfernalPreigniter" Row="1" Column="0"/>
+            <LayoutButtons Face="ResearchSmartServos" Type="Passive" Requirements="HaveSmartServos" Row="2" Column="2"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="HighTemplar">
         <Collide index="Locust" value="1"/>
@@ -656,13 +694,16 @@
         </CardLayouts>
         <KillDisplay value="Default"/>
         <RankDisplay value="Default"/>
+        <CostResource index="Minerals" value="675"/>
+        <ScoreMake value="875"/>
+        <ScoreKill value="925"/>
     </CUnit>
     <CUnit id="Hydralisk">
         <AbilArray Link="MorphToLurker"/>
         <AbilArray Link="que1"/>
+        <AbilArray Link="HydraliskFrenzy"/>
         <CardLayouts index="0">
             <LayoutButtons index="5" Column="3"/>
-            <LayoutButtons Face="LurkerMP" Type="AbilCmd" AbilCmd="MorphToLurker,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowDroneDown,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowZerglingDown,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowBanelingDown,Execute" Row="2" Column="3"/>
@@ -674,6 +715,7 @@
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowInfestorTerranDown,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowInfestorDown,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowUltraliskDown,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="LurkerMP" Type="AbilCmd" AbilCmd="MorphToLurker,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowDroneUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowZerglingUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowBanelingUp,Execute" Row="2" Column="4"/>
@@ -685,16 +727,17 @@
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorTerranUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowUltraliskUp,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="HydraliskFrenzy" Type="AbilCmd" AbilCmd="HydraliskFrenzy,Execute" Row="2" Column="0"/>
         </CardLayouts>
         <Collide index="Locust" value="1"/>
-        <SubgroupPriority value="70"/>
+        <SubgroupPriority value="89"/>
         <SpeedMultiplierCreep value="1.3"/>
         <LifeStart value="90"/>
         <LifeMax value="90"/>
         <GlossaryWeakArray index="0" value="SiegeTank"/>
     </CUnit>
     <CUnit id="HydraliskBurrowed">
-        <SubgroupPriority value="70"/>
+        <SubgroupPriority value="89"/>
         <LifeStart value="90"/>
         <LifeMax value="90"/>
         <SubgroupAlias value="Hydralisk"/>
@@ -734,9 +777,6 @@
         <CardLayouts index="0">
             <LayoutButtons index="5" Face="ImmortalOverload" AbilCmd="ImmortalOverload,Execute" Behavior="BarrierDamageResponse"/>
         </CardLayouts>
-        <CostResource index="Minerals" value="275"/>
-        <ScoreMake value="375"/>
-        <ScoreKill value="375"/>
     </CUnit>
     <CUnit id="InfestedTerransEgg">
         <Collide index="Locust" value="1"/>
@@ -769,7 +809,7 @@
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowInfestorTerranDown,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowInfestorDown,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowUltraliskDown,Execute" Row="2" Column="3"/>
-            <LayoutButtons Face="BurrowedMove" Type="Passive" Row="1" Column="4"/>
+            <LayoutButtons Face="BurrowedMove" Type="Passive" Requirements="UseBurrow" Row="1" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowDroneUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowZerglingUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowBanelingUp,Execute" Row="2" Column="4"/>
@@ -809,7 +849,7 @@
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorTerranUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowUltraliskUp,Execute" Row="2" Column="4"/>
-            <LayoutButtons Face="BurrowedMove" Type="Passive" Row="1" Column="4"/>
+            <LayoutButtons Face="BurrowedMove" Type="Passive" Requirements="UseBurrow" Row="1" Column="4"/>
             <LayoutButtons Face="NeuralParasite" Type="AbilCmd" AbilCmd="NeuralParasite,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="NeuralParasite,Cancel" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowDroneDown,Execute" Row="2" Column="3"/>
@@ -893,6 +933,9 @@
         <CardLayouts index="0">
             <LayoutButtons index="10" removed="1"/>
         </CardLayouts>
+        <CostResource index="Minerals" value="475"/>
+        <ScoreMake value="525"/>
+        <ScoreKill value="575"/>
     </CUnit>
     <CUnit id="LocustMPFlying">
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -937,12 +980,18 @@
             <LayoutButtons index="6" Column="3"/>
         </CardLayouts>
         <EquipmentArray index="0" Weapon="Spinesdisabled"/>
+        <LifeStart value="190"/>
+        <LifeMax value="190"/>
+        <Sight value="11"/>
     </CUnit>
     <CUnit id="LurkerMPBurrowed">
         <SubgroupPriority value="93"/>
         <ScoreKill value="300"/>
         <SubgroupAlias value="LurkerMP"/>
         <SelectAlias value="LurkerMP"/>
+        <LifeStart value="190"/>
+        <LifeMax value="190"/>
+        <Sight value="11"/>
     </CUnit>
     <CUnit id="LurkerMPEgg">
         <Collide index="ForceField" value="1"/>
@@ -980,6 +1029,14 @@
         <Collide index="Phased" value="1"/>
         <SubgroupPriority value="14"/>
         <GlossaryStrongArray index="2" value="Phoenix"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Column="4"/>
+            <LayoutButtons index="1" Face="Stop" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons index="2" Face="AttackBuilding" AbilCmd="attack,Execute" Column="4"/>
+            <LayoutButtons index="3" Face="Detector" Type="Passive" AbilCmd="" Requirements="NotUnderConstruction" Row="2"/>
+            <LayoutButtons index="4" Face="SelectBuilder" Type="SelectBuilder" Requirements="" Row="1"/>
+            <LayoutButtons index="5" Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Mothership">
         <SubgroupPriority value="96"/>
@@ -994,20 +1051,14 @@
         <Attributes index="Heroic" value="1"/>
         <VisionHeight value="15"/>
         <LateralAcceleration value="2.0625"/>
-        <LifeStart value="250"/>
-        <LifeMax value="250"/>
-        <ShieldsStart value="250"/>
-        <ShieldsMax value="250"/>
-        <CostResource index="Minerals" value="300"/>
-        <CostResource index="Vespene" value="300"/>
         <BehaviorArray index="0" removed="1"/>
-        <Radius value="1.25"/>
-        <SeparationRadius value="1.25"/>
         <ScoreMake value="600"/>
         <ScoreKill value="600"/>
-        <Food value="-6"/>
         <EnergyStart value="0"/>
         <EnergyMax value="0"/>
+        <WeaponArray index="0" Link="PurifierBeamDummyTargetFire" Turret=""/>
+        <WeaponArray index="1" Link="MothershipBeam" Turret="FreeRotate"/>
+        <WeaponArray Turret="MothershipRotate"/>
     </CUnit>
     <CUnit id="MothershipCore">
         <SubgroupPriority value="90"/>
@@ -1031,12 +1082,13 @@
         <AbilArray index="1" Link="ChronoBoostEnergyCost"/>
         <AbilArray index="7" Link="NexusTrainMothership"/>
         <AbilArray index="8" Link="NexusMassRecall"/>
-        <AbilArray Link="BatteryOvercharge"/>
+        <AbilArray Link="EnergyRecharge"/>
+        <AbilArray Link="EnergyRecharge"/>
         <CardLayouts index="0">
             <LayoutButtons index="4" Face="ChronoBoostEnergyCost" AbilCmd="ChronoBoostEnergyCost,Execute"/>
             <LayoutButtons index="5" Face="Mothership" AbilCmd="NexusTrainMothership,Train1" Row="0" Column="1"/>
             <LayoutButtons index="6" Face="NexusMassRecall" AbilCmd="NexusMassRecall,Execute" Row="2"/>
-            <LayoutButtons index="7" Face="BatteryOvercharge" AbilCmd="BatteryOvercharge,Execute" Row="2" Column="2"/>
+            <LayoutButtons index="7" Face="EnergyRecharge" AbilCmd="EnergyRecharge,Execute" Row="2" Column="2"/>
             <LayoutButtons index="8" removed="1"/>
         </CardLayouts>
         <EnergyMax value="200"/>
@@ -1099,8 +1151,6 @@
         <GlossaryCategory value=""/>
         <ScoreMake value="0"/>
         <ScoreResult value=""/>
-        <ShieldsStart value="30"/>
-        <ShieldsMax value="30"/>
     </CUnit>
     <CUnit id="Oracle">
         <SubgroupPriority value="84"/>
@@ -1209,6 +1259,7 @@
         <Collide index="Phased" value="1"/>
         <SubgroupPriority value="30"/>
         <GlossaryWeakArray index="0" value="SiegeTank"/>
+        <LifeArmor value="2"/>
     </CUnit>
     <CUnit id="PointDefenseDrone">
         <GlossaryCategory value=""/>
@@ -1219,6 +1270,7 @@
         <Collide index="Locust" value="1"/>
         <SubgroupPriority value="33"/>
         <AbilArray Link="SprayProtoss"/>
+        <AbilArray Link="WorkerStopIdleAbilityVespene"/>
         <CardLayouts index="0">
             <LayoutButtons index="7" AbilCmd="255,255"/>
             <LayoutButtons index="8" AbilCmd="255,255"/>
@@ -1284,6 +1336,9 @@
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowUltraliskUp,Execute" Row="2" Column="4"/>
         </CardLayouts>
         <BehaviorArray Link="QueenMustBeOnCreep"/>
+        <CostResource index="Minerals" value="175"/>
+        <ScoreMake value="175"/>
+        <ScoreKill value="175"/>
     </CUnit>
     <CUnit id="QueenBurrowed">
         <SubgroupPriority value="101"/>
@@ -1314,6 +1369,8 @@
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowUltraliskUp,Execute" Row="2" Column="4"/>
         </CardLayouts>
+        <CostResource index="Minerals" value="175"/>
+        <ScoreKill value="175"/>
     </CUnit>
     <CUnit id="Ravager">
         <AbilArray Link="RavagerCorrosiveBile"/>
@@ -1403,6 +1460,10 @@
     <CUnit id="Refinery">
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
+        <BehaviorArray Link="WorkerPeriodicRefineryCheck"/>
+    </CUnit>
+    <CUnit id="RefineryRich">
+        <BehaviorArray Link="WorkerPeriodicRefineryCheck"/>
     </CUnit>
     <CUnit id="RoachBurrowed">
         <AbilArray index="1" Link="stop"/>
@@ -1460,6 +1521,7 @@
         <Collide index="Locust" value="1"/>
         <SubgroupPriority value="58"/>
         <AbilArray Link="SprayTerran"/>
+        <AbilArray Link="WorkerStopIdleAbilityVespene"/>
         <CardLayouts index="0">
             <LayoutButtons Face="Spray" Type="AbilCmd" AbilCmd="SprayTerran,Execute" Row="2" Column="3"/>
         </CardLayouts>
@@ -1469,6 +1531,13 @@
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
         <SubgroupPriority value="10"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="50"/>
+        <AbilArray Link="SalvageEffect"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="1" Face="Salvage" AbilCmd="SalvageEffect,Execute"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Sentry">
         <Collide index="Locust" value="1"/>
@@ -1490,17 +1559,15 @@
             <LayoutButtons index="0" Face="Stop" AbilCmd="ShieldBatteryRechargeEx5,Cancel" Row="0" Column="1"/>
             <LayoutButtons index="1" Face="CancelBuilding"/>
             <LayoutButtons index="2" Face="ShieldBatteryRecharge" AbilCmd="ShieldBatteryRechargeEx5,Execute" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-            <LayoutButtons index="3" removed="1"/>
-            <LayoutButtons index="4" removed="1"/>
-            <LayoutButtons index="5" removed="1"/>
         </CardLayouts>
         <EnergyStart value="50"/>
         <BehaviorArray Link="BatteryEnergy"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <ShieldsStart value="200"/>
+        <ShieldsMax value="200"/>
     </CUnit>
     <CUnit id="SiegeTank">
         <Collide index="Locust" value="1"/>
@@ -1552,11 +1619,15 @@
         </CardLayouts>
         <SelectAlias value="SporeCrawlerUprooted"/>
         <SubgroupAlias value="SporeCrawlerUprooted"/>
+        <LifeStart value="300"/>
+        <LifeMax value="300"/>
     </CUnit>
     <CUnit id="SporeCrawlerUprooted">
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
         <SubgroupPriority value="4"/>
+        <LifeStart value="300"/>
+        <LifeMax value="300"/>
     </CUnit>
     <CUnit id="Stalker">
         <Collide index="Locust" value="1"/>
@@ -1648,7 +1719,6 @@
         <CostResource index="Minerals" value="250"/>
         <CostResource index="Vespene" value="175"/>
         <Speed value="2.25"/>
-        <Food value="-5"/>
         <ShieldsStart value="100"/>
         <ShieldsMax value="100"/>
         <Acceleration value="3"/>
@@ -1688,7 +1758,7 @@
         <CardLayouts index="0">
             <LayoutButtons index="2" Face="ResearchBansheeCloak" AbilCmd="StarportTechLabResearch,Research1"/>
             <LayoutButtons index="3" Face="BansheeSpeed" AbilCmd="StarportTechLabResearch,Research10" Column="1"/>
-            <LayoutButtons index="4" Face="ResearchRavenInterferenceMatrix" Type="AbilCmd" AbilCmd="StarportTechLabResearch,Research18" Row="0" Column="2"/>
+            <LayoutButtons index="4" Face="ResearchRavenInterferenceMatrix" AbilCmd="StarportTechLabResearch,Research18" Column="2"/>
             <LayoutButtons index="5" removed="1"/>
             <LayoutButtons index="6" removed="1"/>
             <LayoutButtons index="7" removed="1"/>
@@ -1736,6 +1806,7 @@
             <LayoutButtons index="2" Face="Cancel" AbilCmd="UpgradeToLurkerDenMP,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="EvolveGroovedSpines" Type="AbilCmd" AbilCmd="HydraliskDenResearch,Research1" Row="0" Column="0"/>
             <LayoutButtons Face="EvolveMuscularAugments" Type="AbilCmd" AbilCmd="HydraliskDenResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="ResearchFrenzy" Type="AbilCmd" AbilCmd="HydraliskDenResearch,Research3" Row="0" Column="2"/>
         </CardLayouts>
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
@@ -1757,7 +1828,7 @@
             <LayoutButtons index="2" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons index="3" Face="ResearchDrillClaws" AbilCmd="FactoryTechLabResearch,Research5"/>
             <LayoutButtons index="4" Face="ResearchSmartServos" AbilCmd="FactoryTechLabResearch,Research7" Row="0" Column="3"/>
-            <LayoutButtons Face="CycloneResearchHurricaneThrusters" Type="AbilCmd" AbilCmd="FactoryTechLabResearch,Research11" Row="0" Column="1"/>
+            <LayoutButtons Face="CycloneResearchLockOnDamageUpgrade" Type="AbilCmd" AbilCmd="FactoryTechLabResearch,Research10" Row="0" Column="1"/>
         </CardLayouts>
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
@@ -1795,26 +1866,20 @@
     <CUnit id="Cyclone">
         <SubgroupPriority value="71"/>
         <CardLayouts index="0">
-            <LayoutButtons index="7" Face="HurricaneThrusters" Requirements="HaveCycloneSpeedUpgrade" Row="1" Column="0"/>
+            <LayoutButtons index="7" Face="CycloneLockOnDamageUpgrade" Requirements="HaveCycloneLockOnDamageUpgrade" Row="1" Column="0"/>
         </CardLayouts>
-        <LifeStart value="130"/>
-        <LifeMax value="130"/>
-        <Speed value="2.8125"/>
+        <LifeStart value="120"/>
+        <LifeMax value="120"/>
+        <Speed value="3.375"/>
         <Description value="Button/Tooltip/BuildCyclone"/>
-        <CostResource index="Minerals" value="125"/>
-        <CostResource index="Vespene" value="50"/>
-        <ScoreMake value="175"/>
-        <ScoreKill value="175"/>
+        <CostResource index="Vespene" value="100"/>
+        <ScoreMake value="250"/>
+        <ScoreKill value="250"/>
         <GlossaryStrongArray index="0" value="Marauder"/>
         <GlossaryStrongArray index="1" value="Roach"/>
         <GlossaryStrongArray index="2" value="Adept"/>
         <GlossaryWeakArray index="0" value="SiegeTank"/>
         <GlossaryWeakArray index="2" value="Immortal"/>
-        <Food value="-2"/>
-        <LifeArmor value="0"/>
-	<AIKiteRange value="8"/>
-        <WeaponArray index="1" Link="CycloneFakeWeapon" Turret="CycloneWeaponTurret"/>
-        <WeaponArray Turret="Cyclone"/>
     </CUnit>
     <CUnit id="ThorAP">
         <WeaponArray index="0" Link="LanceMissileLaunchers"/>
@@ -1824,7 +1889,7 @@
         <GlossaryStrongArray index="2" value="Phoenix"/>
         <Collide index="Locust" value="1"/>
         <CardLayouts index="0">
-            <LayoutButtons index="6" removed="1"/>
+            <LayoutButtons index="6" Face="ResearchSmartServos" Type="Passive" AbilCmd="" Requirements="HaveSmartServos" Column="2"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="TwilightCouncil">
@@ -1869,13 +1934,13 @@
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorTerranUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowUltraliskUp,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="EvolveChitinousPlating" Type="Passive" Requirements="HaveUltraliskChitnousPlating" Row="1" Column="0"/>
+            <LayoutButtons Face="EvolveAnabolicSynthesis2" Type="Passive" Requirements="HaveUltraliskAnabolicSynthesis" Row="1" Column="1"/>
         </CardLayouts>
-        <Radius value="0.875"/>
-        <InnerRadius value="0.6875"/>
-        <MinimapRadius value="0.875"/>
         <CostResource index="Minerals" value="275"/>
         <ScoreMake value="475"/>
         <ScoreKill value="475"/>
+        <AlliedPushPriority value="1"/>
     </CUnit>
     <CUnit id="UltraliskBurrowed">
         <SubgroupPriority value="88"/>
@@ -1906,9 +1971,6 @@
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowUltraliskUp,Execute" Row="2" Column="4"/>
         </CardLayouts>
-        <Radius value="0.875"/>
-        <InnerRadius value="0.6875"/>
-        <MinimapRadius value="0.875"/>
         <CostResource index="Minerals" value="275"/>
         <ScoreKill value="475"/>
     </CUnit>
@@ -1925,6 +1987,9 @@
         <SubgroupPriority value="68"/>
         <LifeStart value="135"/>
         <LifeMax value="135"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="ResearchSmartServos" Type="Passive" Requirements="HaveSmartServos" Row="2" Column="2"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="VikingFighter">
         <SubgroupPriority value="68"/>
@@ -1934,6 +1999,9 @@
         <LifeStart value="135"/>
         <LifeMax value="135"/>
         <VisionHeight value="15"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="ResearchSmartServos" Type="Passive" Requirements="HaveSmartServos" Row="2" Column="2"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Viper">
         <AbilArray Link="ParasiticBomb"/>
@@ -2192,7 +2260,7 @@
     <CUnit id="Thor">
         <Collide index="Locust" value="1"/>
         <CardLayouts index="0">
-            <LayoutButtons index="6" removed="1"/>
+            <LayoutButtons index="6" Face="ResearchSmartServos" Type="Passive" AbilCmd="" Requirements="HaveSmartServos" Column="2"/>
         </CardLayouts>
         <SubgroupPriority value="52"/>
         <GlossaryStrongArray index="0" value="VikingFighter"/>
@@ -2748,14 +2816,6 @@
         <Sight value="3.5"/>
         <BehaviorArray Link="Detector35"/>
         <CardLayouts index="0" removed="1"/>
-    </CUnit>
-    <CUnit default="1" id="MineralFieldDefault">
-        <LifeStart value="500"/>
-        <LifeMax value="500"/>
-    </CUnit>
-    <CUnit default="1" id="RichMineralFieldDefault">
-        <LifeStart value="500"/>
-        <LifeMax value="500"/>
     </CUnit>
     <CUnit id="BattleStationMineralField">
         <LifeStart value="500"/>

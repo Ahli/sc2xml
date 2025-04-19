@@ -4,6 +4,10 @@
     <CRequirement id="HaveTempestGroundAttackUpgrade">
         <NodeArray index="Use" Link="CountUpgradeTempestGroundAttackUpgradeCompleteOnly788113278"/>
     </CRequirement>
+    <CRequirement id="HaveUltraliskChitnousPlating">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeChitinousPlatingCompleteOnly2928860809"/>
+    </CRequirement>
     <CRequirement id="LearnTempestGroundAttackUpgrade">
         <NodeArray index="Show" Link="NotCountUpgradeTempestGroundAttackUpgradeQueuedOrBetter"/>
     </CRequirement>
@@ -313,5 +317,20 @@
     <CRequirement id="LearnRavenInterferenceMatrixUpgrade">
         <EditorCategories value="Race:Terran,TechType:Upgrade"/>
         <NodeArray index="Show" Link="NotCountUpgradeInterferenceMatrixQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveInfernalPreigniter">
+        <NodeArray index="Use" Link="CountUpgradeHighCapacityBarrelsCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnEvolveFrenzy">
+        <NodeArray index="Use" Link="CountUnitHiveCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeFrenzyQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="TunnelingClawsANDBurrow">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTunnelingClawsCompleteOnlyTechTreeCheatCountUpgradeBurrowCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="UseFrenzy">
+        <EditorCategories value="Race:Protoss,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeFrenzyCompleteOnly306509094TechTreeCheat"/>
     </CRequirement>
 </Catalog>
