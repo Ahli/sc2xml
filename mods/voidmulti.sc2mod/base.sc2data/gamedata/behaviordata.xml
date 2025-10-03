@@ -40,11 +40,17 @@
     <CBehaviorBuff id="DarkTemplarBlinkAttackDelay">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
-        <Duration value="1"/>
+        <Duration value="0.5"/>
         <Modification>
             <StateFlags index="SuppressAttack" value="1"/>
             <AbilCategoriesEnable index="Passive" value="1"/>
         </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Detector15" parent="Detector">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
+        <Modification Detect="15"/>
     </CBehaviorBuff>
     <CBehaviorCreepSource id="NydusCreepGrowth">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
@@ -54,6 +60,10 @@
         <Grown value="Footprint4x4CreepSourceGrown"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorCreepSource>
+    <CBehaviorBuff id="PsiStorm">
+        <Duration value="0.6555"/>
+        <Period value="0.56"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="QueenMustBeOnCreep">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
@@ -191,10 +201,12 @@
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
-        <Duration value="5"/>
+        <Duration value="1"/>
         <DamageResponse ModifyFraction="0.5">
             <Kind index="Spell" value="0"/>
-            <ValidatorArray value="TargetIsNotGround"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
@@ -654,7 +666,9 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="65535"/>
         <MaxStackCountPerCaster value="1"/>
-        <Duration value="1"/>
+        <Duration value="0.0625">
+            <AccumulatorArray value="CasterAttackCooldownFinal"/>
+        </Duration>
         <InfoFlags index="Hidden" value="1"/>
         <TimeScaleSource Value="Caster"/>
     </CBehaviorBuff>
@@ -926,7 +940,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="StasisWardTimedLife" parent="TimedLife">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
-        <Duration value="238"/>
+        <Duration value="126"/>
         <DisableValidatorArray value="NotUnderConstruction"/>
         <DisplayDuration index="Neutral" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
@@ -1124,6 +1138,11 @@
         <PeriodicEffect value="WorkerVespeneProximitySearch"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="WorkerVespeneBugOnProbe">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2.1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="WorkerVespeneWalking">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -1143,5 +1162,44 @@
         </Modification>
         <BuffFlags index="RefreshStack" value="1"/>
         <MaxStackCount value="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipDisableDummyWeapon">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="OrderTargetNotPoint"/>
+        <Modification>
+            <WeaponDisableArray value="PurifierBeamDummyTargetFire"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorUnitTracker id="MothershipLastTargetTracker">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxTrackedUnits value="4"/>
+        <UnitAddedAtMaxRule value="ReplaceOldest"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorUnitTracker>
+    <CBehaviorUnitTracker id="MothershipTargetFireTracker">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <TrackingValidatorArray value="CasterNotHoldingPosition"/>
+        <MaxTrackedUnits value="4"/>
+        <UnitAddedAtMaxRule value="ReplaceOldest"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorUnitTracker>
+    <CBehaviorBuff id="UnloadAcquireTarget">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.125"/>
+        <FinalEffect value="AcquireTargetUnloadSearch"/>
+        <Modification>
+            <ModifyFlags index="OrdersUninterruptible" value="1"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BroodlingAllowAttack">
+        <Duration value="0.5"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReaperKD8Knockback">
+        <Period value="0.125"/>
+        <PeriodicEffect value="ReaperKD8KnockbackRB"/>
     </CBehaviorBuff>
 </Catalog>

@@ -64,6 +64,10 @@
     </CUpgrade>
     <CUpgrade id="CentrificalHooks">
         <ScoreAmount value="200"/>
+        <EffectArray Reference="Unit,Baneling,LifeMax" Value="5"/>
+        <EffectArray Reference="Unit,Baneling,LifeStart" Value="5"/>
+        <EffectArray Reference="Unit,BanelingBurrowed,LifeStart" Value="5"/>
+        <EffectArray Reference="Unit,BanelingBurrowed,LifeMax" Value="5"/>
     </CUpgrade>
     <CUpgrade id="Charge">
         <EffectArray index="0" Value="1.125000"/>
@@ -84,8 +88,6 @@
     </CUpgrade>
     <CUpgrade id="ChitinousPlating"/>
     <CUpgrade id="DrillClaws">
-        <EffectArray index="0" Value="1.500000"/>
-        <EffectArray index="1" Value="1.500000"/>
         <!--EffectArray Operation="Set" Reference="Behavior,WidowMineBurrowedCloakingBehavior,Modification.StateFlags[SuppressCloak]" Value="0"/-->
         <EffectArray Operation="Subtract" Reference="Abil,WidowMineUnburrow,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.500000"/>
         <EffectArray Operation="Subtract" Reference="Abil,WidowMineUnburrow,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.500000"/>
@@ -180,6 +182,7 @@
         <AffectedUnitArray value="PylonOvercharged"/>
         <AffectedUnitArray value="ShieldBattery"/>
         <AffectedUnitArray value="ObserverSiegeMode"/>
+        <AffectedUnitArray value="AssimilatorRich"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmor" Value="1"/>
         <EffectArray Operation="Set" Reference="Actor,ShieldBattery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
@@ -187,13 +190,14 @@
         <EffectArray Reference="Unit,ShieldBattery,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmor" Value="1"/>
-        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmorLevel" Value="1"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/-->
+        <!--5.0.15 data -->
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
     </CUpgrade>
     <CUpgrade id="ProtossShieldsLevel2">
         <AffectedUnitArray value="PylonOvercharged"/>
         <AffectedUnitArray value="ObserverSiegeMode"/>
+        <AffectedUnitArray value="AssimilatorRich"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmor" Value="1"/>
         <EffectArray Operation="Set" Reference="Actor,ShieldBattery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
@@ -201,14 +205,15 @@
         <EffectArray Reference="Unit,ShieldBattery,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmor" Value="1"/>
-        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmorLevel" Value="1"/>
+        <!--5.0.15 data -->
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/-->
         <ScoreAmount value="400"/>
     </CUpgrade>
     <CUpgrade id="ProtossShieldsLevel3">
         <AffectedUnitArray value="PylonOvercharged"/>
         <AffectedUnitArray value="ObserverSiegeMode"/>
+        <AffectedUnitArray value="AssimilatorRich"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmor" Value="1"/>
         <EffectArray Operation="Set" Reference="Actor,ShieldBattery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
@@ -216,8 +221,8 @@
         <EffectArray Reference="Unit,ShieldBattery,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,ObserverSiegeMode,ShieldArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmor" Value="1"/>
-        <EffectArray Reference="Unit,AssimilatorRich,ShieldArmorLevel" Value="1"/>
+        <!--5.0.15 data -->
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/-->
         <ScoreAmount value="500"/>
     </CUpgrade>
@@ -307,7 +312,7 @@
         <EffectArray index="22" Value="1"/>
         <EffectArray index="34" Reference="Weapon,LanceMissileLaunchers,Level" Value="1"/>
         <EffectArray index="35" Reference="Effect,LanceMissileLaunchersDamage,Amount" Value="3"/>
-        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="1"/>
+        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount"/>
         <EffectArray index="37" Operation="Set" Reference="Weapon,LanceMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
         <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="1"/>
         <EffectArray index="39" Operation="Set" Reference="Weapon,TyphoonMissilePod,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
@@ -322,7 +327,7 @@
         <EffectArray index="22" Value="1"/>
         <EffectArray index="34" Reference="Weapon,LanceMissileLaunchers,Level" Value="1"/>
         <EffectArray index="35" Reference="Effect,LanceMissileLaunchersDamage,Amount" Value="3"/>
-        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="1"/>
+        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount"/>
         <EffectArray index="37" Operation="Set" Reference="Weapon,LanceMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
         <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="1"/>
         <EffectArray index="39" Operation="Set" Reference="Weapon,TyphoonMissilePod,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
@@ -337,7 +342,7 @@
         <EffectArray index="22" Value="1"/>
         <EffectArray index="34" Reference="Weapon,LanceMissileLaunchers,Level" Value="1"/>
         <EffectArray index="35" Reference="Effect,LanceMissileLaunchersDamage,Amount" Value="3"/>
-        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="1"/>
+        <EffectArray index="36" Reference="Effect,CycloneAttackWeaponDamage,Amount"/>
         <EffectArray index="37" Operation="Set" Reference="Weapon,LanceMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
         <EffectArray index="38" Operation="Add" Reference="Weapon,TyphoonMissilePod,Level" Value="1"/>
         <EffectArray index="39" Operation="Set" Reference="Weapon,TyphoonMissilePod,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
@@ -974,5 +979,10 @@
         <ScoreResult value="BuildOrder"/>
         <EditorCategories value="Race:Zerg,UpgradeType:SpellResearch"/>
         <AffectedUnitArray value="Hydralisk"/>
+    </CUpgrade>
+    <CUpgrade id="HiSecAutoTracking">
+        <EffectArray Reference="Weapon,TwinIbiksCannon,Level" Value="1"/>
+        <EffectArray Reference="Weapon,AutoTurret,Level" Value="1"/>
+        <EffectArray Reference="Weapon,LongboltMissile,Level" Value="1"/>
     </CUpgrade>
 </Catalog>

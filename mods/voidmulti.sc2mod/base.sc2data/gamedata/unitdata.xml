@@ -96,6 +96,10 @@
     <CUnit id="BarracksFlying">
         <SubgroupPriority value="4"/>
         <VisionHeight value="15"/>
+        <!--5.0.15 Data-->
+        <CardLayouts index="0">
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="BarracksReactor">
         <Collide index="Locust" value="1"/>
@@ -258,6 +262,10 @@
         <Food value="15"/>
         <SubgroupPriority value="5"/>
         <VisionHeight value="15"/>
+        <!--5.0.15 Data-->
+        <CardLayouts index="0">
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Corruptor">
         <AbilArray index="0" Link="CausticSpray"/>
@@ -467,13 +475,14 @@
         <GlossaryWeakArray index="2" value="Tempest"/>
         <CostResource index="Vespene" value="125"/>
         <VisionHeight value="15"/>
+        <Sight value="9"/>
     </CUnit>
     <CUnit id="LiberatorAG">
         <SubgroupPriority value="72"/>
         <CardLayouts index="0">
             <LayoutButtons Face="LiberatorAGRangeUpgrade" Type="Passive" Requirements="HaveLiberatorRange" Row="1" Column="0"/>
         </CardLayouts>
-        <Sight value="10"/>
+        <Sight value="9"/>
         <ScoreMake value="275"/>
         <ScoreKill value="275"/>
         <CostResource index="Vespene" value="125"/>
@@ -600,7 +609,7 @@
         <EnergyStart value="75"/>
         <GlossaryWeakArray index="0" value="Thor"/>
         <GlossaryWeakArray index="1" value="Roach"/>
-        <Food value="-3"/>
+        <Attributes index="Light" value="1"/>
     </CUnit>
     <CUnit id="GhostAlternate" parent="Ghost">
         <EffectArray index="Create" value="MorphToGhostNova"/>
@@ -610,11 +619,14 @@
         <GlossaryCategory value=""/>
         <GlossaryWeakArray index="0" value="Marauder"/>
         <GlossaryWeakArray index="1" value="Zergling"/>
+        <Food value="-3"/>
     </CUnit>
     <CUnit id="GhostNova" parent="Ghost">
         <GlossaryCategory value=""/>
         <GlossaryWeakArray index="0" value="Marauder"/>
         <GlossaryWeakArray index="1" value="Zergling"/>
+        <Food value="-3"/>
+        <Attributes index="Light" value="0"/>
     </CUnit>
     <CUnit id="GhostAcademy">
         <CardLayouts index="0">
@@ -1040,7 +1052,7 @@
     </CUnit>
     <CUnit id="Mothership">
         <SubgroupPriority value="96"/>
-        <Speed value="2.0156"/>
+        <Speed value="1.6054"/>
         <AbilArray index="4" Link="MassRecall"/>
         <AbilArray Link="MothershipCloak"/>
         <CardLayouts index="0">
@@ -1048,17 +1060,23 @@
             <LayoutButtons index="6" Face="MassRecall" AbilCmd="MassRecall,Execute"/>
         </CardLayouts>
         <GlossaryWeakArray index="2" value="Tempest"/>
+        <Attributes index="Psionic" value="0"/>
         <Attributes index="Heroic" value="1"/>
         <VisionHeight value="15"/>
         <LateralAcceleration value="2.0625"/>
-        <BehaviorArray index="0" removed="1"/>
         <ScoreMake value="600"/>
         <ScoreKill value="600"/>
         <EnergyStart value="0"/>
         <EnergyMax value="0"/>
-        <WeaponArray index="0" Link="PurifierBeamDummyTargetFire" Turret=""/>
-        <WeaponArray index="1" Link="MothershipBeam" Turret="FreeRotate"/>
+        <WeaponArray index="1" Link="PurifierBeamDummyTargetFire" Turret=""/>
         <WeaponArray Turret="MothershipRotate"/>
+        <!--5.0.15 Data-->
+        <!--BehaviorArray index="0" removed="1"//     Removed this existing line-->
+        <BehaviorArray index="0" Link="MothershipTargetFireTracker"/>
+        <BehaviorArray Link="MothershipLastTargetTracker"/>
+        <AlliedPushPriority value="1"/>
+        <DefaultAcquireLevel value="Passive"/>
+        <Response value="Nothing"/>
     </CUnit>
     <CUnit id="MothershipCore">
         <SubgroupPriority value="90"/>
@@ -1141,16 +1159,19 @@
         <Acceleration value="0"/>
         <StationaryTurningRate value="0"/>
         <TurningRate value="0"/>
-        <Sight value="13.75"/>
+        <Sight value="15"/>
         <Height value="5"/>
-        <BehaviorArray index="0" Link="Detector13p75"/>
+        <BehaviorArray index="0" Link="Detector15"/>
         <CardLayouts index="0">
-            <LayoutButtons index="8" Face="MorphtoObserver" Type="AbilCmd" AbilCmd="ObserverSiegeMorphtoObserver,Execute" Row="2" Column="1"/>
+            <LayoutButtons index="6" Face="Detector" Column="3"/>
+            <LayoutButtons index="7" Face="MorphtoObserver" Type="AbilCmd" AbilCmd="ObserverSiegeMorphtoObserver,Execute" Column="1"/>
+            <LayoutButtons index="8" removed="1"/>
         </CardLayouts>
         <AbilArray index="2" Link="ObserverSiegeMorphtoObserver"/>
         <GlossaryCategory value=""/>
         <ScoreMake value="0"/>
         <ScoreResult value=""/>
+        <FlagArray index="Cloaked" value="0"/>
     </CUnit>
     <CUnit id="Oracle">
         <SubgroupPriority value="84"/>
@@ -1182,6 +1203,10 @@
         <Food value="15"/>
         <SubgroupPriority value="6"/>
         <VisionHeight value="15"/>
+        <!--5.0.15 Data-->
+        <CardLayouts index="0">
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Overlord">
         <SubgroupPriority value="72"/>
@@ -1575,6 +1600,7 @@
         <WeaponArray Link="90mmCannonsFake" Turret="SiegeTank"/>
         <LifeStart value="175"/>
         <LifeMax value="175"/>
+        <AlliedPushPriority value="1"/>
     </CUnit>
     <CUnit id="SiegeTankSieged">
         <Collide index="Locust" value="1"/>
@@ -1608,6 +1634,8 @@
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
         <SubgroupPriority value="24"/>
+        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Vespene" value="150"/>
     </CUnit>
     <CUnit id="SporeCrawler">
         <Collide index="Locust" value="1"/>
@@ -1819,7 +1847,7 @@
         <SubgroupPriority value="12"/>
         <CardLayouts index="0">
             <LayoutButtons index="2" Face="ResearchNeuralParasite" AbilCmd="InfestationPitResearch,Research4"/>
-            <LayoutButtons index="3" removed="1"/>
+            <LayoutButtons index="3" Face="AmorphousArmorcloud" AbilCmd="InfestationPitResearch,Research6"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="FactoryTechLab">
@@ -1891,6 +1919,7 @@
         <CardLayouts index="0">
             <LayoutButtons index="6" Face="ResearchSmartServos" Type="Passive" AbilCmd="" Requirements="HaveSmartServos" Column="2"/>
         </CardLayouts>
+        <AlliedPushPriority value="1"/>
     </CUnit>
     <CUnit id="TwilightCouncil">
         <Collide index="Locust" value="1"/>
@@ -1990,6 +2019,7 @@
         <CardLayouts index="0">
             <LayoutButtons Face="ResearchSmartServos" Type="Passive" Requirements="HaveSmartServos" Row="2" Column="2"/>
         </CardLayouts>
+        <CostResource index="Minerals" value="125"/>
     </CUnit>
     <CUnit id="VikingFighter">
         <SubgroupPriority value="68"/>
@@ -2002,6 +2032,7 @@
         <CardLayouts index="0">
             <LayoutButtons Face="ResearchSmartServos" Type="Passive" Requirements="HaveSmartServos" Row="2" Column="2"/>
         </CardLayouts>
+        <CostResource index="Minerals" value="125"/>
     </CUnit>
     <CUnit id="Viper">
         <AbilArray Link="ParasiticBomb"/>
@@ -2265,6 +2296,7 @@
         <SubgroupPriority value="52"/>
         <GlossaryStrongArray index="0" value="VikingFighter"/>
         <GlossaryStrongArray index="2" value="Phoenix"/>
+        <AlliedPushPriority value="1"/>
     </CUnit>
     <CUnit id="WidowMineBurrowed">
         <SubgroupPriority value="54"/>
@@ -2763,6 +2795,10 @@
     </CUnit>
     <CUnit id="FactoryFlying">
         <VisionHeight value="15"/>
+        <!--5.0.15 Data-->
+        <CardLayouts index="0">
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="OverlordTransport">
         <VisionHeight value="15"/>
@@ -2771,6 +2807,10 @@
     </CUnit>
     <CUnit id="StarportFlying">
         <VisionHeight value="15"/>
+        <!--5.0.15 Data-->
+        <CardLayouts index="0">
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="TransportOverlordCocoon">
         <VisionHeight value="15"/>

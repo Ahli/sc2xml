@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirement id="HasQueuedAddon">
+        <NodeArray index="Show" Link="AndNotCountUnitBarracksReactorQueuedOnlyAtUnitNotCountUnitBarracksTechLabQueuedOnlyAtUnitNotCountUnitFactoryReactorQueuedOnlyAtUnitNotCountUnitFactoryTechLabQueuedOnlyAtUnitNotCountUnitStarportReactor2432883330"/>
+    </CRequirement>
     <CRequirement id="HaveAdeptPiercingAttack"/>
     <CRequirement id="HaveTempestGroundAttackUpgrade">
         <NodeArray index="Use" Link="CountUpgradeTempestGroundAttackUpgradeCompleteOnly788113278"/>

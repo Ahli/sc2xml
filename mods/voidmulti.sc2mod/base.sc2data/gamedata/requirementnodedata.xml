@@ -9,6 +9,14 @@
         <OperandArray value="NotCountBehaviorNexusShieldOverchargeCompleteOnlyAtUnit"/>
         <OperandArray value="1"/>
     </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUnitBarracksReactorQueuedOnlyAtUnitNotCountUnitBarracksTechLabQueuedOnlyAtUnitNotCountUnitFactoryReactorQueuedOnlyAtUnitNotCountUnitFactoryTechLabQueuedOnlyAtUnitNotCountUnitStarportReactor2432883330">
+        <OperandArray value="NotCountUnitBarracksReactorQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitBarracksTechLabQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitFactoryReactorQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitFactoryTechLabQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitStarportReactorQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitStarportTechLabQueuedOnlyAtUnit"/>
+    </CRequirementAnd>
     <CRequirementCountBehavior id="CountBehaviorImmortalBarrierSupressedCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="ImmortalBarrierSupressed" State="CompleteOnlyAtUnit"/>
@@ -44,10 +52,22 @@
     <CRequirementCountUnit id="CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat">
         <Tooltip value="RequirementNode/Tooltip/CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitBarracksTechLabQueuedOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BarracksTechLab" State="QueuedOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitFactoryTechLabQueuedOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FactoryTechLab" State="QueuedOnlyAtUnit"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitFusionCoreCompleteOnly"/>
     <CRequirementCountUnit id="CountUnitLurkerDenMPCompleteOnlyTechTreeCheat">
         <Tooltip value=""/>
         <Count Link="LurkerDenMP" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitStarportTechLabQueuedOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StarportTechLab" State="QueuedOnlyAtUnit"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeAdeptPiercingAttackCompleteOnly543136321"/>
     <CRequirementCountUpgrade id="CountUpgradeAdeptPiercingAttackCompleteOnlyTechTreeCheat">
@@ -294,6 +314,15 @@
     <CRequirementNot id="NotCountBehaviorRavenScramblerMissileQueuedOrBetterAtUnit">
         <OperandArray index="0" value="CountBehaviorRavenScramblerMissileQueuedOrBetterAtUnit"/>
     </CRequirementNot>
+    <CRequirementNot id="NotCountUnitBarracksTechLabQueuedOnlyAtUnit">
+        <OperandArray index="0" value="CountUnitBarracksTechLabQueuedOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUnitFactoryTechLabQueuedOnlyAtUnit">
+        <OperandArray index="0" value="CountUnitFactoryTechLabQueuedOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUnitStarportTechLabQueuedOnlyAtUnit">
+        <OperandArray index="0" value="CountUnitStarportTechLabQueuedOnlyAtUnit"/>
+    </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeAdeptPiercingAttackQueuedOrBetter"/>
     <CRequirementNot id="NotCountUpgradeAmplifiedShieldingQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeAmplifiedShieldingQueuedOrBetter"/>
@@ -463,4 +492,33 @@
     <CRequirementNot id="NotCountUpgradeFrenzyQueuedOrBetterTechTreeCheat">
         <OperandArray index="0" value="CountUpgradeFrenzyQueuedOrBetterTechTreeCheat"/>
     </CRequirementNot>
+    <CRequirementAnd id="AndNotCountUnitBarracksReactorQueuedOnlyAtUnitNotCountUnitFactoryReactorQueuedOnlyAtUnitNotCountUnitStarportReactorQueuedOnlyAtUnit">
+        <OperandArray value="NotCountUnitBarracksReactorQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitBarracksTechlabQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitFactoryReactorQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitFactoryTechlabQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitStarportReactorQueuedOnlyAtUnit"/>
+        <OperandArray value="NotCountUnitStarportTechlabQueuedOnlyAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementNot id="NotCountUnitBarracksReactorQueuedOnlyAtUnit">
+        <OperandArray index="0" value="CountUnitBarracksReactorQueuedOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUnitFactoryReactorQueuedOnlyAtUnit">
+        <OperandArray index="0" value="CountUnitFactoryReactorQueuedOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUnitStarportReactorQueuedOnlyAtUnit">
+        <OperandArray index="0" value="CountUnitStarportReactorQueuedOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementCountUnit id="CountUnitBarracksReactorQueuedOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BarracksReactor" State="QueuedOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitFactoryReactorQueuedOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FactoryReactor" State="QueuedOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitStarportReactorQueuedOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StarportReactor" State="QueuedOnlyAtUnit"/>
+    </CRequirementCountUnit>
 </Catalog>

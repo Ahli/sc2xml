@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="DefilerMPPlagueTargetModel">
+        <On index="3" Terms="Behavior.AmorphousArmorcloud.On"/>
+        <On index="6" Terms="Behavior.AmorphousArmorcloud.Off"/>
+        <On Terms="ActorCreation; ValidateUnitType IsLurkerBurrowed" Send="SetScale 0.900000"/>
+        <On Terms="ActorCreation; ValidateUnitType IsLurkerUnBurrowed" Send="SetScale 0.800000"/>
+        <AutoScaleFactor value="0.400000"/>
+    </CActorModel>
     <CModel id="CleaningBot">
         <Events>
             <Anim value="Walk,00"/>
@@ -1120,6 +1127,7 @@
     <CModel id="GuardianShield">
         <ScaleMax value="0.930000,0.930000,0.930000"/>
         <ScaleMin value="0.930000,0.930000,0.930000"/>
+        <RadiusLoose value="7.150000"/>
     </CModel>
     <CModel id="Infestor">
         <ScaleMax value="0.750000,0.750000,0.750000"/>
@@ -1483,5 +1491,31 @@
     <CModel id="HydraliskFrenzyModel" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Zerg\HydraliskFrenzy\HydraliskFrenzy.m3"/>
         <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="ProtossAOECursorSplat">
+        <Model value="Assets\UI\ProtossCursorEx2\ProtossCursorEx2.m3"/>
+    </CModel>
+    <CModel id="PsiStormCursorSplat">
+        <Model value="Assets\UI\ProtossCursorEx2\ProtossCursorEx2.m3"/>
+    </CModel>
+    <CModel id="ParasiticBomb">
+        <RadiusLoose value="2.250000"/>
+    </CModel>
+    <CModel id="ParasiticBombAttackImpact">
+        <RadiusLoose value="2.250000"/>
+    </CModel>
+    <CModel id="ParasiticBombDotState">
+        <RadiusLoose value="1.250000"/>
+    </CModel>
+    <CModel id="StimpackStartImpact">
+        <RadiusLoose value="1.250000"/>
+    </CModel>
+    <CModel id="DestructibleExpeditionGate6x6">
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SquibTypeDefault value="Flesh"/>
+    </CModel>
+    <CModel id="LurkerAttackSpikeEx2">
+        <AnimSpeed value="1.750000"/>
     </CModel>
 </Catalog>

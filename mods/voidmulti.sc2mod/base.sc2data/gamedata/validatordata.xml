@@ -990,4 +990,85 @@
         <Value value="Hatchery"/>
         <Find value="0"/>
     </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="WorkerProbeHasShiftVespeneBug">
+        <Compare value="LE"/>
+        <Behavior value="WorkerVespeneBugOnProbe"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="IsAssimilatorRich">
+        <Value value="AssimilatorRich"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="IsAssimilatorCombine">
+        <CombineArray value="IsAssimilator"/>
+        <CombineArray value="IsAssimilatorRich"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="WorkerNotCarryingVespeneUnnamed">
+        <Categories index="User6" value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="WorkerProbeHasNoVespeneAndNoBug">
+        <Type value="And"/>
+        <CombineArray value="WorkerNotCarryingVespeneUnnamed"/>
+        <CombineArray value="WorkerProbeHasShiftVespeneBug"/>
+    </CValidatorCombine>
+    <CValidatorIsUnitTracked id="MothershipTargetFire">
+        <Find value="1"/>
+        <BehaviorLink value="MothershipTargetFireTracker"/>
+        <TrackedUnit Value="Target"/>
+    </CValidatorIsUnitTracked>
+    <CValidatorCombine id="MothershipSingleTargetFilter">
+        <CombineArray value="FriendlyTargetExcludeSelf"/>
+        <CombineArray value="IsDisguisedChangeling"/>
+    </CValidatorCombine>
+    <CValidatorIsUnitTracked id="NotRecentMothershipTarget">
+        <BehaviorLink value="MothershipLastTargetTracker"/>
+        <TrackedUnit Value="Target"/>
+    </CValidatorIsUnitTracked>
+    <CValidatorUnitCompareBehaviorCount id="IsDisguisedChangeling">
+        <Compare value="NE"/>
+        <Behavior value="ChangelingDisable"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="BroodlingAllowedAttack">
+        <WhichUnit Value="Source"/>
+        <Value value="1"/>
+        <Behavior value="BroodlingAllowAttack"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="ContaminateTargetFilters">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <CombineArray value="CanTrain"/>
+        <CombineArray value="CanWarpTrain"/>
+        <CombineArray value="CanResearch"/>
+    </CValidatorCombine>
+    <CValidatorUnitAbil id="CanTrain">
+        <Find value="1"/>
+        <AbilClass value="CAbilTrain"/>
+    </CValidatorUnitAbil>
+    <CValidatorUnitAbil id="CanWarpTrain">
+        <Find value="1"/>
+        <AbilClass value="CAbilWarpTrain"/>
+    </CValidatorUnitAbil>
+    <CValidatorUnitAbil id="CanResearch">
+        <Find value="1"/>
+        <AbilClass value="CAbilResearch"/>
+    </CValidatorUnitAbil>
+    <CValidatorUnitCompareVital id="LifeGT2">
+        <Compare value="GT"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="ConsumePeriodicCheck">
+        <CombineArray value="TargetNotDeadAndCasterNotDeadAndEnergyNotFullCaster"/>
+        <CombineArray value="LifeGT2"/>
+    </CValidatorCombine>
+    <CValidatorUnitMover id="ReaperKD8KnockbackNotInMotion">
+        <Value value="UnitKnockbackMover3"/>
+    </CValidatorUnitMover>
+    <CValidatorUnitType id="TargetNotInvisibleDummyUnit">
+        <Value value="InvisibleTargetDummy"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="DetectedORNotCloakedBuried">
+        <CombineArray value="IsDetected"/>
+        <CombineArray value="NotCloakedAndNotBuried"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="IsLurkerUnBurrowed">
+        <Value value="LurkerMP"/>
+    </CValidatorUnitType>
 </Catalog>

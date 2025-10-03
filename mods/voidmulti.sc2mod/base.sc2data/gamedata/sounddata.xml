@@ -2849,16 +2849,16 @@
     </CSound>
     <CSound id="Spell_AmorphousArmorcloud_Impact" parent="Spell">
         <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Stukov_Broodling_Birth_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Stukov_Broodling_Birth_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Stukov_Broodling_Birth_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Stukov_Broodling_Birth_04.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Stukov_Broodling_Birth_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_DisablingCloud_Impact_00.wav" Pitch="10.000000,10.000000" Volume="1.000000,1.000000"/>
+        <AssetArray File="Assets\Sounds\Spell_DisablingCloud_Impact_01.wav" Pitch="10.000000,10.000000" Volume="1.000000,1.000000"/>
+        <AssetArray File="Assets\Sounds\Spell_DisablingCloud_Impact_02.wav" Pitch="10.000000,10.000000" Volume="1.000000,1.000000"/>
+        <AssetArray File="Assets\Sounds\Spell_DisablingCloud_Impact_03.wav" Pitch="10.000000,10.000000" Volume="1.000000,1.000000"/>
+        <PlayDelay value="25,25"/>
         <DupeMuteCount value="4"/>
         <OffsetFadeIn Volume="-96.000000"/>
         <OffsetFadeIn Time="1"/>
         <Pitch value="0.000000,2.000000"/>
-        <Volume value="-12.000000,-12.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
     </CSound>
     <CSound id="Mothership_CloakFieldOff">
         <Volume value="-6.000000,-6.000000"/>

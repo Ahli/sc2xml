@@ -276,8 +276,9 @@
         <BehaviorLink value="HyperjumpInitialDelaySuppressWeapon"/>
     </CEffectRemoveBehavior>
     <CEffectCreatePersistent id="LiberatorTargetMorphDelayPersistent">
-        <RevealRadius value="5.5"/>
-        <RevealFlags index="Unfog" value="1"/>
+        <PeriodCount value="16"/>
+        <PeriodicEffectArray value="LiberatorTargetMorphSearchArea"/>
+        <PeriodicPeriodArray index="0" value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectCreateUnit id="LurkerMPCU">
         <EditorCategories value="Race:Zerg"/>
@@ -362,6 +363,19 @@
         <ValidatorArray index="0" value="MultipleHitGroundOnlyAttackTargetFilter"/>
         <ValidatorArray value="ZealotAttackDamageMaxRange"/>
     </CEffectDamage>
+    <CEffectDamage id="PsiStormDamage">
+        <Amount value="8.75"/>
+    </CEffectDamage>
+    <CEffectDamage id="PsiStormDamageInitial">
+        <Amount value="8.75"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="PsiStormPersistent">
+        <PeriodCount value="14"/>
+        <PeriodicPeriodArray index="0" value="0.56"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="PsiStormSearch">
+        <AreaArray index="0" Radius="2"/>
+    </CEffectEnumArea>
     <CEffectSet id="RavenScramblerDummy">
         <EditorCategories value="Race:Terran"/>
     </CEffectSet>
@@ -378,13 +392,13 @@
         <EditorCategories value="Race:Protoss"/>
         <!--EffectArray value="SentryWeaponApplyCooldown"/-->
         <EffectArray value="DisruptionBeamDamage"/>
-        <EffectArray value="DisruptionBeamTimeWarpSwitch"/>
+        <EffectArray value="SentryWeaponCooldownBase"/>
+        <EffectArray value="DisruptionBeamABTarget"/>
         <ValidatorArray value="NotHaveBeamTargetCDBehavior"/>
     </CEffectSet>
     <CEffectApplyBehavior id="DisruptionBeamABTarget">
         <EditorCategories value=""/>
         <Behavior value="BeamTargetCD"/>
-        <Flags index="UseDuration" value="1"/>
         <Duration value="1"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="DisruptionBeamABTargetTimeWarped">
@@ -459,6 +473,7 @@
         <EffectArray value="LockOnTurretStart"/>
         <EffectArray value="LockOnResetCooldownInitial"/>
         <EffectArray value="LockOnDummyWeaponAB"/>
+        <ValidatorArray value="TargetNotInvisibleDummyUnit"/>
     </CEffectSet>
     <CEffectApplyBehavior id="NexusShieldOverchargeAB">
         <EditorCategories value=""/>
@@ -489,13 +504,13 @@
         <EditorCategories value="Race:Protoss"/>
         <!--EffectArray value="OracleWeaponApplyCooldown"/-->
         <EffectArray value="OracleWeaponDamage"/>
-        <EffectArray value="OracleWeaponTimeWarpSwitch"/>
+        <EffectArray value="OracleWeaponCooldownBase"/>
+        <EffectArray value="OracleWeaponABTarget"/>
         <ValidatorArray value="NotHaveBeamTargetCDBehavior"/>
     </CEffectSet>
     <CEffectApplyBehavior id="OracleWeaponABTarget">
         <EditorCategories value=""/>
         <Behavior value="BeamTargetCD"/>
-        <Flags index="UseDuration" value="1"/>
         <Duration value="0.86"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="OracleWeaponABTargetTimeWarped">
@@ -618,8 +633,9 @@
     <CEffectCreatePersistent id="RevelationPersistent">
         <ExpireDelay value="28"/>
     </CEffectCreatePersistent>
-    <CEffectCreateUnit id="ReaperKD8Knockback">
+    <CEffectCreateUnit id="KD8Knockback">
         <ValidatorArray value="IsNotRecallingNexus"/>
+        <ValidatorArray value="IsStrategicWarpOut"/>
     </CEffectCreateUnit>
     <CEffectCreateHealer id="ShieldBatteryRechargeEx5">
         <ValidatorArray value="noMarkers"/>
@@ -690,6 +706,9 @@
         <AttributeBonus index="Armored" value="2"/>
         <Amount value="3"/>
     </CEffectDamage-->
+    <CEffectDamage id="CycloneAttackWeaponDamage">
+        <ValidatorArray value="DetectedORNotCloakedBuried"/>
+    </CEffectDamage>
     <CEffectSet id="FungalGrowthInitialSet">
         <EffectArray index="0" value=""/>
     </CEffectSet>
@@ -853,7 +872,7 @@
         <EffectArray value="PunisherGrenadesLMRight"/>
     </CEffectSet>
     <CEffectEnumArea id="PurificationNovaSearch">
-        <AreaArray index="0" Radius="1.5"/>
+        <AreaArray index="0" Radius="1.75"/>
         <ImpactLocation Value="SourceUnitOrPoint"/>
     </CEffectEnumArea>
     <CEffectSet id="PurificationNovaSearchSet">
@@ -902,7 +921,7 @@
         <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetUnit"/>
         <InitialEffect value="EnergyRecharge"/>
-        <PeriodCount value="3"/>
+        <PeriodCount value="1"/>
         <PeriodicValidator value="TargetNotDead"/>
         <PeriodicEffectArray value="EnergyRecharge"/>
         <PeriodicPeriodArray value="0.476"/>
@@ -927,13 +946,13 @@
         <EditorCategories value="Race:Protoss"/>
         <!--EffectArray value="VoidRayWeaponApplyCooldown"/-->
         <EffectArray value="VoidRaySwarmDamage"/>
-        <EffectArray value="VoidRayWeaponTimeWarpSwitch"/>
+        <EffectArray value="VoidRayWeaponCooldownBase"/>
+        <EffectArray value="VoidRayWeaponABTarget"/>
         <ValidatorArray value="NotHaveBeamTargetCDBehavior"/>
     </CEffectSet>
     <CEffectApplyBehavior id="VoidRayWeaponABTarget">
         <EditorCategories value=""/>
         <Behavior value="BeamTargetCD"/>
-        <Flags index="UseDuration" value="1"/>
         <Duration value="0.5"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="VoidRayWeaponABTargetTimeWarped">
@@ -1034,10 +1053,12 @@
     </CEffectDamage>
     <CEffectSet id="YoinkSet">
         <ValidatorArray value="TargetNotTacticalJumping"/>
+        <ValidatorArray value="IsNotSiegedSiegeTank"/>
     </CEffectSet>
     <CEffectCreateUnit id="YoinkStartCreatePlaceholder">
         <ValidatorArray value="NotFrenzied"/>
         <ValidatorArray value="TargetNotTacticalJumping"/>
+        <ValidatorArray value="IsNotSiegedSiegeTank"/>
     </CEffectCreateUnit>
     <CEffectCreatePersistent id="TemporalFieldGrowingBubbleCreatePersistent">
         <EditorCategories value="Race:Protoss"/>
@@ -1729,10 +1750,6 @@
         <PeriodicPeriodArray value="1.176"/>
         <PeriodicPeriodArray value="1.176"/>
     </CEffectCreatePersistent-->
-    <CEffectCreatePersistent id="LiberatorTargetMorphPersistent">
-        <RevealRadius value="5.5"/>
-        <RevealFlags index="Unfog" value="1"/>
-    </CEffectCreatePersistent>
     <CEffectApplyBehavior id="RavenScramblerMissileABcarrier">
         <EditorCategories value="Race:Terran"/>
         <Behavior value="RavenScramblerMissileCarrier"/>
@@ -2379,11 +2396,8 @@
         <Behavior value="CycloneLockOnCooldown"/>
     </CEffectApplyBehavior>
     <CEffectSet id="CycloneWeaponLaunchSet">
-        <ValidatorArray value="NotHaveCycloneLockOnCooldownBehavior"/>
         <EditorCategories value="Race:Terran"/>
         <EffectArray value="CycloneWeaponLaunchMissileSwitch"/>
-        <EffectArray value="CycloneCooldownAB"/>
-        <EffectArray value="CycloneLockOnAddCDtodefaultweapon"/>
     </CEffectSet>
     <CEffectDamage id="FungalGrowthDamage">
         <Amount value="1.5625"/>
@@ -2417,11 +2431,6 @@
         <SearchFilters value="-;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray index="0" Radius="3.75"/>
     </CEffectEnumArea>
-    <CEffectModifyUnit id="ViperConsumeStructureModifyTarget">
-        <VitalArray index="Life">
-            <Change value="-7.5"/>
-        </VitalArray>
-    </CEffectModifyUnit>
     <CEffectTeleport id="HyperjumpTeleport">
         <TeleportFlags index="TestZone" value="1"/>
     </CEffectTeleport>
@@ -2431,9 +2440,6 @@
     <CEffectDamage id="DisruptionBeamDamage">
         <ShieldBonus value="4"/>
     </CEffectDamage>
-    <CEffectModifyUnit id="LockOnResetCooldown">
-        <Cost index="0" CooldownTimeUse="4"/>
-    </CEffectModifyUnit>
     <CEffectEnumArea id="WidowMineNotificationSearch">
         <ValidatorArray value="CasterIsVisible"/>
         <EditorCategories value=""/>
@@ -2551,6 +2557,11 @@
             <Change value="500"/>
         </VitalArray>
     </CEffectModifyUnit>
+    <CEffectApplyBehavior id="WorkerVespeneBugOnProbeAB">
+        <ValidatorArray index="0" value="IsAssimilatorCombine"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="WorkerVespeneBugOnProbe"/>
+    </CEffectApplyBehavior>
     <CEffectEnumArea id="WorkerVespeneProximitySearch">
         <ImpactLocation Value="CasterUnit"/>
         <SearchFilters value="Worker;Ally,Neutral,Enemy"/>
@@ -2563,7 +2574,7 @@
         <ValidatorArray value="WorkerCasterGatheringThisCombine"/>
         <ValidatorArray value="WorkerWithinRangeOfRefinery"/>
         <ValidatorArray value="WorkerNoIdleChannelOrder"/>
-        <ValidatorArray value="WorkerNotCarryingVespeneUnnamed"/>
+        <ValidatorArray value="WorkerProbeHasNoVespeneAndNoBug"/>
         <EffectArray value="WorkerVespeneWalkApplyBehaviorTimed"/>
         <EffectArray value="WorkerRemoveGatherOrderSet"/>
         <EffectArray value="WorkerStartStopIdleAbility"/>
@@ -2657,7 +2668,7 @@
         <PeriodCount value="2"/>
     </CEffectCreatePersistent>
     <CEffectSet id="MothershipBeamFriendlyFireSet">
-        <ValidatorArray value="FriendlyTargetExcludeSelf"/>
+        <ValidatorArray value="MothershipSingleTargetFilter"/>
         <EditorCategories value="Race:Protoss"/>
         <EffectArray value="MothershipBeamPersistent"/>
         <EffectArray value="MothershipSecondaryBeamPersistent"/>
@@ -2665,6 +2676,8 @@
     <CEffectCreatePersistent id="MothershipBeamPersistent">
         <Flags index="Channeled" value="0"/>
         <PeriodCount value="2"/>
+        <!--5.0.15 Data-->
+        <FinalEffect value="MothershipAddRecentTarget"/>
     </CEffectCreatePersistent>
     <CEffectSet id="MothershipBeamSetCustom">
         <EditorCategories value="Race:Protoss"/>
@@ -2676,18 +2689,114 @@
         <ValidatorArray value="CasterIsAlive"/>
         <EditorCategories value=""/>
         <SearchFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <TargetSorts>
-            <SortArray value="MothershipTargetFire"/>
-            <SortArray value="TSThreatenBattlecruiser"/>
-            <SortArray value="TSPriority"/>
-        </TargetSorts>
         <AreaArray MaxCount="4" Radius="7" Effect="MothershipBeamSet"/>
         <MinCount value="1"/>
-        <SearchFlags index="CenterAtLaunch" value="1"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="0"/>
+        <ImpactLocation Value="CasterUnit"/>
+        <TargetSorts>
+            <SortArray value="MothershipTrackedTargetFire"/>
+            <SortArray value="MothershipPreferNewTargets"/>
+            <SortArray value="TSThreatenBattlecruiser"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
     </CEffectEnumArea>
     <CEffectSet id="GravitonBeamInitialSet">
         <EffectArray value="GravitonBeamBehavior"/>
     </CEffectSet>
+    <CEffectUserData id="SentryWeaponCooldownBase">
+        <EditorCategories value="Race:Protoss"/>
+        <Key value="BeamWeaponCooldownBase"/>
+        <SourceKey value="BeamWeaponCooldownBase"/>
+        <Operation value="Set"/>
+    </CEffectUserData>
+    <CEffectUserData id="OracleWeaponCooldownBase">
+        <EditorCategories value="Race:Protoss"/>
+        <Key value="BeamWeaponCooldownBase"/>
+        <Amount value="0.86"/>
+        <SourceKey value="BeamWeaponCooldownBase"/>
+        <Operation value="Set"/>
+    </CEffectUserData>
+    <CEffectUserData id="VoidRayWeaponCooldownBase">
+        <EditorCategories value="Race:Protoss"/>
+        <Key value="BeamWeaponCooldownBase"/>
+        <Amount value="0.5"/>
+        <SourceKey value="BeamWeaponCooldownBase"/>
+        <Operation value="Set"/>
+    </CEffectUserData>
+    <CEffectSet id="MothershipBeamSet">
+        <ValidatorArray value="IsNotDisguisedChangeling"/>
+    </CEffectSet>
+    <CEffectAddTrackedUnit id="MothershipAddRecentTarget">
+        <EditorCategories value=""/>
+        <BehaviorLink value="MothershipLastTargetTracker"/>
+        <TrackedUnit Value="Target"/>
+    </CEffectAddTrackedUnit>
+    <CEffectAddTrackedUnit id="MothershipAddTargetFire">
+        <EditorCategories value=""/>
+        <BehaviorLink value="MothershipTargetFireTracker"/>
+        <TrackedUnit Value="Target"/>
+        <ValidatorArray value="CasterisNotScanning"/>
+    </CEffectAddTrackedUnit>
+    <CEffectEnumArea id="AcquireTargetUnloadSearch">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="-;Player,Ally,Neutral"/>
+        <TargetSorts>
+            <SortArray value="TSThreatensCyclone"/>
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
+        <AreaArray MaxCount="1" Radius="10" Effect="AcquireTargetUnloadIssueAttack"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectEnumArea>
+    <CEffectIssueOrder id="AcquireTargetUnloadIssueAttack">
+        <ValidatorArray value="WeaponInRange"/>
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Abil value="attack"/>
+        <CmdFlags index="AttackOnce" value="1"/>
+        <Player Value="Source"/>
+        <Target Value="TargetUnit"/>
+    </CEffectIssueOrder>
+    <CEffectEnumMagazine id="BroodlordIterateBroodlingEscort">
+        <WhichUnit Value="Caster"/>
+        <EffectExternal value="BroodlingEnableAttackAB"/>
+    </CEffectEnumMagazine>
+    <CEffectApplyBehavior id="BroodlingEnableAttackAB">
+        <Behavior value="BroodlingAllowAttack"/>
+    </CEffectApplyBehavior>
+    <CEffectSwitch id="BroodlingEscort">
+        <ValidatorArray value="BroodlingAllowedAttack"/>
+    </CEffectSwitch>
+    <CEffectCreatePersistent id="Contaminate">
+        <ValidatorArray index="0" value="ContaminateTargetFilters"/>
+        <ValidatorArray value="noMarkers"/>
+    </CEffectCreatePersistent>
+    <CEffectModifyUnit id="ViperConsumeStructureModifyTarget">
+        <VitalArray index="Life">
+            <Change value="-7.5"/>
+        </VitalArray>
+        <!--5.0.15 data -->
+        <ValidatorArray value="LifeGT2"/>
+        <ValidatorArray value="ConsumePeriodicCheck"/>
+    </CEffectModifyUnit>
+    <CEffectDamage id="ViperConsumeDamage">
+        <Flags index="NoKillCredit" value="1"/>
+        <Amount value="7.5"/>
+    </CEffectDamage>
+    <CEffectSet id="ViperConsumeStructurePeriodicSet">
+        <EffectArray index="0" value="ViperConsumeDamage"/>
+        <ValidatorArray value="LifeGT2"/>
+        <ValidatorArray value="ConsumePeriodicCheck"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="ViperConsumeStructureLaunchMissile">
+        <ValidatorArray value="LifeGT2"/>
+        <ValidatorArray value="ConsumePeriodicCheck"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="ViperConsumeStructureCreatePersistent">
+        <PeriodicValidator value="ConsumePeriodicCheck"/>
+    </CEffectCreatePersistent>
+    <CEffectRemoveBehavior id="ReaperKD8KnockbackRB">
+        <ValidatorArray index="0" value="ReaperKD8KnockbackNotInMotion"/>
+    </CEffectRemoveBehavior>
 </Catalog>

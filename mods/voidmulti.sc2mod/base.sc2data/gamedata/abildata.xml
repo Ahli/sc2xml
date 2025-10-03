@@ -630,6 +630,7 @@
     <CAbilEffectTarget id="LiberatorAGTarget">
         <Arc value="0"/>
         <Range index="0" value="5"/>
+        <Flags index="AllowMovement" value="1"/>
     </CAbilEffectTarget>
     <CAbilMorph id="LiberatorMorphtoAA">
         <InfoArray index="0">
@@ -693,9 +694,9 @@
         <TargetFilters index="0" value="Biological,Visible;Self,Enemy,Structure,Missile,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
     <CAbilTransport id="MedivacTransport">
-        <!--UnloadCargoEffect value="MedivacUnloadCargoSetEffect"/-->
         <UnloadCargoEffect value="PurificationNovaTargettedCasterRB"/>
         <TargetFilters value="Visible;Self,Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden"/>
+        <UnloadCargoBehavior value="UnloadAcquireTarget"/>
     </CAbilTransport>
     <CAbilMorph id="MorphBackToGateway">
         <InfoArray index="0">
@@ -821,8 +822,8 @@
     </CAbilEffectTarget>
     <CAbilTransport id="OverlordTransport">
         <CmdButtonArray index="Load" Requirements="UseSingleOverlordTransport"/>
-        <!--UnloadCargoEffect value="DisruptorTransportUnloadPurificationNovaCooldownReset"/-->
         <UnloadCargoEffect value="PurificationNovaTargettedCasterRB"/>
+        <UnloadCargoBehavior value="UnloadAcquireTarget"/>
     </CAbilTransport>
     <CAbilEffectTarget id="ParasiticBomb">
         <Cost index="0">
@@ -836,19 +837,33 @@
         <Flags index="AllowMovement" value="1"/>
         <Flags index="NoDeceleration" value="1"/>
         <Cost>
-            <Vital index="Energy" value="75"/>
+            <Vital index="Energy" value="100"/>
         </Cost>
         <Range value="9"/>
         <CursorEffect value="AmorphousArmorcloudSearch"/>
         <AINotifyEffect value="AmorphousArmorcloudCP"/>
-        <!--CmdButtonArray index="Execute" DefaultButtonFace="AmorphousArmorcloud" Requirements="UseAmorphousArmorcloud"/-->
-        <CmdButtonArray index="Execute" DefaultButtonFace="AmorphousArmorcloud"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AmorphousArmorcloud" Requirements="UseAmorphousArmorcloud"/>
+        <CastOutroTime value="0.5"/>
     </CAbilEffectTarget>
     <CAbilBuild id="ProtossBuild">
         <InfoArray index="Build16" Unit="ShieldBattery" Time="40">
             <Button DefaultButtonFace="ShieldBattery" State="Suppressed" Requirements="HaveCyberneticsCore"/>
         </InfoArray>
+        <EffectArray index="Start" value="WorkerVespeneBugOnProbeAB"/>
     </CAbilBuild>
+    <CAbilEffectTarget id="PsiStorm">
+        <Range index="0" value="8"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="PurificationNova">
+        <Cost index="0">
+            <Cooldown TimeUse="23.8"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="PurificationNovaTargeted">
+        <Cost index="0">
+            <Cooldown TimeUse="23.8"/>
+        </Cost>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="ReleaseInterceptors">
         <Cost index="0">
             <Cooldown TimeUse="40"/>
@@ -967,7 +982,7 @@
             <Resource index="Minerals" value="100"/>
             <Resource index="Vespene" value="100"/>
         </InfoArray>
-        <InfoArray index="Research10" Time="140" Upgrade="BansheeSpeed">
+        <InfoArray index="Research10" Time="110.6" Upgrade="BansheeSpeed">
             <Resource index="Minerals" value="125"/>
             <Resource index="Vespene" value="125"/>
             <Button DefaultButtonFace="BansheeSpeed" Requirements="LearnBansheeSpeed">
@@ -1138,6 +1153,7 @@
         <AutoCastCountMax value="500"/>
     </CAbilMorph>
     <CAbilEffectTarget id="ViperConsumeStructure">
+        <Flags index="BestUnit" value="0"/>
         <Flags index="WaitToSpend" value="1"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="ViperParasiticBombRelay">
@@ -1164,11 +1180,9 @@
     </CAbilWarpTrain>
     <CAbilTransport id="WarpPrismTransport">
         <Range value="5"/>
-        <!--UnloadCargoEffect value="WarpPrismUnloadCargoSetEffect"/-->
         <UnloadCargoEffect value="WarpPrismUnloadCargoSetEffect"/>
         <LoadCargoEffect value="WarpPrismLoadDummy"/>
-        <!--LoadCargoEffect value="PurificationNovaTransportPickupSet"/>
-        <UnloadCargoEffect value="PurificationNovaMorphBackFromTransport"/-->
+        <UnloadCargoBehavior value="UnloadAcquireTarget"/>
     </CAbilTransport>
     <CAbilEffectInstant id="VoidRaySwarmDamageBoostCancel">
         <Flags index="Transient" value="1"/>
@@ -1338,6 +1352,7 @@
         <CancelEffect index="Prep" value="BattlecruiserYamatoCD"/>
     </CAbilEffectTarget>
     <CAbilBuild id="ZergBuild">
+        <InfoArray index="Build7" Time="92.4"/>
         <InfoArray index="Build12" Unit="LurkerDenMP" Time="80">
             <Button DefaultButtonFace="MutateintoLurkerDen" Requirements="HaveHydraliskDen"/>
         </InfoArray>
@@ -1828,7 +1843,7 @@
         <Cost>
             <Vital index="Energy" value="50"/>
             <Charge Link="Abil/BatteryOvercharge"/>
-            <Cooldown Location="Player" TimeUse="84"/>
+            <Cooldown Location="Player" TimeUse="63"/>
         </Cost>
         <TargetFilters value="CanHaveEnergy;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable"/>
         <Range value="500"/>
@@ -1899,4 +1914,60 @@
         <CancelableArray index="ApproachResource" value="1"/>
         <CancelableArray index="WaitAtResource" value="1"/>
     </CAbilHarvest>
+    <CAbilMorphPlacement id="OrbitalCommandLand">
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="CommandStructureAutoRally"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilBuild id="BarracksAddOns">
+        <InfoArray index="Build1">
+            <Button Requirements="HasQueuedAddon">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2">
+            <Button Requirements="HasQueuedAddon">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilBuild id="FactoryAddOns">
+        <InfoArray index="Build1">
+            <Button Requirements="HasQueuedAddon">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2">
+            <Button Requirements="HasQueuedAddon">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilBuild id="StarportAddOns">
+        <InfoArray index="Build1">
+            <Button Requirements="HasQueuedAddon">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2">
+            <Button Requirements="HasQueuedAddon">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilEffectInstant id="Stimpack">
+        <Cost index="0">
+            <Cooldown TimeUse="1"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="StimpackMarauder">
+        <Cost index="0">
+            <Cooldown TimeUse="1"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="CausticSpray">
+        <Flags index="BestUnit" value="0"/>
+    </CAbilEffectTarget>
 </Catalog>

@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAccumulatorUserData id="CasterAttackCooldownBase">
+        <Key value="BeamWeaponCooldownBase"/>
+    </CAccumulatorUserData>
+    <CAccumulatorArithmetic id="CasterAttackCooldownFinal">
+        <MinAccumulation value="0.0625"/>
+        <Parameters value="-0.0625">
+            <AccumulatorArray value="CasterAttackRateReciprocal"/>
+        </Parameters>
+    </CAccumulatorArithmetic>
+    <CAccumulatorArithmetic id="CasterAttackRateAdditiveFactor">
+        <Parameters value="1"/>
+    </CAccumulatorArithmetic>
+    <CAccumulatorArithmetic id="CasterAttackRateMultipliers">
+        <Parameters value="0">
+            <AccumulatorArray value="CasterAttackRateAdditiveFactor"/>
+        </Parameters>
+        <Parameters value="0">
+            <AccumulatorArray value="CasterAttackRatePowerTimeWarp"/>
+        </Parameters>
+        <MinAccumulation value="0.25"/>
+        <MaxAccumulation value="128"/>
+        <Operation value="Multiply"/>
+    </CAccumulatorArithmetic>
+    <CAccumulatorArithmetic id="CasterAttackRateReciprocal">
+        <Parameters value="0">
+            <AccumulatorArray value="CasterAttackCooldownBase"/>
+        </Parameters>
+        <Parameters value="0">
+            <AccumulatorArray value="CasterAttackRateMultipliers"/>
+        </Parameters>
+        <Operation value="Divide"/>
+    </CAccumulatorArithmetic>
+    <CAccumulatorArithmetic id="CasterAttackRatePowerTimeWarp">
+        <Parameters value="0.5"/>
+        <Parameters value="0">
+            <AccumulatorArray value="CasterStackCountAddTimeWarp"/>
+        </Parameters>
+        <Operation value="Power"/>
+    </CAccumulatorArithmetic>
+    <CAccumulatorBehavior id="CasterStackCountAddTimeWarp">
+        <Behavior value="TemporalField"/>
+    </CAccumulatorBehavior>
     <CAccumulatorSwitch id="ShieldBatteryRechargeEx5@CostSwitch">
         <CaseArray Validator="CasterHasBatteryOverchargeBehavior" Accumulator="ShieldBatteryRechargeEx5@CostMutiplierFree"/>
         <CaseDefault value="ShieldBatteryRechargeEx5@CostMutiplierNormal"/>

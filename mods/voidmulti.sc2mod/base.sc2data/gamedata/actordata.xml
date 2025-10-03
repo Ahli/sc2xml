@@ -196,6 +196,7 @@
         <ImpactMap index="Shield" Sound="" ModelReaction=""/>
     </CActorAction>
     <CActorModel id="GuardianShield">
+        <Inherits index="Visibility" value="0"/>
         <HostSiteOps Ops="SOpAttachCenter GuardianShieldVisualOffset"/>
     </CActorModel>
     <CActorSiteOpLocalOffset id="GuardianShieldVisualOffset">
@@ -269,6 +270,9 @@
     </CActorSplat>
     <CActorSplat id="LiberatorAGTargetCursorSplat_Upgrade" parent="CursorSplat" abil="LiberatorAGTarget">
         <On Terms="ActorCreation; !ValidatePlayer LiberatorAGRangeUpgraded" Send="Destroy"/>
+    </CActorSplat>
+    <CActorSplat id="PurificationNovaCursorSplat" parent="ProtossCursorSplat" abil="PurificationNovaTargeted">
+        <Scale value="1.600000"/>
     </CActorSplat>
     <CActorUnit id="ParasiticBombRelayDummy" parent="GenericUnitStandardNoAutoSoundLinks" unitName="ParasiticBombRelayDummy">
         <Model value="Invisible"/>
@@ -667,8 +671,9 @@
         <Inherits index="BaseModelScale" value="0"/>
         <Inherits index="Scale" value="0"/>
         <Inherits index="TintColor" value="0"/>
-        <On Terms="Behavior.AmorphousArmorcloud.On" Send="Create"/>
+        <!--<On Terms="Behavior.AmorphousArmorcloud.On" Send="Create"/>
         <On Terms="Behavior.AmorphousArmorcloud.Off" Send="AnimBracketStop BSD"/>
+         -->
         <HostSiteOps Ops="SOpAttachHead"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
@@ -707,6 +712,7 @@
             <Image value="Assets\Textures\wireframe-zerg-swarmhostspawnflyer.dds"/>
         </GroupIcon>
         <UnitIcon value="Assets\Textures\btn-unit-zerg-locustflyer.dds"/>
+        <On index="65" Send="$Birth RandomStartOffset"/>
     </CActorUnit>
     <CActorAction id="MothershipCoreWeaponAttack">
         <LaunchSiteOps Ops="SOpForwardTargetPoint SOp2DRotation SOpAttachOverhead"/>
@@ -797,6 +803,7 @@
     <CActorMissile id="Reaper">
         <On Terms="Abil.KD8Charge.SourceCastStart" Send="$Spell"/>
         <AbilSoundArray AbilCmd="D8Charge,Execute" Sound="Reaper_D8ChargeVO"/>
+        <HostSiteOps Ops="SOpMoveUpByDot15 SOpBankerReaper"/>
     </CActorMissile>
     <CActorUnit id="SiegeTank">
         <Remove Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
@@ -2463,7 +2470,10 @@
         <LaunchAssets Sound=""/>
     </CActorAction>
     <CActorUnit id="Ravager">
+        <On index="78" Send="TimerSet 0.100000 RavAnimationSwitch"/>
         <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="AnimClear Spell"/>
+        <On Terms="TimerExpired; UnitWalking; TimerName RavAnimationSwitch" Send="$Spell 0 3.000000 2.000000 1.000000 AsTimeScale 0.000000 1"/>
+        <On Terms="Abil.RavagerCorrosiveBile.SourceCastStart" Send="$Spell"/>
     </CActorUnit>
     <CActorRange id="ShieldBatteryRange">
         <On index="1" Terms="Abil.ShieldBatteryRechargeEx5.TargetOn"/>
@@ -2782,4 +2792,107 @@
         <On Terms="Effect.CausticSprayBasePersistent.Start" Send="AnimBracketStart Spell Spell Spell Stand ContentForceLooping 0.500000 AsTimeScale"/>
         <On Terms="Effect.CausticSprayBasePersistent.Stop" Send="AnimBracketStop Spell"/>
     </CActorUnit>
+    <CActorUnit id="OracleStasisTrap">
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <PlaceholderActorModel value="OracleStasisTrapPlaceholder"/>
+    </CActorUnit>
+    <CActorModel id="OracleStasisTrapPlaceholder" parent="PlacementModel">
+        <HostSiteOps Ops="SOpShadowAsyncPrecise" HoldPosition="1" HoldRotation="1"/>
+        <On index="0" Terms="ActorCreation" Send="SetLocalTintColor 201,175,175"/>
+        <On Terms="ActorCreation; ModelIsLowQuality" Send="SetOpacity 0.750000"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
+    </CActorModel>
+    <CActorModel id="StimpackEndImpact">
+        <Inherits index="Visibility" value="1"/>
+    </CActorModel>
+    <CActorModel id="RavagerTargetImpactFire" parent="ModelAnimationStyleOneShotUNIT">
+        <On Terms="Effect.RavagerCorrosiveBileDamage.Start; At Target" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOverhead SOpMoveDownByDot35"/>
+        <Model value="SiegeTankSiegedAttackDamage"/>
+        <Scale value="1.200000"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorStateMonitor id="TerranFlamesMediumBuilding">
+        <On Terms="UnitCreation.RefineryRich" Send="Create"/>
+    </CActorStateMonitor>
+    <CActorStateMonitor id="ZergBloodMediumBuilding">
+        <On Terms="UnitCreation.ExtractorRich" Send="Create"/>
+    </CActorStateMonitor>
+    <CActorSound id="DarkTemplarAttackLaunchSound">
+        <On Terms="WeaponStop.WarpBlades" Send="SoundSetMuted 1 0"/>
+        <On Terms="WeaponStop.WarpBlades" Send="Destroy"/>
+    </CActorSound>
+    <CActorModel id="SiegeTankSiegedTargetImpactFire">
+        <On Terms="AbilTransport.*.CargoLoad" Send="SetVisibility"/>
+        <On Terms="AbilTransport.*.CargoUnload" Send="SetVisibility 1"/>
+    </CActorModel>
+    <CActorAction id="SiegeTankSiegedAttack">
+        <ImpactMap index="None" Model=""/>
+    </CActorAction>
+    <CActorModel id="SiegeTankedSiegedAttackImpactFix" parent="ModelAnimationStyleOneShot">
+        <InheritType value="OneShot"/>
+        <On Terms="Effect.CrucioShockCannonBlast.Start; At Effect" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOpTargetUnitZ" HoldPosition="1"/>
+        <Model value="SiegeTankSiegedAttackImpact"/>
+    </CActorModel>
+    <CActorModel id="ReaperHeal">
+        <On Terms="AbilTransport.*.CargoLoad" Send="SetVisibility"/>
+        <On Terms="AbilTransport.*.CargoUnload" Send="SetVisibility 1"/>
+    </CActorModel>
+    <CActorAction id="ThorAALanceAttack">
+        <LaunchAssets Sound="WarHound_MeleeAttackLaunch"/>
+    </CActorAction>
+    <CActorModel id="MothershipConstructionAnim" parent="ModelAnimationStyleContinuous">
+        <On Terms="ActorCreation" Send="AnimBracketStart Work Stand,Work,Start Stand,Work Stand,Work,End"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
+        <On Terms="Abil.NexusTrainMothership.Start" Send="Create"/>
+        <On Terms="Abil.NexusTrainMothership.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create MothershipCore_UpgradeToMothershipStart3"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <Model value="MothershipCoreMorphAddition"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="MothershipSourceFinish" parent="ModelAnimationStyleOneShot">
+        <On Terms="UnitBirth.Mothership" Send="Create"/>
+        <On Terms="UnitBirth.Mothership" Send="Create MothershipCore_UpgradeToMothershipEndHit"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <Model value="MothershipTeleportIn"/>
+    </CActorModel>
+    <CActorModel id="LurkerMPAttackSpikeEx2">
+        <On index="5" Send="TimerSet 0.860000 DelayDestroy"/>
+        <HostSiteOps Ops="SOpShadow SOpForwardCasterPoint SOp2DRotation LurkerMPSOpShadowSpine SOpRotVariancerUp15"/>
+    </CActorModel>
+    <CActorModel id="LurkerMPAttackSpikeImpact">
+        <Scale value="1.750000"/>
+    </CActorModel>
+    <CActorModel id="DefilerMPPlagueTargetModelMedium">
+        <On index="3" Terms="Behavior.AmorphousArmorcloud.On; ScopeContains _UnitMedium"/>
+        <On index="4" Terms="Behavior.AmorphousArmorcloud.Off"/>
+    </CActorModel>
+    <CActorModel id="DefilerMPPlagueTargetModelSmall">
+        <On index="3" Terms="Behavior.AmorphousArmorcloud.On; ScopeContains _UnitSmall"/>
+        <On index="4" Terms="Behavior.AmorphousArmorcloud.Off"/>
+    </CActorModel>
+    <CActorSiteOpBankerUnit id="SOpBankerReaper">
+        <RollMax value="10.000000"/>
+        <RollInActivationAngle value="7.500000"/>
+        <RollInArc value="55.000000"/>
+        <RollOutDuration value="0.300000"/>
+    </CActorSiteOpBankerUnit>
+    <CActorSiteOpBankerUnit id="SOpBankerCyclone">
+        <RollMax value="2.500000"/>
+        <RollInActivationAngle value="3.750000"/>
+        <RollInArc value="18.750000"/>
+        <RollOutDuration value="0.100000"/>
+    </CActorSiteOpBankerUnit>
+    <CActorSiteOpBankerUnit id="SOpBankerHellion">
+        <RollMax value="5.000000"/>
+        <RollInActivationAngle value="3.750000"/>
+        <RollInArc value="27.500000"/>
+        <RollOutDuration value="0.150000"/>
+    </CActorSiteOpBankerUnit>
 </Catalog>

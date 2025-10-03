@@ -2157,4 +2157,42 @@
         <ReleaseDate Month="6" Year="2020"/>
         <GameContentArray value="RaceBannerPack,WarChestSeason6Free"/>
     </CBundle>
+    <CBundle id="CNBundle1">
+        <ProductId value="2002234"/>
+        <Flags index="ShowDynamicProductContent" value="1"/>
+        <Flags index="IsFeatured" value="1"/>
+        <TileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_small_completecollectionstandard.dds"/>
+        <MediumTileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_medium_completecollectionstandard.dds"/>
+        <LargeTileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_large_completecollectionstandard.dds"/>
+        <ReleaseDate Month="6" Year="2025"/>
+        <LearnMoreBackgroundImage value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Logo_CampaignCollection.dds"/>
+        <LearnMoreImage1 value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Thumb_CampaignCollection_Standard_01.dds"/>
+        <LearnMoreImage2 value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Thumb_CampaignCollection_Standard_02.dds"/>
+        <LearnMoreImage3 value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Thumb_CampaignCollection_Standard_03.dds"/>
+        <LearnMoreTitleText1 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionStandard/Item1/Title"/>
+        <LearnMoreTitleText2 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionStandard/Item2/Title"/>
+        <LearnMoreTitleText3 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionStandard/Item3/Title"/>
+        <LearnMoreBodyText1 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionStandard/Item1/Description"/>
+        <LearnMoreBodyText2 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionStandard/Item2/Description"/>
+        <LearnMoreBodyText3 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionStandard/Item3/Description"/>
+    </CBundle>
+    <CBundle id="CNBundle2">
+        <ProductId value="1981417"/>
+        <Flags index="ShowDynamicProductContent" value="1"/>
+        <Flags index="IsFeatured" value="1"/>
+        <TileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_small_completecollectiondeluxe.dds"/>
+        <MediumTileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_medium_completecollectiondeluxe.dds"/>
+        <LargeTileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_large_completecollectiondeluxe.dds"/>
+        <ReleaseDate Month="6" Year="2025"/>
+        <LearnMoreBackgroundImage value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Logo_CampaignCollection.dds"/>
+        <LearnMoreImage1 value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Thumb_Complete_DigitalDeluxe_01.dds"/>
+        <LearnMoreImage2 value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Thumb_Complete_DigitalDeluxe_02.dds"/>
+        <LearnMoreImage3 value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Thumb_Complete_DigitalDeluxe_03.dds"/>
+        <LearnMoreTitleText1 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionDeluxe/Item1/Title"/>
+        <LearnMoreTitleText2 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionDeluxe/Item2/Title"/>
+        <LearnMoreTitleText3 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionDeluxe/Item3/Title"/>
+        <LearnMoreBodyText1 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionDeluxe/Item1/Description"/>
+        <LearnMoreBodyText2 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionDeluxe/Item2/Description"/>
+        <LearnMoreBodyText3 value="UI/CampaignPurchase/InfoDialog/CompleteCollectionDeluxe/Item3/Description"/>
+    </CBundle>
 </Catalog>

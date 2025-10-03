@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CTargetSortField id="AirTarget">
         <Field value="PlaneArray[Air]"/>
@@ -31,5 +31,11 @@
     </CTargetSortValidator>
     <CTargetSortValidator id="MothershipTargetFire">
         <Validator value="TargetFirePriority"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="MothershipPreferNewTargets">
+        <Validator value="NotRecentMothershipTarget"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="MothershipTrackedTargetFire">
+        <Validator value="MothershipTargetFire"/>
     </CTargetSortValidator>
 </Catalog>
